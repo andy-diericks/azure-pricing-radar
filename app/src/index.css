@@ -1,0 +1,48 @@
+/* Design tokens per ADR 0002 */
+:root {
+  --color-bg-page: #0b1120;
+  --color-bg-card: #111a2e;
+  --color-text-primary: #e6edf7;
+  --color-text-secondary: #93a4be;
+  --color-accent: #38bdf8;
+  --color-price-drop: #34d399;
+  --color-price-increase: #f87171;
+  --color-price-new: #fbbf24;
+
+  --font-ui: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+
+  --text-xs: 13px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 20px;
+  --text-xl: 28px;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+
+  --radius-card: 8px;
+  --radius-control: 6px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-bg-page);
+  color: var(--color-text-primary);
+  font-family: var(--font-ui);
+  font-size: var(--text-base);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
