@@ -44,5 +44,5 @@ jobs:
             - Append your journal entry to journal.md before finishing.
           claude_args: |
             --max-turns 60
-             --model claude-sonnet-4-6
+            --model claude-sonnet-4-6
             --allowedTools "Bash(git:*),Bash(gh:*),Bash(npm:*),Bash(npx:*),Bash(node:*),Bash(mkdir:*),Bash(ls:*),Bash(cat:*),Edit,Write,Read,Glob,Grep"
