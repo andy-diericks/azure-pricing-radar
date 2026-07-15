@@ -13,7 +13,9 @@ Status: accepted · Date: 2026-07-15
 - Dense but calm: this is a data product; charts and tables are the heroes.
 - Every price change is color-coded by direction using the tokens above.
 - No gradients, no glassmorphism, no animation longer than 150ms.
-- Mobile: readable, not pixel-perfect. Desktop-first.
+- Mobile: first-class. Layouts adapt below 640px (cards over wide tables),
+  touch targets ≥ 44px, charts responsive. Desktop remains the primary
+  canvas, but mobile is never an afterthought.
 
 ## Consequences
 New colors, fonts, sizes, or spacing values require updating this ADR via a
