@@ -12,6 +12,18 @@ Azure Pricing Radar tracks Azure retail prices over time, detects changes
 beautiful public dashboard with plain-language summaries. Goal: become the
 reference for Azure price history.
 
+## Two roles, two schedules
+
+- **Developer run** (every 2 hours): executes `playbooks/dev-run.md`.
+  Implements exactly one `claude-ready` issue via PR.
+- **Product-manager run** (daily): executes `playbooks/backlog-run.md`.
+  Triages and feeds the backlog from `docs/product-vision.md`. Creates
+  issues, never code.
+
+Each run is told its role in its prompt. Never do the other role's job:
+a developer run with an empty backlog does NOT invent issues to implement
+in the same run (the PM run handles that, with its own guardrails).
+
 ## THE ONE RULE THAT OVERRIDES EVERYTHING
 
 **One run = one task. Never more.**
