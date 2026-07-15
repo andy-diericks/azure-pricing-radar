@@ -41,3 +41,17 @@ Claude reads the tail of it to remember.
 - Noticed for later: Could not take a screenshot in the CI environment (no browser).
   The /data/ route only works in dev; build output needs data copied to app/public/
   for GitHub Pages (relates to issue #6).
+
+## 2026-07-15T23:15Z — run 2026-07-15-2313
+- Task: #5 CI workflow: lint, typecheck, test, build on PRs
+- Did: Wrote .github/workflows/ci.yml (triggers on PR + push to main, runs lint /
+  typecheck / test / build in app/ with Node 22 + npm cache). All four checks pass
+  locally. Could NOT push: GitHub rejected the push with "refusing to allow a GitHub
+  App to create or update workflow … without `workflows` permission". Labeled #5
+  needs-human so the repo owner can grant the Claude GitHub App the `workflows` scope
+  (in repo Settings → GitHub Apps or the App's permission settings).
+- Decisions: Documented the blocker rather than abandoning the issue; the workflow
+  file is correct and ready to merge once a human pushes or grants the permission.
+- Noticed for later: This same missing permission will block any future issue that
+  touches .github/workflows/. The workaround is to grant the `workflows` permission
+  to the GitHub App in repository settings.
