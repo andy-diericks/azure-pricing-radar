@@ -15,6 +15,12 @@ what Azure pricing did over time — something Microsoft doesn't show.
    Reddit / HN. Screenshots that explain themselves.
 4. **Coverage growth** — more services and regions over time, added
    deliberately, never at the cost of 1–3.
+5. **Visual excellence** — the dashboard should look like a polished
+   product, not a data dump: strong typographic hierarchy, generous
+   chart design, delightful details within ADR 0002's tokens.
+   Roughly 1 in 4 backlog issues should be a design/polish task
+   (e.g. "redesign the changes table row states", "improve chart
+   tooltips and axis formatting", "empty states and loading skeletons").
 
 ## Milestones
 - **M1 — Working radar (now):** dashboard renders latest diffs as a
