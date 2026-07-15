@@ -25,3 +25,19 @@ Claude reads the tail of it to remember.
   project-wide without polluting tsconfig types[].
 - Noticed for later: Vite base path will need setting to /azure-pricing-radar/
   for GitHub Pages (issue #6 scope). Vitest 2.x deprecation warnings are harmless.
+
+## 2026-07-15T19:47Z — run 2026-07-15-1938
+- Task: #3 Load data/latest and render a price-changes table
+- Did: Added PriceChangesTable component (pure, prop-driven) with ADR 0002 tokens.
+  Created loadDiffs() that fetches /data/diffs/manifest.json then the per-scope diff
+  files, converting added/removed/changed entries into typed TableRow objects sorted
+  by priority (actual price moves first, new SKUs last, capped at 100 rows). Vite
+  dev plugin serves ../data/ under /data/ and generates the manifest dynamically.
+  19 tests green (8 component, 6 loader, 5 app); all 4 checks pass.
+- Decisions: Used toFixed(6) with trailing-zero strip (min 2 decimals) for price
+  display — locale-independent and consistent in jsdom test environment. Prioritised
+  changed/removed rows over new-SKU rows since the first fetch has no history so
+  "added" is artificially large.
+- Noticed for later: Could not take a screenshot in the CI environment (no browser).
+  The /data/ route only works in dev; build output needs data copied to app/public/
+  for GitHub Pages (relates to issue #6).

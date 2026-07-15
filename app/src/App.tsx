@@ -1,6 +1,21 @@
+import { useState, useEffect } from 'react'
 import './App.css'
+import { PriceChangesTable } from './components/PriceChangesTable'
+import { loadDiffs } from './lib/loadDiffs'
+import type { TableRow } from './types'
 
 export default function App() {
+  const [rows, setRows] = useState<TableRow[]>([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+
+  useEffect(() => {
+    loadDiffs()
+      .then(setRows)
+      .catch((err: Error) => setError(err.message))
+      .finally(() => setLoading(false))
+  }, [])
+
   return (
     <div className="app">
       <header className="header">
@@ -9,24 +24,14 @@ export default function App() {
         <span className="header__subtitle">Real-time price change tracking</span>
       </header>
       <main className="main">
-        <div className="placeholder-card">
-          <h1 className="placeholder-card__heading">Price changes, tracked.</h1>
-          <p className="placeholder-card__body">
-            Azure Pricing Radar monitors retail prices across VM SKUs, Storage,
-            and OpenAI services. Price history and change alerts coming soon.
-          </p>
-          <div className="legend">
-            <span className="legend__item">
-              <span className="price-tag price-tag--drop">▼ Drop</span>
-            </span>
-            <span className="legend__item">
-              <span className="price-tag price-tag--increase">▲ Increase</span>
-            </span>
-            <span className="legend__item">
-              <span className="price-tag price-tag--new">★ New SKU</span>
-            </span>
-          </div>
-        </div>
+        <section className="card">
+          <h2 className="card__heading">Recent price changes</h2>
+          {loading && <p className="status-msg">Loading…</p>}
+          {error && (
+            <p className="status-msg status-msg--error">Failed to load data: {error}</p>
+          )}
+          {!loading && !error && <PriceChangesTable rows={rows} />}
+        </section>
       </main>
     </div>
   )
