@@ -41,3 +41,5 @@ jobs:
               for a single developer run.
           claude_args: |
             --max-turns 40
+            --model claude-sonnet-4-6
+            --allowedTools "Bash(git:*),Bash(gh:*),Bash(npm:*),Bash(npx:*),Bash(node:*),Bash(mkdir:*),Bash(ls:*),Bash(cat:*),Edit,Write,Read,Glob,Grep"
