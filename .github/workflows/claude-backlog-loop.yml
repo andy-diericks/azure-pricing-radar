@@ -1,0 +1,42 @@
+name: Claude backlog loop (PM)
+
+on:
+  schedule:
+    - cron: "29 6 * * *" # daily, 06:29 UTC
+  workflow_dispatch: {}
+
+concurrency:
+  group: claude-backlog-loop
+  cancel-in-progress: false
+
+jobs:
+  pm-run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run Claude Code (product manager)
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: |
+            You are the autonomous PRODUCT MANAGER of this repository, on
+            your daily run. You create and triage GitHub issues; you never
+            write application code.
+
+            Execute playbooks/backlog-run.md exactly. Reminders:
+            - Queue cap: if 5+ open 'claude-ready' issues exist, journal and stop.
+            - Max 3 new issues, strictly from the current milestone in
+              docs/product-vision.md.
+            - Every issue: Goal / Definition of done / Out of scope, sized
+              for a single developer run.
+          claude_args: |
+            --max-turns 40

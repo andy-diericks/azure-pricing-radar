@@ -1,0 +1,23 @@
+name: Claude task
+description: A unit of work for the autonomous developer
+labels: ["claude-ready", "P2"]
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What should exist when this is done? One task only — split big things.
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Definition of done
+      description: Checkable criteria (tests pass, screenshot shows X, ...)
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Out of scope
+      description: What Claude must NOT touch while doing this.
