@@ -55,3 +55,9 @@ Claude reads the tail of it to remember.
 - Triage: none — no unlabeled or needs-human open issues
 - Created: #17 Data freshness badge: show last-updated timestamp in page header
 - Rationale: Queue had 4 open claude-ready issues (#13–#16); room for one more before the cap of 5. Issue #17 directly addresses M1's "Trustworthy data" goal — diff files already carry `at` timestamps, the developer just needs to surface the most recent one in the page header. Sized well under 500 lines.
+
+## 2026-07-16T10:24Z — run 2026-07-16-1021
+- Task: #18 GitHub page is blank
+- Did: Fixed blank GitHub Pages deploy by (1) adding `base: process.env.GITHUB_PAGES === 'true' ? '/azure-pricing-radar/' : '/'` to `vite.config.ts` — the deployment workflow already sets GITHUB_PAGES=true, so built assets now reference `/azure-pricing-radar/assets/…` instead of `/assets/…`; (2) switched hardcoded `/data/…` fetch paths in `loadDiffs.ts` and `loadHistory.ts` to `${import.meta.env.BASE_URL}data/…` so data fetches resolve correctly under the subdirectory path; (3) added `src/vite-env.d.ts` with `/// <reference types="vite/client" />` to expose `import.meta.env` to TypeScript. All 39 tests pass; lint, typecheck, and build green.
+- Decisions: Tests mock fetch with `/data/…` URLs and still pass because Vitest resolves BASE_URL to `/` (no GITHUB_PAGES env set during test runs). Added `vite-env.d.ts` rather than modifying tsconfig to follow standard Vite convention.
+- Noticed for later: The large chunk warning (Recharts >500 kB) is pre-existing and not in scope.

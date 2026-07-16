@@ -59,7 +59,8 @@ function diffToRows(diff: DiffFile): TableRow[] {
 }
 
 export async function loadDiffs(): Promise<TableRow[]> {
-  const manifestRes = await fetch('/data/diffs/manifest.json')
+  const base = import.meta.env.BASE_URL
+  const manifestRes = await fetch(`${base}data/diffs/manifest.json`)
   if (!manifestRes.ok) throw new Error(`Manifest fetch failed: ${manifestRes.status}`)
   const manifest: DiffManifestEntry[] = await manifestRes.json()
 
@@ -71,7 +72,7 @@ export async function loadDiffs(): Promise<TableRow[]> {
 
   const diffs = await Promise.all(
     latestEntries.map(async (entry) => {
-      const res = await fetch(`/data/${entry.path}`)
+      const res = await fetch(`${base}data/${entry.path}`)
       if (!res.ok) return null
       return (await res.json()) as DiffFile
     }),
