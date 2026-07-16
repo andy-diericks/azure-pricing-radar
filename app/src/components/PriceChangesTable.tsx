@@ -17,9 +17,10 @@ function formatPrice(price: number): string {
 
 interface Props {
   rows: TableRow[]
+  onRowClick?: (row: TableRow) => void
 }
 
-export function PriceChangesTable({ rows }: Props) {
+export function PriceChangesTable({ rows, onRowClick }: Props) {
   if (rows.length === 0) {
     return <p className="pct__empty">No price changes detected in the latest fetch.</p>
   }
@@ -40,7 +41,20 @@ export function PriceChangesTable({ rows }: Props) {
         </thead>
         <tbody>
           {rows.map((row) => (
-            <tr key={row.key} className={`pct__row pct__row--${row.direction}`}>
+            <tr
+              key={row.key}
+              className={`pct__row pct__row--${row.direction}${onRowClick ? ' pct__row--clickable' : ''}`}
+              onClick={onRowClick ? () => onRowClick(row) : undefined}
+              tabIndex={onRowClick ? 0 : undefined}
+              onKeyDown={
+                onRowClick
+                  ? (e) => {
+                      if (e.key === 'Enter' || e.key === ' ') onRowClick(row)
+                    }
+                  : undefined
+              }
+              aria-label={onRowClick ? `View price history for ${row.skuName}` : undefined}
+            >
               <td>
                 <span className={`pct__badge pct__badge--${row.direction}`}>
                   {DIRECTION_LABELS[row.direction]}
