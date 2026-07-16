@@ -2,7 +2,7 @@ name: Fetch Azure prices
 
 on:
   schedule:
-    - cron: "43 * * * *" # hourly; offset from the Claude loop
+    - cron: "43 2,8,14,20 * * *" # hourly; offset from the Claude loop
   workflow_dispatch: {}
 
 concurrency:
