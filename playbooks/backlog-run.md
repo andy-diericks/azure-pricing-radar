@@ -26,7 +26,7 @@ small, high-quality backlog. You create issues; you NEVER write code.
   are `needs-human` proposals, not `claude-ready` tasks).
 
 ## Step 3 — Journal
-Append to `journal.md` (commit directly to main — docs-only exception):
+Append to `journal.md` (Commit the journal entry on a branch claude/pm-journal-<date> and open a small PR titled chore: PM journal <date>.):
 ```
 ## <UTC date-time> — PM run
 - Triage: <N issues triaged / none>

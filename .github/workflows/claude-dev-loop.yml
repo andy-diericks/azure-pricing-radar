@@ -2,7 +2,7 @@ name: Claude dev loop
 
 on:
   schedule:
-    - cron: "17 */2 * * *" # every 2 hours (odd minute avoids the top-of-hour rush)
+    - cron: "17 */4 * * *" # every 2 hours (odd minute avoids the top-of-hour rush)
   workflow_dispatch: {} # manual trigger for testing
 
 concurrency:
@@ -29,7 +29,16 @@ jobs:
         with:
           node-version: 22
 
+      - name: Check for work
+        id: gate
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          count=$(gh issue list --label claude-ready --state open --json number --jq 'length')
+          echo "issues=$count" >> "$GITHUB_OUTPUT"
+
       - name: Run Claude Code
+        if: steps.gate.outputs.issues != '0'
         uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
