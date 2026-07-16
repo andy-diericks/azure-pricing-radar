@@ -11,7 +11,7 @@ what Azure pricing did over time — something Microsoft doesn't show.
 1. **Trustworthy data** — accurate diffs, no gaps, transparent methodology.
 2. **Instant answers** — "what changed this week?", "history of this SKU?",
    "is this region cheaper?" answered in under 10 seconds on the dashboard.
-3. **Differentiation** — history and openness. Nearby tools (e.g. cloudprice.net) do cross-region/cloud comparison snapshots; we never compete on specs or multi-cloud — we win on 'what changed and when', with fully open data."
+3. **Differentiation** — history and openness. Nearby tools (e.g. cloudprice.net) do cross-region/cloud comparison snapshots; we never compete on specs or multi-cloud — we win on 'what changed and when', with fully open data.
 4. **Shareable moments** — a price drop page you can link on social media /
    Reddit / HN. Screenshots that explain themselves.
 5. **Coverage growth** — more services and regions over time, added
