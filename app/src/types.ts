@@ -27,6 +27,7 @@ export type ChangeDirection = 'new' | 'removed' | 'drop' | 'increase'
 
 export interface TableRow {
   key: string
+  itemKey: string
   direction: ChangeDirection
   scope: string
   productName: string

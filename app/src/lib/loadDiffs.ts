@@ -9,6 +9,7 @@ function diffToRows(diff: DiffFile): TableRow[] {
   for (const item of diff.added) {
     rows.push({
       key: `${scope}:added:${item.key}`,
+      itemKey: item.key,
       direction: 'new',
       scope,
       productName: item.productName,
@@ -24,6 +25,7 @@ function diffToRows(diff: DiffFile): TableRow[] {
   for (const item of diff.removed) {
     rows.push({
       key: `${scope}:removed:${item.key}`,
+      itemKey: item.key,
       direction: 'removed',
       scope,
       productName: item.productName,
@@ -40,6 +42,7 @@ function diffToRows(diff: DiffFile): TableRow[] {
     const direction = change.after.retailPrice < change.before.retailPrice ? 'drop' : 'increase'
     rows.push({
       key: `${scope}:changed:${change.key}`,
+      itemKey: change.key,
       direction,
       scope,
       productName: change.after.productName,

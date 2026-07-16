@@ -1,11 +1,12 @@
-import { describe, it, expect } from 'vitest'
-import { render, screen } from '@testing-library/react'
+import { describe, it, expect, vi } from 'vitest'
+import { render, screen, fireEvent } from '@testing-library/react'
 import { PriceChangesTable } from './PriceChangesTable'
 import type { TableRow } from '../types'
 
 function makeRow(overrides: Partial<TableRow> = {}): TableRow {
   return {
     key: 'test-key',
+    itemKey: 'raw-item-key',
     direction: 'new',
     scope: 'vm-eu-west',
     productName: 'Virtual Machines Dsv5 Series',
@@ -89,5 +90,25 @@ describe('PriceChangesTable', () => {
     )
     expect(container.querySelector('.pct__badge--drop')).toBeInTheDocument()
     expect(container.querySelector('.pct__row--drop')).toBeInTheDocument()
+  })
+
+  it('calls onRowClick with the row when a row is clicked', () => {
+    const onRowClick = vi.fn()
+    render(<PriceChangesTable rows={[makeRow()]} onRowClick={onRowClick} />)
+    fireEvent.click(screen.getByText('Standard_D2s_v5'))
+    expect(onRowClick).toHaveBeenCalledOnce()
+    expect(onRowClick).toHaveBeenCalledWith(makeRow())
+  })
+
+  it('adds clickable class when onRowClick is provided', () => {
+    const { container } = render(
+      <PriceChangesTable rows={[makeRow()]} onRowClick={vi.fn()} />,
+    )
+    expect(container.querySelector('.pct__row--clickable')).toBeInTheDocument()
+  })
+
+  it('does not add clickable class when onRowClick is absent', () => {
+    const { container } = render(<PriceChangesTable rows={[makeRow()]} />)
+    expect(container.querySelector('.pct__row--clickable')).not.toBeInTheDocument()
   })
 })
