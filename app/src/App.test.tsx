@@ -72,7 +72,7 @@ describe('App', () => {
   it('renders price change rows after load', async () => {
     render(<App />)
     await waitFor(() => expect(screen.queryByText(/loading/i)).not.toBeInTheDocument())
-    expect(screen.getByText('Standard_D2s_v5')).toBeInTheDocument()
+    expect(screen.getAllByText('Standard_D2s_v5')[0]).toBeInTheDocument()
   })
 
   it('shows error state on fetch failure', async () => {
@@ -82,16 +82,16 @@ describe('App', () => {
   })
 
   it('opens the history chart when a row is clicked', async () => {
-    render(<App />)
+    const { container } = render(<App />)
     await waitFor(() => expect(screen.queryByText(/loading/i)).not.toBeInTheDocument())
-    fireEvent.click(screen.getByText('Standard_D2s_v5'))
+    fireEvent.click(container.querySelector('.pct__row--clickable')!)
     expect(screen.getByTestId('price-history-chart')).toBeInTheDocument()
   })
 
   it('closes the history chart when onClose is called', async () => {
-    render(<App />)
+    const { container } = render(<App />)
     await waitFor(() => expect(screen.queryByText(/loading/i)).not.toBeInTheDocument())
-    fireEvent.click(screen.getByText('Standard_D2s_v5'))
+    fireEvent.click(container.querySelector('.pct__row--clickable')!)
     expect(screen.getByTestId('price-history-chart')).toBeInTheDocument()
     fireEvent.click(screen.getByRole('button', { name: /close chart/i }))
     expect(screen.queryByTestId('price-history-chart')).not.toBeInTheDocument()
