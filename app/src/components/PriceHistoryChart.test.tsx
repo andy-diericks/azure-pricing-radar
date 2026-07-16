@@ -79,9 +79,9 @@ describe('PriceHistoryChart', () => {
     expect(screen.getByText('Standard_D2s_v5')).toBeInTheDocument()
   })
 
-  it('shows loading state initially', () => {
+  it('shows skeleton loading state initially', () => {
     render(<PriceHistoryChart row={ROW} onClose={vi.fn()} />)
-    expect(screen.getByText(/loading/i)).toBeInTheDocument()
+    expect(screen.getByLabelText(/loading chart/i)).toBeInTheDocument()
   })
 
   it('renders the chart after data loads', async () => {
@@ -112,9 +112,24 @@ describe('PriceHistoryChart', () => {
     expect(onClose).toHaveBeenCalledOnce()
   })
 
-  it('shows error state when fetch fails', async () => {
+  it('shows empty state when SKU has no history', async () => {
+    vi.stubGlobal('fetch', (url: string) => {
+      if (url === '/data/diffs/manifest.json') {
+        return Promise.resolve(new Response(JSON.stringify([]), { status: 200 }))
+      }
+      return Promise.resolve(new Response('Not Found', { status: 404 }))
+    })
+    render(<PriceHistoryChart row={ROW} onClose={vi.fn()} />)
+    await waitFor(() =>
+      expect(screen.getByText(/no price history recorded/i)).toBeInTheDocument(),
+    )
+  })
+
+  it('shows plain-language error state when fetch fails', async () => {
     vi.stubGlobal('fetch', () => Promise.resolve(new Response('', { status: 500 })))
     render(<PriceHistoryChart row={ROW} onClose={vi.fn()} />)
-    await waitFor(() => expect(screen.getByText(/error/i)).toBeInTheDocument())
+    await waitFor(() =>
+      expect(screen.getByText(/unable to load price history/i)).toBeInTheDocument(),
+    )
   })
 })

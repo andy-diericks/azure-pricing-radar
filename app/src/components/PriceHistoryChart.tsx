@@ -11,17 +11,54 @@ import {
 import { loadHistory } from '../lib/loadHistory'
 import type { HistoryPoint } from '../lib/loadHistory'
 import type { TableRow } from '../types'
+import { directionColor, formatDateAxis, formatDateFull, formatPrice } from '../lib/format'
 import './PriceHistoryChart.css'
 
-function formatDate(at: string): string {
-  const d = new Date(at)
-  return `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, '0')}-${String(d.getUTCDate()).padStart(2, '0')}`
+interface ChartPoint {
+  at: string
+  price: number
 }
 
-function formatPrice(v: number): string {
-  const s = v.toFixed(6).replace(/0+$/, '')
-  const decimals = s.includes('.') ? s.length - s.indexOf('.') - 1 : 0
-  return `$${decimals < 2 ? v.toFixed(2) : s}`
+interface TooltipProps {
+  active?: boolean
+  payload?: ReadonlyArray<{ value?: unknown }>
+  label?: string | number
+  data: ChartPoint[]
+  skuName: string
+  scope: string
+}
+
+function ChartTooltip({ active, payload, label, data, skuName, scope }: TooltipProps) {
+  if (!active || !payload?.length || typeof label !== 'string' || !label) return null
+  const raw = payload[0].value
+  if (typeof raw !== 'number') return null
+  const price = raw
+  const idx = data.findIndex((p) => p.at === label)
+  const prev = idx > 0 ? data[idx - 1].price : null
+  const change =
+    prev !== null
+      ? (() => {
+          const abs = price - prev
+          const pct = prev !== 0 ? (abs / prev) * 100 : 0
+          const sign = abs >= 0 ? '+' : ''
+          return { text: `${sign}${formatPrice(abs)} (${sign}${pct.toFixed(1)}%)`, up: abs >= 0 }
+        })()
+      : null
+
+  return (
+    <div className="phc__tooltip">
+      <div className="phc__tooltip-date">{formatDateFull(label)}</div>
+      <div className="phc__tooltip-sku">
+        {skuName} · {scope}
+      </div>
+      <div className="phc__tooltip-price">{formatPrice(price)}</div>
+      {change && (
+        <div className={`phc__tooltip-change phc__tooltip-change--${change.up ? 'up' : 'down'}`}>
+          {change.text}
+        </div>
+      )}
+    </div>
+  )
 }
 
 interface Props {
@@ -38,7 +75,7 @@ export function PriceHistoryChart({ row, onClose }: Props) {
   useEffect(() => {
     loadHistory(row.itemKey)
       .then(setPoints)
-      .catch((err: Error) => setError(err.message))
+      .catch(() => setError('Unable to load price history. Please try again later.'))
       .finally(() => setLoading(false))
   }, [row.itemKey])
 
@@ -54,9 +91,17 @@ export function PriceHistoryChart({ row, onClose }: Props) {
     if (e.target === overlayRef.current) onClose()
   }
 
-  const chartData = points
+  const chartData: ChartPoint[] = points
     .filter((p): p is { at: string; price: number } => p.price !== null)
-    .map((p) => ({ at: formatDate(p.at), price: p.price }))
+    .map((p) => ({ at: p.at, price: p.price }))
+
+  const rangeMs =
+    chartData.length > 1
+      ? new Date(chartData[chartData.length - 1].at).getTime() -
+        new Date(chartData[0].at).getTime()
+      : 0
+
+  const color = directionColor(row.direction)
 
   return (
     <div
@@ -80,50 +125,52 @@ export function PriceHistoryChart({ row, onClose }: Props) {
           </button>
         </div>
         <div className="phc__body">
-          {loading && <p className="phc__status">Loading…</p>}
-          {error && <p className="phc__status phc__status--error">Error: {error}</p>}
+          {loading && <div className="phc__skeleton" aria-label="Loading chart" />}
+          {error && <p className="phc__status phc__status--error">{error}</p>}
           {!loading && !error && chartData.length === 0 && (
-            <p className="phc__status">No price history available.</p>
+            <p className="phc__status">No price history recorded for this SKU yet.</p>
           )}
           {!loading && !error && chartData.length > 0 && (
-            <ResponsiveContainer width="100%" height={280}>
-              <LineChart data={chartData} margin={{ top: 8, right: 16, left: 8, bottom: 8 }}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#1e2d47" />
-                <XAxis
-                  dataKey="at"
-                  tick={{ fill: 'var(--color-text-secondary)', fontSize: 12 }}
-                  axisLine={{ stroke: '#1e2d47' }}
-                  tickLine={false}
-                />
-                <YAxis
-                  tickFormatter={(v: number) => `$${v}`}
-                  tick={{ fill: 'var(--color-text-secondary)', fontSize: 12 }}
-                  axisLine={{ stroke: '#1e2d47' }}
-                  tickLine={false}
-                  width={64}
-                />
-                <Tooltip
-                  formatter={(v: unknown) => [typeof v === 'number' ? formatPrice(v) : String(v), 'Price']}
-                  labelFormatter={(l: unknown) => `Date: ${l}`}
-                  contentStyle={{
-                    background: 'var(--color-bg-card)',
-                    border: '1px solid #1e2d47',
-                    borderRadius: 'var(--radius-control)',
-                    color: 'var(--color-text-primary)',
-                    fontSize: 13,
-                  }}
-                />
-                <Line
-                  type="monotone"
-                  dataKey="price"
-                  stroke="var(--color-accent)"
-                  strokeWidth={2}
-                  dot={{ fill: 'var(--color-accent)', r: 4 }}
-                  activeDot={{ r: 6 }}
-                  isAnimationActive={false}
-                />
-              </LineChart>
-            </ResponsiveContainer>
+            <div className="phc__chart-container">
+              <ResponsiveContainer width="100%" height="100%">
+                <LineChart data={chartData} margin={{ top: 8, right: 16, left: 8, bottom: 8 }}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="#1e2d47" />
+                  <XAxis
+                    dataKey="at"
+                    tickFormatter={(v: string) => formatDateAxis(v, rangeMs)}
+                    tick={{ fill: '#93A4BE', fontSize: 13 }}
+                    axisLine={{ stroke: '#1e2d47', strokeWidth: 1 }}
+                    tickLine={false}
+                  />
+                  <YAxis
+                    tickFormatter={(v: number) => formatPrice(v)}
+                    tick={{ fill: '#93A4BE', fontSize: 13 }}
+                    axisLine={{ stroke: '#1e2d47', strokeWidth: 1 }}
+                    tickLine={false}
+                    width={72}
+                  />
+                  <Tooltip
+                    content={(props) => (
+                      <ChartTooltip
+                        {...props}
+                        data={chartData}
+                        skuName={row.skuName}
+                        scope={row.scope}
+                      />
+                    )}
+                  />
+                  <Line
+                    type="monotone"
+                    dataKey="price"
+                    stroke={color}
+                    strokeWidth={2}
+                    dot={false}
+                    activeDot={{ r: 5, fill: color }}
+                    isAnimationActive={false}
+                  />
+                </LineChart>
+              </ResponsiveContainer>
+            </div>
           )}
         </div>
       </div>
