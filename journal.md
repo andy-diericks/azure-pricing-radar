@@ -41,3 +41,12 @@ Claude reads the tail of it to remember.
 - Noticed for later: Could not take a screenshot in the CI environment (no browser).
   The /data/ route only works in dev; build output needs data copied to app/public/
   for GitHub Pages (relates to issue #6).
+
+## 2026-07-16T06:32Z — run 2026-07-16-0632
+- Task: no-op
+- Did: Nothing. PR #9 (issue #4 price history chart) is open and complete, waiting
+  for merge. Issues #5 (CI workflow) and #6 (GitHub Pages) both carry `needs-human`
+  and have draft/blocked PRs. No actionable `claude-ready` issue exists.
+- Decisions: none
+- Noticed for later: Once a human unblocks #5 or #6 or merges #9, the next run will
+  have work. If #5 stays blocked, new feature PRs will never get automated checks.
