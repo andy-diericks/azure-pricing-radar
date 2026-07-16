@@ -41,3 +41,20 @@ Claude reads the tail of it to remember.
 - Noticed for later: Could not take a screenshot in the CI environment (no browser).
   The /data/ route only works in dev; build output needs data copied to app/public/
   for GitHub Pages (relates to issue #6).
+
+## 2026-07-15T21:25Z — run 2026-07-15-2116
+- Task: #4 Price history chart per SKU (Recharts)
+- Did: Added `itemKey` field to `TableRow` (raw Azure pricing key, distinct from the
+  React composite key). Created `loadHistory(itemKey)` that fetches all diff files
+  across all dates and builds a chronological price time series. Added
+  `PriceHistoryChart` modal component using Recharts LineChart; clicking any table
+  row opens the modal, Escape/close-button/overlay-click all dismiss it.
+  `PriceChangesTable` gains an optional `onRowClick` prop with keyboard support
+  (Enter/Space). 39 tests green; all 4 checks pass.
+- Decisions: Typed formatter callbacks as `(v: unknown)` to satisfy recharts 3.x's
+  strict `Formatter` type — recharts passes `ValueType | undefined` which can't be
+  narrowed at the signature level without casting. Mocked recharts in component tests
+  to avoid JSDOM's missing ResizeObserver; mocked PriceHistoryChart in App tests to
+  isolate chart open/close behaviour.
+- Noticed for later: Recharts bundle is ~508 KB minified; a code-split via dynamic
+  import() would keep the initial bundle small. Worth a separate issue.

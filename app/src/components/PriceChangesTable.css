@@ -27,6 +27,19 @@
   background-color: rgba(255, 255, 255, 0.02);
 }
 
+.pct__row--clickable {
+  cursor: pointer;
+}
+
+.pct__row--clickable:hover td {
+  background-color: rgba(56, 189, 248, 0.06);
+}
+
+.pct__row--clickable:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: -2px;
+}
+
 .pct__num {
   text-align: right;
 }
