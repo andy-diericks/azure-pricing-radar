@@ -36,10 +36,11 @@ describe('PriceChangesTable', () => {
 
   it('renders a new SKU row with correct badge and price', () => {
     render(<PriceChangesTable rows={[makeRow()]} />)
-    expect(screen.getByText('Standard_D2s_v5')).toBeInTheDocument()
-    expect(screen.getByText(/★ New/)).toBeInTheDocument()
-    expect(screen.getByText('$0.096')).toBeInTheDocument()
-    expect(screen.getByText('—')).toBeInTheDocument()
+    // Content appears in both table and card; verify at least one instance exists
+    expect(screen.getAllByText('Standard_D2s_v5')[0]).toBeInTheDocument()
+    expect(screen.getAllByText(/★ New/)[0]).toBeInTheDocument()
+    expect(screen.getAllByText('$0.096')[0]).toBeInTheDocument()
+    expect(screen.getAllByText('—')[0]).toBeInTheDocument()
   })
 
   it('renders a price drop row with before and after prices', () => {
@@ -48,9 +49,9 @@ describe('PriceChangesTable', () => {
         rows={[makeRow({ direction: 'drop', priceBefore: 0.1, priceAfter: 0.09 })]}
       />,
     )
-    expect(screen.getByText(/▼ Drop/)).toBeInTheDocument()
-    expect(screen.getByText('$0.10')).toBeInTheDocument()
-    expect(screen.getByText('$0.09')).toBeInTheDocument()
+    expect(screen.getAllByText(/▼ Drop/)[0]).toBeInTheDocument()
+    expect(screen.getAllByText('$0.10')[0]).toBeInTheDocument()
+    expect(screen.getAllByText('$0.09')[0]).toBeInTheDocument()
   })
 
   it('renders a price increase row', () => {
@@ -59,9 +60,9 @@ describe('PriceChangesTable', () => {
         rows={[makeRow({ direction: 'increase', priceBefore: 0.09, priceAfter: 0.1 })]}
       />,
     )
-    expect(screen.getByText(/▲ Increase/)).toBeInTheDocument()
-    expect(screen.getByText('$0.09')).toBeInTheDocument()
-    expect(screen.getByText('$0.10')).toBeInTheDocument()
+    expect(screen.getAllByText(/▲ Increase/)[0]).toBeInTheDocument()
+    expect(screen.getAllByText('$0.09')[0]).toBeInTheDocument()
+    expect(screen.getAllByText('$0.10')[0]).toBeInTheDocument()
   })
 
   it('renders a removed SKU row', () => {
@@ -70,8 +71,8 @@ describe('PriceChangesTable', () => {
         rows={[makeRow({ direction: 'removed', priceBefore: 0.096, priceAfter: 0 })]}
       />,
     )
-    expect(screen.getByText(/✕ Removed/)).toBeInTheDocument()
-    expect(screen.getByText('$0.096')).toBeInTheDocument()
+    expect(screen.getAllByText(/✕ Removed/)[0]).toBeInTheDocument()
+    expect(screen.getAllByText('$0.096')[0]).toBeInTheDocument()
   })
 
   it('renders multiple rows', () => {
@@ -80,8 +81,8 @@ describe('PriceChangesTable', () => {
       makeRow({ key: 'r2', direction: 'drop', skuName: 'SKU-B', priceBefore: 0.5, priceAfter: 0.4 }),
     ]
     render(<PriceChangesTable rows={rows} />)
-    expect(screen.getByText('SKU-A')).toBeInTheDocument()
-    expect(screen.getByText('SKU-B')).toBeInTheDocument()
+    expect(screen.getAllByText('SKU-A')[0]).toBeInTheDocument()
+    expect(screen.getAllByText('SKU-B')[0]).toBeInTheDocument()
   })
 
   it('applies the correct CSS class per direction', () => {
@@ -92,10 +93,10 @@ describe('PriceChangesTable', () => {
     expect(container.querySelector('.pct__row--drop')).toBeInTheDocument()
   })
 
-  it('calls onRowClick with the row when a row is clicked', () => {
+  it('calls onRowClick with the row when a table row is clicked', () => {
     const onRowClick = vi.fn()
-    render(<PriceChangesTable rows={[makeRow()]} onRowClick={onRowClick} />)
-    fireEvent.click(screen.getByText('Standard_D2s_v5'))
+    const { container } = render(<PriceChangesTable rows={[makeRow()]} onRowClick={onRowClick} />)
+    fireEvent.click(container.querySelector('.pct__row--clickable')!)
     expect(onRowClick).toHaveBeenCalledOnce()
     expect(onRowClick).toHaveBeenCalledWith(makeRow())
   })
@@ -110,5 +111,85 @@ describe('PriceChangesTable', () => {
   it('does not add clickable class when onRowClick is absent', () => {
     const { container } = render(<PriceChangesTable rows={[makeRow()]} />)
     expect(container.querySelector('.pct__row--clickable')).not.toBeInTheDocument()
+  })
+})
+
+describe('PriceChangesTable — card layout', () => {
+  it('renders a card for each row', () => {
+    const rows = [makeRow({ key: 'r1' }), makeRow({ key: 'r2' })]
+    const { container } = render(<PriceChangesTable rows={rows} />)
+    expect(container.querySelectorAll('.pct__card')).toHaveLength(2)
+  })
+
+  it('card shows direction badge and SKU name', () => {
+    const { container } = render(<PriceChangesTable rows={[makeRow()]} />)
+    const card = container.querySelector('.pct__card')!
+    expect(card.querySelector('.pct__badge')).toHaveTextContent('★ New')
+    expect(card.querySelector('.pct__card-sku')).toHaveTextContent('Standard_D2s_v5')
+  })
+
+  it('card shows product name and region', () => {
+    const { container } = render(<PriceChangesTable rows={[makeRow()]} />)
+    const meta = container.querySelector('.pct__card-meta')!
+    expect(meta).toHaveTextContent('Virtual Machines Dsv5 Series')
+    expect(meta).toHaveTextContent('westeurope')
+  })
+
+  it('card shows before and after prices with unit', () => {
+    const { container } = render(
+      <PriceChangesTable
+        rows={[makeRow({ direction: 'drop', priceBefore: 0.1, priceAfter: 0.09 })]}
+      />,
+    )
+    const prices = container.querySelector('.pct__card-prices')!
+    expect(prices).toHaveTextContent('$0.10')
+    expect(prices).toHaveTextContent('$0.09')
+    expect(prices).toHaveTextContent('1 Hour')
+  })
+
+  it('card shows dash when there is no before price', () => {
+    const { container } = render(<PriceChangesTable rows={[makeRow()]} />)
+    const prices = container.querySelector('.pct__card-prices')!
+    expect(prices).toHaveTextContent('—')
+  })
+
+  it('card adds clickable class when onRowClick is provided', () => {
+    const { container } = render(
+      <PriceChangesTable rows={[makeRow()]} onRowClick={vi.fn()} />,
+    )
+    expect(container.querySelector('.pct__card--clickable')).toBeInTheDocument()
+  })
+
+  it('card does not add clickable class when onRowClick is absent', () => {
+    const { container } = render(<PriceChangesTable rows={[makeRow()]} />)
+    expect(container.querySelector('.pct__card--clickable')).not.toBeInTheDocument()
+  })
+
+  it('card calls onRowClick when clicked', () => {
+    const onRowClick = vi.fn()
+    const { container } = render(
+      <PriceChangesTable rows={[makeRow()]} onRowClick={onRowClick} />,
+    )
+    fireEvent.click(container.querySelector('.pct__card--clickable')!)
+    expect(onRowClick).toHaveBeenCalledOnce()
+    expect(onRowClick).toHaveBeenCalledWith(makeRow())
+  })
+
+  it('card triggers onRowClick on Enter key', () => {
+    const onRowClick = vi.fn()
+    const { container } = render(
+      <PriceChangesTable rows={[makeRow()]} onRowClick={onRowClick} />,
+    )
+    fireEvent.keyDown(container.querySelector('.pct__card--clickable')!, { key: 'Enter' })
+    expect(onRowClick).toHaveBeenCalledOnce()
+    expect(onRowClick).toHaveBeenCalledWith(makeRow())
+  })
+
+  it('card applies direction-specific CSS class', () => {
+    const { container } = render(
+      <PriceChangesTable rows={[makeRow({ direction: 'increase' })]} />,
+    )
+    expect(container.querySelector('.pct__card--increase')).toBeInTheDocument()
+    expect(container.querySelector('.pct__badge--increase')).toBeInTheDocument()
   })
 })

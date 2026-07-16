@@ -88,3 +88,95 @@
   text-align: center;
   padding: var(--space-8) 0;
 }
+
+/* Card list — hidden on desktop, shown on mobile */
+.pct__cards {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.pct__card {
+  background: var(--color-bg-card);
+  border-radius: var(--radius-card);
+  padding: var(--space-3);
+  min-height: 44px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.pct__card--clickable {
+  cursor: pointer;
+}
+
+.pct__card--clickable:hover {
+  background-color: rgba(56, 189, 248, 0.06);
+}
+
+.pct__card--clickable:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: -2px;
+}
+
+.pct__card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.pct__card-sku {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+  text-align: right;
+}
+
+.pct__card-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  gap: var(--space-2);
+}
+
+.pct__card-product {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+}
+
+.pct__card-prices {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+}
+
+.pct__card-unit {
+  margin-left: auto;
+}
+
+/* Responsive: switch to cards below 640px */
+@media (max-width: 640px) {
+  .pct__wrapper {
+    overflow-x: unset;
+  }
+
+  .pct {
+    display: none;
+  }
+
+  .pct__cards {
+    display: flex;
+  }
+}
