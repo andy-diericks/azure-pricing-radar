@@ -50,3 +50,8 @@ Claude reads the tail of it to remember.
 - Decisions: none
 - Noticed for later: Once a human unblocks #5 or #6 or merges #9, the next run will
   have work. If #5 stays blocked, new feature PRs will never get automated checks.
+
+## 2026-07-16T00:00Z — PM run
+- Triage: none — no unlabeled or needs-human open issues
+- Created: #17 Data freshness badge: show last-updated timestamp in page header
+- Rationale: Queue had 4 open claude-ready issues (#13–#16); room for one more before the cap of 5. Issue #17 directly addresses M1's "Trustworthy data" goal — diff files already carry `at` timestamps, the developer just needs to surface the most recent one in the page header. Sized well under 500 lines.
