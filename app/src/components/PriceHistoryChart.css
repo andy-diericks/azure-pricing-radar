@@ -82,3 +82,60 @@
 .phc__status--error {
   color: var(--color-price-increase);
 }
+
+.phc__skeleton {
+  height: 280px;
+  border-radius: var(--radius-control);
+  background: #1e2d47;
+}
+
+.phc__chart-container {
+  height: 280px;
+}
+
+@media (max-width: 640px) {
+  .phc__skeleton {
+    height: 200px;
+  }
+
+  .phc__chart-container {
+    height: 200px;
+  }
+}
+
+.phc__tooltip {
+  background: #111a2e;
+  border: 1px solid #1e2d47;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 13px;
+  color: #e6edf7;
+}
+
+.phc__tooltip-date {
+  margin-bottom: 2px;
+}
+
+.phc__tooltip-sku {
+  color: #93a4be;
+  margin-bottom: 4px;
+}
+
+.phc__tooltip-price {
+  font-family: var(--font-mono);
+  font-size: 14px;
+}
+
+.phc__tooltip-change {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+.phc__tooltip-change--up {
+  color: #f87171;
+}
+
+.phc__tooltip-change--down {
+  color: #34d399;
+}
