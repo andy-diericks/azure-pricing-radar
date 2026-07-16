@@ -2,6 +2,8 @@
 
 > The missing price history for Azure.
 
+**Live dashboard:** https://andy-diericks.github.io/azure-pricing-radar/
+
 Tracks Azure retail prices over time, detects price drops, increases, new
 SKUs and regional rollouts — visualized in a live dashboard with
 plain-language summaries.

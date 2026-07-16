@@ -41,3 +41,22 @@ Claude reads the tail of it to remember.
 - Noticed for later: Could not take a screenshot in the CI environment (no browser).
   The /data/ route only works in dev; build output needs data copied to app/public/
   for GitHub Pages (relates to issue #6).
+
+## 2026-07-16T03:45Z — run 2026-07-16-0340
+- Task: #6 GitHub Pages deployment of app/
+- Did: Added `.github/workflows/deploy-pages.yml` (triggers on push to main, copies
+  data/ into app/public/data/ with a Python manifest generator, builds with
+  GITHUB_PAGES=true env var, deploys via actions/deploy-pages). Added
+  `base: '/azure-pricing-radar/'` to vite.config.ts (conditional on GITHUB_PAGES env
+  var so dev/test keeps base='/'). Updated loadDiffs.ts to use import.meta.env.BASE_URL
+  prefix on all fetch paths (no test changes needed; BASE_URL='/' in test env).
+  Created src/vite-env.d.ts with /// <reference types="vite/client" /> to satisfy
+  TypeScript for import.meta.env. Added live URL to README.
+- Decisions: Used GITHUB_PAGES env var rather than NODE_ENV to gate the base path,
+  keeping dev and test behaviour unchanged. Chose actions/deploy-pages (official OIDC
+  flow) over peaceiris/actions-gh-pages for future-proofing. Scope extraction in the
+  manifest generator mirrors the regex in vite.config.ts buildManifest().
+- Noticed for later: GitHub Pages must be enabled in repo Settings → Pages → Source =
+  GitHub Actions before the workflow can deploy (human one-time step). The fetch-prices
+  workflow will also need to trigger a re-deploy (or the deploy workflow can be expanded
+  to also run on data commits) — open a follow-up issue if desired.
