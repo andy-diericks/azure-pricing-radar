@@ -32,6 +32,7 @@ describe('PriceChangesTable', () => {
     expect(screen.getByRole('columnheader', { name: /sku/i })).toBeInTheDocument()
     expect(screen.getByRole('columnheader', { name: /product/i })).toBeInTheDocument()
     expect(screen.getByRole('columnheader', { name: /region/i })).toBeInTheDocument()
+    expect(screen.getByRole('columnheader', { name: /^%$/ })).toBeInTheDocument()
   })
 
   it('renders a new SKU row with correct badge and price', () => {
@@ -43,7 +44,7 @@ describe('PriceChangesTable', () => {
     expect(screen.getAllByText('—')[0]).toBeInTheDocument()
   })
 
-  it('renders a price drop row with before and after prices', () => {
+  it('renders a price drop row with before and after prices and percentage', () => {
     render(
       <PriceChangesTable
         rows={[makeRow({ direction: 'drop', priceBefore: 0.1, priceAfter: 0.09 })]}
@@ -52,9 +53,10 @@ describe('PriceChangesTable', () => {
     expect(screen.getAllByText(/▼ Drop/)[0]).toBeInTheDocument()
     expect(screen.getAllByText('$0.10')[0]).toBeInTheDocument()
     expect(screen.getAllByText('$0.09')[0]).toBeInTheDocument()
+    expect(screen.getAllByText('-10.0%')[0]).toBeInTheDocument()
   })
 
-  it('renders a price increase row', () => {
+  it('renders a price increase row with percentage', () => {
     render(
       <PriceChangesTable
         rows={[makeRow({ direction: 'increase', priceBefore: 0.09, priceAfter: 0.1 })]}
@@ -63,6 +65,7 @@ describe('PriceChangesTable', () => {
     expect(screen.getAllByText(/▲ Increase/)[0]).toBeInTheDocument()
     expect(screen.getAllByText('$0.09')[0]).toBeInTheDocument()
     expect(screen.getAllByText('$0.10')[0]).toBeInTheDocument()
+    expect(screen.getAllByText('+11.1%')[0]).toBeInTheDocument()
   })
 
   it('renders a removed SKU row', () => {
@@ -73,6 +76,19 @@ describe('PriceChangesTable', () => {
     )
     expect(screen.getAllByText(/✕ Removed/)[0]).toBeInTheDocument()
     expect(screen.getAllByText('$0.096')[0]).toBeInTheDocument()
+  })
+
+  it('shows dash in % column for new and removed rows', () => {
+    render(
+      <PriceChangesTable
+        rows={[
+          makeRow({ key: 'r1', direction: 'new' }),
+          makeRow({ key: 'r2', direction: 'removed', priceBefore: 0.096, priceAfter: 0 }),
+        ]}
+      />,
+    )
+    // Both new and removed should show '—' for the % column (and priceBefore for new)
+    expect(screen.getAllByText('—').length).toBeGreaterThanOrEqual(2)
   })
 
   it('renders multiple rows', () => {

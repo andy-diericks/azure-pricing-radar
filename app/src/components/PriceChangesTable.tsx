@@ -1,4 +1,5 @@
 import type { TableRow, ChangeDirection } from '../types'
+import { formatPctChange } from '../lib/format'
 import './PriceChangesTable.css'
 
 const DIRECTION_LABELS: Record<ChangeDirection, string> = {
@@ -37,6 +38,7 @@ export function PriceChangesTable({ rows, onRowClick }: Props) {
               <th scope="col">Region</th>
               <th scope="col" className="pct__num">Before</th>
               <th scope="col" className="pct__num">After</th>
+              <th scope="col" className="pct__num">%</th>
               <th scope="col">Unit</th>
             </tr>
           </thead>
@@ -68,6 +70,9 @@ export function PriceChangesTable({ rows, onRowClick }: Props) {
                   {row.priceBefore !== null ? `$${formatPrice(row.priceBefore)}` : '—'}
                 </td>
                 <td className="pct__num pct__mono">{`$${formatPrice(row.priceAfter)}`}</td>
+                <td className={`pct__num pct__mono pct__pct--${row.direction}`}>
+                  {formatPctChange(row.priceBefore, row.priceAfter, row.direction)}
+                </td>
                 <td className="pct__secondary">{row.unitOfMeasure}</td>
               </tr>
             ))}
@@ -107,6 +112,9 @@ export function PriceChangesTable({ rows, onRowClick }: Props) {
               </span>
               <span className="pct__secondary" aria-hidden="true">→</span>
               <span className="pct__mono">{`$${formatPrice(row.priceAfter)}`}</span>
+              <span className={`pct__mono pct__pct--${row.direction}`}>
+                {formatPctChange(row.priceBefore, row.priceAfter, row.direction)}
+              </span>
               <span className="pct__secondary pct__card-unit">{row.unitOfMeasure}</span>
             </div>
           </li>

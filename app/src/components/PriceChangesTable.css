@@ -82,6 +82,14 @@
   background-color: rgba(248, 113, 113, 0.1);
 }
 
+.pct__pct--drop {
+  color: var(--color-price-drop);
+}
+
+.pct__pct--increase {
+  color: var(--color-price-increase);
+}
+
 .pct__empty {
   color: var(--color-text-secondary);
   font-size: var(--text-sm);

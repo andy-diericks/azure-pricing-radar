@@ -25,6 +25,14 @@ export function formatDateFull(isoDate: string): string {
   })
 }
 
+export function formatPctChange(priceBefore: number | null, priceAfter: number, direction: string): string {
+  if (direction !== 'drop' && direction !== 'increase') return '—'
+  if (priceBefore === null || priceBefore === 0) return '—'
+  const pct = ((priceAfter - priceBefore) / priceBefore) * 100
+  const fixed = pct.toFixed(1)
+  return pct >= 0 ? `+${fixed}%` : `${fixed}%`
+}
+
 export function directionColor(direction: string): string {
   const map: Record<string, string> = {
     drop: '#34D399',

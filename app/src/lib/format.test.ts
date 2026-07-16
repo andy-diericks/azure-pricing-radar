@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { formatPrice, formatDateAxis, formatDateFull, directionColor } from './format'
+import { formatPrice, formatDateAxis, formatDateFull, directionColor, formatPctChange } from './format'
 
 const TWO_WEEKS_MS = 14 * 24 * 60 * 60 * 1000
 const FOUR_MONTHS_MS = 120 * 24 * 60 * 60 * 1000
@@ -51,6 +51,41 @@ describe('formatDateFull', () => {
     expect(result).toContain('12')
     expect(result).toContain('Jul')
     expect(result).toContain('2026')
+  })
+})
+
+describe('formatPctChange', () => {
+  it('returns a negative percentage for a price drop', () => {
+    expect(formatPctChange(0.1, 0.09, 'drop')).toBe('-10.0%')
+  })
+
+  it('returns a positive percentage for a price increase', () => {
+    expect(formatPctChange(0.09, 0.1, 'increase')).toBe('+11.1%')
+  })
+
+  it('returns dash for new direction', () => {
+    expect(formatPctChange(null, 0.09, 'new')).toBe('—')
+  })
+
+  it('returns dash for removed direction', () => {
+    expect(formatPctChange(0.09, 0, 'removed')).toBe('—')
+  })
+
+  it('returns dash when priceBefore is null', () => {
+    expect(formatPctChange(null, 0.1, 'drop')).toBe('—')
+  })
+
+  it('returns dash when priceBefore is zero to avoid division by zero', () => {
+    expect(formatPctChange(0, 0.1, 'increase')).toBe('—')
+  })
+
+  it('rounds to one decimal place', () => {
+    // 0.001 -> 0.002: +100.0%
+    expect(formatPctChange(0.001, 0.002, 'increase')).toBe('+100.0%')
+  })
+
+  it('handles a 50% drop', () => {
+    expect(formatPctChange(0.002, 0.001, 'drop')).toBe('-50.0%')
   })
 })
 
