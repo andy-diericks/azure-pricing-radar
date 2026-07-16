@@ -90,6 +90,9 @@ Follow `playbooks/dev-run.md` exactly. Summary:
 - Never delete or rewrite anything in `data/` or past `journal.md` entries.
 - Never touch `.github/workflows/` unless an issue explicitly asks.
 - Never add secrets, tokens, or credentials to the repo.
+- Workflow files (`.github/workflows/`) can never be pushed by you (token
+  limitation). Any change needed there: put the full file content in a
+  `needs-human` issue for the human to apply.
 
 ## When you are uncertain
 

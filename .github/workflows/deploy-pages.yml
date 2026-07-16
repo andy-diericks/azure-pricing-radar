@@ -1,0 +1,72 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+          cache-dependency-path: app/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: app
+
+      - name: Copy data and generate manifest
+        run: |
+          mkdir -p app/public/data/diffs
+          cp -r data/diffs/. app/public/data/diffs/
+          cp -r data/latest app/public/data/latest
+          python3 - <<'PYEOF'
+          import os, json, re
+          diffs_dir = 'data/diffs'
+          entries = []
+          for date_dir in sorted(os.listdir(diffs_dir)):
+              full_path = os.path.join(diffs_dir, date_dir)
+              if not os.path.isdir(full_path):
+                  continue
+              for f in sorted(os.listdir(full_path)):
+                  if not f.endswith('.json'):
+                      continue
+                  scope = re.sub(r'^\d{4}-', '', f).replace('.json', '')
+                  entries.append({'path': f'diffs/{date_dir}/{f}', 'scope': scope, 'date': date_dir})
+          with open('app/public/data/diffs/manifest.json', 'w') as mf:
+              json.dump(entries, mf)
+          print(f"Generated manifest with {len(entries)} entries")
+          PYEOF
+
+      - name: Build
+        run: npm run build
+        working-directory: app
+        env:
+          GITHUB_PAGES: "true"
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: app/dist
+
+      - uses: actions/deploy-pages@v4
+        id: deployment
