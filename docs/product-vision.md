@@ -11,19 +11,20 @@ what Azure pricing did over time — something Microsoft doesn't show.
 1. **Trustworthy data** — accurate diffs, no gaps, transparent methodology.
 2. **Instant answers** — "what changed this week?", "history of this SKU?",
    "is this region cheaper?" answered in under 10 seconds on the dashboard.
-3. **Shareable moments** — a price drop page you can link on social media /
+3. **Differentiation** — history and openness. Nearby tools (e.g. cloudprice.net) do cross-region/cloud comparison snapshots; we never compete on specs or multi-cloud — we win on 'what changed and when', with fully open data."
+4. **Shareable moments** — a price drop page you can link on social media /
    Reddit / HN. Screenshots that explain themselves.
-4. **Coverage growth** — more services and regions over time, added
+5. **Coverage growth** — more services and regions over time, added
    deliberately per the roadmap below, never at the cost of 1–3.
-5. **Visual excellence** — the dashboard should look like a polished
+6. **Visual excellence** — the dashboard should look like a polished
    product, not a data dump: strong typographic hierarchy, generous
    chart design, delightful details within ADR 0002's tokens.
    Roughly 1 in 4 backlog issues should be a design/polish task.
-6. **Mobile-friendly** — genuinely usable on a phone: readable tables
+7. **Mobile-friendly** — genuinely usable on a phone: readable tables
    (or card layouts under 640px), touch targets ≥ 44px, responsive charts,
    no horizontal scrolling except inside tables. Test viewport: 390px.
    Roughly 1 in 6 backlog issues should improve the mobile experience.
-7. **Fast** — Lighthouse Performance ≥ 90 on the deployed site, initial
+8. **Fast** — Lighthouse Performance ≥ 90 on the deployed site, initial
    load under 2 seconds on a mid-range phone, lazy-load heavy chart data,
    lean JS bundle. Slowness fixes take priority over new features.
    Roughly 1 in 6 backlog issues should be a performance task.
