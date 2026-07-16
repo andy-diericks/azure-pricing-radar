@@ -6,14 +6,15 @@ export interface HistoryPoint {
 }
 
 export async function loadHistory(itemKey: string): Promise<HistoryPoint[]> {
-  const manifestRes = await fetch('/data/diffs/manifest.json')
+  const base = import.meta.env.BASE_URL
+  const manifestRes = await fetch(`${base}data/diffs/manifest.json`)
   if (!manifestRes.ok) throw new Error(`Manifest fetch failed: ${manifestRes.status}`)
   const manifest: DiffManifestEntry[] = await manifestRes.json()
 
   const diffs = (
     await Promise.all(
       manifest.map(async (entry) => {
-        const res = await fetch(`/data/${entry.path}`)
+        const res = await fetch(`${base}data/${entry.path}`)
         if (!res.ok) return null
         return (await res.json()) as DiffFile
       }),

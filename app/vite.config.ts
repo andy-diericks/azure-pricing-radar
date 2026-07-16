@@ -26,6 +26,7 @@ function buildManifest(): object[] {
 }
 
 export default defineConfig({
+  base: process.env.GITHUB_PAGES === 'true' ? '/azure-pricing-radar/' : '/',
   plugins: [
     react(),
     {
