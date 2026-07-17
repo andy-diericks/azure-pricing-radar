@@ -1,5 +1,5 @@
 import type { TableRow, ChangeDirection } from '../types'
-import { formatPctChange } from '../lib/format'
+import { formatPrice, formatPctChange } from '../lib/format'
 import './PriceChangesTable.css'
 
 const DIRECTION_LABELS: Record<ChangeDirection, string> = {
@@ -7,13 +7,6 @@ const DIRECTION_LABELS: Record<ChangeDirection, string> = {
   removed: '✕ Removed',
   drop: '▼ Drop',
   increase: '▲ Increase',
-}
-
-function formatPrice(price: number): string {
-  // Strip trailing zeros but always show at least 2 decimal places
-  const s = price.toFixed(6).replace(/0+$/, '')
-  const decimals = s.includes('.') ? s.length - s.indexOf('.') - 1 : 0
-  return decimals < 2 ? price.toFixed(2) : s
 }
 
 const SKELETON_COUNT = 6
@@ -171,9 +164,9 @@ export function PriceChangesTable({ rows, loading, error, onRowClick }: Props) {
                 <td>{row.productName}</td>
                 <td>{row.armRegionName}</td>
                 <td className="pct__num pct__mono">
-                  {row.priceBefore !== null ? `$${formatPrice(row.priceBefore)}` : '—'}
+                  {row.priceBefore !== null ? `${formatPrice(row.priceBefore)}` : '—'}
                 </td>
-                <td className="pct__num pct__mono">{`$${formatPrice(row.priceAfter)}`}</td>
+                <td className="pct__num pct__mono">{`${formatPrice(row.priceAfter)}`}</td>
                 <td className={`pct__num pct__mono pct__pct--${row.direction}`}>
                   {formatPctChange(row.priceBefore, row.priceAfter, row.direction)}
                 </td>
@@ -212,10 +205,10 @@ export function PriceChangesTable({ rows, loading, error, onRowClick }: Props) {
             </div>
             <div className="pct__card-prices">
               <span className="pct__mono pct__secondary">
-                {row.priceBefore !== null ? `$${formatPrice(row.priceBefore)}` : '—'}
+                {row.priceBefore !== null ? `${formatPrice(row.priceBefore)}` : '—'}
               </span>
               <span className="pct__secondary" aria-hidden="true">→</span>
-              <span className="pct__mono">{`$${formatPrice(row.priceAfter)}`}</span>
+              <span className="pct__mono">{`${formatPrice(row.priceAfter)}`}</span>
               <span className={`pct__mono pct__pct--${row.direction}`}>
                 {formatPctChange(row.priceBefore, row.priceAfter, row.direction)}
               </span>

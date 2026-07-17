@@ -101,6 +101,10 @@ Claude reads the tail of it to remember.
 - Decisions: Used UTC getters (`getUTCDate`, etc.) and a static month-name array rather than `toLocaleDateString` — guarantees consistent output across all environments regardless of locale settings. Placed badge in the header element (right-aligned) rather than below the title line — avoids wrapping on narrow viewports and follows the existing single-row header layout.
 - Noticed for later: `PriceChangesTable` still has a local `formatPrice` that duplicates `lib/format.ts` (three runs noted; worth a dedicated cleanup issue).
 
+## 2026-07-17T14:08Z — run 2026-07-17-1403
+- Task: #28 cleanup: deduplicate formatPrice — remove local copy in PriceChangesTable
+- Did: Removed the local `formatPrice` function from `PriceChangesTable.tsx` (lines 12–17) and added `formatPrice` to the existing import from `../lib/format`. Updated the four call sites — the local function returned the number only (no `$`), so callers used `` `$${formatPrice(...)}` ``; the shared function already includes `$`, so those became `` `${formatPrice(...)}` ``. All test assertions were already written to expect `$`-prefixed values, so no test changes were needed. 90 tests green; lint, typecheck, build all pass.
+- Decisions: No changes to the `formatPrice` implementation or to any other component — strictly within the issue scope.
 ## 2026-07-17T10:13Z — run 2026-07-17-1011
 - Task: #21 align README and any UI copy with ADR 0003
 - Did: Changed the `header__subtitle` span in `App.tsx` from "Real-time price change tracking" to "Price changes · checked every 6 hours", complying with ADR 0003's explicit ban on "real-time" or "live prices" in UI copy. Scanned all `*.tsx`/`*.ts` source files — no other violations found. All 90 tests pass; lint, typecheck, build green.
