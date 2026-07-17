@@ -34,7 +34,7 @@ jobs:
             write application code.
 
             Execute playbooks/backlog-run.md exactly. Reminders:
-            - Queue cap: if 5+ open 'claude-ready' issues exist, journal and stop.
+            - Queue cap: if 10+ open 'claude-ready' issues exist, journal and stop.
             - Max 3 new issues, strictly from the current milestone in
               docs/product-vision.md.
             - Every issue: Goal / Definition of done / Out of scope, sized
