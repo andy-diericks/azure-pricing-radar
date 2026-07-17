@@ -90,3 +90,8 @@ Claude reads the tail of it to remember.
 - Triage: #21 ("align README and any UI copy with ADR 0003") rewritten — original body was a duplicate of the title with no Goal/DoD/Out-of-scope. Identified the concrete violation: `App.tsx` header subtitle reads "Real-time price change tracking", which ADR 0003 forbids. Rewrote with specific Goal, Definition of done, and Out-of-scope section.
 - Created: #28 cleanup: deduplicate formatPrice in PriceChangesTable, #29 polish: add favicon and meta description to index.html, #30 perf: lazy-load PriceHistoryChart to cut initial JS bundle
 - Rationale: M1 is finishing (2 existing issues in queue: #17 data freshness badge, #21 UI copy fix). All three new issues are M1-milestone polish — code quality (#28, journal-flagged twice), visual excellence + shareable moments (#29, vision goals 4 & 6), and performance (#30, vision goal 8: Lighthouse ≥ 90). Queue is now at the cap of 5; next PM run will hold unless issues close.
+
+## 2026-07-17T12:00Z — PM run
+- Triage: none — no unlabeled or needs-human open issues
+- Created: none — queue full (5 open claude-ready issues: #17, #21, #28, #29, #30)
+- Rationale: Previous PM run this morning already filled the queue to the cap of 5. No new issues created; holding until developer runs consume the backlog.
