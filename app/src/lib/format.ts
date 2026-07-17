@@ -33,6 +33,18 @@ export function formatPctChange(priceBefore: number | null, priceAfter: number, 
   return pct >= 0 ? `+${fixed}%` : `${fixed}%`
 }
 
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+
+export function formatLastUpdated(isoString: string): string {
+  const d = new Date(isoString)
+  const day = d.getUTCDate()
+  const month = MONTHS[d.getUTCMonth()]
+  const year = d.getUTCFullYear()
+  const hours = String(d.getUTCHours()).padStart(2, '0')
+  const minutes = String(d.getUTCMinutes()).padStart(2, '0')
+  return `${day} ${month} ${year}, ${hours}:${minutes} UTC`
+}
+
 export function directionColor(direction: string): string {
   const map: Record<string, string> = {
     drop: '#34D399',
