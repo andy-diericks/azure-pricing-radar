@@ -175,6 +175,84 @@ describe('PriceChangesTable', () => {
   })
 })
 
+describe('PriceChangesTable — accessibility', () => {
+  it('direction badge is aria-hidden', () => {
+    const { container } = render(<PriceChangesTable rows={[makeRow()]} />)
+    const badge = container.querySelector('.pct__badge')!
+    expect(badge).toHaveAttribute('aria-hidden', 'true')
+  })
+
+  it('sr-only span provides screen-reader text for "new" direction', () => {
+    const { container } = render(<PriceChangesTable rows={[makeRow({ direction: 'new' })]} />)
+    const srOnly = container.querySelector('.pct__row .sr-only')!
+    expect(srOnly).toHaveTextContent('new SKU')
+  })
+
+  it('sr-only span provides screen-reader text for "price drop" direction', () => {
+    const { container } = render(
+      <PriceChangesTable rows={[makeRow({ direction: 'drop', priceBefore: 0.1, priceAfter: 0.09 })]} />,
+    )
+    const srOnly = container.querySelector('.pct__row .sr-only')!
+    expect(srOnly).toHaveTextContent('price drop')
+  })
+
+  it('sr-only span provides screen-reader text for "price increase" direction', () => {
+    const { container } = render(
+      <PriceChangesTable rows={[makeRow({ direction: 'increase', priceBefore: 0.09, priceAfter: 0.1 })]} />,
+    )
+    const srOnly = container.querySelector('.pct__row .sr-only')!
+    expect(srOnly).toHaveTextContent('price increase')
+  })
+
+  it('sr-only span provides screen-reader text for "removed" direction', () => {
+    const { container } = render(
+      <PriceChangesTable rows={[makeRow({ direction: 'removed', priceBefore: 0.096, priceAfter: 0 })]} />,
+    )
+    const srOnly = container.querySelector('.pct__row .sr-only')!
+    expect(srOnly).toHaveTextContent('removed SKU')
+  })
+
+  it('clickable table row has role="button"', () => {
+    const { container } = render(<PriceChangesTable rows={[makeRow()]} onRowClick={vi.fn()} />)
+    expect(container.querySelector('.pct__row--clickable')).toHaveAttribute('role', 'button')
+  })
+
+  it('non-clickable table row does not have role="button"', () => {
+    const { container } = render(<PriceChangesTable rows={[makeRow()]} />)
+    expect(container.querySelector('.pct__row')).not.toHaveAttribute('role')
+  })
+
+  it('clickable table row has descriptive aria-label summarising the change', () => {
+    const row = makeRow({ direction: 'drop', priceBefore: 0.1, priceAfter: 0.09 })
+    const { container } = render(<PriceChangesTable rows={[row]} onRowClick={vi.fn()} />)
+    const tr = container.querySelector('.pct__row--clickable')!
+    expect(tr).toHaveAttribute('aria-label', 'Standard_D2s_v5 · westeurope — price drop -10.0%')
+  })
+
+  it('clickable table row aria-label for new SKU omits percentage', () => {
+    const { container } = render(<PriceChangesTable rows={[makeRow()]} onRowClick={vi.fn()} />)
+    const tr = container.querySelector('.pct__row--clickable')!
+    expect(tr).toHaveAttribute('aria-label', 'Standard_D2s_v5 · westeurope — new SKU')
+  })
+
+  it('clickable mobile card has role="button"', () => {
+    const { container } = render(<PriceChangesTable rows={[makeRow()]} onRowClick={vi.fn()} />)
+    expect(container.querySelector('.pct__card--clickable')).toHaveAttribute('role', 'button')
+  })
+
+  it('clickable mobile card has descriptive aria-label', () => {
+    const row = makeRow({ direction: 'increase', priceBefore: 0.09, priceAfter: 0.1 })
+    const { container } = render(<PriceChangesTable rows={[row]} onRowClick={vi.fn()} />)
+    const card = container.querySelector('.pct__card--clickable')!
+    expect(card).toHaveAttribute('aria-label', 'Standard_D2s_v5 · westeurope — price increase +11.1%')
+  })
+
+  it('non-clickable mobile card does not have role="button"', () => {
+    const { container } = render(<PriceChangesTable rows={[makeRow()]} />)
+    expect(container.querySelector('.pct__card')).not.toHaveAttribute('role')
+  })
+})
+
 describe('PriceChangesTable — card layout', () => {
   it('renders a card for each row', () => {
     const rows = [makeRow({ key: 'r1' }), makeRow({ key: 'r2' })]
