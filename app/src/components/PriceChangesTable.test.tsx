@@ -20,10 +20,55 @@ function makeRow(overrides: Partial<TableRow> = {}): TableRow {
   }
 }
 
+describe('PriceChangesTable — loading and state', () => {
+  it('renders skeleton rows when loading', () => {
+    const { container } = render(<PriceChangesTable rows={[]} loading={true} />)
+    expect(screen.getByTestId('table-skeleton')).toBeInTheDocument()
+    expect(container.querySelectorAll('.pct__skeleton-row')).toHaveLength(6)
+    expect(container.querySelectorAll('.pct__card--skeleton')).toHaveLength(6)
+  })
+
+  it('skeleton table has the same column headers as the data table', () => {
+    render(<PriceChangesTable rows={[]} loading={true} />)
+    expect(screen.getByRole('columnheader', { name: /change/i })).toBeInTheDocument()
+    expect(screen.getByRole('columnheader', { name: /sku/i })).toBeInTheDocument()
+    expect(screen.getByRole('columnheader', { name: /^%$/ })).toBeInTheDocument()
+  })
+
+  it('does not show skeleton when not loading', () => {
+    const { container } = render(<PriceChangesTable rows={[makeRow()]} loading={false} />)
+    expect(container.querySelector('[data-testid="table-skeleton"]')).not.toBeInTheDocument()
+    expect(container.querySelectorAll('.pct__skeleton-row')).toHaveLength(0)
+  })
+
+  it('renders error state with headline and message', () => {
+    render(<PriceChangesTable rows={[]} error="Manifest fetch failed: 500" />)
+    expect(screen.getByText(/failed to load price changes/i)).toBeInTheDocument()
+    expect(screen.getByText('Manifest fetch failed: 500')).toBeInTheDocument()
+  })
+
+  it('error state does not render a table', () => {
+    const { container } = render(
+      <PriceChangesTable rows={[]} error="something went wrong" />,
+    )
+    expect(container.querySelector('table')).not.toBeInTheDocument()
+  })
+})
+
 describe('PriceChangesTable', () => {
   it('shows empty state when no rows', () => {
     render(<PriceChangesTable rows={[]} />)
     expect(screen.getByText(/no price changes/i)).toBeInTheDocument()
+  })
+
+  it('empty state shows subline text', () => {
+    render(<PriceChangesTable rows={[]} />)
+    expect(screen.getByText(/check back after the next data fetch/i)).toBeInTheDocument()
+  })
+
+  it('empty state does not render a table', () => {
+    const { container } = render(<PriceChangesTable rows={[]} />)
+    expect(container.querySelector('table')).not.toBeInTheDocument()
   })
 
   it('renders column headers', () => {

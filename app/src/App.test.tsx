@@ -64,21 +64,21 @@ describe('App', () => {
     expect(screen.getByRole('heading', { name: /recent price changes/i })).toBeInTheDocument()
   })
 
-  it('shows loading state initially', () => {
+  it('shows loading skeleton initially', () => {
     render(<App />)
-    expect(screen.getByText(/loading/i)).toBeInTheDocument()
+    expect(screen.getByTestId('table-skeleton')).toBeInTheDocument()
   })
 
   it('renders price change rows after load', async () => {
     render(<App />)
-    await waitFor(() => expect(screen.queryByText(/loading/i)).not.toBeInTheDocument())
+    await waitFor(() => expect(screen.queryByTestId('table-skeleton')).not.toBeInTheDocument())
     expect(screen.getAllByText('Standard_D2s_v5')[0]).toBeInTheDocument()
   })
 
   it('shows error state on fetch failure', async () => {
     vi.stubGlobal('fetch', () => Promise.resolve(new Response('', { status: 500 })))
     render(<App />)
-    await waitFor(() => expect(screen.getByText(/failed to load data/i)).toBeInTheDocument())
+    await waitFor(() => expect(screen.getByText(/failed to load price changes/i)).toBeInTheDocument())
   })
 
   it('opens the history chart when a row is clicked', async () => {

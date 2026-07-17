@@ -16,14 +16,118 @@ function formatPrice(price: number): string {
   return decimals < 2 ? price.toFixed(2) : s
 }
 
+const SKELETON_COUNT = 6
+
+function SkeletonRow() {
+  return (
+    <tr className="pct__skeleton-row" aria-hidden="true">
+      <td><span className="pct__skeleton-cell pct__skeleton-cell--badge" /></td>
+      <td><span className="pct__skeleton-cell pct__skeleton-cell--sku" /></td>
+      <td><span className="pct__skeleton-cell pct__skeleton-cell--wide" /></td>
+      <td><span className="pct__skeleton-cell" /></td>
+      <td><span className="pct__skeleton-cell pct__skeleton-cell--num" /></td>
+      <td><span className="pct__skeleton-cell pct__skeleton-cell--num" /></td>
+      <td><span className="pct__skeleton-cell pct__skeleton-cell--num" /></td>
+      <td><span className="pct__skeleton-cell" /></td>
+    </tr>
+  )
+}
+
+function SkeletonCard() {
+  return (
+    <li className="pct__card pct__card--skeleton" aria-hidden="true">
+      <div className="pct__card-top">
+        <span className="pct__skeleton-cell pct__skeleton-cell--badge" />
+        <span className="pct__skeleton-cell pct__skeleton-cell--sku" />
+      </div>
+      <div className="pct__card-meta">
+        <span className="pct__skeleton-cell pct__skeleton-cell--wide" />
+        <span className="pct__skeleton-cell" />
+      </div>
+      <div className="pct__card-prices">
+        <span className="pct__skeleton-cell pct__skeleton-cell--num" />
+        <span className="pct__skeleton-cell pct__skeleton-cell--num" />
+      </div>
+    </li>
+  )
+}
+
+function EmptyIcon() {
+  return (
+    <svg className="pct__state-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+      <rect x="4" y="8" width="32" height="24" rx="2" stroke="currentColor" strokeWidth="2" />
+      <line x1="4" y1="16" x2="36" y2="16" stroke="currentColor" strokeWidth="2" />
+      <line x1="13" y1="23" x2="27" y2="23" stroke="currentColor" strokeWidth="1.5" strokeDasharray="2 2" />
+      <line x1="13" y1="28" x2="23" y2="28" stroke="currentColor" strokeWidth="1.5" strokeDasharray="2 2" />
+    </svg>
+  )
+}
+
+function ErrorIcon() {
+  return (
+    <svg className="pct__state-icon pct__state-icon--error" width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+      <path d="M20 6L36 34H4L20 6Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+      <line x1="20" y1="18" x2="20" y2="26" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <circle cx="20" cy="30.5" r="1.5" fill="currentColor" />
+    </svg>
+  )
+}
+
 interface Props {
   rows: TableRow[]
+  loading?: boolean
+  error?: string | null
   onRowClick?: (row: TableRow) => void
 }
 
-export function PriceChangesTable({ rows, onRowClick }: Props) {
+export function PriceChangesTable({ rows, loading, error, onRowClick }: Props) {
+  if (loading) {
+    return (
+      <>
+        <div className="pct__wrapper" data-testid="table-skeleton">
+          <table className="pct" aria-label="Price changes" aria-busy="true">
+            <thead>
+              <tr>
+                <th scope="col">Change</th>
+                <th scope="col">SKU</th>
+                <th scope="col">Product</th>
+                <th scope="col">Region</th>
+                <th scope="col" className="pct__num">Before</th>
+                <th scope="col" className="pct__num">After</th>
+                <th scope="col" className="pct__num">%</th>
+                <th scope="col">Unit</th>
+              </tr>
+            </thead>
+            <tbody>
+              {Array.from({ length: SKELETON_COUNT }, (_, i) => <SkeletonRow key={i} />)}
+            </tbody>
+          </table>
+        </div>
+        <ul className="pct__cards pct__cards--skeleton" aria-label="Price changes" aria-busy="true">
+          {Array.from({ length: SKELETON_COUNT }, (_, i) => <SkeletonCard key={i} />)}
+        </ul>
+      </>
+    )
+  }
+
+  if (error) {
+    return (
+      <div className="pct__state">
+        <ErrorIcon />
+        <p className="pct__state-headline">Failed to load price changes</p>
+        <p className="pct__state-subline">{error}</p>
+      </div>
+    )
+  }
+
   if (rows.length === 0) {
-    return <p className="pct__empty">No price changes detected in the latest fetch.</p>
+    return (
+      <div className="pct__state">
+        <EmptyIcon />
+        <p className="pct__state-headline">No price changes detected</p>
+        <p className="pct__state-subline">Check back after the next data fetch</p>
+      </div>
+    )
   }
 
   return (

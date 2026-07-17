@@ -90,11 +90,72 @@
   color: var(--color-price-increase);
 }
 
-.pct__empty {
-  color: var(--color-text-secondary);
-  font-size: var(--text-sm);
+/* Skeleton loading state */
+.pct__skeleton-row td {
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 1px solid #1a2640;
+  vertical-align: middle;
+}
+
+.pct__skeleton-cell {
+  display: inline-block;
+  height: 14px;
+  border-radius: var(--radius-control);
+  background-color: rgba(147, 164, 190, 0.1);
+  width: 56px;
+  vertical-align: middle;
+}
+
+.pct__skeleton-cell--badge {
+  width: 64px;
+  height: 20px;
+}
+
+.pct__skeleton-cell--sku {
+  width: 120px;
+}
+
+.pct__skeleton-cell--wide {
+  width: 160px;
+}
+
+.pct__skeleton-cell--num {
+  width: 44px;
+}
+
+.pct__card--skeleton {
+  background: var(--color-bg-card);
+}
+
+/* Empty and error states */
+.pct__state {
+  padding: var(--space-12) var(--space-8);
   text-align: center;
-  padding: var(--space-8) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.pct__state-icon {
+  color: var(--color-text-secondary);
+  opacity: 0.5;
+}
+
+.pct__state-icon--error {
+  color: var(--color-price-increase);
+  opacity: 0.7;
+}
+
+.pct__state-headline {
+  font-size: var(--text-base);
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.pct__state-subline {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
 }
 
 /* Card list — hidden on desktop, shown on mobile */

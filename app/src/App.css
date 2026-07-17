@@ -53,16 +53,6 @@
   margin-bottom: var(--space-4);
 }
 
-.status-msg {
-  font-size: var(--text-sm);
-  color: var(--color-text-secondary);
-  padding: var(--space-8) 0;
-  text-align: center;
-}
-
-.status-msg--error {
-  color: var(--color-price-increase);
-}
 
 .price-tag {
   font-family: var(--font-mono);
