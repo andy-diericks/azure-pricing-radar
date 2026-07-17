@@ -28,13 +28,7 @@ export default function App() {
       <main className="main">
         <section className="card">
           <h2 className="card__heading">Recent price changes</h2>
-          {loading && <p className="status-msg">Loading…</p>}
-          {error && (
-            <p className="status-msg status-msg--error">Failed to load data: {error}</p>
-          )}
-          {!loading && !error && (
-            <PriceChangesTable rows={rows} onRowClick={setSelectedRow} />
-          )}
+          <PriceChangesTable rows={rows} loading={loading} error={error} onRowClick={setSelectedRow} />
         </section>
       </main>
       {selectedRow && (
