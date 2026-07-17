@@ -17,6 +17,56 @@ dashboard.
 
 <!-- screenshot of the dashboard here -->
 
+## 📈 Dashboard features
+
+The live dashboard is a static site (Vite + React) built from the data in this
+repository — no backend, no tracking, no accounts.
+
+**Price-changes table** — every detected price event from the latest data
+fetch, showing:
+- Direction badge: price drop, price increase, new SKU, or removed SKU
+- SKU name and Azure region
+- Before → after price with unit (e.g. `$/hour`)
+- Percentage change (e.g. `-10.0%`, `+11.1%`)
+- Click any row to open the per-SKU price history chart
+
+**Per-SKU history chart** — a line chart of that SKU's price over time,
+colored by direction (green for drops, red for increases, amber for new).
+Click the back arrow or press Escape to return to the table.
+
+**Data freshness badge** — the header shows when the data was last updated
+(e.g. "Last updated: 17 Jul 2026, 16:02 UTC").
+
+**Graceful states** — the table shows a skeleton while data loads, a plain-
+language error message if the fetch fails, and an empty-state message when no
+changes were detected.
+
+**Mobile layout** — on small screens the table switches to a card list with
+44 px touch targets and the same full data.
+
+Prices are checked every 6 hours ([why not more often?](docs/adr/0003-fetch-cadence.md)) —
+this is a radar for same-day detection, not a real-time ticker.
+
+## 🔍 What it tracks today
+
+- **Virtual Machines** — West Europe
+- **Storage** — West Europe
+- **Azure OpenAI** — EU
+
+Scopes grow deliberately over time. Want one added? Open an issue.
+
+## 💻 Run locally
+
+```bash
+git clone https://github.com/andy-diericks/azure-pricing-radar.git
+cd azure-pricing-radar/app
+npm install
+npm run dev
+```
+
+The dev server proxies `data/` from the repository root, so you see real
+historical data with no extra setup.
+
 ## 🤖 The twist: an AI builds this
 
 This repository is autonomously maintained and developed by
@@ -38,24 +88,11 @@ itself, decision by decision.
 A human (hi 👋) reviews pull requests, answers the agent's questions
 (issues labeled `needs-human`), and steers by editing the product vision.
 
-## 🔍 What it tracks today
-
-- **Virtual Machines** — West Europe
-- **Storage** — West Europe
-- **Azure OpenAI** — West Europe, Sweden Central, France Central
-
-Scopes grow deliberately over time. Want one added? Open an issue.
-
 ## ⚙️ How the data works
 
 - `data/latest/` — current snapshot per scope
 - `data/diffs/<date>/` — every detected change, timestamped: additions,
   removals, and price moves with before/after values
-- The dashboard is a static site (Vite + React) built from this data —
-  no backend, no tracking, no accounts
-
-Prices are checked every 6 hours ([why not more often?](docs/adr/0003-fetch-cadence.md)) —
-this is a radar for same-day detection, not a real-time ticker.
 
 ## 🤝 Contributing
 
