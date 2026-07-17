@@ -110,3 +110,8 @@ Claude reads the tail of it to remember.
 - Did: Changed the `header__subtitle` span in `App.tsx` from "Real-time price change tracking" to "Price changes · checked every 6 hours", complying with ADR 0003's explicit ban on "real-time" or "live prices" in UI copy. Scanned all `*.tsx`/`*.ts` source files — no other violations found. All 90 tests pass; lint, typecheck, build green.
 - Decisions: Used the copy suggested in the issue ("Price changes · checked every 6 hours") — it directly satisfies the ADR constraint, accurately conveys cadence, and requires no new CSS or layout changes.
 - Noticed for later: nothing new.
+
+## 2026-07-17T18:00Z — PM run
+- Triage: none — no unlabeled or needs-human open issues
+- Created: #35 accessibility: add ARIA labels and keyboard navigation to price-changes table, #36 docs: refresh README to document the M1 dashboard, #37 ux: click-to-sort column headers in price-changes table
+- Rationale: Queue had 2 open claude-ready issues (#29, #30); room for 3 more before the cap of 10. M1 is finishing (core features deployed); all three issues round out M1 quality — accessibility serves keyboard/screen-reader users (vision goal 6), README refresh makes the project credible to new visitors (vision: "README is a product surface"), and column sorting directly addresses "what changed most?" (vision goal 2: instant answers). Queue is now at 5.
