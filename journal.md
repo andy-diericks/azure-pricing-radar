@@ -86,6 +86,15 @@ Claude reads the tail of it to remember.
 - Decisions: Placed all loading/empty/error rendering inside `PriceChangesTable` rather than `App.tsx` — single owner of the table area means no layout shift risk between states and the skeleton header directly seeds column widths. No skeleton animation (ADR 0002 caps animation at 150 ms; shimmer is explicitly out of scope per issue). Used inline SVG for state icons — no third-party library, no new dependencies.
 - Noticed for later: `PriceChangesTable` still has a local `formatPrice` that duplicates `lib/format.ts` (noted in run 2026-07-16-1742; still not addressed).
 
+## 2026-07-17T00:00Z — PM run
+- Triage: #21 ("align README and any UI copy with ADR 0003") rewritten — original body was a duplicate of the title with no Goal/DoD/Out-of-scope. Identified the concrete violation: `App.tsx` header subtitle reads "Real-time price change tracking", which ADR 0003 forbids. Rewrote with specific Goal, Definition of done, and Out-of-scope section.
+- Created: #28 cleanup: deduplicate formatPrice in PriceChangesTable, #29 polish: add favicon and meta description to index.html, #30 perf: lazy-load PriceHistoryChart to cut initial JS bundle
+- Rationale: M1 is finishing (2 existing issues in queue: #17 data freshness badge, #21 UI copy fix). All three new issues are M1-milestone polish — code quality (#28, journal-flagged twice), visual excellence + shareable moments (#29, vision goals 4 & 6), and performance (#30, vision goal 8: Lighthouse ≥ 90). Queue is now at the cap of 5; next PM run will hold unless issues close.
+
+## 2026-07-17T12:00Z — PM run
+- Triage: none — no unlabeled or needs-human open issues
+- Created: none — queue full (5 open claude-ready issues: #17, #21, #28, #29, #30)
+- Rationale: Previous PM run this morning already filled the queue to the cap of 5. No new issues created; holding until developer runs consume the backlog.
 ## 2026-07-17T06:45Z — run 2026-07-17-0645
 - Task: #17 Data freshness badge: show last-updated timestamp in page header
 - Did: Changed `loadDiffs()` return type from `TableRow[]` to `{ rows: TableRow[]; lastUpdatedAt: string | null }`, extracting the most recent `at` timestamp across all fetched diff files. Added `formatLastUpdated(isoString)` to `lib/format.ts` — formats as "D MMM YYYY, HH:mm UTC" using UTC getters (locale-independent). Created `LastUpdatedBadge` component that renders "Last updated: <date>" or returns null when `lastUpdatedAt` is null, using only `--color-text-secondary` and `--text-xs` ADR 0002 tokens. Placed badge inside `.header` in `App.tsx` with `margin-left: auto` to right-align it. Added `LoadDiffsResult` interface to `types.ts`. Updated all affected tests; added 8 new tests (4 for `formatLastUpdated`, 3 for `LastUpdatedBadge`, 1 App integration). 90 tests green; lint, typecheck, build all pass.
