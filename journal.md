@@ -105,4 +105,8 @@ Claude reads the tail of it to remember.
 - Task: #28 cleanup: deduplicate formatPrice — remove local copy in PriceChangesTable
 - Did: Removed the local `formatPrice` function from `PriceChangesTable.tsx` (lines 12–17) and added `formatPrice` to the existing import from `../lib/format`. Updated the four call sites — the local function returned the number only (no `$`), so callers used `` `$${formatPrice(...)}` ``; the shared function already includes `$`, so those became `` `${formatPrice(...)}` ``. All test assertions were already written to expect `$`-prefixed values, so no test changes were needed. 90 tests green; lint, typecheck, build all pass.
 - Decisions: No changes to the `formatPrice` implementation or to any other component — strictly within the issue scope.
+## 2026-07-17T10:13Z — run 2026-07-17-1011
+- Task: #21 align README and any UI copy with ADR 0003
+- Did: Changed the `header__subtitle` span in `App.tsx` from "Real-time price change tracking" to "Price changes · checked every 6 hours", complying with ADR 0003's explicit ban on "real-time" or "live prices" in UI copy. Scanned all `*.tsx`/`*.ts` source files — no other violations found. All 90 tests pass; lint, typecheck, build green.
+- Decisions: Used the copy suggested in the issue ("Price changes · checked every 6 hours") — it directly satisfies the ADR constraint, accurately conveys cadence, and requires no new CSS or layout changes.
 - Noticed for later: nothing new.

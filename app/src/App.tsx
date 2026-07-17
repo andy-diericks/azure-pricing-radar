@@ -28,7 +28,7 @@ export default function App() {
       <header className="header">
         <div className="header__dot" />
         <span className="header__title">Azure Pricing Radar</span>
-        <span className="header__subtitle">Real-time price change tracking</span>
+        <span className="header__subtitle">Price changes · checked every 6 hours</span>
         <LastUpdatedBadge lastUpdatedAt={lastUpdatedAt} />
       </header>
       <main className="main">
