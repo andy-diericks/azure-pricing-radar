@@ -44,3 +44,8 @@ export interface DiffManifestEntry {
   scope: string
   date: string
 }
+
+export interface LoadDiffsResult {
+  rows: TableRow[]
+  lastUpdatedAt: string | null
+}

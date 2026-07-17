@@ -1,0 +1,5 @@
+.last-updated-badge {
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  margin-left: auto;
+}
