@@ -9,6 +9,19 @@ const DIRECTION_LABELS: Record<ChangeDirection, string> = {
   increase: '▲ Increase',
 }
 
+const DIRECTION_SR_LABELS: Record<ChangeDirection, string> = {
+  new: 'new SKU',
+  removed: 'removed SKU',
+  drop: 'price drop',
+  increase: 'price increase',
+}
+
+function rowAriaLabel(row: TableRow): string {
+  const pct = formatPctChange(row.priceBefore, row.priceAfter, row.direction)
+  const suffix = pct !== '—' ? ` ${pct}` : ''
+  return `${row.skuName} · ${row.armRegionName} — ${DIRECTION_SR_LABELS[row.direction]}${suffix}`
+}
+
 const SKELETON_COUNT = 6
 
 function SkeletonRow() {
@@ -146,6 +159,7 @@ export function PriceChangesTable({ rows, loading, error, onRowClick }: Props) {
                 className={`pct__row pct__row--${row.direction}${onRowClick ? ' pct__row--clickable' : ''}`}
                 onClick={onRowClick ? () => onRowClick(row) : undefined}
                 tabIndex={onRowClick ? 0 : undefined}
+                role={onRowClick ? 'button' : undefined}
                 onKeyDown={
                   onRowClick
                     ? (e) => {
@@ -153,12 +167,13 @@ export function PriceChangesTable({ rows, loading, error, onRowClick }: Props) {
                       }
                     : undefined
                 }
-                aria-label={onRowClick ? `View price history for ${row.skuName}` : undefined}
+                aria-label={onRowClick ? rowAriaLabel(row) : undefined}
               >
                 <td>
-                  <span className={`pct__badge pct__badge--${row.direction}`}>
+                  <span className={`pct__badge pct__badge--${row.direction}`} aria-hidden="true">
                     {DIRECTION_LABELS[row.direction]}
                   </span>
+                  <span className="sr-only">{DIRECTION_SR_LABELS[row.direction]}</span>
                 </td>
                 <td className="pct__mono">{row.skuName}</td>
                 <td>{row.productName}</td>
@@ -184,6 +199,7 @@ export function PriceChangesTable({ rows, loading, error, onRowClick }: Props) {
             className={`pct__card pct__card--${row.direction}${onRowClick ? ' pct__card--clickable' : ''}`}
             onClick={onRowClick ? () => onRowClick(row) : undefined}
             tabIndex={onRowClick ? 0 : undefined}
+            role={onRowClick ? 'button' : undefined}
             onKeyDown={
               onRowClick
                 ? (e) => {
@@ -191,10 +207,10 @@ export function PriceChangesTable({ rows, loading, error, onRowClick }: Props) {
                   }
                 : undefined
             }
-            aria-label={onRowClick ? `View price history for ${row.skuName}` : undefined}
+            aria-label={onRowClick ? rowAriaLabel(row) : undefined}
           >
             <div className="pct__card-top">
-              <span className={`pct__badge pct__badge--${row.direction}`}>
+              <span className={`pct__badge pct__badge--${row.direction}`} aria-hidden="true">
                 {DIRECTION_LABELS[row.direction]}
               </span>
               <span className="pct__card-sku pct__mono">{row.skuName}</span>
