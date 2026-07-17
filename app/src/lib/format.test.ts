@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { formatPrice, formatDateAxis, formatDateFull, directionColor, formatPctChange } from './format'
+import { formatPrice, formatDateAxis, formatDateFull, directionColor, formatPctChange, formatLastUpdated } from './format'
 
 const TWO_WEEKS_MS = 14 * 24 * 60 * 60 * 1000
 const FOUR_MONTHS_MS = 120 * 24 * 60 * 60 * 1000
@@ -86,6 +86,24 @@ describe('formatPctChange', () => {
 
   it('handles a 50% drop', () => {
     expect(formatPctChange(0.002, 0.001, 'drop')).toBe('-50.0%')
+  })
+})
+
+describe('formatLastUpdated', () => {
+  it('formats a UTC ISO timestamp as "D MMM YYYY, HH:mm UTC"', () => {
+    expect(formatLastUpdated('2026-07-15T17:41:10Z')).toBe('15 Jul 2026, 17:41 UTC')
+  })
+
+  it('zero-pads hours and minutes', () => {
+    expect(formatLastUpdated('2026-01-05T09:03:00Z')).toBe('5 Jan 2026, 09:03 UTC')
+  })
+
+  it('handles timestamps with offset notation', () => {
+    expect(formatLastUpdated('2026-07-15T17:41:10.201545+00:00')).toBe('15 Jul 2026, 17:41 UTC')
+  })
+
+  it('handles end of year boundary', () => {
+    expect(formatLastUpdated('2026-12-31T23:59:00Z')).toBe('31 Dec 2026, 23:59 UTC')
   })
 })
 

@@ -75,6 +75,12 @@ describe('App', () => {
     expect(screen.getAllByText('Standard_D2s_v5')[0]).toBeInTheDocument()
   })
 
+  it('shows the last-updated badge after load', async () => {
+    render(<App />)
+    await waitFor(() => expect(screen.queryByTestId('table-skeleton')).not.toBeInTheDocument())
+    expect(screen.getByText(/last updated:/i)).toBeInTheDocument()
+  })
+
   it('shows error state on fetch failure', async () => {
     vi.stubGlobal('fetch', () => Promise.resolve(new Response('', { status: 500 })))
     render(<App />)

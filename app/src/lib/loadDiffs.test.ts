@@ -68,6 +68,27 @@ function mockFetch(url: string): Promise<Response> {
   return Promise.resolve(new Response('Not Found', { status: 404 }))
 }
 
+const STORAGE_DIFF: DiffFile = {
+  scope: 'storage-eu-west',
+  at: '2026-07-15T18:00:00Z',
+  added: [],
+  removed: [],
+  changed: [],
+}
+
+function mockFetchWithStorage(url: string): Promise<Response> {
+  if (url === '/data/diffs/manifest.json') {
+    return Promise.resolve(new Response(JSON.stringify(MANIFEST), { status: 200 }))
+  }
+  if (url === '/data/diffs/2026-07-15/1741-vm-eu-west.json') {
+    return Promise.resolve(new Response(JSON.stringify(VM_DIFF), { status: 200 }))
+  }
+  if (url === '/data/diffs/2026-07-15/1741-storage-eu-west.json') {
+    return Promise.resolve(new Response(JSON.stringify(STORAGE_DIFF), { status: 200 }))
+  }
+  return Promise.resolve(new Response('Not Found', { status: 404 }))
+}
+
 describe('loadDiffs', () => {
   beforeEach(() => {
     vi.stubGlobal('fetch', mockFetch)
@@ -78,18 +99,18 @@ describe('loadDiffs', () => {
   })
 
   it('returns rows from the latest diff files', async () => {
-    const rows = await loadDiffs()
+    const { rows } = await loadDiffs()
     expect(rows.length).toBeGreaterThan(0)
   })
 
   it('prioritises changed rows over new SKUs', async () => {
-    const rows = await loadDiffs()
+    const { rows } = await loadDiffs()
     const firstRow = rows[0]
     expect(firstRow.direction).toBe('drop')
   })
 
   it('maps added items to direction=new', async () => {
-    const rows = await loadDiffs()
+    const { rows } = await loadDiffs()
     const newRow = rows.find((r) => r.direction === 'new')
     expect(newRow).toBeDefined()
     expect(newRow?.skuName).toBe('Standard_D2s_v5')
@@ -98,7 +119,7 @@ describe('loadDiffs', () => {
   })
 
   it('maps changed items to drop or increase', async () => {
-    const rows = await loadDiffs()
+    const { rows } = await loadDiffs()
     const drop = rows.find((r) => r.direction === 'drop')
     expect(drop).toBeDefined()
     expect(drop?.priceBefore).toBe(0.5)
@@ -110,11 +131,26 @@ describe('loadDiffs', () => {
     await expect(loadDiffs()).rejects.toThrow('Manifest fetch failed')
   })
 
-  it('returns empty array when manifest is empty', async () => {
+  it('returns empty rows and null lastUpdatedAt when manifest is empty', async () => {
     vi.stubGlobal('fetch', () =>
       Promise.resolve(new Response(JSON.stringify([]), { status: 200 })),
     )
-    const rows = await loadDiffs()
-    expect(rows).toEqual([])
+    const result = await loadDiffs()
+    expect(result.rows).toEqual([])
+    expect(result.lastUpdatedAt).toBeNull()
+  })
+
+  it('returns the most recent at timestamp across all diff files', async () => {
+    vi.stubGlobal('fetch', mockFetchWithStorage)
+    const { lastUpdatedAt } = await loadDiffs()
+    // STORAGE_DIFF.at (18:00) is later than VM_DIFF.at (17:41)
+    expect(lastUpdatedAt).toBe('2026-07-15T18:00:00Z')
+  })
+
+  it('returns the at timestamp from a single diff file', async () => {
+    const { lastUpdatedAt } = await loadDiffs()
+    // mockFetch only returns VM_DIFF for vm-eu-west and empty for storage-eu-west
+    // both have at = '2026-07-15T17:41:10Z'
+    expect(lastUpdatedAt).toBe('2026-07-15T17:41:10Z')
   })
 })

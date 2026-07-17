@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import './App.css'
 import { PriceChangesTable } from './components/PriceChangesTable'
 import { PriceHistoryChart } from './components/PriceHistoryChart'
+import { LastUpdatedBadge } from './components/LastUpdatedBadge'
 import { loadDiffs } from './lib/loadDiffs'
 import type { TableRow } from './types'
 
@@ -10,10 +11,14 @@ export default function App() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [selectedRow, setSelectedRow] = useState<TableRow | null>(null)
+  const [lastUpdatedAt, setLastUpdatedAt] = useState<string | null>(null)
 
   useEffect(() => {
     loadDiffs()
-      .then(setRows)
+      .then(({ rows: r, lastUpdatedAt: ts }) => {
+        setRows(r)
+        setLastUpdatedAt(ts)
+      })
       .catch((err: Error) => setError(err.message))
       .finally(() => setLoading(false))
   }, [])
@@ -24,6 +29,7 @@ export default function App() {
         <div className="header__dot" />
         <span className="header__title">Azure Pricing Radar</span>
         <span className="header__subtitle">Real-time price change tracking</span>
+        <LastUpdatedBadge lastUpdatedAt={lastUpdatedAt} />
       </header>
       <main className="main">
         <section className="card">
