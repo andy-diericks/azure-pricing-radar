@@ -54,6 +54,12 @@
 }
 
 
+.phc__lazy-fallback {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 11, 28, 0.8);
+}
+
 .price-tag {
   font-family: var(--font-mono);
   font-size: var(--text-sm);
