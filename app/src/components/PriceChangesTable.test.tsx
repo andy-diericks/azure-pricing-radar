@@ -332,3 +332,140 @@ describe('PriceChangesTable — card layout', () => {
     expect(container.querySelector('.pct__badge--increase')).toBeInTheDocument()
   })
 })
+
+describe('PriceChangesTable — sorting', () => {
+  // rowA: drop, B-sku, Z-product, eastus, before=0.20, after=0.16, |pct|=20.0
+  const rowA = makeRow({
+    key: 'a',
+    direction: 'drop',
+    skuName: 'B-sku',
+    productName: 'Z-product',
+    armRegionName: 'eastus',
+    priceBefore: 0.2,
+    priceAfter: 0.16,
+  })
+  // rowB: increase, A-sku, A-product, westeurope, before=0.09, after=0.10, |pct|≈11.1
+  const rowB = makeRow({
+    key: 'b',
+    direction: 'increase',
+    skuName: 'A-sku',
+    productName: 'A-product',
+    armRegionName: 'westeurope',
+    priceBefore: 0.09,
+    priceAfter: 0.1,
+  })
+  // rowC: new, C-sku, M-product, northeurope, before=null, after=0.50, |pct|=0
+  const rowC = makeRow({
+    key: 'c',
+    direction: 'new',
+    skuName: 'C-sku',
+    productName: 'M-product',
+    armRegionName: 'northeurope',
+    priceBefore: null,
+    priceAfter: 0.5,
+  })
+
+  function getTableSkuOrder(container: HTMLElement): string[] {
+    return Array.from(container.querySelectorAll<HTMLTableRowElement>('.pct__row')).map(
+      (tr) => tr.cells[1]?.textContent?.trim() ?? '',
+    )
+  }
+
+  it('renders with default sort: largest absolute % change descending', () => {
+    const { container } = render(<PriceChangesTable rows={[rowC, rowB, rowA]} />)
+    expect(getTableSkuOrder(container)).toEqual(['B-sku', 'A-sku', 'C-sku'])
+  })
+
+  it('sorts by % ascending on click (toggles from default desc)', () => {
+    const { container } = render(<PriceChangesTable rows={[rowA, rowB, rowC]} />)
+    fireEvent.click(screen.getByRole('columnheader', { name: /^%$/ }))
+    expect(getTableSkuOrder(container)).toEqual(['C-sku', 'A-sku', 'B-sku'])
+  })
+
+  it('sorts by Direction column ascending', () => {
+    const { container } = render(<PriceChangesTable rows={[rowC, rowB, rowA]} />)
+    fireEvent.click(screen.getByRole('columnheader', { name: /^change$/i }))
+    expect(getTableSkuOrder(container)).toEqual(['B-sku', 'A-sku', 'C-sku'])
+  })
+
+  it('sorts by SKU ascending on first click of SKU header', () => {
+    const { container } = render(<PriceChangesTable rows={[rowA, rowB, rowC]} />)
+    fireEvent.click(screen.getByRole('columnheader', { name: /^sku$/i }))
+    expect(getTableSkuOrder(container)).toEqual(['A-sku', 'B-sku', 'C-sku'])
+  })
+
+  it('sorts by SKU descending on second click of SKU header', () => {
+    const { container } = render(<PriceChangesTable rows={[rowA, rowB, rowC]} />)
+    fireEvent.click(screen.getByRole('columnheader', { name: /^sku$/i }))
+    fireEvent.click(screen.getByRole('columnheader', { name: /^sku$/i }))
+    expect(getTableSkuOrder(container)).toEqual(['C-sku', 'B-sku', 'A-sku'])
+  })
+
+  it('sorts by Product ascending', () => {
+    const { container } = render(<PriceChangesTable rows={[rowA, rowB, rowC]} />)
+    fireEvent.click(screen.getByRole('columnheader', { name: /^product$/i }))
+    expect(getTableSkuOrder(container)).toEqual(['A-sku', 'C-sku', 'B-sku'])
+  })
+
+  it('sorts by Region ascending', () => {
+    const { container } = render(<PriceChangesTable rows={[rowA, rowB, rowC]} />)
+    fireEvent.click(screen.getByRole('columnheader', { name: /^region$/i }))
+    expect(getTableSkuOrder(container)).toEqual(['B-sku', 'C-sku', 'A-sku'])
+  })
+
+  it('sorts by Before price ascending (nulls last)', () => {
+    const { container } = render(<PriceChangesTable rows={[rowA, rowB, rowC]} />)
+    fireEvent.click(screen.getByRole('columnheader', { name: /^before$/i }))
+    expect(getTableSkuOrder(container)).toEqual(['A-sku', 'B-sku', 'C-sku'])
+  })
+
+  it('sorts by After price ascending', () => {
+    const { container } = render(<PriceChangesTable rows={[rowA, rowB, rowC]} />)
+    fireEvent.click(screen.getByRole('columnheader', { name: /^after$/i }))
+    expect(getTableSkuOrder(container)).toEqual(['A-sku', 'B-sku', 'C-sku'])
+  })
+
+  it('shows sort indicator ↓ on default active column (%)', () => {
+    render(<PriceChangesTable rows={[rowA]} />)
+    const pctHeader = screen.getByRole('columnheader', { name: /^%$/ })
+    expect(pctHeader.textContent).toContain('↓')
+  })
+
+  it('shows sort indicator ↑ after toggling % column to ascending', () => {
+    render(<PriceChangesTable rows={[rowA]} />)
+    fireEvent.click(screen.getByRole('columnheader', { name: /^%$/ }))
+    const pctHeader = screen.getByRole('columnheader', { name: /^%$/ })
+    expect(pctHeader.textContent).toContain('↑')
+  })
+
+  it('active header has aria-sort="descending" by default', () => {
+    render(<PriceChangesTable rows={[rowA]} />)
+    expect(screen.getByRole('columnheader', { name: /^%$/ })).toHaveAttribute('aria-sort', 'descending')
+  })
+
+  it('inactive headers have aria-sort="none"', () => {
+    render(<PriceChangesTable rows={[rowA]} />)
+    expect(screen.getByRole('columnheader', { name: /^sku$/i })).toHaveAttribute('aria-sort', 'none')
+  })
+
+  it('activates sort on Enter key press', () => {
+    const { container } = render(<PriceChangesTable rows={[rowA, rowB, rowC]} />)
+    fireEvent.keyDown(screen.getByRole('columnheader', { name: /^sku$/i }), { key: 'Enter' })
+    expect(getTableSkuOrder(container)).toEqual(['A-sku', 'B-sku', 'C-sku'])
+  })
+
+  it('activates sort on Space key press', () => {
+    const { container } = render(<PriceChangesTable rows={[rowA, rowB, rowC]} />)
+    fireEvent.keyDown(screen.getByRole('columnheader', { name: /^sku$/i }), { key: ' ' })
+    expect(getTableSkuOrder(container)).toEqual(['A-sku', 'B-sku', 'C-sku'])
+  })
+
+  it('mobile cards reflect the same sort order as the table', () => {
+    const { container } = render(<PriceChangesTable rows={[rowA, rowB, rowC]} />)
+    fireEvent.click(screen.getByRole('columnheader', { name: /^sku$/i }))
+    const cardSkus = Array.from(container.querySelectorAll('.pct__card-sku')).map(
+      (el) => el.textContent?.trim() ?? '',
+    )
+    expect(cardSkus).toEqual(['A-sku', 'B-sku', 'C-sku'])
+  })
+})
