@@ -7,10 +7,12 @@ import React from 'react'
 
 vi.mock('recharts', () => ({
   ResponsiveContainer: ({ children }: { children: React.ReactNode }) => <div>{children}</div>,
-  LineChart: ({ children }: { children: React.ReactNode }) => (
-    <div data-testid="line-chart">{children}</div>
+  AreaChart: ({ children }: { children: React.ReactNode }) => (
+    <div data-testid="area-chart">{children}</div>
   ),
-  Line: () => null,
+  Area: ({ stroke, fill, fillOpacity }: { stroke: string; fill: string; fillOpacity: number }) => (
+    <div data-testid="area" data-stroke={stroke} data-fill={fill} data-fill-opacity={fillOpacity} />
+  ),
   XAxis: () => null,
   YAxis: () => null,
   CartesianGrid: () => null,
@@ -92,7 +94,15 @@ describe('PriceHistoryChart', () => {
   it('renders the chart after data loads', async () => {
     render(<PriceHistoryChart row={ROW} onClose={vi.fn()} />)
     await waitFor(() => expect(screen.queryByText(/loading/i)).not.toBeInTheDocument())
-    expect(screen.getByTestId('line-chart')).toBeInTheDocument()
+    expect(screen.getByTestId('area-chart')).toBeInTheDocument()
+  })
+
+  it('renders an Area with fill matching stroke at 12% opacity', async () => {
+    render(<PriceHistoryChart row={ROW} onClose={vi.fn()} />)
+    await waitFor(() => expect(screen.queryByText(/loading/i)).not.toBeInTheDocument())
+    const area = screen.getByTestId('area')
+    expect(area.dataset.fill).toBe(area.dataset.stroke)
+    expect(area.dataset.fillOpacity).toBe('0.12')
   })
 
   it('calls onClose when the close button is clicked', () => {
