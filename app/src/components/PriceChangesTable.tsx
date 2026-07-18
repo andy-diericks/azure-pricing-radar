@@ -83,7 +83,7 @@ interface Props {
   rows: TableRow[]
   loading?: boolean
   error?: string | null
-  onRowClick?: (row: TableRow) => void
+  onRowClick?: (row: TableRow, element: HTMLElement) => void
 }
 
 export function PriceChangesTable({ rows, loading, error, onRowClick }: Props) {
@@ -157,13 +157,14 @@ export function PriceChangesTable({ rows, loading, error, onRowClick }: Props) {
               <tr
                 key={row.key}
                 className={`pct__row pct__row--${row.direction}${onRowClick ? ' pct__row--clickable' : ''}`}
-                onClick={onRowClick ? () => onRowClick(row) : undefined}
+                onClick={onRowClick ? (e) => onRowClick(row, e.currentTarget as HTMLElement) : undefined}
                 tabIndex={onRowClick ? 0 : undefined}
                 role={onRowClick ? 'button' : undefined}
                 onKeyDown={
                   onRowClick
                     ? (e) => {
-                        if (e.key === 'Enter' || e.key === ' ') onRowClick(row)
+                        if (e.key === 'Enter' || e.key === ' ')
+                          onRowClick(row, e.currentTarget as HTMLElement)
                       }
                     : undefined
                 }
@@ -197,13 +198,14 @@ export function PriceChangesTable({ rows, loading, error, onRowClick }: Props) {
           <li
             key={row.key}
             className={`pct__card pct__card--${row.direction}${onRowClick ? ' pct__card--clickable' : ''}`}
-            onClick={onRowClick ? () => onRowClick(row) : undefined}
+            onClick={onRowClick ? (e) => onRowClick(row, e.currentTarget as HTMLElement) : undefined}
             tabIndex={onRowClick ? 0 : undefined}
             role={onRowClick ? 'button' : undefined}
             onKeyDown={
               onRowClick
                 ? (e) => {
-                    if (e.key === 'Enter' || e.key === ' ') onRowClick(row)
+                    if (e.key === 'Enter' || e.key === ' ')
+                      onRowClick(row, e.currentTarget as HTMLElement)
                   }
                 : undefined
             }

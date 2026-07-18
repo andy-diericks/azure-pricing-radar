@@ -159,7 +159,7 @@ describe('PriceChangesTable', () => {
     const { container } = render(<PriceChangesTable rows={[makeRow()]} onRowClick={onRowClick} />)
     fireEvent.click(container.querySelector('.pct__row--clickable')!)
     expect(onRowClick).toHaveBeenCalledOnce()
-    expect(onRowClick).toHaveBeenCalledWith(makeRow())
+    expect(onRowClick).toHaveBeenCalledWith(makeRow(), expect.any(HTMLElement))
   })
 
   it('adds clickable class when onRowClick is provided', () => {
@@ -311,7 +311,7 @@ describe('PriceChangesTable — card layout', () => {
     )
     fireEvent.click(container.querySelector('.pct__card--clickable')!)
     expect(onRowClick).toHaveBeenCalledOnce()
-    expect(onRowClick).toHaveBeenCalledWith(makeRow())
+    expect(onRowClick).toHaveBeenCalledWith(makeRow(), expect.any(HTMLElement))
   })
 
   it('card triggers onRowClick on Enter key', () => {
@@ -321,7 +321,7 @@ describe('PriceChangesTable — card layout', () => {
     )
     fireEvent.keyDown(container.querySelector('.pct__card--clickable')!, { key: 'Enter' })
     expect(onRowClick).toHaveBeenCalledOnce()
-    expect(onRowClick).toHaveBeenCalledWith(makeRow())
+    expect(onRowClick).toHaveBeenCalledWith(makeRow(), expect.any(HTMLElement))
   })
 
   it('card applies direction-specific CSS class', () => {

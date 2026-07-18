@@ -71,6 +71,11 @@ export function PriceHistoryChart({ row, onClose }: Props) {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const overlayRef = useRef<HTMLDivElement>(null)
+  const closeRef = useRef<HTMLButtonElement>(null)
+
+  useEffect(() => {
+    closeRef.current?.focus()
+  }, [])
 
   useEffect(() => {
     loadHistory(row.itemKey)
@@ -120,7 +125,7 @@ export function PriceHistoryChart({ row, onClose }: Props) {
               {row.productName} · {row.armRegionName}
             </p>
           </div>
-          <button className="phc__close" onClick={onClose} aria-label="Close">
+          <button ref={closeRef} className="phc__close" onClick={onClose} aria-label="Close">
             ✕
           </button>
         </div>

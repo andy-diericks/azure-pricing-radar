@@ -102,4 +102,28 @@ describe('App', () => {
     fireEvent.click(screen.getByRole('button', { name: /close chart/i }))
     expect(screen.queryByTestId('price-history-chart')).not.toBeInTheDocument()
   })
+
+  it('returns focus to the activating row when the chart is closed', async () => {
+    const { container } = render(<App />)
+    await waitFor(() => expect(screen.queryByTestId('table-skeleton')).not.toBeInTheDocument())
+    const row = container.querySelector('.pct__row--clickable') as HTMLElement
+    row.focus()
+    expect(document.activeElement).toBe(row)
+    fireEvent.click(row)
+    await waitFor(() => expect(screen.getByTestId('price-history-chart')).toBeInTheDocument())
+    fireEvent.click(screen.getByRole('button', { name: /close chart/i }))
+    expect(document.activeElement).toBe(row)
+  })
+
+  it('returns focus to the activating row when Escape is pressed', async () => {
+    const { container } = render(<App />)
+    await waitFor(() => expect(screen.queryByTestId('table-skeleton')).not.toBeInTheDocument())
+    const row = container.querySelector('.pct__row--clickable') as HTMLElement
+    row.focus()
+    fireEvent.click(row)
+    await waitFor(() => expect(screen.getByTestId('price-history-chart')).toBeInTheDocument())
+    fireEvent.keyDown(document, { key: 'Escape' })
+    expect(document.activeElement).toBe(row)
+    await waitFor(() => expect(screen.queryByTestId('price-history-chart')).not.toBeInTheDocument())
+  })
 })

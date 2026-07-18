@@ -1,4 +1,4 @@
-import { lazy, Suspense, useState, useEffect } from 'react'
+import { lazy, Suspense, useState, useEffect, useRef } from 'react'
 import './App.css'
 import { PriceChangesTable } from './components/PriceChangesTable'
 import { LastUpdatedBadge } from './components/LastUpdatedBadge'
@@ -15,6 +15,7 @@ export default function App() {
   const [error, setError] = useState<string | null>(null)
   const [selectedRow, setSelectedRow] = useState<TableRow | null>(null)
   const [lastUpdatedAt, setLastUpdatedAt] = useState<string | null>(null)
+  const openerRef = useRef<HTMLElement | null>(null)
 
   useEffect(() => {
     loadDiffs()
@@ -25,6 +26,30 @@ export default function App() {
       .catch((err: Error) => setError(err.message))
       .finally(() => setLoading(false))
   }, [])
+
+  useEffect(() => {
+    if (!selectedRow) return
+    function handleEscape(e: KeyboardEvent) {
+      if (e.key === 'Escape') {
+        setSelectedRow(null)
+        openerRef.current?.focus()
+        openerRef.current = null
+      }
+    }
+    document.addEventListener('keydown', handleEscape)
+    return () => document.removeEventListener('keydown', handleEscape)
+  }, [selectedRow])
+
+  function handleRowClick(row: TableRow, el: HTMLElement) {
+    openerRef.current = el
+    setSelectedRow(row)
+  }
+
+  function handleChartClose() {
+    setSelectedRow(null)
+    openerRef.current?.focus()
+    openerRef.current = null
+  }
 
   return (
     <div className="app">
@@ -37,12 +62,12 @@ export default function App() {
       <main className="main">
         <section className="card">
           <h2 className="card__heading">Recent price changes</h2>
-          <PriceChangesTable rows={rows} loading={loading} error={error} onRowClick={setSelectedRow} />
+          <PriceChangesTable rows={rows} loading={loading} error={error} onRowClick={handleRowClick} />
         </section>
       </main>
       {selectedRow && (
         <Suspense fallback={<div className="phc__lazy-fallback" aria-label="Loading chart" />}>
-          <PriceHistoryChart row={selectedRow} onClose={() => setSelectedRow(null)} />
+          <PriceHistoryChart row={selectedRow} onClose={handleChartClose} />
         </Suspense>
       )}
     </div>

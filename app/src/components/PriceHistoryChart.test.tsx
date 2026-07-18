@@ -79,6 +79,11 @@ describe('PriceHistoryChart', () => {
     expect(screen.getByText('Standard_D2s_v5')).toBeInTheDocument()
   })
 
+  it('focuses the close button on mount', () => {
+    render(<PriceHistoryChart row={ROW} onClose={vi.fn()} />)
+    expect(document.activeElement).toBe(screen.getByRole('button', { name: /close/i }))
+  })
+
   it('shows skeleton loading state initially', () => {
     render(<PriceHistoryChart row={ROW} onClose={vi.fn()} />)
     expect(screen.getByLabelText(/loading chart/i)).toBeInTheDocument()
