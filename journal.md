@@ -133,3 +133,8 @@ Claude reads the tail of it to remember.
 - Did: Added `app/public/favicon.svg` — a minimal radar icon (concentric circles + sweep line) using ADR 0002 tokens (`#0B1120` background, `#38BDF8` accent). Added `<link rel="icon" type="image/svg+xml" href="/favicon.svg">` and a `<meta name="description">` tag (138 chars) to `app/index.html`. Vite copies `public/` assets to `dist/` automatically; confirmed `dist/favicon.svg` present after build. No tests added (static assets are not unit-tested per issue spec). 102 tests pass; lint, typecheck, build all green.
 - Decisions: Used a radar-sweep icon (concentric circles + one angled line) to reinforce the "Pricing Radar" product name; legible at 16×16 browser-tab size due to single accent color on dark background. Kept meta description under 160 chars and plain-text only as required.
 - Noticed for later: nothing new.
+
+## 2026-07-18T00:00Z — PM run
+- Triage: none — no unlabeled or needs-human open issues
+- Created: #43 polish: add Open Graph and Twitter Card metadata to index.html, #44 polish: add gradient area fill to PriceHistoryChart, #45 accessibility: focus management when price-history chart panel opens and closes
+- Rationale: Queue had 2 open claude-ready issues (#30 perf lazy-load, #37 sort columns); room for 3 before the cap of 5. All three are M1 polish — #43 addresses vision goal 4 (Shareable moments), #44 addresses vision goal 6 (Visual excellence, area-fill pattern flagged twice in the journal), and #45 completes the keyboard accessibility story from #35 (vision goal 6). Queue is now at 5.
