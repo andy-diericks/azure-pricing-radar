@@ -91,14 +91,14 @@ describe('App', () => {
     const { container } = render(<App />)
     await waitFor(() => expect(screen.queryByText(/loading/i)).not.toBeInTheDocument())
     fireEvent.click(container.querySelector('.pct__row--clickable')!)
-    expect(screen.getByTestId('price-history-chart')).toBeInTheDocument()
+    await waitFor(() => expect(screen.getByTestId('price-history-chart')).toBeInTheDocument())
   })
 
   it('closes the history chart when onClose is called', async () => {
     const { container } = render(<App />)
     await waitFor(() => expect(screen.queryByText(/loading/i)).not.toBeInTheDocument())
     fireEvent.click(container.querySelector('.pct__row--clickable')!)
-    expect(screen.getByTestId('price-history-chart')).toBeInTheDocument()
+    await waitFor(() => expect(screen.getByTestId('price-history-chart')).toBeInTheDocument())
     fireEvent.click(screen.getByRole('button', { name: /close chart/i }))
     expect(screen.queryByTestId('price-history-chart')).not.toBeInTheDocument()
   })

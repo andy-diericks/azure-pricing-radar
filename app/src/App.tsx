@@ -1,8 +1,11 @@
-import { useState, useEffect } from 'react'
+import { lazy, Suspense, useState, useEffect } from 'react'
 import './App.css'
 import { PriceChangesTable } from './components/PriceChangesTable'
-import { PriceHistoryChart } from './components/PriceHistoryChart'
 import { LastUpdatedBadge } from './components/LastUpdatedBadge'
+
+const PriceHistoryChart = lazy(() =>
+  import('./components/PriceHistoryChart').then(m => ({ default: m.PriceHistoryChart })),
+)
 import { loadDiffs } from './lib/loadDiffs'
 import type { TableRow } from './types'
 
@@ -38,7 +41,9 @@ export default function App() {
         </section>
       </main>
       {selectedRow && (
-        <PriceHistoryChart row={selectedRow} onClose={() => setSelectedRow(null)} />
+        <Suspense fallback={<div className="phc__lazy-fallback" aria-label="Loading chart" />}>
+          <PriceHistoryChart row={selectedRow} onClose={() => setSelectedRow(null)} />
+        </Suspense>
       )}
     </div>
   )
