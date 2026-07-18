@@ -156,6 +156,10 @@ Claude reads the tail of it to remember.
 - Decisions: Sorting is performed on the `rows` prop inside the component (not in the loader) so the 100-row cap from `loadDiffs` is preserved and the table remains self-contained. Used `useMemo` for the sorted list to avoid re-sorting on every render. `SortableHeader` is defined outside `PriceChangesTable` to prevent remounting on each parent render. Absolute |pct| is used for the `%` column sort — consistent with the default sort intent (largest moves first).
 - Noticed for later: nothing new.
 
+## 2026-07-18T21:08Z — run 2026-07-18-1
+- Task: #44 polish: add gradient area fill to PriceHistoryChart
+- Did: Replaced `LineChart` + `Line` with `AreaChart` + `Area` in `PriceHistoryChart.tsx`. Added `fill={color}` and `fillOpacity={0.12}` to `Area` — fill colour matches the direction-based stroke (`#34D399` drop / `#F87171` increase / `#FBBF24` new). All existing props (`dot={false}`, `activeDot`, `strokeWidth`, `isAnimationActive`) are preserved. Updated the Recharts mock in `PriceHistoryChart.test.tsx` to export `AreaChart`/`Area` (with data attributes for fill/stroke/fillOpacity) and renamed the `line-chart` testid to `area-chart`. Added one new test asserting that `fill === stroke` and `fillOpacity === 0.12`. 122 tests green; lint, typecheck, build all pass.
+- Decisions: Used a flat translucent fill (no SVG gradient definition) as specified in the issue's out-of-scope section. No changes to `lib/format.ts`, tooltip config, or axis formatting — strictly within scope.
 ## 2026-07-18T17:15Z — run 2026-07-18-1714
 - Task: #43 polish: add Open Graph and Twitter Card metadata to index.html
 - Did: Added 9 meta tags to `app/index.html`: `og:title`, `og:description`, `og:type` ("website"), `og:url` (https://andy-diericks.github.io/azure-pricing-radar/), `og:image` (absolute URL pointing to the existing `favicon.svg`), `twitter:card` ("summary"), `twitter:title`, and `twitter:description`. All values match the existing `<title>` and `<meta name="description">`. No JS or new dependencies. 121 tests pass; lint, typecheck, build all green.

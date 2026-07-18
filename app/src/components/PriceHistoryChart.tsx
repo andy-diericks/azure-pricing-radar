@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import {
+  Area,
+  AreaChart,
   CartesianGrid,
-  Line,
-  LineChart,
   ResponsiveContainer,
   Tooltip,
   XAxis,
@@ -138,7 +138,7 @@ export function PriceHistoryChart({ row, onClose }: Props) {
           {!loading && !error && chartData.length > 0 && (
             <div className="phc__chart-container">
               <ResponsiveContainer width="100%" height="100%">
-                <LineChart data={chartData} margin={{ top: 8, right: 16, left: 8, bottom: 8 }}>
+                <AreaChart data={chartData} margin={{ top: 8, right: 16, left: 8, bottom: 8 }}>
                   <CartesianGrid strokeDasharray="3 3" stroke="#1e2d47" />
                   <XAxis
                     dataKey="at"
@@ -164,16 +164,18 @@ export function PriceHistoryChart({ row, onClose }: Props) {
                       />
                     )}
                   />
-                  <Line
+                  <Area
                     type="monotone"
                     dataKey="price"
                     stroke={color}
                     strokeWidth={2}
+                    fill={color}
+                    fillOpacity={0.12}
                     dot={false}
                     activeDot={{ r: 5, fill: color }}
                     isAnimationActive={false}
                   />
-                </LineChart>
+                </AreaChart>
               </ResponsiveContainer>
             </div>
           )}
