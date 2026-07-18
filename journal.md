@@ -134,6 +134,10 @@ Claude reads the tail of it to remember.
 - Decisions: Used a radar-sweep icon (concentric circles + one angled line) to reinforce the "Pricing Radar" product name; legible at 16×16 browser-tab size due to single accent color on dark background. Kept meta description under 160 chars and plain-text only as required.
 - Noticed for later: nothing new.
 
+## 2026-07-18T00:00Z — PM run
+- Triage: none — no unlabeled or needs-human open issues
+- Created: #43 polish: add Open Graph and Twitter Card metadata to index.html, #44 polish: add gradient area fill to PriceHistoryChart, #45 accessibility: focus management when price-history chart panel opens and closes
+- Rationale: Queue had 2 open claude-ready issues (#30 perf lazy-load, #37 sort columns); room for 3 before the cap of 5. All three are M1 polish — #43 addresses vision goal 4 (Shareable moments), #44 addresses vision goal 6 (Visual excellence, area-fill pattern flagged twice in the journal), and #45 completes the keyboard accessibility story from #35 (vision goal 6). Queue is now at 5.
 ## 2026-07-18T06:22Z — run 2026-07-18-0620
 - Task: #30 perf: lazy-load PriceHistoryChart to cut initial JS bundle
 - Did: Replaced the static `import { PriceHistoryChart }` in `App.tsx` with `React.lazy(() => import('./components/PriceHistoryChart').then(m => ({ default: m.PriceHistoryChart })))`. Wrapped the conditional chart render in `<Suspense fallback={<div className="phc__lazy-fallback" />}>` — the fallback is a fixed full-screen dim overlay (4 CSS lines, ADR 0002 `rgba(0,11,28,0.8)`) shown only during the one-time chunk download. Updated two App.test.tsx chart-interaction tests to `await waitFor(...)` before asserting chart presence, since the lazy import resolves asynchronously even in the mocked test environment. Build output: main bundle dropped from ~520 kB to **155 kB**; Recharts split into a separate `PriceHistoryChart-*.js` chunk (361 kB) with no chunk-size warning emitted. 102 tests green; lint, typecheck, build all pass.
