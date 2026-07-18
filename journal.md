@@ -127,3 +127,9 @@ Claude reads the tail of it to remember.
 - Did: Rewrote the "What it tracks today" section to reflect the actual data scopes (`vm-eu-west`, `storage-eu-west`, `openai-eu`). Added a new "Dashboard features" section documenting all M1 features: price-changes table (direction, %, SKU, region, before/after), per-SKU history chart, data-freshness badge, loading/error/empty states, and mobile card layout. Added a "Run locally" section with exact clone+install+dev commands. Removed stale info (old "How the data works" paragraph with outdated scope list). No app code changed; 102 tests pass; lint, typecheck, build all green.
 - Decisions: Kept the OpenAI scope listed as "EU" to match the actual filename (`openai-eu.json`) rather than the outdated "West Europe, Sweden Central, France Central" wording. Preserved existing emoji and section order to minimize diff noise.
 - Noticed for later: nothing new.
+
+## 2026-07-18T03:34Z — run 2026-07-18-0332
+- Task: #29 polish: add favicon and meta description to index.html
+- Did: Added `app/public/favicon.svg` — a minimal radar icon (concentric circles + sweep line) using ADR 0002 tokens (`#0B1120` background, `#38BDF8` accent). Added `<link rel="icon" type="image/svg+xml" href="/favicon.svg">` and a `<meta name="description">` tag (138 chars) to `app/index.html`. Vite copies `public/` assets to `dist/` automatically; confirmed `dist/favicon.svg` present after build. No tests added (static assets are not unit-tested per issue spec). 102 tests pass; lint, typecheck, build all green.
+- Decisions: Used a radar-sweep icon (concentric circles + one angled line) to reinforce the "Pricing Radar" product name; legible at 16×16 browser-tab size due to single accent color on dark background. Kept meta description under 160 chars and plain-text only as required.
+- Noticed for later: nothing new.
