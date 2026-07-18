@@ -1,3 +1,4 @@
+import { useState, useMemo } from 'react'
 import type { TableRow, ChangeDirection } from '../types'
 import { formatPrice, formatPctChange } from '../lib/format'
 import './PriceChangesTable.css'
@@ -16,10 +17,97 @@ const DIRECTION_SR_LABELS: Record<ChangeDirection, string> = {
   increase: 'price increase',
 }
 
+const DIRECTION_ORDER: Record<ChangeDirection, number> = {
+  drop: 0,
+  increase: 1,
+  new: 2,
+  removed: 3,
+}
+
 function rowAriaLabel(row: TableRow): string {
   const pct = formatPctChange(row.priceBefore, row.priceAfter, row.direction)
   const suffix = pct !== '—' ? ` ${pct}` : ''
   return `${row.skuName} · ${row.armRegionName} — ${DIRECTION_SR_LABELS[row.direction]}${suffix}`
+}
+
+type SortKey = 'direction' | 'pct' | 'sku' | 'product' | 'region' | 'before' | 'after'
+type SortDir = 'asc' | 'desc'
+
+function rawPctAbs(row: TableRow): number {
+  if (row.priceBefore === null || row.priceBefore === 0) return 0
+  return Math.abs(((row.priceAfter - row.priceBefore) / row.priceBefore) * 100)
+}
+
+function getSortValue(row: TableRow, key: Exclude<SortKey, 'before'>): number | string {
+  switch (key) {
+    case 'direction': return DIRECTION_ORDER[row.direction]
+    case 'pct': return rawPctAbs(row)
+    case 'sku': return row.skuName
+    case 'product': return row.productName
+    case 'region': return row.armRegionName
+    case 'after': return row.priceAfter
+  }
+}
+
+function sortRows(rows: TableRow[], key: SortKey, dir: SortDir): TableRow[] {
+  return [...rows].sort((a, b) => {
+    if (key === 'before') {
+      if (a.priceBefore === null && b.priceBefore === null) {
+        return DIRECTION_ORDER[a.direction] - DIRECTION_ORDER[b.direction]
+      }
+      if (a.priceBefore === null) return 1
+      if (b.priceBefore === null) return -1
+      const diff = a.priceBefore - b.priceBefore
+      const result = dir === 'desc' ? -diff : diff
+      return result !== 0 ? result : DIRECTION_ORDER[a.direction] - DIRECTION_ORDER[b.direction]
+    }
+
+    const av = getSortValue(a, key)
+    const bv = getSortValue(b, key)
+
+    const cmp =
+      typeof av === 'string'
+        ? (av as string).localeCompare(bv as string)
+        : (av as number) - (bv as number)
+
+    const result = dir === 'desc' ? -cmp : cmp
+    return result !== 0 ? result : DIRECTION_ORDER[a.direction] - DIRECTION_ORDER[b.direction]
+  })
+}
+
+interface SortableHeaderProps {
+  label: string
+  colKey: SortKey
+  activeKey: SortKey
+  activeDir: SortDir
+  onSort: (key: SortKey) => void
+  className?: string
+}
+
+function SortableHeader({ label, colKey, activeKey, activeDir, onSort, className }: SortableHeaderProps) {
+  const isActive = activeKey === colKey
+  return (
+    <th
+      scope="col"
+      className={`pct__th--sortable${className ? ` ${className}` : ''}${isActive ? ' pct__th--active' : ''}`}
+      tabIndex={0}
+      onClick={() => onSort(colKey)}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault()
+          onSort(colKey)
+        }
+      }}
+      aria-sort={isActive ? (activeDir === 'asc' ? 'ascending' : 'descending') : 'none'}
+    >
+      {label}
+      {isActive && (
+        <span className="pct__sort-indicator" aria-hidden="true">
+          {activeDir === 'asc' ? ' ↑' : ' ↓'}
+        </span>
+      )}
+    </th>
+  )
 }
 
 const SKELETON_COUNT = 6
@@ -87,6 +175,20 @@ interface Props {
 }
 
 export function PriceChangesTable({ rows, loading, error, onRowClick }: Props) {
+  const [sortKey, setSortKey] = useState<SortKey>('pct')
+  const [sortDir, setSortDir] = useState<SortDir>('desc')
+
+  const displayRows = useMemo(() => sortRows(rows, sortKey, sortDir), [rows, sortKey, sortDir])
+
+  function handleSort(key: SortKey) {
+    if (key === sortKey) {
+      setSortDir((d) => (d === 'asc' ? 'desc' : 'asc'))
+    } else {
+      setSortKey(key)
+      setSortDir('asc')
+    }
+  }
+
   if (loading) {
     return (
       <>
@@ -142,18 +244,18 @@ export function PriceChangesTable({ rows, loading, error, onRowClick }: Props) {
         <table className="pct" aria-label="Price changes">
           <thead>
             <tr>
-              <th scope="col">Change</th>
-              <th scope="col">SKU</th>
-              <th scope="col">Product</th>
-              <th scope="col">Region</th>
-              <th scope="col" className="pct__num">Before</th>
-              <th scope="col" className="pct__num">After</th>
-              <th scope="col" className="pct__num">%</th>
+              <SortableHeader label="Change" colKey="direction" activeKey={sortKey} activeDir={sortDir} onSort={handleSort} />
+              <SortableHeader label="SKU" colKey="sku" activeKey={sortKey} activeDir={sortDir} onSort={handleSort} />
+              <SortableHeader label="Product" colKey="product" activeKey={sortKey} activeDir={sortDir} onSort={handleSort} />
+              <SortableHeader label="Region" colKey="region" activeKey={sortKey} activeDir={sortDir} onSort={handleSort} />
+              <SortableHeader label="Before" colKey="before" activeKey={sortKey} activeDir={sortDir} onSort={handleSort} className="pct__num" />
+              <SortableHeader label="After" colKey="after" activeKey={sortKey} activeDir={sortDir} onSort={handleSort} className="pct__num" />
+              <SortableHeader label="%" colKey="pct" activeKey={sortKey} activeDir={sortDir} onSort={handleSort} className="pct__num" />
               <th scope="col">Unit</th>
             </tr>
           </thead>
           <tbody>
-            {rows.map((row) => (
+            {displayRows.map((row) => (
               <tr
                 key={row.key}
                 className={`pct__row pct__row--${row.direction}${onRowClick ? ' pct__row--clickable' : ''}`}
@@ -194,7 +296,7 @@ export function PriceChangesTable({ rows, loading, error, onRowClick }: Props) {
       </div>
 
       <ul className="pct__cards" aria-label="Price changes">
-        {rows.map((row) => (
+        {displayRows.map((row) => (
           <li
             key={row.key}
             className={`pct__card pct__card--${row.direction}${onRowClick ? ' pct__card--clickable' : ''}`}
