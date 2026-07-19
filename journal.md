@@ -170,3 +170,8 @@ Claude reads the tail of it to remember.
 - Triage: #51 "Fix data freshness badge" — already labeled claude-ready/P1; DoD was vague ("check that the date showed is the current one"). Added investigation-guide comment distinguishing code bug (loadDiffs.ts reads wrong timestamp) from stale data pipeline (diff files genuinely old). No label changes needed.
 - Created: #52 polish: add change-count summary above price-changes table, #53 accessibility: add skip-to-main-content link, #54 polish: PriceHistoryChart empty state when fewer than 2 history points
 - Rationale: Queue had 1 open claude-ready issue (#51); room for 3 more before the cap of 5. M1 is "done/finishing" — all three issues round out M1 quality: #52 addresses vision goal 2 (instant answers) + goal 6 (visual excellence); #53 completes WCAG 2.4.1 compliance (goal 6); #54 fixes a misleading chart empty-area state (goal 1 trustworthy data + goal 6 polish). Queue is now at 4.
+
+## 2026-07-19T12:00Z — PM run
+- Triage: none — no unlabeled or needs-human issues
+- Created: #57 E1.3a: Faceted filters (service, region, direction, magnitude)
+- Rationale: Queue had 4 open claude-ready issues (#51–#54); room for 1 more before the cap of 5. E1.3 is the next epic sub-task: faceted filters (service, region, direction, magnitude slider) with URL encoding for shareable filtered views. Sized as E1.3a (client-side filtering on full dataset). E1.3b (reset button and UX refinement) deferred to a later run. Queue is now at the cap of 5; next PM run holds until developer runs consume work.
