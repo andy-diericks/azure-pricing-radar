@@ -1,0 +1,73 @@
+.fp {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  align-items: flex-start;
+  padding: var(--space-3) 0 var(--space-4);
+  border-bottom: 1px solid rgba(147, 164, 190, 0.12);
+  margin-bottom: var(--space-4);
+}
+
+.fp__group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-width: 120px;
+}
+
+.fp__label {
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.fp__checks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.fp__check {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+  cursor: pointer;
+  min-height: 24px;
+}
+
+.fp__check input[type='checkbox'] {
+  accent-color: var(--color-accent);
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+
+.fp__check--drop span { color: var(--color-price-drop); }
+.fp__check--increase span { color: var(--color-price-increase); }
+.fp__check--new span { color: var(--color-price-new); }
+
+.fp__magnitude-val {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-accent);
+}
+
+.fp__slider {
+  width: 120px;
+  accent-color: var(--color-accent);
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .fp {
+    gap: var(--space-3);
+  }
+
+  .fp__slider {
+    width: 100%;
+  }
+}
