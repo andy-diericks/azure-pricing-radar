@@ -2,6 +2,7 @@ import { lazy, Suspense, useState, useEffect, useRef } from 'react'
 import './App.css'
 import { PriceChangesTable } from './components/PriceChangesTable'
 import { LastUpdatedBadge } from './components/LastUpdatedBadge'
+import { ChangesSummary } from './components/ChangesSummary'
 
 const PriceHistoryChart = lazy(() =>
   import('./components/PriceHistoryChart').then(m => ({ default: m.PriceHistoryChart })),
@@ -64,6 +65,7 @@ export default function App() {
       <main className="main">
         <section className="card">
           <h2 className="card__heading">Recent price changes</h2>
+          <ChangesSummary rows={rows} loading={loading} />
           <PriceChangesTable rows={rows} loading={loading} error={error} onRowClick={handleRowClick} />
         </section>
       </main>

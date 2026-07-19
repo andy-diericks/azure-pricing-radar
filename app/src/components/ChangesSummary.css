@@ -1,0 +1,41 @@
+.csm {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  margin-bottom: var(--space-4);
+}
+
+.csm--loading {
+  gap: var(--space-3);
+}
+
+.csm__skeleton {
+  display: inline-block;
+  height: 14px;
+  width: 72px;
+  border-radius: var(--radius-control);
+  background-color: rgba(147, 164, 190, 0.1);
+}
+
+.csm__item--drop {
+  color: var(--color-price-drop);
+}
+
+.csm__item--increase {
+  color: var(--color-price-increase);
+}
+
+.csm__item--new {
+  color: var(--color-price-new);
+}
+
+.csm__item--removed {
+  color: var(--color-text-secondary);
+}
+
+.csm__sep {
+  color: var(--color-text-secondary);
+}
