@@ -32,13 +32,17 @@ small, high-quality backlog. You create issues; you NEVER write code.
 - Duplicate check: compare against the titles + labels from the Step 0
   list only. Open a specific issue only if a title collision is ambiguous.
 
-## Step 3 — Journal
-Append to `journal.md` (Commit the journal entry on a branch claude/pm-journal-<date> and open a small PR titled chore: PM journal <date>):
+# Step 3 — Journal
+Append your entry to `journal.md` and commit it directly to `main`
+(`git add journal.md && git commit -m "chore: PM journal <date>" && git push`).
+The Claude app is on the ruleset bypass list, so pushing to `main` is
+allowed — no branch, no PR needed for the journal.
+
 ```
 ## <UTC date-time> — PM run
 - Triage: <N issues triaged / none>
 - Created: #<n> <title>, ... (or "none — queue full")
-- Rationale: <1-2 lines linking choices to the vision milestone>
+- Rationale: <1-2 lines linking choices to the current epic>
 ```
 
 ## Hard limits
