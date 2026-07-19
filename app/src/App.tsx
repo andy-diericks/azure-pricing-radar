@@ -15,13 +15,15 @@ export default function App() {
   const [error, setError] = useState<string | null>(null)
   const [selectedRow, setSelectedRow] = useState<TableRow | null>(null)
   const [lastUpdatedAt, setLastUpdatedAt] = useState<string | null>(null)
+  const [lastCheckedAt, setLastCheckedAt] = useState<string | null>(null)
   const openerRef = useRef<HTMLElement | null>(null)
 
   useEffect(() => {
     loadDiffs()
-      .then(({ rows: r, lastUpdatedAt: ts }) => {
+      .then(({ rows: r, lastUpdatedAt: ts, lastCheckedAt: checked }) => {
         setRows(r)
         setLastUpdatedAt(ts)
+        setLastCheckedAt(checked)
       })
       .catch((err: Error) => setError(err.message))
       .finally(() => setLoading(false))
@@ -57,7 +59,7 @@ export default function App() {
         <div className="header__dot" />
         <span className="header__title">Azure Pricing Radar</span>
         <span className="header__subtitle">Price changes · checked every 6 hours</span>
-        <LastUpdatedBadge lastUpdatedAt={lastUpdatedAt} />
+        <LastUpdatedBadge lastUpdatedAt={lastUpdatedAt} lastCheckedAt={lastCheckedAt} />
       </header>
       <main className="main">
         <section className="card">

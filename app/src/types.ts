@@ -48,4 +48,5 @@ export interface DiffManifestEntry {
 export interface LoadDiffsResult {
   rows: TableRow[]
   lastUpdatedAt: string | null
+  lastCheckedAt: string | null
 }
