@@ -22,6 +22,10 @@ dashboard.
 The live dashboard is a static site (Vite + React) built from the data in this
 repository — no backend, no tracking, no accounts.
 
+**Change-count summary** — a compact stats row above the table showing how
+many changes of each type are in the current diff (e.g. _3 drops · 1 increase
+· 12 new SKUs_), color-coded by direction. Zero-count categories are omitted.
+
 **Price-changes table** — every detected price event from the latest data
 fetch, showing:
 - Direction badge: price drop, price increase, new SKU, or removed SKU
