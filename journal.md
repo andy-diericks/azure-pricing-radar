@@ -175,3 +175,9 @@ Claude reads the tail of it to remember.
 - Triage: none — no unlabeled or needs-human issues
 - Created: #57 E1.3a: Faceted filters (service, region, direction, magnitude)
 - Rationale: Queue had 4 open claude-ready issues (#51–#54); room for 1 more before the cap of 5. E1.3 is the next epic sub-task: faceted filters (service, region, direction, magnitude slider) with URL encoding for shareable filtered views. Sized as E1.3a (client-side filtering on full dataset). E1.3b (reset button and UX refinement) deferred to a later run. Queue is now at the cap of 5; next PM run holds until developer runs consume work.
+
+## 2026-07-19T10:10Z — run 2026-07-19-1
+- Task: #51 Fix data freshness badge (P1)
+- Did: Full investigation — no code bug found. Traced loadDiffs.ts → formatLastUpdated → LastUpdatedBadge: the badge correctly reads the `at` field from data/diffs/2026-07-15/*.json ("2026-07-15T17:41:10.201545+00:00") and displays "15 Jul 2026, 17:41 UTC". The microsecond-format ISO string is explicitly covered by format.test.ts:102. The fetch-prices pipeline has been running 4× a day (last run 2026-07-19T05:38Z) but no new diffs are written because Azure prices have not changed since July 15 — this is correct behavior.
+- Decisions: Closed #51 as not a code bug. Opened #58 (needs-human) requesting that the pipeline write a data/last-checked.json on every run so the badge can distinguish "prices unchanged today" from "data stale" — requires scripts/ modification (frozen zone, human must apply).
+- Noticed for later: nothing new.
