@@ -44,6 +44,6 @@ jobs:
             - Every issue: Goal / Definition of done / Out of scope, sized
               for a single developer run.
           claude_args: |
-            --max-turns 15
+            --max-turns 30
             --model claude-haiku-4-5
             --allowedTools "Bash(git:*),Bash(gh:*),Read,Glob,Grep,Edit,Write"
