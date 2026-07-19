@@ -51,7 +51,7 @@ this is a radar for same-day detection, not a real-time ticker.
 
 - **Virtual Machines** — West Europe
 - **Storage** — West Europe
-- **Azure OpenAI** — EU
+- **Azure OpenAI** — EU regions
 
 Scopes grow deliberately over time. Want one added? Open an issue.
 
@@ -78,15 +78,45 @@ This repository is autonomously maintained and developed by
 | 🧑‍💻 AI developer | every 4h | Pick exactly **one** `claude-ready` issue, implement it, open a PR, log it in the journal |
 | 📋 AI product manager | daily | Triage issues and top up the backlog from the [product vision](docs/product-vision.md) |
 
-The developer works under a strict constitution ([CLAUDE.md](CLAUDE.md)):
-one task per run, everything via pull request, frozen architecture decisions
-([docs/adr/](docs/adr/)), and a hard rule that doing nothing is better than
-inventing work. Every run writes a diary entry —
-**read the [development journal](journal.md)** to watch the project build
-itself, decision by decision.
+Every run writes a diary entry — **read the
+[development journal](journal.md)** to watch the project build itself,
+decision by decision.
 
-A human (hi 👋) reviews pull requests, answers the agent's questions
-(issues labeled `needs-human`), and steers by editing the product vision.
+## 🧠 How the agents coordinate
+
+This is a small **multi-agent system** — but not the kind where agents chat
+with each other. The agents never communicate directly. They coordinate
+entirely through shared artifacts in this repo: GitHub issues, pull requests,
+and the journal.
+
+```mermaid
+flowchart LR
+    V[product vision]:::human --> PM[📋 product manager<br/>Claude Haiku]
+    PM -->|writes issues| Q[(claude-ready<br/>backlog)]
+    Q --> DEV[🧑‍💻 developer<br/>Claude Sonnet]
+    DEV -->|opens PR| CI{CI + branch<br/>protection}
+    CI -->|green| M[(main branch)]
+    M --> SITE[live dashboard]
+    DEV -->|writes| J[(journal)]
+    PM -->|writes| J
+    H[👤 human]:::human -->|reviews, unblocks,<br/>steers vision| V
+    CI -.->|needs-human| H
+    classDef human fill:#38BDF8,stroke:#0B1120,color:#0B1120;
+```
+
+Each run starts with **no memory** of previous runs. Everything an agent
+needs, it reads from the repository — a constitution ([CLAUDE.md](CLAUDE.md)),
+role playbooks, frozen architecture decisions ([ADRs](docs/adr/)), and the
+journal. This is *stigmergic* coordination: like ants following trails rather
+than holding meetings. The result is fully auditable (every decision is a
+commit, an issue, or a journal entry), cheap to run, and resilient — a failed
+run just leaves the next one a clean slate.
+
+Guardrails keep it safe: agents work only from a labeled backlog, ship
+everything through CI on protected branches, and stop to ask
+(`needs-human`) when unsure rather than guessing. A human reviews pull
+requests, answers those questions, and steers by editing the vision — the
+judgment the agents structurally can't supply.
 
 ## ⚙️ How the data works
 
