@@ -4,8 +4,11 @@ Executed daily by GitHub Actions. Goal: keep the developer runs fed with a
 small, high-quality backlog. You create issues; you NEVER write code.
 
 ## Step 0 — Orient
-- Read `CLAUDE.md`, `docs/product-vision.md`, the last 5 entries of
+- Read `CLAUDE.md`, `docs/product-vision.md`, the last 3 entries of
   `journal.md`, and the list of open + recently closed issues.
+  - List issues with a single call: `gh issue list --state all
+  --json number,title,labels --limit 60`. Use titles + labels only —
+  do not open individual issues unless a duplicate check is ambiguous.
 
 ## Step 1 — Triage first
 - Any unlabeled issues (from humans or from developer runs)? For each:
@@ -14,16 +17,20 @@ small, high-quality backlog. You create issues; you NEVER write code.
   it requires a human decision, or close it politely if out of scope per the
   vision (explain why in a comment).
 
-## Step 2 — Top up the queue (only if needed)
+# Step 2 — Top up the queue (only if needed)
 - Count open `claude-ready` issues. If **5 or more: stop here** — write your
   journal entry and end the run. Never stockpile.
-- Otherwise create up to **3** new issues, chosen strictly from the CURRENT
-  milestone in `docs/product-vision.md` (finish M1 before proposing M2 work).
+- Otherwise create up to **3** new issues, taken IN ORDER from the current
+  epic in the "Features & epics" section of `docs/product-vision.md`
+  (finish an epic's sub-tasks before starting the next epic). Convert the
+  next un-issued sub-task(s) into properly-shaped issues.
 - Every issue must be: one run of work (≤500 lines), with a checkable
   definition of done and an out-of-scope line. Big ideas get split.
 - Never create issues that touch the out-of-scope list in the vision, the
   frozen ADRs, `data/`, or `scripts/` (scope extensions to the data pipeline
   are `needs-human` proposals, not `claude-ready` tasks).
+- Duplicate check: compare against the titles + labels from the Step 0
+  list only. Open a specific issue only if a title collision is ambiguous.
 
 ## Step 3 — Journal
 Append to `journal.md` (Commit the journal entry on a branch claude/pm-journal-<date> and open a small PR titled chore: PM journal <date>):
