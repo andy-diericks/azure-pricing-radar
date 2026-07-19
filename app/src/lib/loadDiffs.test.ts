@@ -50,6 +50,8 @@ const VM_DIFF: DiffFile = {
   ],
 }
 
+const LAST_CHECKED = { at: '2026-07-19T05:38:00Z' }
+
 function mockFetch(url: string): Promise<Response> {
   if (url === '/data/diffs/manifest.json') {
     return Promise.resolve(new Response(JSON.stringify(MANIFEST), { status: 200 }))
@@ -64,6 +66,9 @@ function mockFetch(url: string): Promise<Response> {
         { status: 200 },
       ),
     )
+  }
+  if (url === '/data/latest/last-checked.json') {
+    return Promise.resolve(new Response(JSON.stringify(LAST_CHECKED), { status: 200 }))
   }
   return Promise.resolve(new Response('Not Found', { status: 404 }))
 }
@@ -87,6 +92,13 @@ function mockFetchWithStorage(url: string): Promise<Response> {
     return Promise.resolve(new Response(JSON.stringify(STORAGE_DIFF), { status: 200 }))
   }
   return Promise.resolve(new Response('Not Found', { status: 404 }))
+}
+
+function mockFetchNoLastChecked(url: string): Promise<Response> {
+  if (url === '/data/latest/last-checked.json') {
+    return Promise.resolve(new Response('Not Found', { status: 404 }))
+  }
+  return mockFetch(url)
 }
 
 describe('loadDiffs', () => {
@@ -152,5 +164,30 @@ describe('loadDiffs', () => {
     // mockFetch only returns VM_DIFF for vm-eu-west and empty for storage-eu-west
     // both have at = '2026-07-15T17:41:10Z'
     expect(lastUpdatedAt).toBe('2026-07-15T17:41:10Z')
+  })
+
+  it('returns lastCheckedAt from last-checked.json when present', async () => {
+    const { lastCheckedAt } = await loadDiffs()
+    expect(lastCheckedAt).toBe('2026-07-19T05:38:00Z')
+  })
+
+  it('returns null lastCheckedAt when last-checked.json is absent', async () => {
+    vi.stubGlobal('fetch', mockFetchNoLastChecked)
+    const { lastCheckedAt } = await loadDiffs()
+    expect(lastCheckedAt).toBeNull()
+  })
+
+  it('returns null lastCheckedAt when manifest is empty', async () => {
+    vi.stubGlobal('fetch', (url: string) => {
+      if (url === '/data/diffs/manifest.json') {
+        return Promise.resolve(new Response(JSON.stringify([]), { status: 200 }))
+      }
+      if (url === '/data/latest/last-checked.json') {
+        return Promise.resolve(new Response(JSON.stringify(LAST_CHECKED), { status: 200 }))
+      }
+      return Promise.resolve(new Response('Not Found', { status: 404 }))
+    })
+    const result = await loadDiffs()
+    expect(result.lastCheckedAt).toBe('2026-07-19T05:38:00Z')
   })
 })

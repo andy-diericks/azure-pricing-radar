@@ -2,4 +2,8 @@
   font-size: var(--text-xs);
   color: var(--color-text-secondary);
   margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
 }

@@ -60,11 +60,24 @@ function diffToRows(diff: DiffFile): TableRow[] {
 
 export async function loadDiffs(): Promise<LoadDiffsResult> {
   const base = import.meta.env.BASE_URL
-  const manifestRes = await fetch(`${base}data/diffs/manifest.json`)
-  if (!manifestRes.ok) throw new Error(`Manifest fetch failed: ${manifestRes.status}`)
-  const manifest: DiffManifestEntry[] = await manifestRes.json()
 
-  if (manifest.length === 0) return { rows: [], lastUpdatedAt: null }
+  const [manifestRes, checkedRes] = await Promise.all([
+    fetch(`${base}data/diffs/manifest.json`),
+    fetch(`${base}data/latest/last-checked.json`).catch(() => null),
+  ])
+
+  if (!manifestRes.ok) throw new Error(`Manifest fetch failed: ${manifestRes.status}`)
+
+  const [manifest, checkedData] = await Promise.all([
+    manifestRes.json() as Promise<DiffManifestEntry[]>,
+    checkedRes && checkedRes.ok
+      ? (checkedRes.json() as Promise<{ at: string }>)
+      : Promise.resolve(null),
+  ])
+
+  const lastCheckedAt = checkedData ? checkedData.at : null
+
+  if (manifest.length === 0) return { rows: [], lastUpdatedAt: null, lastCheckedAt }
 
   const dates = [...new Set(manifest.map((e) => e.date))].sort().reverse()
   const latestDate = dates[0]
@@ -90,5 +103,5 @@ export async function loadDiffs(): Promise<LoadDiffsResult> {
   const newSkus = allRows.filter((r) => r.direction === 'new')
   const removed = allRows.filter((r) => r.direction === 'removed')
 
-  return { rows: [...changes, ...removed, ...newSkus].slice(0, MAX_ROWS), lastUpdatedAt }
+  return { rows: [...changes, ...removed, ...newSkus].slice(0, MAX_ROWS), lastUpdatedAt, lastCheckedAt }
 }

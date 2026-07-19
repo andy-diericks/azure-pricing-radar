@@ -92,6 +92,9 @@ def main() -> int:
 
         latest_file.write_text(json.dumps(new_index, indent=0, sort_keys=True))
 
+    last_checked_file = latest_dir / "last-checked.json"
+    last_checked_file.write_text(json.dumps({"at": now.isoformat()}, indent=1))
+
     print("changes detected" if any_changes else "no changes")
     return 0
 

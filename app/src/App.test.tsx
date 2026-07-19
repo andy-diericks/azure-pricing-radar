@@ -78,6 +78,7 @@ describe('App', () => {
   it('shows the last-updated badge after load', async () => {
     render(<App />)
     await waitFor(() => expect(screen.queryByTestId('table-skeleton')).not.toBeInTheDocument())
+    // mockFetch returns 404 for last-checked.json, so badge falls back to "Last updated:"
     expect(screen.getByText(/last updated:/i)).toBeInTheDocument()
   })
 
