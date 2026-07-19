@@ -1,14 +1,17 @@
-import { lazy, Suspense, useState, useEffect, useRef } from 'react'
+import { lazy, Suspense, useState, useEffect, useRef, useMemo } from 'react'
 import './App.css'
 import { PriceChangesTable } from './components/PriceChangesTable'
 import { LastUpdatedBadge } from './components/LastUpdatedBadge'
 import { ChangesSummary } from './components/ChangesSummary'
+import { FilterPanel } from './components/FilterPanel'
+import { loadDiffs } from './lib/loadDiffs'
+import { parseFiltersFromSearch, filtersToSearch, applyFilters } from './lib/filters'
+import type { FilterState } from './lib/filters'
+import type { TableRow } from './types'
 
 const PriceHistoryChart = lazy(() =>
   import('./components/PriceHistoryChart').then(m => ({ default: m.PriceHistoryChart })),
 )
-import { loadDiffs } from './lib/loadDiffs'
-import type { TableRow } from './types'
 
 export default function App() {
   const [rows, setRows] = useState<TableRow[]>([])
@@ -17,6 +20,9 @@ export default function App() {
   const [selectedRow, setSelectedRow] = useState<TableRow | null>(null)
   const [lastUpdatedAt, setLastUpdatedAt] = useState<string | null>(null)
   const [lastCheckedAt, setLastCheckedAt] = useState<string | null>(null)
+  const [filters, setFilters] = useState<FilterState>(() =>
+    parseFiltersFromSearch(window.location.search),
+  )
   const openerRef = useRef<HTMLElement | null>(null)
 
   useEffect(() => {
@@ -54,6 +60,14 @@ export default function App() {
     openerRef.current = null
   }
 
+  function handleFiltersChange(next: FilterState) {
+    setFilters(next)
+    const search = filtersToSearch(next)
+    history.replaceState(null, '', search || window.location.pathname)
+  }
+
+  const filteredRows = useMemo(() => applyFilters(rows, filters), [rows, filters])
+
   return (
     <div className="app">
       <header className="header">
@@ -65,8 +79,9 @@ export default function App() {
       <main className="main">
         <section className="card">
           <h2 className="card__heading">Recent price changes</h2>
-          <ChangesSummary rows={rows} loading={loading} />
-          <PriceChangesTable rows={rows} loading={loading} error={error} onRowClick={handleRowClick} />
+          <FilterPanel rows={rows} filters={filters} onChange={handleFiltersChange} />
+          <ChangesSummary rows={filteredRows} loading={loading} />
+          <PriceChangesTable rows={filteredRows} loading={loading} error={error} onRowClick={handleRowClick} />
         </section>
       </main>
       {selectedRow && (
