@@ -1,14 +1,11 @@
 name: Claude dev loop
-
 on:
   schedule:
-    - cron: "17 */4 * * *" # every 2 hours (odd minute avoids the top-of-hour rush)
+    - cron: "17 */4 * * *" # every 4 hours (odd minute avoids the top-of-hour rush)
   workflow_dispatch: {} # manual trigger for testing
-
 concurrency:
   group: claude-dev-loop
   cancel-in-progress: false # never kill a run mid-implementation
-
 jobs:
   dev-run:
     runs-on: ubuntu-latest
@@ -23,12 +20,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0 # full history: Claude reads the journal and git log
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-
       - name: Check for work
         id: gate
         env:
@@ -36,7 +27,12 @@ jobs:
         run: |
           count=$(gh issue list --label claude-ready --state open --json number --jq 'length')
           echo "issues=$count" >> "$GITHUB_OUTPUT"
-
+          echo "Open claude-ready issues: $count"
+      - name: Setup Node
+        if: steps.gate.outputs.issues != '0'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
       - name: Run Claude Code
         if: steps.gate.outputs.issues != '0'
         uses: anthropics/claude-code-action@v1
@@ -44,14 +40,14 @@ jobs:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           prompt: |
             You are the autonomous developer of this repository, on your
-            scheduled 2-hour run.
-
+            scheduled run.
             Execute playbooks/dev-run.md exactly. Reminders:
             - ONE task only. Read CLAUDE.md first — its rules are absolute.
             - A no-op is a valid outcome. Do not invent work.
             - Everything ships via branch + PR, never direct to main.
+            - Enable auto-merge on the PR; never merge directly to main.
             - Append your journal entry to journal.md before finishing.
           claude_args: |
-            --max-turns 60
+            --max-turns 45
             --model claude-sonnet-4-6
             --allowedTools "Bash(git:*),Bash(gh:*),Bash(npm:*),Bash(npx:*),Bash(node:*),Bash(mkdir:*),Bash(ls:*),Bash(cat:*),Edit,Write,Read,Glob,Grep"
