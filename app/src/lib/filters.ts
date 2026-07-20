@@ -5,6 +5,7 @@ export interface FilterState {
   selectedRegions: string[]
   selectedDirections: ChangeDirection[]
   minMagnitude: number
+  searchTerm: string
 }
 
 export const EMPTY_FILTERS: FilterState = {
@@ -12,6 +13,7 @@ export const EMPTY_FILTERS: FilterState = {
   selectedRegions: [],
   selectedDirections: [],
   minMagnitude: 0,
+  searchTerm: '',
 }
 
 export function parseFiltersFromSearch(search: string): FilterState {
@@ -26,6 +28,7 @@ export function parseFiltersFromSearch(search: string): FilterState {
     selectedRegions: split('region'),
     selectedDirections: split('direction') as ChangeDirection[],
     minMagnitude: isNaN(mag) || mag < 0 ? 0 : Math.min(mag, 100),
+    searchTerm: params.get('search') ?? '',
   }
 }
 
@@ -35,12 +38,15 @@ export function filtersToSearch(f: FilterState): string {
   if (f.selectedRegions.length) p.set('region', f.selectedRegions.join(','))
   if (f.selectedDirections.length) p.set('direction', f.selectedDirections.join(','))
   if (f.minMagnitude > 0) p.set('magnitude', String(f.minMagnitude))
+  if (f.searchTerm) p.set('search', f.searchTerm)
   const s = p.toString()
   return s ? `?${s}` : ''
 }
 
 export function applyFilters(rows: TableRow[], f: FilterState): TableRow[] {
+  const term = f.searchTerm.toLowerCase()
   return rows.filter(row => {
+    if (term && !row.skuName.toLowerCase().includes(term)) return false
     if (f.selectedServices.length > 0 && !f.selectedServices.includes(row.scope)) return false
     if (f.selectedRegions.length > 0 && !f.selectedRegions.includes(row.armRegionName)) return false
     if (f.selectedDirections.length > 0 && !f.selectedDirections.includes(row.direction)) return false

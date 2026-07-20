@@ -4,6 +4,7 @@ import { PriceChangesTable } from './components/PriceChangesTable'
 import { LastUpdatedBadge } from './components/LastUpdatedBadge'
 import { ChangesSummary } from './components/ChangesSummary'
 import { FilterPanel } from './components/FilterPanel'
+import { SearchInput } from './components/SearchInput'
 import { loadDiffs } from './lib/loadDiffs'
 import { parseFiltersFromSearch, filtersToSearch, applyFilters } from './lib/filters'
 import type { FilterState } from './lib/filters'
@@ -66,6 +67,10 @@ export default function App() {
     history.replaceState(null, '', search || window.location.pathname)
   }
 
+  function handleSearchChange(term: string) {
+    handleFiltersChange({ ...filters, searchTerm: term })
+  }
+
   const filteredRows = useMemo(() => applyFilters(rows, filters), [rows, filters])
 
   return (
@@ -80,6 +85,7 @@ export default function App() {
       <main id="main-content" className="main">
         <section className="card">
           <h2 className="card__heading">Recent price changes</h2>
+          <SearchInput value={filters.searchTerm} onChange={handleSearchChange} />
           <FilterPanel rows={rows} filters={filters} onChange={handleFiltersChange} />
           <ChangesSummary rows={filteredRows} loading={loading} />
           <PriceChangesTable rows={filteredRows} loading={loading} error={error} onRowClick={handleRowClick} />
