@@ -1,4 +1,4 @@
-import { lazy, Suspense, useState, useEffect, useRef, useMemo } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import './App.css'
 import { PriceChangesTable } from './components/PriceChangesTable'
 import { LastUpdatedBadge } from './components/LastUpdatedBadge'
@@ -11,21 +11,15 @@ import { parseFiltersFromSearch, filtersToSearch, applyFilters } from './lib/fil
 import type { FilterState } from './lib/filters'
 import type { TableRow } from './types'
 
-const PriceHistoryChart = lazy(() =>
-  import('./components/PriceHistoryChart').then(m => ({ default: m.PriceHistoryChart })),
-)
-
 export default function App() {
   const [rows, setRows] = useState<TableRow[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
-  const [selectedRow, setSelectedRow] = useState<TableRow | null>(null)
   const [lastUpdatedAt, setLastUpdatedAt] = useState<string | null>(null)
   const [lastCheckedAt, setLastCheckedAt] = useState<string | null>(null)
   const [filters, setFilters] = useState<FilterState>(() =>
     parseFiltersFromSearch(window.location.search),
   )
-  const openerRef = useRef<HTMLElement | null>(null)
 
   useEffect(() => {
     loadDiffs()
@@ -38,28 +32,8 @@ export default function App() {
       .finally(() => setLoading(false))
   }, [])
 
-  useEffect(() => {
-    if (!selectedRow) return
-    function handleEscape(e: KeyboardEvent) {
-      if (e.key === 'Escape') {
-        setSelectedRow(null)
-        openerRef.current?.focus()
-        openerRef.current = null
-      }
-    }
-    document.addEventListener('keydown', handleEscape)
-    return () => document.removeEventListener('keydown', handleEscape)
-  }, [selectedRow])
-
-  function handleRowClick(row: TableRow, el: HTMLElement) {
-    openerRef.current = el
-    setSelectedRow(row)
-  }
-
-  function handleChartClose() {
-    setSelectedRow(null)
-    openerRef.current?.focus()
-    openerRef.current = null
+  function handleRowClick(row: TableRow) {
+    window.location.hash = `#/sku/${encodeURIComponent(row.skuName)}`
   }
 
   function handleFiltersChange(next: FilterState) {
@@ -97,11 +71,6 @@ export default function App() {
           <PriceChangesTable rows={filteredRows} loading={loading} error={error} onRowClick={handleRowClick} />
         </section>
       </main>
-      {selectedRow && (
-        <Suspense fallback={<div className="phc__lazy-fallback" aria-label="Loading chart" />}>
-          <PriceHistoryChart row={selectedRow} onClose={handleChartClose} />
-        </Suspense>
-      )}
     </div>
   )
 }

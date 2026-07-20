@@ -1,7 +1,16 @@
 import { useState, useEffect } from 'react'
+import {
+  Area,
+  AreaChart,
+  CartesianGrid,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis,
+} from 'recharts'
 import { loadSkuIndex } from '../lib/loadSkuIndex'
-import { formatPrice } from '../lib/format'
-import type { SkuEntry, SkuIndex } from '../lib/skuIndex'
+import { formatPrice, formatDateAxis, formatDateFull, directionColor } from '../lib/format'
+import type { SkuEntry, SkuHistoryPoint, SkuIndex } from '../lib/skuIndex'
 import '../App.css'
 import './SkuPage.css'
 
@@ -29,6 +38,172 @@ function buildDescription(family: string, entry: SkuEntry): string {
     ? ` Current price from ${formatPrice(cheapest.retailPrice)}/${cheapest.unitOfMeasure.toLowerCase().replace(/^1 /, '')}.`
     : ''
   return `Azure retail pricing for ${family} (${entry.productName}).${priceStr}`
+}
+
+interface ChartPoint {
+  at: string
+  price: number
+}
+
+function getChartDirection(points: (SkuHistoryPoint & { price: number })[]): string {
+  const last = points[points.length - 1]
+  if (!last) return 'new'
+  if (last.direction === 'changed') {
+    if (last.priceBefore !== undefined && last.price < last.priceBefore) return 'drop'
+    if (last.priceBefore !== undefined && last.price > last.priceBefore) return 'increase'
+  }
+  return 'new'
+}
+
+interface SkuChartTooltipProps {
+  active?: boolean
+  payload?: ReadonlyArray<{ value?: unknown }>
+  label?: string | number
+  data: ChartPoint[]
+  unitOfMeasure: string
+}
+
+function SkuChartTooltip({ active, payload, label, data, unitOfMeasure }: SkuChartTooltipProps) {
+  if (!active || !payload?.length || typeof label !== 'string' || !label) return null
+  const raw = payload[0].value
+  if (typeof raw !== 'number') return null
+  const price = raw
+  const idx = data.findIndex((p) => p.at === label)
+  const prev = idx > 0 ? data[idx - 1].price : null
+  const change =
+    prev !== null
+      ? (() => {
+          const abs = price - prev
+          const pct = prev !== 0 ? (abs / prev) * 100 : 0
+          const sign = abs >= 0 ? '+' : ''
+          return { text: `${sign}${formatPrice(abs)} (${sign}${pct.toFixed(1)}%)`, up: abs >= 0 }
+        })()
+      : null
+
+  return (
+    <div className="phc__tooltip">
+      <div className="phc__tooltip-date">{formatDateFull(label)}</div>
+      <div className="phc__tooltip-price">{formatPrice(price, unitOfMeasure)}</div>
+      {change && (
+        <div className={`phc__tooltip-change phc__tooltip-change--${change.up ? 'up' : 'down'}`}>
+          {change.text}
+        </div>
+      )}
+    </div>
+  )
+}
+
+function ChartEmptyIcon() {
+  return (
+    <svg className="sku-page__empty-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+      <rect x="4" y="4" width="32" height="32" rx="2" stroke="currentColor" strokeWidth="2" />
+      <polyline points="8,28 16,20 22,24 32,12" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" strokeLinecap="round" />
+      <line x1="13" y1="32" x2="27" y2="32" stroke="currentColor" strokeWidth="1.5" strokeDasharray="2 2" />
+    </svg>
+  )
+}
+
+interface HistoryProps {
+  entry: SkuEntry
+}
+
+function SkuHistory({ entry }: HistoryProps) {
+  const primaryRegion = entry.regions.slice().sort((a, b) => a.retailPrice - b.retailPrice)[0]
+  if (!primaryRegion) return null
+
+  const regionPoints = entry.history
+    .filter((h) => h.armRegionName === primaryRegion.armRegionName && h.retailPrice !== null)
+    .map((h) => ({ ...h, price: h.retailPrice as number }))
+    .sort((a, b) => a.at.localeCompare(b.at))
+
+  const chartData: ChartPoint[] = regionPoints.map((p) => ({ at: p.at, price: p.price }))
+
+  const rangeMs =
+    chartData.length > 1
+      ? new Date(chartData[chartData.length - 1].at).getTime() -
+        new Date(chartData[0].at).getTime()
+      : 0
+
+  const color = directionColor(getChartDirection(regionPoints))
+
+  return (
+    <div className="sku-page__history">
+      <h2 className="sku-page__history-heading">
+        Price history · {primaryRegion.armRegionName}
+      </h2>
+
+      {chartData.length === 0 && (
+        <div className="sku-page__empty" data-testid="sku-history-empty">
+          <ChartEmptyIcon />
+          <p className="sku-page__empty-headline">No price changes recorded yet</p>
+          <p className="sku-page__empty-subline">Check back after the next data fetch</p>
+        </div>
+      )}
+
+      {chartData.length === 1 && (
+        <div className="sku-page__single" data-testid="sku-history-single">
+          <p className="sku-page__single-price" style={{ color }}>
+            {formatPrice(chartData[0].price, primaryRegion.unitOfMeasure)}
+          </p>
+          <dl className="sku-page__single-meta">
+            <dt>Region</dt>
+            <dd>{primaryRegion.armRegionName}</dd>
+            <dt>First seen</dt>
+            <dd>{formatDateFull(chartData[0].at)}</dd>
+          </dl>
+          <div className="sku-page__empty">
+            <ChartEmptyIcon />
+            <p className="sku-page__empty-headline">Not enough history yet</p>
+            <p className="sku-page__empty-subline">Check back after the next data fetch</p>
+          </div>
+        </div>
+      )}
+
+      {chartData.length >= 2 && (
+        <div className="sku-page__chart-container" data-testid="sku-history-chart">
+          <ResponsiveContainer width="100%" height="100%">
+            <AreaChart data={chartData} margin={{ top: 8, right: 16, left: 8, bottom: 8 }}>
+              <CartesianGrid strokeDasharray="3 3" stroke="#1e2d47" />
+              <XAxis
+                dataKey="at"
+                tickFormatter={(v: string) => formatDateAxis(v, rangeMs)}
+                tick={{ fill: '#93A4BE', fontSize: 13 }}
+                axisLine={{ stroke: '#1e2d47', strokeWidth: 1 }}
+                tickLine={false}
+              />
+              <YAxis
+                tickFormatter={(v: number) => formatPrice(v)}
+                tick={{ fill: '#93A4BE', fontSize: 13 }}
+                axisLine={{ stroke: '#1e2d47', strokeWidth: 1 }}
+                tickLine={false}
+                width={72}
+              />
+              <Tooltip
+                content={(props) => (
+                  <SkuChartTooltip
+                    {...props}
+                    data={chartData}
+                    unitOfMeasure={primaryRegion.unitOfMeasure}
+                  />
+                )}
+              />
+              <Area
+                type="monotone"
+                dataKey="price"
+                stroke={color}
+                strokeWidth={2}
+                fill={color}
+                fillOpacity={0.12}
+                dot={false}
+                activeDot={{ r: 5, fill: color }}
+                isAnimationActive={false}
+              />
+            </AreaChart>
+          </ResponsiveContainer>
+        </div>
+      )}
+    </div>
+  )
 }
 
 export function SkuPage({ family }: Props) {
@@ -186,6 +361,7 @@ export function SkuPage({ family }: Props) {
               ))}
             </tbody>
           </table>
+          <SkuHistory entry={entry} />
         </div>
       </main>
     </div>

@@ -2,6 +2,21 @@ import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
 import { render, screen, waitFor } from '@testing-library/react'
 import { SkuPage } from './SkuPage'
 import type { SkuIndex } from '../lib/skuIndex'
+import React from 'react'
+
+vi.mock('recharts', () => ({
+  ResponsiveContainer: ({ children }: { children: React.ReactNode }) => <div>{children}</div>,
+  AreaChart: ({ children }: { children: React.ReactNode }) => (
+    <div data-testid="area-chart">{children}</div>
+  ),
+  Area: ({ stroke, fill, fillOpacity }: { stroke: string; fill: string; fillOpacity: number }) => (
+    <div data-testid="area" data-stroke={stroke} data-fill={fill} data-fill-opacity={fillOpacity} />
+  ),
+  XAxis: () => null,
+  YAxis: () => null,
+  CartesianGrid: () => null,
+  Tooltip: () => null,
+}))
 
 const SKU_INDEX: SkuIndex = {
   generatedAt: '2026-07-20T00:00:00Z',
@@ -19,16 +34,47 @@ const SKU_INDEX: SkuIndex = {
   },
 }
 
-function mockFetch(url: string): Promise<Response> {
-  if (url.endsWith('sku-index.json')) {
-    return Promise.resolve(new Response(JSON.stringify(SKU_INDEX), { status: 200 }))
+const SKU_INDEX_TWO_POINTS: SkuIndex = {
+  generatedAt: '2026-07-20T00:00:00Z',
+  skus: {
+    Standard_D2s_v5: {
+      productName: 'Virtual Machines Dsv5 Series',
+      regions: [
+        { armRegionName: 'westeurope', scope: 'vm-eu-west', retailPrice: 0.088, unitOfMeasure: '1 Hour' },
+      ],
+      history: [
+        { at: '2026-07-15T17:41:10Z', armRegionName: 'westeurope', retailPrice: 0.096, direction: 'added' },
+        { at: '2026-07-16T12:00:00Z', armRegionName: 'westeurope', retailPrice: 0.088, priceBefore: 0.096, direction: 'changed' },
+      ],
+    },
+  },
+}
+
+const SKU_INDEX_NO_HISTORY: SkuIndex = {
+  generatedAt: '2026-07-20T00:00:00Z',
+  skus: {
+    Standard_D2s_v5: {
+      productName: 'Virtual Machines Dsv5 Series',
+      regions: [
+        { armRegionName: 'westeurope', scope: 'vm-eu-west', retailPrice: 0.096, unitOfMeasure: '1 Hour' },
+      ],
+      history: [],
+    },
+  },
+}
+
+function mockFetch(index: SkuIndex) {
+  return function (url: string): Promise<Response> {
+    if (url.endsWith('sku-index.json')) {
+      return Promise.resolve(new Response(JSON.stringify(index), { status: 200 }))
+    }
+    return Promise.resolve(new Response('Not Found', { status: 404 }))
   }
-  return Promise.resolve(new Response('Not Found', { status: 404 }))
 }
 
 describe('SkuPage', () => {
   beforeEach(() => {
-    vi.stubGlobal('fetch', mockFetch)
+    vi.stubGlobal('fetch', mockFetch(SKU_INDEX))
     document.title = 'Azure Pricing Radar'
   })
 
@@ -55,7 +101,7 @@ describe('SkuPage', () => {
 
     it('renders region prices in a table', async () => {
       render(<SkuPage family="Standard_D2s_v5" />)
-      await waitFor(() => expect(screen.getByText('westeurope')).toBeInTheDocument())
+      await waitFor(() => expect(screen.getAllByText('westeurope').length).toBeGreaterThan(0))
       expect(screen.getByText('northeurope')).toBeInTheDocument()
       expect(screen.getByText('$0.096')).toBeInTheDocument()
       expect(screen.getByText('$0.102')).toBeInTheDocument()
@@ -150,6 +196,48 @@ describe('SkuPage', () => {
       await waitFor(() =>
         expect(screen.getByText(/failed to load sku data/i)).toBeInTheDocument(),
       )
+    })
+  })
+
+  describe('price history section', () => {
+    it('shows single-point display when SKU has exactly 1 history point', async () => {
+      render(<SkuPage family="Standard_D2s_v5" />)
+      await waitFor(() =>
+        expect(screen.getByTestId('sku-history-single')).toBeInTheDocument(),
+      )
+      expect(screen.getByText('$0.096 / 1 Hour')).toBeInTheDocument()
+      expect(screen.getAllByText('westeurope').length).toBeGreaterThan(0)
+      expect(screen.getByText('15 Jul 2026')).toBeInTheDocument()
+      expect(screen.getByText(/not enough history yet/i)).toBeInTheDocument()
+    })
+
+    it('renders area chart when SKU has 2+ history points', async () => {
+      vi.stubGlobal('fetch', mockFetch(SKU_INDEX_TWO_POINTS))
+      render(<SkuPage family="Standard_D2s_v5" />)
+      await waitFor(() =>
+        expect(screen.getByTestId('sku-history-chart')).toBeInTheDocument(),
+      )
+      expect(screen.getByTestId('area-chart')).toBeInTheDocument()
+      expect(screen.queryByTestId('sku-history-single')).not.toBeInTheDocument()
+    })
+
+    it('shows drop color when last history point is a price decrease', async () => {
+      vi.stubGlobal('fetch', mockFetch(SKU_INDEX_TWO_POINTS))
+      render(<SkuPage family="Standard_D2s_v5" />)
+      await waitFor(() =>
+        expect(screen.getByTestId('area')).toBeInTheDocument(),
+      )
+      const area = screen.getByTestId('area')
+      expect(area.dataset.stroke).toBe('#34D399')
+    })
+
+    it('shows empty state when SKU has 0 history points for primary region', async () => {
+      vi.stubGlobal('fetch', mockFetch(SKU_INDEX_NO_HISTORY))
+      render(<SkuPage family="Standard_D2s_v5" />)
+      await waitFor(() =>
+        expect(screen.getByTestId('sku-history-empty')).toBeInTheDocument(),
+      )
+      expect(screen.getByText(/no price changes recorded yet/i)).toBeInTheDocument()
     })
   })
 })

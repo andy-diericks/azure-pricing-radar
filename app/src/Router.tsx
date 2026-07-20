@@ -1,7 +1,10 @@
-import { useState, useEffect } from 'react'
+import { lazy, Suspense, useState, useEffect } from 'react'
 import App from './App'
-import { SkuPage } from './components/SkuPage'
 import { parseRoute } from './lib/useRoute'
+
+const SkuPage = lazy(() =>
+  import('./components/SkuPage').then(m => ({ default: m.SkuPage })),
+)
 
 export function Router() {
   const [route, setRoute] = useState(() => parseRoute(window.location.hash))
@@ -15,7 +18,11 @@ export function Router() {
   }, [])
 
   if (route.view === 'sku') {
-    return <SkuPage family={route.family} />
+    return (
+      <Suspense fallback={<div className="phc__lazy-fallback" aria-label="Loading" />}>
+        <SkuPage family={route.family} />
+      </Suspense>
+    )
   }
   return <App />
 }
