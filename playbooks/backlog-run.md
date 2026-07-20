@@ -20,8 +20,11 @@ application code.
   under the vision's "Out of scope" or "Frozen zones".
 
 ## Step 2 — Top up the queue (only if needed)
-- Count open `claude-ready` issues. If **5 or more: stop here** — write your
-  journal entry and end the run. Never stockpile.
+- Count OPEN `claude-ready` issues only, with a dedicated call:
+  `gh issue list --state open --label claude-ready --json number --jq 'length'`.
+  If that count is **5 or more: stop here** — journal and end. Never
+  stockpile. (The Step 0 `--state all` list is for duplicate-checking only,
+  NOT for counting the queue.)
 - Otherwise create up to **3** new issues, taken IN ORDER from the Current
   Epic (see the top of `docs/product-vision.md`). Convert the next
   un-issued sub-task(s) of that epic into properly-shaped issues. Do not
