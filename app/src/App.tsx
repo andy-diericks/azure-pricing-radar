@@ -70,13 +70,14 @@ export default function App() {
 
   return (
     <div className="app">
+      <a href="#main-content" className="skip-link">Skip to main content</a>
       <header className="header">
         <div className="header__dot" />
         <span className="header__title">Azure Pricing Radar</span>
         <span className="header__subtitle">Price changes · checked every 6 hours</span>
         <LastUpdatedBadge lastUpdatedAt={lastUpdatedAt} lastCheckedAt={lastCheckedAt} />
       </header>
-      <main className="main">
+      <main id="main-content" className="main">
         <section className="card">
           <h2 className="card__heading">Recent price changes</h2>
           <FilterPanel rows={rows} filters={filters} onChange={handleFiltersChange} />
