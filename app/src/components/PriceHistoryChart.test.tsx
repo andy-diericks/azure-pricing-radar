@@ -160,7 +160,7 @@ describe('PriceHistoryChart', () => {
     expect(screen.queryByTestId('area-chart')).not.toBeInTheDocument()
   })
 
-  it('renders empty state when history has exactly 1 point', async () => {
+  it('renders single-point layout when history has exactly 1 point', async () => {
     vi.stubGlobal('fetch', (url: string) => {
       if (url === '/data/diffs/manifest.json') {
         return Promise.resolve(
@@ -179,6 +179,10 @@ describe('PriceHistoryChart', () => {
     await waitFor(() =>
       expect(screen.getByText(/not enough history yet/i)).toBeInTheDocument(),
     )
+    expect(screen.getByText('$0.096 / 1 Hour')).toBeInTheDocument()
+    expect(screen.getByText('Virtual Machines Dsv5 Series')).toBeInTheDocument()
+    expect(screen.getByText('westeurope')).toBeInTheDocument()
+    expect(screen.getByText('15 Jul 2026')).toBeInTheDocument()
     expect(screen.getByText(/check back after the next data fetch/i)).toBeInTheDocument()
     expect(screen.queryByTestId('area-chart')).not.toBeInTheDocument()
   })
