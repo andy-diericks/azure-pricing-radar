@@ -53,9 +53,8 @@ vision's items 6-8).
   below), so it lands in the PR.
 - Push and open a PR: title = issue title; body = what / why / how tested;
   screenshots if UI; and "Closes #<number>".
-- Do NOT merge the PR or enable auto-merge. Leave it open for human review.
-  The human reviews, approves, and merges. Your job ends when the PR is open
-  and CI is running.
+- Do NOT enable auto-merge. Open the PR and leave it for the human to
+  review and merge. Your job ends when the PR is open and CI is running.
 
 ## Journal entry format
 ```
