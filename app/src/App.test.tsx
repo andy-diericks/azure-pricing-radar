@@ -59,6 +59,19 @@ describe('App', () => {
     expect(screen.getByText('Azure Pricing Radar')).toBeInTheDocument()
   })
 
+  it('has a skip link with href pointing to main-content', () => {
+    const { container } = render(<App />)
+    const skip = container.querySelector('a.skip-link')
+    expect(skip).toBeInTheDocument()
+    expect(skip).toHaveAttribute('href', '#main-content')
+  })
+
+  it('skip link is the first focusable element in the document', () => {
+    const { container } = render(<App />)
+    const focusable = container.querySelectorAll('a, button, input, select, textarea, [tabindex]')
+    expect(focusable[0]).toHaveClass('skip-link')
+  })
+
   it('renders the section heading', () => {
     render(<App />)
     expect(screen.getByRole('heading', { name: /recent price changes/i })).toBeInTheDocument()
