@@ -1,16 +1,7 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
 import { render, screen, waitFor, fireEvent } from '@testing-library/react'
 import App from './App'
-import type { DiffFile, DiffManifestEntry, TableRow } from './types'
-
-vi.mock('./components/PriceHistoryChart', () => ({
-  PriceHistoryChart: ({ row, onClose }: { row: TableRow; onClose: () => void }) => (
-    <div data-testid="price-history-chart">
-      <span>{row.skuName}</span>
-      <button onClick={onClose}>Close chart</button>
-    </div>
-  ),
-}))
+import type { DiffFile, DiffManifestEntry } from './types'
 
 const MANIFEST: DiffManifestEntry[] = [
   { path: 'diffs/2026-07-15/1741-vm-eu-west.json', scope: 'vm-eu-west', date: '2026-07-15' },
@@ -101,43 +92,10 @@ describe('App', () => {
     await waitFor(() => expect(screen.getByText(/failed to load price changes/i)).toBeInTheDocument())
   })
 
-  it('opens the history chart when a row is clicked', async () => {
-    const { container } = render(<App />)
-    await waitFor(() => expect(screen.queryByText(/loading/i)).not.toBeInTheDocument())
-    fireEvent.click(container.querySelector('.pct__row--clickable')!)
-    await waitFor(() => expect(screen.getByTestId('price-history-chart')).toBeInTheDocument())
-  })
-
-  it('closes the history chart when onClose is called', async () => {
-    const { container } = render(<App />)
-    await waitFor(() => expect(screen.queryByText(/loading/i)).not.toBeInTheDocument())
-    fireEvent.click(container.querySelector('.pct__row--clickable')!)
-    await waitFor(() => expect(screen.getByTestId('price-history-chart')).toBeInTheDocument())
-    fireEvent.click(screen.getByRole('button', { name: /close chart/i }))
-    expect(screen.queryByTestId('price-history-chart')).not.toBeInTheDocument()
-  })
-
-  it('returns focus to the activating row when the chart is closed', async () => {
+  it('navigates to the SKU page when a row is clicked', async () => {
     const { container } = render(<App />)
     await waitFor(() => expect(screen.queryByTestId('table-skeleton')).not.toBeInTheDocument())
-    const row = container.querySelector('.pct__row--clickable') as HTMLElement
-    row.focus()
-    expect(document.activeElement).toBe(row)
-    fireEvent.click(row)
-    await waitFor(() => expect(screen.getByTestId('price-history-chart')).toBeInTheDocument())
-    fireEvent.click(screen.getByRole('button', { name: /close chart/i }))
-    expect(document.activeElement).toBe(row)
-  })
-
-  it('returns focus to the activating row when Escape is pressed', async () => {
-    const { container } = render(<App />)
-    await waitFor(() => expect(screen.queryByTestId('table-skeleton')).not.toBeInTheDocument())
-    const row = container.querySelector('.pct__row--clickable') as HTMLElement
-    row.focus()
-    fireEvent.click(row)
-    await waitFor(() => expect(screen.getByTestId('price-history-chart')).toBeInTheDocument())
-    fireEvent.keyDown(document, { key: 'Escape' })
-    expect(document.activeElement).toBe(row)
-    await waitFor(() => expect(screen.queryByTestId('price-history-chart')).not.toBeInTheDocument())
+    fireEvent.click(container.querySelector('.pct__row--clickable')!)
+    expect(window.location.hash).toBe('#/sku/Standard_D2s_v5')
   })
 })
