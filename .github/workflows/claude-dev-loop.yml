@@ -45,7 +45,7 @@ jobs:
             - ONE task only. Read CLAUDE.md first — its rules are absolute.
             - A no-op is a valid outcome. Do not invent work.
             - Everything ships via branch + PR, never direct to main.
-            - Enable auto-merge on the PR; never merge directly to main.
+            - Open the PR and leave it for human review; never merge it yourself.
             - Append your journal entry to journal.md before finishing.
           claude_args: |
             --max-turns 45
