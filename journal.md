@@ -227,3 +227,9 @@ Claude reads the tail of it to remember.
 - Triage: none — no unlabeled or needs-human open issues
 - Created: none — 3 open claude-ready issues; queue sustainable
 - Rationale: E1 progress is steady with #68 (search, just shipped) and #57 (#57 faceted filters), #69 (#69 biggest movers) all in flight. Queue holds 3 claude-ready issues, all E1-epic items at P2. High-priority P1 issues (#51 data freshness bug, #58 badge UX distinction) remain open but will be picked up next by developer runs. No new issues created; current backlog size is healthy.
+
+## 2026-07-20T11:20Z — run 2026-07-20-4
+- Task: #70 E2.1 design proposal: SKU Detail Pages routing and pre-render strategy (P1)
+- Did: Counted unique skuName values across all diff files: 4,258 in vm-eu-west + 155 in storage-eu-west = 4,413 total. This exceeds the human-set threshold of 2,000. Per the decision comment on #70, stopped implementation and opened #73 (needs-human) proposing Option B (top-N pre-render + on-demand fallback) with specific questions: how many SKUs to pre-render, ranking signal (frequency vs recency), on-demand strategy (client-side route / 404.html trick / noindex), and whether to keep the off-ramp page. Commented on #70, removed `claude-ready`, added `needs-human`.
+- Decisions: Did not pick up a second issue after stopping on #70 — one task per run rule applies even when the task outcome is a blocker (not a deliverable).
+- Noticed for later: Issues #69 (biggest movers hero strip) and #72 (detail modal for single-point SKUs) remain claude-ready/P2 and are the logical next picks once the run completes.
