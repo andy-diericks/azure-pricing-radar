@@ -21,6 +21,7 @@ vi.mock('recharts', () => ({
 
 const MANIFEST: DiffManifestEntry[] = [
   { path: 'diffs/2026-07-15/1741-vm-eu-west.json', scope: 'vm-eu-west', date: '2026-07-15' },
+  { path: 'diffs/2026-07-16/1200-vm-eu-west.json', scope: 'vm-eu-west', date: '2026-07-16' },
 ]
 
 const DIFF: DiffFile = {
@@ -40,6 +41,20 @@ const DIFF: DiffFile = {
   ],
   removed: [],
   changed: [],
+}
+
+const DIFF2: DiffFile = {
+  scope: 'vm-eu-west',
+  at: '2026-07-16T12:00:00Z',
+  added: [],
+  removed: [],
+  changed: [
+    {
+      key: 'K1',
+      before: { key: 'K1', retailPrice: 0.096, unitPrice: 0.096, unitOfMeasure: '1 Hour', productName: 'Virtual Machines Dsv5 Series', skuName: 'Standard_D2s_v5', meterName: 'D2s v5', armRegionName: 'westeurope' },
+      after: { key: 'K1', retailPrice: 0.088, unitPrice: 0.088, unitOfMeasure: '1 Hour', productName: 'Virtual Machines Dsv5 Series', skuName: 'Standard_D2s_v5', meterName: 'D2s v5', armRegionName: 'westeurope' },
+    },
+  ],
 }
 
 const ROW: TableRow = {
@@ -62,6 +77,9 @@ function mockFetch(url: string): Promise<Response> {
   }
   if (url === '/data/diffs/2026-07-15/1741-vm-eu-west.json') {
     return Promise.resolve(new Response(JSON.stringify(DIFF), { status: 200 }))
+  }
+  if (url === '/data/diffs/2026-07-16/1200-vm-eu-west.json') {
+    return Promise.resolve(new Response(JSON.stringify(DIFF2), { status: 200 }))
   }
   return Promise.resolve(new Response('Not Found', { status: 404 }))
 }
@@ -127,7 +145,7 @@ describe('PriceHistoryChart', () => {
     expect(onClose).toHaveBeenCalledOnce()
   })
 
-  it('shows empty state when SKU has no history', async () => {
+  it('renders empty state when history array is empty', async () => {
     vi.stubGlobal('fetch', (url: string) => {
       if (url === '/data/diffs/manifest.json') {
         return Promise.resolve(new Response(JSON.stringify([]), { status: 200 }))
@@ -136,8 +154,33 @@ describe('PriceHistoryChart', () => {
     })
     render(<PriceHistoryChart row={ROW} onClose={vi.fn()} />)
     await waitFor(() =>
-      expect(screen.getByText(/no price history recorded/i)).toBeInTheDocument(),
+      expect(screen.getByText(/not enough history yet/i)).toBeInTheDocument(),
     )
+    expect(screen.getByText(/check back after the next data fetch/i)).toBeInTheDocument()
+    expect(screen.queryByTestId('area-chart')).not.toBeInTheDocument()
+  })
+
+  it('renders empty state when history has exactly 1 point', async () => {
+    vi.stubGlobal('fetch', (url: string) => {
+      if (url === '/data/diffs/manifest.json') {
+        return Promise.resolve(
+          new Response(
+            JSON.stringify([{ path: 'diffs/2026-07-15/1741-vm-eu-west.json', scope: 'vm-eu-west', date: '2026-07-15' }]),
+            { status: 200 },
+          ),
+        )
+      }
+      if (url === '/data/diffs/2026-07-15/1741-vm-eu-west.json') {
+        return Promise.resolve(new Response(JSON.stringify(DIFF), { status: 200 }))
+      }
+      return Promise.resolve(new Response('Not Found', { status: 404 }))
+    })
+    render(<PriceHistoryChart row={ROW} onClose={vi.fn()} />)
+    await waitFor(() =>
+      expect(screen.getByText(/not enough history yet/i)).toBeInTheDocument(),
+    )
+    expect(screen.getByText(/check back after the next data fetch/i)).toBeInTheDocument()
+    expect(screen.queryByTestId('area-chart')).not.toBeInTheDocument()
   })
 
   it('shows plain-language error state when fetch fails', async () => {

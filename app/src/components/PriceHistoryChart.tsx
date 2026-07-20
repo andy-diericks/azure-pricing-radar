@@ -61,6 +61,16 @@ function ChartTooltip({ active, payload, label, data, skuName, scope }: TooltipP
   )
 }
 
+function ChartEmptyIcon() {
+  return (
+    <svg className="phc__empty-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+      <rect x="4" y="4" width="32" height="32" rx="2" stroke="currentColor" strokeWidth="2" />
+      <polyline points="8,28 16,20 22,24 32,12" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" strokeLinecap="round" />
+      <line x1="13" y1="32" x2="27" y2="32" stroke="currentColor" strokeWidth="1.5" strokeDasharray="2 2" />
+    </svg>
+  )
+}
+
 interface Props {
   row: TableRow
   onClose: () => void
@@ -132,10 +142,14 @@ export function PriceHistoryChart({ row, onClose }: Props) {
         <div className="phc__body">
           {loading && <div className="phc__skeleton" aria-label="Loading chart" />}
           {error && <p className="phc__status phc__status--error">{error}</p>}
-          {!loading && !error && chartData.length === 0 && (
-            <p className="phc__status">No price history recorded for this SKU yet.</p>
+          {!loading && !error && chartData.length < 2 && (
+            <div className="phc__empty">
+              <ChartEmptyIcon />
+              <p className="phc__empty-headline">Not enough history yet</p>
+              <p className="phc__empty-subline">Check back after the next data fetch</p>
+            </div>
           )}
-          {!loading && !error && chartData.length > 0 && (
+          {!loading && !error && chartData.length >= 2 && (
             <div className="phc__chart-container">
               <ResponsiveContainer width="100%" height="100%">
                 <AreaChart data={chartData} margin={{ top: 8, right: 16, left: 8, bottom: 8 }}>

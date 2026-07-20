@@ -83,6 +83,33 @@
   color: var(--color-price-increase);
 }
 
+.phc__empty {
+  padding: var(--space-8) var(--space-4);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.phc__empty-icon {
+  color: var(--color-text-secondary);
+  opacity: 0.5;
+}
+
+.phc__empty-headline {
+  margin: 0;
+  font-size: var(--text-base);
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.phc__empty-subline {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
 .phc__skeleton {
   height: 280px;
   border-radius: var(--radius-control);
