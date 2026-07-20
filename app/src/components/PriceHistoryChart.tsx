@@ -142,11 +142,31 @@ export function PriceHistoryChart({ row, onClose }: Props) {
         <div className="phc__body">
           {loading && <div className="phc__skeleton" aria-label="Loading chart" />}
           {error && <p className="phc__status phc__status--error">{error}</p>}
-          {!loading && !error && chartData.length < 2 && (
+          {!loading && !error && chartData.length === 0 && (
             <div className="phc__empty">
               <ChartEmptyIcon />
               <p className="phc__empty-headline">Not enough history yet</p>
               <p className="phc__empty-subline">Check back after the next data fetch</p>
+            </div>
+          )}
+          {!loading && !error && chartData.length === 1 && (
+            <div className="phc__single">
+              <p className="phc__single-price" style={{ color }}>
+                {formatPrice(chartData[0].price, row.unitOfMeasure)}
+              </p>
+              <dl className="phc__single-meta">
+                <dt>Product</dt>
+                <dd>{row.productName}</dd>
+                <dt>Region</dt>
+                <dd>{row.armRegionName}</dd>
+                <dt>First seen</dt>
+                <dd>{formatDateFull(chartData[0].at)}</dd>
+              </dl>
+              <div className="phc__empty">
+                <ChartEmptyIcon />
+                <p className="phc__empty-headline">Not enough history yet</p>
+                <p className="phc__empty-subline">Check back after the next data fetch</p>
+              </div>
             </div>
           )}
           {!loading && !error && chartData.length >= 2 && (
