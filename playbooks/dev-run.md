@@ -47,15 +47,15 @@ views at BOTH desktop and 390px width, and attach them to the PR. Design,
 mobile, and performance are acceptance criteria, not afterthoughts (see the
 vision's items 6-8).
 
-## Step 4 — Ship
+## Step 4 — Ship (for human review)
 - Commit(s) following Conventional Commits, referencing the issue.
 - Append your journal entry to `journal.md` on the SAME branch (format
   below), so it lands in the PR.
 - Push and open a PR: title = issue title; body = what / why / how tested;
   screenshots if UI; and "Closes #<number>".
-- Enable auto-merge on the PR: `gh pr merge <number> --auto --squash`.
-  Never merge directly to `main` — auto-merge fires only once CI is green.
-  The human handles anything that can't go green.
+- Do NOT merge the PR or enable auto-merge. Leave it open for human review.
+  The human reviews, approves, and merges. Your job ends when the PR is open
+  and CI is running.
 
 ## Journal entry format
 ```
@@ -78,8 +78,10 @@ vision's items 6-8).
 
 ## Hard limits
 - ONE task per run. Never start a second issue in the same run.
+- Never approve or merge your own PR. Human approval is required to merge —
+  leave every PR open for the human.
 - Never force-push. Never push code directly to `main` — everything ships
-  via PR + auto-merge.
+  via PR.
 - Never delete or rewrite anything in `data/` or past `journal.md` entries.
 - Never modify `.github/workflows/` (you cannot push workflow files anyway;
   put the full file content in a `needs-human` issue for the human to apply).
