@@ -195,7 +195,14 @@ Claude reads the tail of it to remember.
 - Noticed for later: nothing new.
 
 ## 2026-07-20T04:07Z — run 2026-07-20-1
+
 - Task: #53 accessibility: add skip-to-main-content link
 - Did: Added `<a href="#main-content" class="skip-link">Skip to main content</a>` as the first child of `.app` in `App.tsx`. Added `id="main-content"` to the existing `<main>` element. Added `.skip-link` CSS in `App.css`: visually hidden (clip/clip-path/1×1px) by default, fully visible on `:focus` using ADR 0002 tokens (`--color-bg-card` background, `--color-text-primary` text, `--color-accent` outline). Added 2 new tests: link exists with correct `href`; skip link is the first focusable element in the document. 160 tests green; lint, typecheck, build all pass.
 - Decisions: Used `--color-bg-card` for the skip link background — the issue referenced `--color-surface` which does not exist as a token; `--color-bg-card` is the nearest equivalent. Both `clip` and `clip-path` set for broad browser compatibility; both are cleared on focus.
+- Noticed for later: nothing new.
+
+## 2026-07-20T07:35Z — run 2026-07-20-2
+- Task: #54 polish: PriceHistoryChart empty state when fewer than 2 history points
+- Did: Added `ChartEmptyIcon` (inline SVG: chart outline with a trend line) to `PriceHistoryChart.tsx`. Changed the chart-body conditions from `chartData.length === 0` / `chartData.length > 0` to `chartData.length < 2` / `chartData.length >= 2` — both 0-point and 1-point histories now show the empty state instead of a broken chart. Replaced the old `<p className="phc__status">` fallback with a `<div className="phc__empty">` containing the icon, "Not enough history yet" headline, and "Check back after the next data fetch" subline, matching the PriceChangesTable visual pattern (ADR 0002 tokens only). Added `.phc__empty`, `.phc__empty-icon`, `.phc__empty-headline`, `.phc__empty-subline` CSS classes to `PriceHistoryChart.css`. Updated `mockFetch` in the test to return 2 data points so existing chart-render tests continue to pass. Replaced the old empty-state test; added 2 new tests: empty history array and exactly 1 history point. 161 tests green; lint, typecheck, build all pass.
+- Decisions: Used a chart-outline SVG icon (not the table icon from PriceChangesTable) to contextually signal the chart area. Applied the `chartData.length < 2` threshold to the filtered (non-null price) array, consistent with how the chart consumes the data.
 - Noticed for later: nothing new.
