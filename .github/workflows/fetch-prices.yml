@@ -13,12 +13,11 @@ jobs:
   fetch:
     runs-on: ubuntu-latest
     timeout-minutes: 20
-    permissions:
-      contents: write
-      pull-requests: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.DATA_PAT }}
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -31,24 +30,14 @@ jobs:
       - name: Fetch prices and compute diff
         run: python scripts/fetch_prices.py
 
-      - name: Commit, push, and auto-merge if data changed
-        env:
-          GH_TOKEN: ${{ github.token }}
+      - name: Commit data updates
         run: |
           git config user.name "pricing-radar-bot"
           git config user.email "actions@users.noreply.github.com"
           git add data/
           if git diff --cached --quiet; then
             echo "No price changes this run."
-            exit 0
+          else
+            git commit -m "data: price snapshot $(date -u +'%Y-%m-%dT%H:%M')"
+            git push
           fi
-          ts=$(date -u +'%Y-%m-%dT%H%M')
-          branch="data/snapshot-$ts"
-          git checkout -b "$branch"
-          git commit -m "data: price snapshot $ts"
-          git push origin "$branch"
-          gh pr create \
-            --base main --head "$branch" \
-            --title "data: price snapshot $ts" \
-            --body "Automated price snapshot. Data-only change; merges automatically once CI passes."
-          gh pr merge "$branch" --auto --squash --delete-branch
