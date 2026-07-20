@@ -49,6 +49,6 @@ jobs:
             - Open the PR and leave it for human review; never merge it yourself.
             - Append your journal entry to journal.md before finishing.
           claude_args: |
-            --max-turns 45
+            --max-turns 80
             --model claude-sonnet-4-6
             --allowedTools "Bash,Edit,Write,Read,Glob,Grep"
