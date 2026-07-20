@@ -211,3 +211,8 @@ Claude reads the tail of it to remember.
 - Triage: none — no unlabeled or needs-human issues
 - Created: none — queue full (32 open claude-ready issues)
 - Rationale: Developer runs have been steady; current queue exceeds the cap of 5 by a large margin. Holding until multiple issues close. E1 is progressing well with faceted filters, accessibility, and polish features shipped. Next PM run will create issues only if queue drops below 5.
+
+## 2026-07-20T12:00Z — PM run
+- Triage: none — no unlabeled or needs-human open issues
+- Created: #68 E1.4 Full-text SKU search with instant filtering (P2), #69 E1.5 Biggest movers hero strip (P2), #70 E2.1 design proposal for SKU routing/pre-render strategy (needs-human)
+- Rationale: Queue empty (0 open claude-ready issues); all issues from previous runs have closed or merged. E1 is nearly complete—E1.3a (faceted filters) and E1.6 (accessibility/mobile/empty states) are shipped. Created E1.4 and E1.5 to finish the epic. E2.1 requires a human design decision per the product vision before implementation, so opened it as needs-human to unblock the next epic. Epic E1 completion will be journaled once E1.4 and E1.5 ship.
