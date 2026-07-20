@@ -99,11 +99,11 @@ flowchart LR
     PM -->|writes issues| Q[(claude-ready<br/>backlog)]
     Q --> DEV[🧑‍💻 developer<br/>Claude Sonnet]
     DEV -->|opens PR| CI{CI + branch<br/>protection}
-    CI -->|green| M[(main branch)]
+    CI -->|green + human approval| M[(main branch)]
     M --> SITE[live dashboard]
     DEV -->|writes| J[(journal)]
     PM -->|writes| J
-    H[👤 human]:::human -->|reviews, unblocks,<br/>steers vision| V
+    H[👤 human]:::human -->|reviews, approves,<br/>unblocks, steers| V
     CI -.->|needs-human| H
     classDef human fill:#38BDF8,stroke:#0B1120,color:#0B1120;
 ```
@@ -116,11 +116,14 @@ than holding meetings. The result is fully auditable (every decision is a
 commit, an issue, or a journal entry), cheap to run, and resilient — a failed
 run just leaves the next one a clean slate.
 
-Guardrails keep it safe: agents work only from a labeled backlog, ship
-everything through CI on protected branches, and stop to ask
-(`needs-human`) when unsure rather than guessing. A human reviews pull
-requests, answers those questions, and steers by editing the vision — the
-judgment the agents structurally can't supply.
+Guardrails keep it safe: agents work only from a labeled backlog, and every
+pull request runs through CI on protected branches. Nothing reaches `main`
+without **a human reviewing and approving it** — the developer opens PRs but
+never merges its own work. When an agent is unsure, it stops and asks
+(`needs-human`) rather than guessing. The human reviews pull requests,
+answers those questions, and steers by editing the vision — the judgment the
+agents structurally can't supply.
+
 
 ## ⚙️ How the data works
 
