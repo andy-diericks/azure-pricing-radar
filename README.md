@@ -22,6 +22,14 @@ dashboard.
 The live dashboard is a static site (Vite + React) built from the data in this
 repository — no backend, no tracking, no accounts.
 
+**SKU search** — a search box above the table for instant, case-insensitive
+substring filtering by SKU name (e.g. typing `standard` narrows to all
+`Standard_*` SKUs). The search term is preserved in the URL (`?search=…`) for
+shareable filtered views. Works in combination with the facet filters below.
+
+**Facet filters** — filter by service, region, direction, and minimum magnitude.
+All active filters (search + facets) are encoded in the URL for sharing.
+
 **Change-count summary** — a compact stats row above the table showing how
 many changes of each type are in the current diff (e.g. _3 drops · 1 increase
 · 12 new SKUs_), color-coded by direction. Zero-count categories are omitted.

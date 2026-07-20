@@ -33,6 +33,7 @@ describe('parseFiltersFromSearch', () => {
       selectedRegions: ['westeurope'],
       selectedDirections: ['drop', 'increase'],
       minMagnitude: 5,
+      searchTerm: '',
     })
   })
 
@@ -42,6 +43,14 @@ describe('parseFiltersFromSearch', () => {
 
   it('clamps magnitude above 100 to 100', () => {
     expect(parseFiltersFromSearch('?magnitude=200').minMagnitude).toBe(100)
+  })
+
+  it('parses the search term', () => {
+    expect(parseFiltersFromSearch('?search=Standard').searchTerm).toBe('Standard')
+  })
+
+  it('returns empty searchTerm when search param is absent', () => {
+    expect(parseFiltersFromSearch('?magnitude=5').searchTerm).toBe('')
   })
 })
 
@@ -56,12 +65,19 @@ describe('filtersToSearch', () => {
       selectedRegions: ['westeurope'],
       selectedDirections: ['drop'],
       minMagnitude: 10,
+      searchTerm: 'Standard',
     })
     const params = new URLSearchParams(search.slice(1))
     expect(params.get('service')).toBe('vm-eu-west')
     expect(params.get('region')).toBe('westeurope')
     expect(params.get('direction')).toBe('drop')
     expect(params.get('magnitude')).toBe('10')
+    expect(params.get('search')).toBe('Standard')
+  })
+
+  it('omits search param when searchTerm is empty', () => {
+    const search = filtersToSearch({ ...EMPTY_FILTERS, minMagnitude: 5 })
+    expect(new URLSearchParams(search.slice(1)).get('search')).toBeNull()
   })
 
   it('round-trips through parse', () => {
@@ -70,6 +86,7 @@ describe('filtersToSearch', () => {
       selectedRegions: ['westeurope'],
       selectedDirections: ['drop' as const, 'increase' as const],
       minMagnitude: 5,
+      searchTerm: 'Standard',
     }
     expect(parseFiltersFromSearch(filtersToSearch(original))).toEqual(original)
   })
@@ -79,6 +96,43 @@ describe('applyFilters', () => {
   it('returns all rows when filters are empty', () => {
     const rows = [makeRow(), makeRow({ key: 'k2', direction: 'increase' })]
     expect(applyFilters(rows, EMPTY_FILTERS)).toEqual(rows)
+  })
+
+  it('filters by search term (case-insensitive substring)', () => {
+    const rows = [
+      makeRow({ key: 'k1', skuName: 'Standard_D2s_v5' }),
+      makeRow({ key: 'k2', skuName: 'Standard_E4s_v3' }),
+      makeRow({ key: 'k3', skuName: 'Premium_SSD_LRS' }),
+    ]
+    const result = applyFilters(rows, { ...EMPTY_FILTERS, searchTerm: 'standard' })
+    expect(result).toHaveLength(2)
+    expect(result.map(r => r.key)).toEqual(['k1', 'k2'])
+  })
+
+  it('search is case-insensitive', () => {
+    const rows = [makeRow({ skuName: 'Standard_D2s_v5' })]
+    expect(applyFilters(rows, { ...EMPTY_FILTERS, searchTerm: 'STANDARD' })).toHaveLength(1)
+    expect(applyFilters(rows, { ...EMPTY_FILTERS, searchTerm: 'standard_d2s' })).toHaveLength(1)
+  })
+
+  it('empty searchTerm shows all rows', () => {
+    const rows = [makeRow({ key: 'k1' }), makeRow({ key: 'k2', skuName: 'Premium_SSD_LRS' })]
+    expect(applyFilters(rows, { ...EMPTY_FILTERS, searchTerm: '' })).toHaveLength(2)
+  })
+
+  it('applies search AND facet filters together', () => {
+    const rows = [
+      makeRow({ key: 'k1', skuName: 'Standard_D2s_v5', direction: 'drop' }),
+      makeRow({ key: 'k2', skuName: 'Standard_E4s_v3', direction: 'increase' }),
+      makeRow({ key: 'k3', skuName: 'Premium_SSD_LRS', direction: 'drop' }),
+    ]
+    const result = applyFilters(rows, {
+      ...EMPTY_FILTERS,
+      searchTerm: 'standard',
+      selectedDirections: ['drop'],
+    })
+    expect(result).toHaveLength(1)
+    expect(result[0].key).toBe('k1')
   })
 
   it('filters by service', () => {
