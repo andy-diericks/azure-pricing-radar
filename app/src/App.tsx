@@ -5,6 +5,7 @@ import { LastUpdatedBadge } from './components/LastUpdatedBadge'
 import { ChangesSummary } from './components/ChangesSummary'
 import { FilterPanel } from './components/FilterPanel'
 import { SearchInput } from './components/SearchInput'
+import { BiggestMovers } from './components/BiggestMovers'
 import { loadDiffs } from './lib/loadDiffs'
 import { parseFiltersFromSearch, filtersToSearch, applyFilters } from './lib/filters'
 import type { FilterState } from './lib/filters'
@@ -73,6 +74,10 @@ export default function App() {
 
   const filteredRows = useMemo(() => applyFilters(rows, filters), [rows, filters])
 
+  function handleMoverClick() {
+    document.getElementById('price-changes-card')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+
   return (
     <div className="app">
       <a href="#main-content" className="skip-link">Skip to main content</a>
@@ -83,7 +88,8 @@ export default function App() {
         <LastUpdatedBadge lastUpdatedAt={lastUpdatedAt} lastCheckedAt={lastCheckedAt} />
       </header>
       <main id="main-content" className="main">
-        <section className="card">
+        <BiggestMovers rows={rows} loading={loading} onItemClick={handleMoverClick} />
+        <section className="card" id="price-changes-card">
           <h2 className="card__heading">Recent price changes</h2>
           <SearchInput value={filters.searchTerm} onChange={handleSearchChange} />
           <FilterPanel rows={rows} filters={filters} onChange={handleFiltersChange} />

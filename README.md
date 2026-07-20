@@ -22,6 +22,13 @@ dashboard.
 The live dashboard is a static site (Vite + React) built from the data in this
 repository — no backend, no tracking, no accounts.
 
+**Biggest movers** — a hero strip at the top of the dashboard showing the most
+dramatic price changes over the last 7 days and 30 days. Each time window lists
+the top 3 biggest drops (green) and top 3 biggest increases (red), sorted by
+percentage magnitude. Each entry shows the SKU name, region, percentage change,
+and before → after price. Click any entry to jump to the full price-changes
+feed below.
+
 **SKU search** — a search box above the table for instant, case-insensitive
 substring filtering by SKU name (e.g. typing `standard` narrows to all
 `Standard_*` SKUs). The search term is preserved in the URL (`?search=…`) for
