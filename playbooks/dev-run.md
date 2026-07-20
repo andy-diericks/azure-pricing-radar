@@ -22,6 +22,12 @@ Priority order:
    successful run.
 
 ## Step 2 — Implement
+- FIRST, size the task. If the issue clearly needs more than one run —
+  multiple distinct deliverables (a data layer AND routing AND pages, etc.) —
+  do NOT start building. Split it into lettered sub-issues (E2.1a, E2.1b...),
+  label each `claude-ready`, journal "split #<n> into sub-issues", and END
+  the run. Splitting is a complete, valid, successful run. Only build when the
+  task genuinely fits one run.
 - Branch: `claude/issue-<number>-<short-slug>` from latest `main`.
 - Stay strictly inside the issue's scope. Anything you notice that is out of
   scope: open a new issue (no label — the PM triages it), don't fix it now.
