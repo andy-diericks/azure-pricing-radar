@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
-import { render, screen, waitFor } from '@testing-library/react'
+import { render, screen, waitFor, within, fireEvent } from '@testing-library/react'
 import { SkuPage } from './SkuPage'
 import type { SkuIndex } from '../lib/skuIndex'
 import React from 'react'
@@ -59,6 +59,25 @@ const SKU_INDEX_NO_HISTORY: SkuIndex = {
         { armRegionName: 'westeurope', scope: 'vm-eu-west', retailPrice: 0.096, unitOfMeasure: '1 Hour' },
       ],
       history: [],
+    },
+  },
+}
+
+const SKU_INDEX_MULTI_REGION: SkuIndex = {
+  generatedAt: '2026-07-20T00:00:00Z',
+  skus: {
+    Standard_D2s_v5: {
+      productName: 'Virtual Machines Dsv5 Series',
+      regions: [
+        { armRegionName: 'westeurope', scope: 'vm-eu-west', retailPrice: 0.088, unitOfMeasure: '1 Hour' },
+        { armRegionName: 'northeurope', scope: 'vm-eu-west', retailPrice: 0.095, unitOfMeasure: '1 Hour' },
+      ],
+      history: [
+        { at: '2026-07-15T17:41:10Z', armRegionName: 'westeurope', retailPrice: 0.096, direction: 'added' },
+        { at: '2026-07-16T12:00:00Z', armRegionName: 'westeurope', retailPrice: 0.088, priceBefore: 0.096, direction: 'changed' },
+        { at: '2026-07-15T17:41:10Z', armRegionName: 'northeurope', retailPrice: 0.102, direction: 'added' },
+        { at: '2026-07-16T12:00:00Z', armRegionName: 'northeurope', retailPrice: 0.095, priceBefore: 0.102, direction: 'changed' },
+      ],
     },
   },
 }
@@ -238,6 +257,81 @@ describe('SkuPage', () => {
         expect(screen.getByTestId('sku-history-empty')).toBeInTheDocument(),
       )
       expect(screen.getByText(/no price changes recorded yet/i)).toBeInTheDocument()
+    })
+  })
+
+  describe('region selector', () => {
+    it('does not render region selector when history has only one region', async () => {
+      vi.stubGlobal('fetch', mockFetch(SKU_INDEX_TWO_POINTS))
+      render(<SkuPage family="Standard_D2s_v5" />)
+      await waitFor(() => expect(screen.getByTestId('sku-history-chart')).toBeInTheDocument())
+      expect(screen.queryByRole('group', { name: /select regions/i })).not.toBeInTheDocument()
+    })
+
+    it('renders region selector with one button per history region', async () => {
+      vi.stubGlobal('fetch', mockFetch(SKU_INDEX_MULTI_REGION))
+      render(<SkuPage family="Standard_D2s_v5" />)
+      await waitFor(() => expect(screen.getByTestId('sku-history-chart')).toBeInTheDocument())
+      const selector = screen.getByRole('group', { name: /select regions/i })
+      expect(within(selector).getAllByRole('button').length).toBe(2)
+      expect(within(selector).getByRole('button', { name: 'westeurope' })).toBeInTheDocument()
+      expect(within(selector).getByRole('button', { name: 'northeurope' })).toBeInTheDocument()
+    })
+
+    it('selects the cheapest region by default', async () => {
+      vi.stubGlobal('fetch', mockFetch(SKU_INDEX_MULTI_REGION))
+      render(<SkuPage family="Standard_D2s_v5" />)
+      await waitFor(() => expect(screen.getByTestId('sku-history-chart')).toBeInTheDocument())
+      expect(screen.getByRole('button', { name: 'westeurope' })).toHaveAttribute('aria-pressed', 'true')
+      expect(screen.getByRole('button', { name: 'northeurope' })).toHaveAttribute('aria-pressed', 'false')
+    })
+
+    it('adds a second region when its button is clicked', async () => {
+      vi.stubGlobal('fetch', mockFetch(SKU_INDEX_MULTI_REGION))
+      render(<SkuPage family="Standard_D2s_v5" />)
+      await waitFor(() => expect(screen.getByTestId('sku-history-chart')).toBeInTheDocument())
+      fireEvent.click(screen.getByRole('button', { name: 'northeurope' }))
+      expect(screen.getAllByTestId('area').length).toBe(2)
+      expect(screen.getByRole('button', { name: /northeurope/i })).toHaveAttribute('aria-pressed', 'true')
+    })
+
+    it('removes a region when its active button is clicked (if another remains)', async () => {
+      vi.stubGlobal('fetch', mockFetch(SKU_INDEX_MULTI_REGION))
+      render(<SkuPage family="Standard_D2s_v5" />)
+      await waitFor(() => expect(screen.getByTestId('sku-history-chart')).toBeInTheDocument())
+      fireEvent.click(screen.getByRole('button', { name: 'northeurope' })) // add
+      fireEvent.click(screen.getByRole('button', { name: 'northeurope' })) // remove
+      expect(screen.getAllByTestId('area').length).toBe(1)
+      expect(screen.getByRole('button', { name: /northeurope/i })).toHaveAttribute('aria-pressed', 'false')
+    })
+
+    it('cannot deselect the last selected region', async () => {
+      vi.stubGlobal('fetch', mockFetch(SKU_INDEX_MULTI_REGION))
+      render(<SkuPage family="Standard_D2s_v5" />)
+      await waitFor(() => expect(screen.getByTestId('sku-history-chart')).toBeInTheDocument())
+      fireEvent.click(screen.getByRole('button', { name: 'westeurope' }))
+      expect(screen.getByRole('button', { name: 'westeurope' })).toHaveAttribute('aria-pressed', 'true')
+      expect(screen.getAllByTestId('area').length).toBe(1)
+    })
+
+    it('uses palette colors when multiple regions are selected', async () => {
+      vi.stubGlobal('fetch', mockFetch(SKU_INDEX_MULTI_REGION))
+      render(<SkuPage family="Standard_D2s_v5" />)
+      await waitFor(() => expect(screen.getByTestId('sku-history-chart')).toBeInTheDocument())
+      fireEvent.click(screen.getByRole('button', { name: 'northeurope' }))
+      const areas = screen.getAllByTestId('area')
+      expect(areas.length).toBe(2)
+      const strokes = areas.map((a) => a.dataset.stroke)
+      expect(strokes).toContain('#38BDF8')
+      expect(strokes).toContain('#FBBF24')
+    })
+
+    it('shows heading with all selected region names', async () => {
+      vi.stubGlobal('fetch', mockFetch(SKU_INDEX_MULTI_REGION))
+      render(<SkuPage family="Standard_D2s_v5" />)
+      await waitFor(() => expect(screen.getByTestId('sku-history-chart')).toBeInTheDocument())
+      fireEvent.click(screen.getByRole('button', { name: 'northeurope' }))
+      expect(screen.getByRole('heading', { level: 2 })).toHaveTextContent('westeurope · northeurope')
     })
   })
 })
