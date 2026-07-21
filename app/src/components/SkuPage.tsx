@@ -20,6 +20,9 @@ interface Props {
 
 const REPO_URL = 'https://github.com/andy-diericks/azure-pricing-radar'
 
+// ADR 0002 tokens available for categorical (non-directional) series.
+// Expanding beyond 2 colors requires an ADR 0002 update (needs-human).
+const COMPARISON_PALETTE = ['#38BDF8', '#FBBF24']
 const REGION_COLORS: readonly string[] = ['#38BDF8', '#FBBF24']
 
 function setMetaProperty(property: string, content: string) {
@@ -45,6 +48,35 @@ function buildDescription(family: string, entry: SkuEntry): string {
 interface ChartPoint {
   at: string
   price: number
+}
+
+interface MultiPoint {
+  at: string
+  [region: string]: string | number | undefined
+}
+
+function buildMultiChartData(
+  history: SkuHistoryPoint[],
+  regions: string[],
+): MultiPoint[] {
+  const allTimestamps = [
+    ...new Set(
+      history
+        .filter((h) => regions.includes(h.armRegionName) && h.retailPrice !== null)
+        .map((h) => h.at),
+    ),
+  ].sort()
+
+  return allTimestamps.map((at) => {
+    const point: MultiPoint = { at }
+    for (const region of regions) {
+      const h = history.find(
+        (p) => p.at === at && p.armRegionName === region && p.retailPrice !== null,
+      )
+      point[region] = h !== undefined ? (h.retailPrice as number) : undefined
+    }
+    return point
+  })
 }
 
 function getChartDirection(points: (SkuHistoryPoint & { price: number })[]): string {
@@ -167,6 +199,8 @@ interface HistoryProps {
 }
 
 function SkuHistory({ entry }: HistoryProps) {
+  const [compareMode, setCompareMode] = useState(false)
+
   const historyRegions = useMemo(
     () => [
       ...new Set(
@@ -253,18 +287,43 @@ function SkuHistory({ entry }: HistoryProps) {
     })
   }, [perRegionData])
 
+  const eligibleRegionNames = [
+    ...new Set(
+      entry.history
+        .filter((h) => h.retailPrice !== null)
+        .map((h) => h.armRegionName),
+    ),
+  ]
+  const canCompare = eligibleRegionNames.length >= 2 && primaryPoints.length >= 2
+
+  const multiChartData: MultiPoint[] = compareMode
+    ? buildMultiChartData(entry.history, eligibleRegionNames)
+    : []
+
   const rangeMs =
     mergedData.length > 1
       ? new Date(mergedData[mergedData.length - 1].at as string).getTime() -
         new Date(mergedData[0].at as string).getTime()
       : 0
 
+  const multiRangeMs =
+    multiChartData.length > 1
+      ? new Date(multiChartData[multiChartData.length - 1].at as string).getTime() -
+        new Date(multiChartData[0].at as string).getTime()
+      : rangeMs
+
   const headingText =
     selectedRegions.length === 1 ? selectedRegions[0] : selectedRegions.join(' · ')
 
+  const cheapestRegion = entry.regions.slice().sort((a, b) => a.retailPrice - b.retailPrice)[0]
+
   return (
     <div className="sku-page__history">
-      <h2 className="sku-page__history-heading">Price history · {headingText}</h2>
+      <h2 className="sku-page__history-heading">
+        {compareMode
+          ? `Price history · ${eligibleRegionNames.length} regions`
+          : `Price history · ${headingText}`}
+      </h2>
 
       {historyRegions.length > 1 && (
         <div
@@ -329,64 +388,134 @@ function SkuHistory({ entry }: HistoryProps) {
       )}
 
       {primaryPoints.length >= 2 && (
-        <div className="sku-page__chart-container" data-testid="sku-history-chart">
-          <ResponsiveContainer width="100%" height="100%">
-            <AreaChart data={mergedData} margin={{ top: 8, right: 16, left: 8, bottom: 8 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#1e2d47" />
-              <XAxis
-                dataKey="at"
-                tickFormatter={(v: string) => formatDateAxis(v, rangeMs)}
-                tick={{ fill: '#93A4BE', fontSize: 13 }}
-                axisLine={{ stroke: '#1e2d47', strokeWidth: 1 }}
-                tickLine={false}
-              />
-              <YAxis
-                tickFormatter={(v: number) => formatPrice(v)}
-                tick={{ fill: '#93A4BE', fontSize: 13 }}
-                axisLine={{ stroke: '#1e2d47', strokeWidth: 1 }}
-                tickLine={false}
-                width={72}
-              />
-              <Tooltip
-                content={
-                  isSingleRegion
-                    ? (props) => (
-                        <SkuChartTooltip
-                          {...props}
-                          data={primaryPoints}
-                          unitOfMeasure={primaryRegion?.unitOfMeasure ?? ''}
-                        />
-                      )
-                    : (props) => (
-                        <MultiRegionTooltip
-                          {...props}
-                          perRegionData={perRegionData}
-                          entry={entry}
-                        />
-                      )
-                }
-              />
-              {selectedRegions.map((regionName) => {
-                const color = getSeriesColor(regionName)
-                return (
-                  <Area
-                    key={regionName}
-                    type="monotone"
-                    dataKey={regionName}
-                    stroke={color}
-                    strokeWidth={2}
-                    fill={color}
-                    fillOpacity={isSingleRegion ? 0.12 : 0}
-                    dot={false}
-                    activeDot={{ r: 5, fill: color }}
-                    isAnimationActive={false}
-                    connectNulls={false}
+        <>
+          {canCompare && (
+            <div className="sku-page__compare-bar">
+              <button
+                className={`sku-page__compare-toggle${compareMode ? ' sku-page__compare-toggle--active' : ''}`}
+                onClick={() => setCompareMode((m) => !m)}
+                aria-pressed={compareMode}
+              >
+                {compareMode ? '← Single region' : 'Compare all regions'}
+              </button>
+            </div>
+          )}
+          <div className="sku-page__chart-container" data-testid="sku-history-chart">
+            <ResponsiveContainer width="100%" height="100%">
+              {compareMode ? (
+                <AreaChart
+                  data={multiChartData}
+                  margin={{ top: 8, right: 16, left: 8, bottom: 8 }}
+                >
+                  <CartesianGrid strokeDasharray="3 3" stroke="#1e2d47" />
+                  <XAxis
+                    dataKey="at"
+                    tickFormatter={(v: string) => formatDateAxis(v, multiRangeMs)}
+                    tick={{ fill: '#93A4BE', fontSize: 13 }}
+                    axisLine={{ stroke: '#1e2d47', strokeWidth: 1 }}
+                    tickLine={false}
                   />
-                )
-              })}
-            </AreaChart>
-          </ResponsiveContainer>
-        </div>
+                  <YAxis
+                    tickFormatter={(v: number) => formatPrice(v)}
+                    tick={{ fill: '#93A4BE', fontSize: 13 }}
+                    axisLine={{ stroke: '#1e2d47', strokeWidth: 1 }}
+                    tickLine={false}
+                    width={72}
+                  />
+                  <Tooltip
+                    content={(props) => (
+                      <MultiRegionTooltip
+                        {...props}
+                        perRegionData={perRegionData}
+                        entry={entry}
+                      />
+                    )}
+                  />
+                  {eligibleRegionNames.map((region, i) => (
+                    <Area
+                      key={region}
+                      type="monotone"
+                      dataKey={region}
+                      stroke={COMPARISON_PALETTE[i % COMPARISON_PALETTE.length]}
+                      strokeWidth={2}
+                      fill={COMPARISON_PALETTE[i % COMPARISON_PALETTE.length]}
+                      fillOpacity={0}
+                      dot={false}
+                      activeDot={{ r: 5, fill: COMPARISON_PALETTE[i % COMPARISON_PALETTE.length] }}
+                      isAnimationActive={false}
+                      connectNulls={false}
+                    />
+                  ))}
+                </AreaChart>
+              ) : (
+                <AreaChart data={mergedData} margin={{ top: 8, right: 16, left: 8, bottom: 8 }}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="#1e2d47" />
+                  <XAxis
+                    dataKey="at"
+                    tickFormatter={(v: string) => formatDateAxis(v, rangeMs)}
+                    tick={{ fill: '#93A4BE', fontSize: 13 }}
+                    axisLine={{ stroke: '#1e2d47', strokeWidth: 1 }}
+                    tickLine={false}
+                  />
+                  <YAxis
+                    tickFormatter={(v: number) => formatPrice(v)}
+                    tick={{ fill: '#93A4BE', fontSize: 13 }}
+                    axisLine={{ stroke: '#1e2d47', strokeWidth: 1 }}
+                    tickLine={false}
+                    width={72}
+                  />
+                  <Tooltip
+                    content={
+                      isSingleRegion
+                        ? (props) => (
+                            <SkuChartTooltip
+                              {...props}
+                              data={primaryPoints}
+                              unitOfMeasure={primaryRegion?.unitOfMeasure ?? ''}
+                            />
+                          )
+                        : (props) => (
+                            <MultiRegionTooltip
+                              {...props}
+                              perRegionData={perRegionData}
+                              entry={entry}
+                            />
+                          )
+                    }
+                  />
+                  {selectedRegions.map((regionName) => {
+                    const color = getSeriesColor(regionName)
+                    return (
+                      <Area
+                        key={regionName}
+                        type="monotone"
+                        dataKey={regionName}
+                        stroke={color}
+                        strokeWidth={2}
+                        fill={color}
+                        fillOpacity={isSingleRegion ? 0.12 : 0}
+                        dot={false}
+                        activeDot={{ r: 5, fill: color }}
+                        isAnimationActive={false}
+                        connectNulls={false}
+                      />
+                    )
+                  })}
+                </AreaChart>
+              )}
+            </ResponsiveContainer>
+          </div>
+          {compareMode && cheapestRegion && (
+            <div className="sku-page__cheapest-badge" data-testid="cheapest-badge">
+              <span className="sku-page__cheapest-label">Cheapest now:</span>{' '}
+              <span className="sku-page__cheapest-region">{cheapestRegion.armRegionName}</span>{' '}
+              <span className="sku-page__cheapest-price">
+                {formatPrice(cheapestRegion.retailPrice)} /{' '}
+                {cheapestRegion.unitOfMeasure.toLowerCase().replace(/^1 /, '')}
+              </span>
+            </div>
+          )}
+        </>
       )}
     </div>
   )

@@ -9,8 +9,24 @@ vi.mock('recharts', () => ({
   AreaChart: ({ children }: { children: React.ReactNode }) => (
     <div data-testid="area-chart">{children}</div>
   ),
-  Area: ({ stroke, fill, fillOpacity }: { stroke: string; fill: string; fillOpacity: number }) => (
-    <div data-testid="area" data-stroke={stroke} data-fill={fill} data-fill-opacity={fillOpacity} />
+  Area: ({
+    stroke,
+    fill,
+    fillOpacity,
+    dataKey,
+  }: {
+    stroke: string
+    fill: string
+    fillOpacity: number
+    dataKey?: string
+  }) => (
+    <div
+      data-testid="area"
+      data-stroke={stroke}
+      data-fill={fill}
+      data-fill-opacity={String(fillOpacity)}
+      data-key={dataKey}
+    />
   ),
   XAxis: () => null,
   YAxis: () => null,
@@ -63,6 +79,7 @@ const SKU_INDEX_NO_HISTORY: SkuIndex = {
   },
 }
 
+// Two regions, each with 2+ history points — enables compare toggle
 const SKU_INDEX_MULTI_REGION: SkuIndex = {
   generatedAt: '2026-07-20T00:00:00Z',
   skus: {
@@ -257,6 +274,72 @@ describe('SkuPage', () => {
         expect(screen.getByTestId('sku-history-empty')).toBeInTheDocument(),
       )
       expect(screen.getByText(/no price changes recorded yet/i)).toBeInTheDocument()
+    })
+  })
+
+  describe('region comparison', () => {
+    it('compare toggle is not shown when only one region has history', async () => {
+      vi.stubGlobal('fetch', mockFetch(SKU_INDEX_TWO_POINTS))
+      render(<SkuPage family="Standard_D2s_v5" />)
+      await waitFor(() => expect(screen.getByTestId('sku-history-chart')).toBeInTheDocument())
+      expect(screen.queryByRole('button', { name: /compare all regions/i })).not.toBeInTheDocument()
+    })
+
+    it('compare toggle is shown when multiple regions have history and 2+ chart points', async () => {
+      vi.stubGlobal('fetch', mockFetch(SKU_INDEX_MULTI_REGION))
+      render(<SkuPage family="Standard_D2s_v5" />)
+      await waitFor(() =>
+        expect(screen.getByRole('button', { name: /compare all regions/i })).toBeInTheDocument(),
+      )
+    })
+
+    it('clicking compare toggle shows multiple Area series', async () => {
+      vi.stubGlobal('fetch', mockFetch(SKU_INDEX_MULTI_REGION))
+      render(<SkuPage family="Standard_D2s_v5" />)
+      await waitFor(() => expect(screen.getByRole('button', { name: /compare all regions/i })).toBeInTheDocument())
+      fireEvent.click(screen.getByRole('button', { name: /compare all regions/i }))
+      const areas = screen.getAllByTestId('area')
+      expect(areas.length).toBe(2)
+    })
+
+    it('uses palette colors for each region in compare mode', async () => {
+      vi.stubGlobal('fetch', mockFetch(SKU_INDEX_MULTI_REGION))
+      render(<SkuPage family="Standard_D2s_v5" />)
+      await waitFor(() => expect(screen.getByRole('button', { name: /compare all regions/i })).toBeInTheDocument())
+      fireEvent.click(screen.getByRole('button', { name: /compare all regions/i }))
+      const areas = screen.getAllByTestId('area')
+      expect(areas[0].dataset.stroke).toBe('#38BDF8')
+      expect(areas[1].dataset.stroke).toBe('#FBBF24')
+    })
+
+    it('shows cheapest region badge in compare mode', async () => {
+      vi.stubGlobal('fetch', mockFetch(SKU_INDEX_MULTI_REGION))
+      render(<SkuPage family="Standard_D2s_v5" />)
+      await waitFor(() => expect(screen.getByRole('button', { name: /compare all regions/i })).toBeInTheDocument())
+      fireEvent.click(screen.getByRole('button', { name: /compare all regions/i }))
+      const badge = screen.getByTestId('cheapest-badge')
+      expect(badge).toBeInTheDocument()
+      expect(badge).toHaveTextContent('westeurope')
+      expect(badge).toHaveTextContent('$0.088')
+    })
+
+    it('heading shows region count in compare mode', async () => {
+      vi.stubGlobal('fetch', mockFetch(SKU_INDEX_MULTI_REGION))
+      render(<SkuPage family="Standard_D2s_v5" />)
+      await waitFor(() => expect(screen.getByRole('button', { name: /compare all regions/i })).toBeInTheDocument())
+      fireEvent.click(screen.getByRole('button', { name: /compare all regions/i }))
+      expect(screen.getByRole('heading', { level: 2 })).toHaveTextContent('2 regions')
+    })
+
+    it('can deactivate compare mode and returns to single-region chart', async () => {
+      vi.stubGlobal('fetch', mockFetch(SKU_INDEX_MULTI_REGION))
+      render(<SkuPage family="Standard_D2s_v5" />)
+      await waitFor(() => expect(screen.getByRole('button', { name: /compare all regions/i })).toBeInTheDocument())
+      fireEvent.click(screen.getByRole('button', { name: /compare all regions/i }))
+      expect(screen.getByRole('button', { name: /single region/i })).toBeInTheDocument()
+      fireEvent.click(screen.getByRole('button', { name: /single region/i }))
+      expect(screen.queryByTestId('cheapest-badge')).not.toBeInTheDocument()
+      expect(screen.getByRole('button', { name: /compare all regions/i })).toBeInTheDocument()
     })
   })
 
