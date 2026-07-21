@@ -1,5 +1,4 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
-import { render, screen, waitFor, fireEvent } from '@testing-library/react'
 import { render, screen, waitFor, within, fireEvent } from '@testing-library/react'
 import { SkuPage } from './SkuPage'
 import type { SkuIndex } from '../lib/skuIndex'
@@ -341,6 +340,9 @@ describe('SkuPage', () => {
       fireEvent.click(screen.getByRole('button', { name: /single region/i }))
       expect(screen.queryByTestId('cheapest-badge')).not.toBeInTheDocument()
       expect(screen.getByRole('button', { name: /compare all regions/i })).toBeInTheDocument()
+    })
+  })
+
   describe('region selector', () => {
     it('does not render region selector when history has only one region', async () => {
       vi.stubGlobal('fetch', mockFetch(SKU_INDEX_TWO_POINTS))

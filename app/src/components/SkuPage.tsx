@@ -127,35 +127,6 @@ function SkuChartTooltip({ active, payload, label, data, unitOfMeasure }: SkuCha
   )
 }
 
-interface MultiRegionTooltipProps {
-  active?: boolean
-  payload?: ReadonlyArray<{ dataKey?: string | number | ((obj: unknown) => unknown); value?: unknown; color?: string }>
-  label?: string | number
-  unitOfMeasure: string
-}
-
-function MultiRegionTooltip({ active, payload, label, unitOfMeasure }: MultiRegionTooltipProps) {
-  if (!active || !payload?.length || typeof label !== 'string' || !label) return null
-
-  const entries = payload
-    .filter((p) => typeof p.value === 'number' && typeof p.dataKey === 'string')
-    .map((p) => ({ region: p.dataKey as string, price: p.value as number, color: p.color }))
-
-  if (!entries.length) return null
-
-  const cheapest = entries.slice().sort((a, b) => a.price - b.price)[0]
-
-  return (
-    <div className="phc__tooltip">
-      <div className="phc__tooltip-date">{formatDateFull(label)}</div>
-      {entries.map((e) => (
-        <div key={e.region} className="phc__tooltip-price" style={{ color: e.color }}>
-          {e.region}: {formatPrice(e.price, unitOfMeasure)}
-        </div>
-      ))}
-      <div className="phc__tooltip-cheapest">
-        Cheapest: {cheapest.region} @ {formatPrice(cheapest.price, unitOfMeasure)}
-      </div>
 interface MultiTooltipEntry {
   dataKey?: string | number | ((obj: unknown) => unknown)
   value?: unknown
@@ -230,8 +201,6 @@ interface HistoryProps {
 function SkuHistory({ entry }: HistoryProps) {
   const [compareMode, setCompareMode] = useState(false)
 
-  const primaryRegion = entry.regions.slice().sort((a, b) => a.retailPrice - b.retailPrice)[0]
-  if (!primaryRegion) return null
   const historyRegions = useMemo(
     () => [
       ...new Set(
@@ -325,7 +294,7 @@ function SkuHistory({ entry }: HistoryProps) {
         .map((h) => h.armRegionName),
     ),
   ]
-  const canCompare = eligibleRegionNames.length >= 2 && chartData.length >= 2
+  const canCompare = eligibleRegionNames.length >= 2 && primaryPoints.length >= 2
 
   const multiChartData: MultiPoint[] = compareMode
     ? buildMultiChartData(entry.history, eligibleRegionNames)
@@ -343,20 +312,18 @@ function SkuHistory({ entry }: HistoryProps) {
         new Date(multiChartData[0].at as string).getTime()
       : rangeMs
 
-  const color = directionColor(getChartDirection(regionPoints))
   const headingText =
     selectedRegions.length === 1 ? selectedRegions[0] : selectedRegions.join(' · ')
 
   const cheapestRegion = entry.regions.slice().sort((a, b) => a.retailPrice - b.retailPrice)[0]
 
-  const historyHeading = compareMode
-    ? `Price history · ${eligibleRegionNames.length} regions`
-    : `Price history · ${primaryRegion.armRegionName}`
-
   return (
     <div className="sku-page__history">
-      <h2 className="sku-page__history-heading">{historyHeading}</h2>
-      <h2 className="sku-page__history-heading">Price history · {headingText}</h2>
+      <h2 className="sku-page__history-heading">
+        {compareMode
+          ? `Price history · ${eligibleRegionNames.length} regions`
+          : `Price history · ${headingText}`}
+      </h2>
 
       {historyRegions.length > 1 && (
         <div
@@ -420,7 +387,7 @@ function SkuHistory({ entry }: HistoryProps) {
         </div>
       )}
 
-      {chartData.length >= 2 && (
+      {primaryPoints.length >= 2 && (
         <>
           {canCompare && (
             <div className="sku-page__compare-bar">
@@ -459,7 +426,8 @@ function SkuHistory({ entry }: HistoryProps) {
                     content={(props) => (
                       <MultiRegionTooltip
                         {...props}
-                        unitOfMeasure={primaryRegion.unitOfMeasure}
+                        perRegionData={perRegionData}
+                        entry={entry}
                       />
                     )}
                   />
@@ -480,7 +448,7 @@ function SkuHistory({ entry }: HistoryProps) {
                   ))}
                 </AreaChart>
               ) : (
-                <AreaChart data={chartData} margin={{ top: 8, right: 16, left: 8, bottom: 8 }}>
+                <AreaChart data={mergedData} margin={{ top: 8, right: 16, left: 8, bottom: 8 }}>
                   <CartesianGrid strokeDasharray="3 3" stroke="#1e2d47" />
                   <XAxis
                     dataKey="at"
@@ -497,25 +465,42 @@ function SkuHistory({ entry }: HistoryProps) {
                     width={72}
                   />
                   <Tooltip
-                    content={(props) => (
-                      <SkuChartTooltip
-                        {...props}
-                        data={chartData}
-                        unitOfMeasure={primaryRegion.unitOfMeasure}
+                    content={
+                      isSingleRegion
+                        ? (props) => (
+                            <SkuChartTooltip
+                              {...props}
+                              data={primaryPoints}
+                              unitOfMeasure={primaryRegion?.unitOfMeasure ?? ''}
+                            />
+                          )
+                        : (props) => (
+                            <MultiRegionTooltip
+                              {...props}
+                              perRegionData={perRegionData}
+                              entry={entry}
+                            />
+                          )
+                    }
+                  />
+                  {selectedRegions.map((regionName) => {
+                    const color = getSeriesColor(regionName)
+                    return (
+                      <Area
+                        key={regionName}
+                        type="monotone"
+                        dataKey={regionName}
+                        stroke={color}
+                        strokeWidth={2}
+                        fill={color}
+                        fillOpacity={isSingleRegion ? 0.12 : 0}
+                        dot={false}
+                        activeDot={{ r: 5, fill: color }}
+                        isAnimationActive={false}
+                        connectNulls={false}
                       />
-                    )}
-                  />
-                  <Area
-                    type="monotone"
-                    dataKey="price"
-                    stroke={color}
-                    strokeWidth={2}
-                    fill={color}
-                    fillOpacity={0.12}
-                    dot={false}
-                    activeDot={{ r: 5, fill: color }}
-                    isAnimationActive={false}
-                  />
+                    )
+                  })}
                 </AreaChart>
               )}
             </ResponsiveContainer>
@@ -531,65 +516,6 @@ function SkuHistory({ entry }: HistoryProps) {
             </div>
           )}
         </>
-      {primaryPoints.length >= 2 && (
-        <div className="sku-page__chart-container" data-testid="sku-history-chart">
-          <ResponsiveContainer width="100%" height="100%">
-            <AreaChart data={mergedData} margin={{ top: 8, right: 16, left: 8, bottom: 8 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#1e2d47" />
-              <XAxis
-                dataKey="at"
-                tickFormatter={(v: string) => formatDateAxis(v, rangeMs)}
-                tick={{ fill: '#93A4BE', fontSize: 13 }}
-                axisLine={{ stroke: '#1e2d47', strokeWidth: 1 }}
-                tickLine={false}
-              />
-              <YAxis
-                tickFormatter={(v: number) => formatPrice(v)}
-                tick={{ fill: '#93A4BE', fontSize: 13 }}
-                axisLine={{ stroke: '#1e2d47', strokeWidth: 1 }}
-                tickLine={false}
-                width={72}
-              />
-              <Tooltip
-                content={
-                  isSingleRegion
-                    ? (props) => (
-                        <SkuChartTooltip
-                          {...props}
-                          data={primaryPoints}
-                          unitOfMeasure={primaryRegion?.unitOfMeasure ?? ''}
-                        />
-                      )
-                    : (props) => (
-                        <MultiRegionTooltip
-                          {...props}
-                          perRegionData={perRegionData}
-                          entry={entry}
-                        />
-                      )
-                }
-              />
-              {selectedRegions.map((regionName) => {
-                const color = getSeriesColor(regionName)
-                return (
-                  <Area
-                    key={regionName}
-                    type="monotone"
-                    dataKey={regionName}
-                    stroke={color}
-                    strokeWidth={2}
-                    fill={color}
-                    fillOpacity={isSingleRegion ? 0.12 : 0}
-                    dot={false}
-                    activeDot={{ r: 5, fill: color }}
-                    isAnimationActive={false}
-                    connectNulls={false}
-                  />
-                )
-              })}
-            </AreaChart>
-          </ResponsiveContainer>
-        </div>
       )}
     </div>
   )
