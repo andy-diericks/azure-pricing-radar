@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import {
   Area,
   AreaChart,
@@ -19,6 +19,8 @@ interface Props {
 }
 
 const REPO_URL = 'https://github.com/andy-diericks/azure-pricing-radar'
+
+const REGION_COLORS: readonly string[] = ['#38BDF8', '#FBBF24']
 
 function setMetaProperty(property: string, content: string) {
   let el = document.querySelector<HTMLMetaElement>(`meta[property="${property}"]`)
@@ -93,6 +95,63 @@ function SkuChartTooltip({ active, payload, label, data, unitOfMeasure }: SkuCha
   )
 }
 
+interface MultiTooltipEntry {
+  dataKey?: string | number | ((obj: unknown) => unknown)
+  value?: unknown
+  color?: string
+}
+
+interface MultiRegionTooltipProps {
+  active?: boolean
+  payload?: ReadonlyArray<MultiTooltipEntry>
+  label?: string | number
+  perRegionData: Map<string, ChartPoint[]>
+  entry: SkuEntry
+}
+
+function MultiRegionTooltip({ active, payload, label, perRegionData, entry }: MultiRegionTooltipProps) {
+  if (!active || !payload?.length || typeof label !== 'string' || !label) return null
+  return (
+    <div className="phc__tooltip">
+      <div className="phc__tooltip-date">{formatDateFull(label)}</div>
+      {payload.map((item, i) => {
+        const regionName = typeof item.dataKey === 'string' ? item.dataKey : undefined
+        if (!regionName || typeof item.value !== 'number') return null
+        const points = perRegionData.get(regionName) ?? []
+        const idx = points.findIndex((p) => p.at === label)
+        const prev = idx > 0 ? points[idx - 1].price : null
+        const price = item.value
+        const unitOfMeasure =
+          entry.regions.find((r) => r.armRegionName === regionName)?.unitOfMeasure ?? ''
+        const change =
+          prev !== null
+            ? (() => {
+                const abs = price - prev
+                const pct = prev !== 0 ? (abs / prev) * 100 : 0
+                const sign = abs >= 0 ? '+' : ''
+                return { text: `${sign}${formatPrice(abs)} (${sign}${pct.toFixed(1)}%)`, up: abs >= 0 }
+              })()
+            : null
+        return (
+          <div key={`${regionName}-${i}`} className="phc__tooltip-region-entry">
+            <div className="phc__tooltip-region-name" style={{ color: item.color }}>
+              {regionName}
+            </div>
+            <div className="phc__tooltip-price">{formatPrice(price, unitOfMeasure)}</div>
+            {change && (
+              <div
+                className={`phc__tooltip-change phc__tooltip-change--${change.up ? 'up' : 'down'}`}
+              >
+                {change.text}
+              </div>
+            )}
+          </div>
+        )
+      })}
+    </div>
+  )
+}
+
 function ChartEmptyIcon() {
   return (
     <svg className="sku-page__empty-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
@@ -108,31 +167,138 @@ interface HistoryProps {
 }
 
 function SkuHistory({ entry }: HistoryProps) {
-  const primaryRegion = entry.regions.slice().sort((a, b) => a.retailPrice - b.retailPrice)[0]
-  if (!primaryRegion) return null
+  const historyRegions = useMemo(
+    () => [
+      ...new Set(
+        entry.history.filter((h) => h.retailPrice !== null).map((h) => h.armRegionName),
+      ),
+    ],
+    [entry.history],
+  )
 
-  const regionPoints = entry.history
-    .filter((h) => h.armRegionName === primaryRegion.armRegionName && h.retailPrice !== null)
-    .map((h) => ({ ...h, price: h.retailPrice as number }))
-    .sort((a, b) => a.at.localeCompare(b.at))
+  const defaultRegion = useMemo(() => {
+    const withHistory = new Set(historyRegions)
+    return (
+      entry.regions
+        .slice()
+        .sort((a, b) => a.retailPrice - b.retailPrice)
+        .find((r) => withHistory.has(r.armRegionName))?.armRegionName ??
+      historyRegions[0] ??
+      ''
+    )
+  }, [entry.regions, historyRegions])
 
-  const chartData: ChartPoint[] = regionPoints.map((p) => ({ at: p.at, price: p.price }))
+  const [selectedRegions, setSelectedRegions] = useState<string[]>(() =>
+    defaultRegion ? [defaultRegion] : historyRegions.slice(0, 1),
+  )
+
+  function toggleRegion(region: string) {
+    setSelectedRegions((prev) => {
+      if (prev.includes(region)) {
+        return prev.length > 1 ? prev.filter((r) => r !== region) : prev
+      }
+      return [...prev, region]
+    })
+  }
+
+  const regionColorMap = useMemo(() => {
+    const map = new Map<string, string>()
+    historyRegions.forEach((r, i) => map.set(r, REGION_COLORS[i % REGION_COLORS.length]))
+    return map
+  }, [historyRegions])
+
+  const perRegionData = useMemo((): Map<string, ChartPoint[]> => {
+    const map = new Map<string, ChartPoint[]>()
+    for (const regionName of selectedRegions) {
+      const points = entry.history
+        .filter((h) => h.armRegionName === regionName && h.retailPrice !== null)
+        .map((h) => ({ at: h.at, price: h.retailPrice as number }))
+        .sort((a, b) => a.at.localeCompare(b.at))
+      map.set(regionName, points)
+    }
+    return map
+  }, [entry.history, selectedRegions])
+
+  const isSingleRegion = selectedRegions.length === 1
+  const primaryRegionName = selectedRegions[0] ?? ''
+  const primaryRegion =
+    entry.regions.find((r) => r.armRegionName === primaryRegionName) ?? entry.regions[0]
+  const primaryPoints = perRegionData.get(primaryRegionName) ?? []
+
+  const primaryDirectionHistory = useMemo(
+    () =>
+      entry.history
+        .filter((h) => h.armRegionName === primaryRegionName && h.retailPrice !== null)
+        .map((h) => ({ ...h, price: h.retailPrice as number }))
+        .sort((a, b) => a.at.localeCompare(b.at)),
+    [entry.history, primaryRegionName],
+  )
+
+  function getSeriesColor(regionName: string): string {
+    if (isSingleRegion) return directionColor(getChartDirection(primaryDirectionHistory))
+    return regionColorMap.get(regionName) ?? REGION_COLORS[0]
+  }
+
+  const mergedData = useMemo((): Array<Record<string, unknown>> => {
+    const allAts = [
+      ...new Set([...perRegionData.values()].flatMap((pts) => pts.map((p) => p.at))),
+    ].sort()
+    return allAts.map((at) => {
+      const point: Record<string, unknown> = { at }
+      for (const [regionName, pts] of perRegionData) {
+        const match = pts.find((p) => p.at === at)
+        if (match !== undefined) point[regionName] = match.price
+      }
+      return point
+    })
+  }, [perRegionData])
 
   const rangeMs =
-    chartData.length > 1
-      ? new Date(chartData[chartData.length - 1].at).getTime() -
-        new Date(chartData[0].at).getTime()
+    mergedData.length > 1
+      ? new Date(mergedData[mergedData.length - 1].at as string).getTime() -
+        new Date(mergedData[0].at as string).getTime()
       : 0
 
-  const color = directionColor(getChartDirection(regionPoints))
+  const headingText =
+    selectedRegions.length === 1 ? selectedRegions[0] : selectedRegions.join(' · ')
 
   return (
     <div className="sku-page__history">
-      <h2 className="sku-page__history-heading">
-        Price history · {primaryRegion.armRegionName}
-      </h2>
+      <h2 className="sku-page__history-heading">Price history · {headingText}</h2>
 
-      {chartData.length === 0 && (
+      {historyRegions.length > 1 && (
+        <div
+          className="sku-page__region-selector"
+          role="group"
+          aria-label="Select regions"
+        >
+          {historyRegions.map((region) => (
+            <button
+              key={region}
+              type="button"
+              className={[
+                'sku-page__region-btn',
+                selectedRegions.includes(region) ? 'sku-page__region-btn--active' : '',
+              ]
+                .join(' ')
+                .trim()}
+              onClick={() => toggleRegion(region)}
+              aria-pressed={selectedRegions.includes(region)}
+            >
+              {selectedRegions.includes(region) && (
+                <span
+                  className="sku-page__region-swatch"
+                  style={{ background: regionColorMap.get(region) }}
+                  aria-hidden="true"
+                />
+              )}
+              {region}
+            </button>
+          ))}
+        </div>
+      )}
+
+      {primaryPoints.length === 0 && (
         <div className="sku-page__empty" data-testid="sku-history-empty">
           <ChartEmptyIcon />
           <p className="sku-page__empty-headline">No price changes recorded yet</p>
@@ -140,16 +306,19 @@ function SkuHistory({ entry }: HistoryProps) {
         </div>
       )}
 
-      {chartData.length === 1 && (
+      {primaryPoints.length === 1 && (
         <div className="sku-page__single" data-testid="sku-history-single">
-          <p className="sku-page__single-price" style={{ color }}>
-            {formatPrice(chartData[0].price, primaryRegion.unitOfMeasure)}
+          <p
+            className="sku-page__single-price"
+            style={{ color: directionColor(getChartDirection(primaryDirectionHistory)) }}
+          >
+            {formatPrice(primaryPoints[0].price, primaryRegion?.unitOfMeasure ?? '')}
           </p>
           <dl className="sku-page__single-meta">
             <dt>Region</dt>
-            <dd>{primaryRegion.armRegionName}</dd>
+            <dd>{primaryRegionName}</dd>
             <dt>First seen</dt>
-            <dd>{formatDateFull(chartData[0].at)}</dd>
+            <dd>{formatDateFull(primaryPoints[0].at)}</dd>
           </dl>
           <div className="sku-page__empty">
             <ChartEmptyIcon />
@@ -159,10 +328,10 @@ function SkuHistory({ entry }: HistoryProps) {
         </div>
       )}
 
-      {chartData.length >= 2 && (
+      {primaryPoints.length >= 2 && (
         <div className="sku-page__chart-container" data-testid="sku-history-chart">
           <ResponsiveContainer width="100%" height="100%">
-            <AreaChart data={chartData} margin={{ top: 8, right: 16, left: 8, bottom: 8 }}>
+            <AreaChart data={mergedData} margin={{ top: 8, right: 16, left: 8, bottom: 8 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="#1e2d47" />
               <XAxis
                 dataKey="at"
@@ -179,25 +348,42 @@ function SkuHistory({ entry }: HistoryProps) {
                 width={72}
               />
               <Tooltip
-                content={(props) => (
-                  <SkuChartTooltip
-                    {...props}
-                    data={chartData}
-                    unitOfMeasure={primaryRegion.unitOfMeasure}
+                content={
+                  isSingleRegion
+                    ? (props) => (
+                        <SkuChartTooltip
+                          {...props}
+                          data={primaryPoints}
+                          unitOfMeasure={primaryRegion?.unitOfMeasure ?? ''}
+                        />
+                      )
+                    : (props) => (
+                        <MultiRegionTooltip
+                          {...props}
+                          perRegionData={perRegionData}
+                          entry={entry}
+                        />
+                      )
+                }
+              />
+              {selectedRegions.map((regionName) => {
+                const color = getSeriesColor(regionName)
+                return (
+                  <Area
+                    key={regionName}
+                    type="monotone"
+                    dataKey={regionName}
+                    stroke={color}
+                    strokeWidth={2}
+                    fill={color}
+                    fillOpacity={isSingleRegion ? 0.12 : 0}
+                    dot={false}
+                    activeDot={{ r: 5, fill: color }}
+                    isAnimationActive={false}
+                    connectNulls={false}
                   />
-                )}
-              />
-              <Area
-                type="monotone"
-                dataKey="price"
-                stroke={color}
-                strokeWidth={2}
-                fill={color}
-                fillOpacity={0.12}
-                dot={false}
-                activeDot={{ r: 5, fill: color }}
-                isAnimationActive={false}
-              />
+                )
+              })}
             </AreaChart>
           </ResponsiveContainer>
         </div>
