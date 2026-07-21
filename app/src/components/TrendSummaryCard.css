@@ -1,0 +1,78 @@
+.tsc {
+  margin-top: var(--space-6);
+  padding-top: var(--space-6);
+  border-top: 1px solid rgba(147, 164, 190, 0.15);
+}
+
+.tsc__heading {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--space-4);
+}
+
+.tsc__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+.tsc__stat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.tsc__stat-label {
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+}
+
+.tsc__stat-value {
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+}
+
+.tsc__stat-value--mono {
+  font-family: var(--font-mono);
+}
+
+/* Direction badges */
+.tsc__badge {
+  display: inline-block;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  font-family: var(--font-mono);
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-control);
+}
+
+.tsc__badge--drop {
+  color: #34D399;
+  background: rgba(52, 211, 153, 0.1);
+}
+
+.tsc__badge--increase {
+  color: #F87171;
+  background: rgba(248, 113, 113, 0.1);
+}
+
+.tsc__badge--stable {
+  color: #FBBF24;
+  background: rgba(251, 191, 36, 0.1);
+}
+
+.tsc__badge--neutral {
+  color: var(--color-text-secondary);
+  background: rgba(147, 164, 190, 0.1);
+  font-family: inherit;
+  font-weight: 400;
+}
+
+@media (max-width: 640px) {
+  .tsc__grid {
+    grid-template-columns: 1fr;
+  }
+}

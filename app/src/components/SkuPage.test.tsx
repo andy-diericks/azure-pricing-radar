@@ -241,9 +241,9 @@ describe('SkuPage', () => {
       await waitFor(() =>
         expect(screen.getByTestId('sku-history-single')).toBeInTheDocument(),
       )
-      expect(screen.getByText('$0.096 / 1 Hour')).toBeInTheDocument()
+      expect(screen.getAllByText('$0.096 / 1 Hour').length).toBeGreaterThan(0)
       expect(screen.getAllByText('westeurope').length).toBeGreaterThan(0)
-      expect(screen.getByText('15 Jul 2026')).toBeInTheDocument()
+      expect(screen.getAllByText('15 Jul 2026').length).toBeGreaterThan(0)
       expect(screen.getByText(/not enough history yet/i)).toBeInTheDocument()
     })
 
@@ -328,7 +328,8 @@ describe('SkuPage', () => {
       render(<SkuPage family="Standard_D2s_v5" />)
       await waitFor(() => expect(screen.getByRole('button', { name: /compare all regions/i })).toBeInTheDocument())
       fireEvent.click(screen.getByRole('button', { name: /compare all regions/i }))
-      expect(screen.getByRole('heading', { level: 2 })).toHaveTextContent('2 regions')
+      const h2s = screen.getAllByRole('heading', { level: 2 })
+      expect(h2s.some((h) => h.textContent?.includes('2 regions'))).toBe(true)
     })
 
     it('can deactivate compare mode and returns to single-region chart', async () => {
@@ -414,7 +415,8 @@ describe('SkuPage', () => {
       render(<SkuPage family="Standard_D2s_v5" />)
       await waitFor(() => expect(screen.getByTestId('sku-history-chart')).toBeInTheDocument())
       fireEvent.click(screen.getByRole('button', { name: 'northeurope' }))
-      expect(screen.getByRole('heading', { level: 2 })).toHaveTextContent('westeurope · northeurope')
+      const h2s = screen.getAllByRole('heading', { level: 2 })
+      expect(h2s.some((h) => h.textContent?.includes('westeurope · northeurope'))).toBe(true)
     })
   })
 })

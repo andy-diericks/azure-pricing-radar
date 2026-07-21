@@ -11,6 +11,7 @@ import {
 import { loadSkuIndex } from '../lib/loadSkuIndex'
 import { formatPrice, formatDateAxis, formatDateFull, directionColor } from '../lib/format'
 import type { SkuEntry, SkuHistoryPoint, SkuIndex } from '../lib/skuIndex'
+import { TrendSummaryCard } from './TrendSummaryCard'
 import '../App.css'
 import './SkuPage.css'
 
@@ -676,6 +677,13 @@ export function SkuPage({ family }: Props) {
               ))}
             </tbody>
           </table>
+          <TrendSummaryCard
+            entry={entry}
+            primaryRegion={
+              entry.regions.slice().sort((a, b) => a.retailPrice - b.retailPrice)[0]
+                ?.armRegionName ?? ''
+            }
+          />
           <SkuHistory entry={entry} />
         </div>
       </main>
