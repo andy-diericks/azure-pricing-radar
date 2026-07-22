@@ -4,3 +4,4 @@ dist/
 __pycache__/
 .DS_Store
 app/public/sku-index.json
+app/public/og-images/
