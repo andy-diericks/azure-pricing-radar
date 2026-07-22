@@ -3,7 +3,7 @@
 The north star for backlog decisions. The product-manager run derives issues
 from THIS file — never from imagination.
 
-**Current epic: E1** — the PM works this epic's sub-tasks in order. Update
+**Current epic: E3** — the PM works this epic's sub-tasks in order. Update
 this line by hand when an epic completes (the PM journals "Epic <id>
 complete" to signal it's ready).
 
