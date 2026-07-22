@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/build-sku-index.js && vite build",
+    "build": "node scripts/build-sku-index.js && node scripts/build-og-images.js && vite build",
     "lint": "eslint src --ext .ts,.tsx --max-warnings 0",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",

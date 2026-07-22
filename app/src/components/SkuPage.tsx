@@ -11,6 +11,7 @@ import {
 import { loadSkuIndex } from '../lib/loadSkuIndex'
 import { formatPrice, formatDateAxis, formatDateFull, directionColor } from '../lib/format'
 import type { SkuEntry, SkuHistoryPoint, SkuIndex } from '../lib/skuIndex'
+import { ogImageUrl } from '../lib/ogImage'
 import { TrendSummaryCard } from './TrendSummaryCard'
 import '../App.css'
 import './SkuPage.css'
@@ -556,17 +557,22 @@ export function SkuPage({ family }: Props) {
     const prevOgTitle = document.querySelector('meta[property="og:title"]')?.getAttribute('content') ?? ''
     const prevOgDesc = document.querySelector('meta[property="og:description"]')?.getAttribute('content') ?? ''
     const prevOgUrl = document.querySelector('meta[property="og:url"]')?.getAttribute('content') ?? ''
+    const prevOgImage = document.querySelector('meta[property="og:image"]')?.getAttribute('content') ?? ''
 
     document.title = title
     setMetaProperty('og:title', title)
     setMetaProperty('og:description', ogDescription)
     setMetaProperty('og:url', canonicalUrl)
+    if (entry) {
+      setMetaProperty('og:image', ogImageUrl(baseUrl, family))
+    }
 
     return () => {
       document.title = prevTitle
       setMetaProperty('og:title', prevOgTitle)
       setMetaProperty('og:description', prevOgDesc)
       setMetaProperty('og:url', prevOgUrl)
+      setMetaProperty('og:image', prevOgImage)
     }
   }, [index, entry, family])
 
