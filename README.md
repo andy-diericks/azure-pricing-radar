@@ -89,6 +89,18 @@ entry), changes under 0.5% omitted as rounding noise.
 summary (e.g. _3 drops · 1 increase_), direction-coded badges, and the top 3
 biggest movers by percentage magnitude across all services.
 
+## 📡 Subscribe
+
+Stay on top of Azure pricing changes in your feed reader:
+
+| Format | URL |
+|---|---|
+| Atom 1.0 | `https://andy-diericks.github.io/azure-pricing-radar/feed.atom` |
+| RSS 2.0 | `https://andy-diericks.github.io/azure-pricing-radar/feed.rss` |
+
+Works with any feed reader — Feedly, NetNewsWire, Miniflux, Thunderbird, and
+others. New entries appear after each data fetch that detects a price change.
+
 ## 🔍 What it tracks today
 
 - **Virtual Machines** — West Europe

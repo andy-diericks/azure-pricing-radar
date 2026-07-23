@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Azure Pricing Radar Daily Digest</title>
+  <link href="https://andy-diericks.github.io/azure-pricing-radar/"/>
+  <link rel="self" href="https://andy-diericks.github.io/azure-pricing-radar/feed.atom" type="application/atom+xml"/>
+  <updated>2026-07-15T00:00:00Z</updated>
+  <id>https://andy-diericks.github.io/azure-pricing-radar/</id>
+  <entry>
+    <title>Azure pricing changes for 2026-07-15</title>
+    <id>https://andy-diericks.github.io/azure-pricing-radar/#/digests/2026-07-15</id>
+    <link href="https://andy-diericks.github.io/azure-pricing-radar/#/digests/2026-07-15"/>
+    <updated>2026-07-23T10:42:52.646Z</updated>
+    <content type="text">Azure pricing changes for 2026-07-15
+
+9,904 new SKUs</content>
+  </entry>
+</feed>

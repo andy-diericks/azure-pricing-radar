@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Azure Pricing Radar Daily Digest</title>
+    <link>https://andy-diericks.github.io/azure-pricing-radar/</link>
+    <description>Daily digest of Azure retail price changes tracked by Azure Pricing Radar.</description>
+    <lastBuildDate>Wed, 15 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Azure pricing changes for 2026-07-15</title>
+      <link>https://andy-diericks.github.io/azure-pricing-radar/#/digests/2026-07-15</link>
+      <guid>https://andy-diericks.github.io/azure-pricing-radar/#/digests/2026-07-15</guid>
+      <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Azure pricing changes for 2026-07-15
+
+9,904 new SKUs</description>
+    </item>
+  </channel>
+</rss>
