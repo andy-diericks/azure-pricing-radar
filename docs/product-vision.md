@@ -140,6 +140,9 @@ Plain-language summaries that turn raw diffs into something worth following.
   movers.
 - E3.3 RSS/Atom feed of digests (architects live in feed readers).
 - E3.4 "This week in Azure pricing" weekly rollup page + markdown file.
+- E3.5 Add Target regions: Belgium Central (belgiumcentral, new region launched Nov 2025)
+- E3.6 Add Target regions: North Europe (northeurope) and France Central (francecentral)
+- E3.7 Add Target regions: Sweden Central (swedencentral).
 
 ## E4 — Beyond pay-as-you-go (the depth that earns respect)
 The features that make FinOps people take it seriously. NOTE: E4 enlarges the
