@@ -83,6 +83,12 @@ Entries follow the [quality bar in `docs/examples.md`](docs/examples.md):
 neutral verbs, no speculation, grouped families (12 SKUs moving together = one
 entry), changes under 0.5% omitted as rounding noise.
 
+**Digest archive** — all digests are browsable at
+`https://andy-diericks.github.io/azure-pricing-radar/#/digests` (or click
+"Digests" in the dashboard header). Each entry shows the date, a headline
+summary (e.g. _3 drops · 1 increase_), direction-coded badges, and the top 3
+biggest movers by percentage magnitude across all services.
+
 ## 🔍 What it tracks today
 
 - **Virtual Machines** — West Europe

@@ -63,6 +63,16 @@
   flex-shrink: 0;
 }
 
+.header__nav-link {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+}
+
+.header__nav-link:hover {
+  color: var(--color-accent);
+}
+
 .main {
   flex: 1;
   padding: var(--space-8);
