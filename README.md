@@ -66,6 +66,23 @@ changes were detected.
 Prices are checked every 6 hours ([why not more often?](docs/adr/0003-fetch-cadence.md)) —
 this is a radar for same-day detection, not a real-time ticker.
 
+## 📋 Daily digests
+
+After each data fetch that detects price changes, a digest is auto-generated
+and committed to `data/digests/`. Each digest covers one day's worth of
+changes in two formats:
+
+- **`data/digests/<YYYY-MM-DD>.md`** — human-readable Markdown: headline,
+  plain-language summary (drops, increases, new SKUs, removals), and the top 3
+  biggest movers per service/region group, each with before → after price and
+  percentage change.
+- **`data/digests/<YYYY-MM-DD>.json`** — structured JSON with the same data,
+  machine-readable for downstream tools (E3.2 archive page, E3.3 RSS feed).
+
+Entries follow the [quality bar in `docs/examples.md`](docs/examples.md):
+neutral verbs, no speculation, grouped families (12 SKUs moving together = one
+entry), changes under 0.5% omitted as rounding noise.
+
 ## 🔍 What it tracks today
 
 - **Virtual Machines** — West Europe

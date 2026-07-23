@@ -95,6 +95,14 @@ def main() -> int:
     last_checked_file = latest_dir / "last-checked.json"
     last_checked_file.write_text(json.dumps({"at": now.isoformat()}, indent=1))
 
+    if any_changes:
+        import subprocess
+        digest_script = Path(__file__).resolve().parent / "generate-digest.js"
+        result = subprocess.run(["node", str(digest_script)], capture_output=True, text=True)
+        print(result.stdout, end="")
+        if result.returncode != 0:
+            print(result.stderr, file=sys.stderr)
+
     print("changes detected" if any_changes else "no changes")
     return 0
 
