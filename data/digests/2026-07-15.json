@@ -1,0 +1,28 @@
+{
+  "generatedAt": "2026-07-23T10:42:52.646Z",
+  "date": "2026-07-15",
+  "totalDrops": 0,
+  "totalIncreases": 0,
+  "totalNewSkus": 9904,
+  "totalRemoved": 0,
+  "sections": [
+    {
+      "scope": "storage-eu-west",
+      "displayName": "Storage · West Europe",
+      "drops": 0,
+      "increases": 0,
+      "newSkus": 1426,
+      "removed": 0,
+      "topMovers": []
+    },
+    {
+      "scope": "vm-eu-west",
+      "displayName": "Virtual Machines · West Europe",
+      "drops": 0,
+      "increases": 0,
+      "newSkus": 8478,
+      "removed": 0,
+      "topMovers": []
+    }
+  ]
+}
