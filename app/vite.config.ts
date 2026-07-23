@@ -25,6 +25,21 @@ function buildManifest(): object[] {
   return entries
 }
 
+function buildDigestsManifest(): object[] {
+  const digestsDir = join(DATA_DIR, 'digests')
+  const entries: object[] = []
+  try {
+    for (const file of readdirSync(digestsDir).sort()) {
+      if (!file.endsWith('.json')) continue
+      const date = file.replace('.json', '')
+      entries.push({ date, path: `digests/${file}` })
+    }
+  } catch {
+    // no digests directory yet — return empty manifest
+  }
+  return entries
+}
+
 export default defineConfig({
   base: process.env.GITHUB_PAGES === 'true' ? '/azure-pricing-radar/' : '/',
   plugins: [
@@ -40,6 +55,12 @@ export default defineConfig({
             if (url === '/diffs/manifest.json') {
               res.setHeader('Content-Type', 'application/json')
               res.end(JSON.stringify(buildManifest()))
+              return
+            }
+
+            if (url === '/digests/manifest.json') {
+              res.setHeader('Content-Type', 'application/json')
+              res.end(JSON.stringify(buildDigestsManifest()))
               return
             }
 

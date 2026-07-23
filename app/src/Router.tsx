@@ -6,6 +6,10 @@ const SkuPage = lazy(() =>
   import('./components/SkuPage').then(m => ({ default: m.SkuPage })),
 )
 
+const DigestArchive = lazy(() =>
+  import('./pages/DigestArchive').then(m => ({ default: m.DigestArchive })),
+)
+
 export function Router() {
   const [route, setRoute] = useState(() => parseRoute(window.location.hash))
 
@@ -21,6 +25,13 @@ export function Router() {
     return (
       <Suspense fallback={<div className="phc__lazy-fallback" aria-label="Loading" />}>
         <SkuPage family={route.family} />
+      </Suspense>
+    )
+  }
+  if (route.view === 'digests') {
+    return (
+      <Suspense fallback={<div className="phc__lazy-fallback" aria-label="Loading" />}>
+        <DigestArchive />
       </Suspense>
     )
   }

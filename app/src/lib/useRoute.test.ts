@@ -45,4 +45,16 @@ describe('parseRoute', () => {
       family: 'Standard_D2s_v5',
     })
   })
+
+  it('returns digests view for #/digests', () => {
+    expect(parseRoute('#/digests')).toEqual({ view: 'digests' })
+  })
+
+  it('returns digests view for #/digests/ with trailing slash', () => {
+    expect(parseRoute('#/digests/')).toEqual({ view: 'digests' })
+  })
+
+  it('returns digests view for plain /digests path', () => {
+    expect(parseRoute('/digests')).toEqual({ view: 'digests' })
+  })
 })
