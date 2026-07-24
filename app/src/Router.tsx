@@ -10,6 +10,10 @@ const DigestArchive = lazy(() =>
   import('./pages/DigestArchive').then(m => ({ default: m.DigestArchive })),
 )
 
+const WeeklyDigest = lazy(() =>
+  import('./pages/WeeklyDigest').then(m => ({ default: m.WeeklyDigest })),
+)
+
 export function Router() {
   const [route, setRoute] = useState(() => parseRoute(window.location.hash))
 
@@ -32,6 +36,13 @@ export function Router() {
     return (
       <Suspense fallback={<div className="phc__lazy-fallback" aria-label="Loading" />}>
         <DigestArchive />
+      </Suspense>
+    )
+  }
+  if (route.view === 'weekly') {
+    return (
+      <Suspense fallback={<div className="phc__lazy-fallback" aria-label="Loading" />}>
+        <WeeklyDigest />
       </Suspense>
     )
   }

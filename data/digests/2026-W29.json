@@ -1,0 +1,34 @@
+{
+  "generatedAt": "2026-07-24T10:36:41.745Z",
+  "isoWeek": "2026-W29",
+  "weekStart": "2026-07-13",
+  "weekEnd": "2026-07-19",
+  "daysWithData": 1,
+  "totalDrops": 0,
+  "totalIncreases": 0,
+  "totalNewSkus": 9904,
+  "totalRemoved": 0,
+  "servicesAffected": [],
+  "regionsAffected": [],
+  "topMovers": [],
+  "sections": [
+    {
+      "scope": "storage-eu-west",
+      "displayName": "Storage · West Europe",
+      "drops": 0,
+      "increases": 0,
+      "newSkus": 1426,
+      "removed": 0,
+      "topMovers": []
+    },
+    {
+      "scope": "vm-eu-west",
+      "displayName": "Virtual Machines · West Europe",
+      "drops": 0,
+      "increases": 0,
+      "newSkus": 8478,
+      "removed": 0,
+      "topMovers": []
+    }
+  ]
+}

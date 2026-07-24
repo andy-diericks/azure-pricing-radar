@@ -57,4 +57,16 @@ describe('parseRoute', () => {
   it('returns digests view for plain /digests path', () => {
     expect(parseRoute('/digests')).toEqual({ view: 'digests' })
   })
+
+  it('returns weekly view for #/weekly', () => {
+    expect(parseRoute('#/weekly')).toEqual({ view: 'weekly' })
+  })
+
+  it('returns weekly view for #/weekly/ with trailing slash', () => {
+    expect(parseRoute('#/weekly/')).toEqual({ view: 'weekly' })
+  })
+
+  it('returns weekly view for plain /weekly path', () => {
+    expect(parseRoute('/weekly')).toEqual({ view: 'weekly' })
+  })
 })
