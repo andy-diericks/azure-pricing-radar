@@ -59,6 +59,7 @@ export default function App() {
         <div className="header__dot" />
         <span className="header__title">Azure Pricing Radar</span>
         <span className="header__subtitle">Price changes · checked every 6 hours</span>
+        <a href="#/weekly" className="header__nav-link">This week</a>
         <a href="#/digests" className="header__nav-link">Digests</a>
         <LastUpdatedBadge lastUpdatedAt={lastUpdatedAt} lastCheckedAt={lastCheckedAt} />
       </header>

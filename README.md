@@ -89,6 +89,25 @@ entry), changes under 0.5% omitted as rounding noise.
 summary (e.g. _3 drops · 1 increase_), direction-coded badges, and the top 3
 biggest movers by percentage magnitude across all services.
 
+## 📅 Weekly digest
+
+Every ISO week, a "This week in Azure pricing" rollup aggregates the week's
+daily digests into one high-level view:
+
+- **Summary card** — total drops, increases, new SKUs, and removed SKUs for
+  the week; which services and regions were affected.
+- **Biggest movers** — the top 5 price changes across all services, sorted by
+  percentage magnitude.
+- **By service** — per-service breakdown with counts and top 3 movers.
+
+**Weekly archive files** are committed to `data/digests/` in two formats:
+- `data/digests/<YYYY-Www>.md` — human-readable Markdown
+- `data/digests/<YYYY-Www>.json` — structured JSON for downstream consumers
+
+**Weekly rollup page** — view the current week at
+`https://andy-diericks.github.io/azure-pricing-radar/#/weekly` (or click
+"This week" in the dashboard header).
+
 ## 📡 Subscribe
 
 Stay on top of Azure pricing changes in your feed reader:
