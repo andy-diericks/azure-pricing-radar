@@ -351,3 +351,9 @@ Claude reads the tail of it to remember.
 - Did: Deleted `app/src/components/PriceHistoryChart.tsx`, `PriceHistoryChart.test.tsx`, and `PriceHistoryChart.css` — all three files were fully orphaned since run 2026-07-20-9 replaced the chart modal with inline rendering in SkuPage. Confirmed no remaining imports of `PriceHistoryChart` anywhere in `app/src`. 384 tests green (the 11 PriceHistoryChart tests removed); lint, typecheck, build all pass.
 - Decisions: Straight deletion only — no refactoring, no other changes per issue scope. Build output unchanged (no PriceHistoryChart chunk was being emitted anyway since the lazy import was removed from App.tsx in run 2026-07-20-9).
 - Noticed for later: nothing new.
+
+## 2026-07-24T17:55Z — run 2026-07-24-3
+- Task: #101 E3.5 needs-human: Add Belgium Central (belgiumcentral) region to price tracking
+- Did: Issue #101 is a verification/planning issue whose DoD asked a human to validate five prerequisites and then have me create a claude-ready developer implementation issue. The project owner validated ("I validate"). Created #105 "E3.5 implement: Add Belgium Central (belgiumcentral) region to price tracking" (claude-ready, P2) with explicit frozen-zone exception for `scripts/fetch_prices.py`, exact SCOPES entries to add, and README update requirement. Closed #101 as completed.
+- Decisions: Treated the human's "I validate" comment as approval of all five DoD items (armRegionName confirmed, services confirmed, repo size acceptable). Created a focused implementation issue (#105) rather than attempting to implement scripts/ changes in the same run — the scripts/ frozen zone requires an explicit per-issue exception, which #105 now carries. Chose to add only VM and Storage scopes (not OpenAI) as the issue specified; OpenAI presence in Belgium Central should be verified separately.
+- Noticed for later: nothing new.
