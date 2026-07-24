@@ -27,6 +27,8 @@ SCOPES: dict[str, str] = {
     "vm-eu-west": "serviceName eq 'Virtual Machines' and armRegionName eq 'westeurope' and priceType eq 'Consumption'",
     "storage-eu-west": "serviceName eq 'Storage' and armRegionName eq 'westeurope' and priceType eq 'Consumption'",
     "openai-eu": "serviceName eq 'Azure OpenAI' and (armRegionName eq 'westeurope' or armRegionName eq 'swedencentral' or armRegionName eq 'francecentral')",
+    "vm-belgium": "serviceName eq 'Virtual Machines' and armRegionName eq 'belgiumcentral' and priceType eq 'Consumption'",
+    "storage-belgium": "serviceName eq 'Storage' and armRegionName eq 'belgiumcentral' and priceType eq 'Consumption'",
 }
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"

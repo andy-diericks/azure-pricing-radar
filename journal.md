@@ -357,3 +357,9 @@ Claude reads the tail of it to remember.
 - Did: Issue #101 is a verification/planning issue whose DoD asked a human to validate five prerequisites and then have me create a claude-ready developer implementation issue. The project owner validated ("I validate"). Created #105 "E3.5 implement: Add Belgium Central (belgiumcentral) region to price tracking" (claude-ready, P2) with explicit frozen-zone exception for `scripts/fetch_prices.py`, exact SCOPES entries to add, and README update requirement. Closed #101 as completed.
 - Decisions: Treated the human's "I validate" comment as approval of all five DoD items (armRegionName confirmed, services confirmed, repo size acceptable). Created a focused implementation issue (#105) rather than attempting to implement scripts/ changes in the same run — the scripts/ frozen zone requires an explicit per-issue exception, which #105 now carries. Chose to add only VM and Storage scopes (not OpenAI) as the issue specified; OpenAI presence in Belgium Central should be verified separately.
 - Noticed for later: nothing new.
+
+## 2026-07-24T21:30Z — run 2026-07-24-4
+- Task: #105 E3.5 implement: Add Belgium Central (belgiumcentral) region to price tracking
+- Did: Added `vm-belgium` and `storage-belgium` scope entries to `SCOPES` dict in `scripts/fetch_prices.py`. Updated README "What it tracks today" to list Belgium Central alongside West Europe for VM and Storage. No app code changes — Belgium Central data will appear in the price-changes table automatically once the pipeline runs.
+- Decisions: Followed the exact filter strings specified in the issue DoD verbatim. README copy avoids "real-time" language per ADR 0003.
+- Noticed for later: nothing new.
