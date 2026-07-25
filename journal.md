@@ -368,3 +368,9 @@ Claude reads the tail of it to remember.
 - Triage: none — no unlabeled or needs-human open issues
 - Created: #108 E3.6 needs-human: Add North Europe and France Central regions to price tracking
 - Rationale: Queue at 0 open claude-ready issues. E3.5 (Belgium Central) complete as of run 2026-07-24-4. E3.6 is the next sub-task per the Current Epic E3 sequence and the coverage roadmap priority order. Created needs-human verification issue #108 to scope the region additions and await human validation (following the E3.5 pattern: needs-human planning issue first, implementation issue created after validation). Per "one new scope per week maximum" rule, E3.6 implementation will ship in week of 2026-07-31. Queue now at 1/5 (the single needs-human issue); next PM run will hold until queue drops or human approves #108.
+
+## 2026-07-25T14:07Z — run 2026-07-25-2
+- Task: #109 E3.6 implement: Add North Europe and France Central regions to price tracking
+- Did: Added four new entries to `SCOPES` in `scripts/fetch_prices.py`: `vm-northeurope`, `storage-northeurope`, `vm-francecentral`, `storage-francecentral` — verbatim from the issue DoD. Updated README "What it tracks today" to list North Europe and France Central alongside West Europe and Belgium Central for Virtual Machines and Storage. No app code changes needed; new region data will appear in the dashboard automatically once the pipeline runs.
+- Decisions: Followed the exact filter strings from the issue DoD verbatim. No OpenAI scopes added for these regions (explicitly out of scope per issue). README copy avoids "real-time" language per ADR 0003.
+- Noticed for later: nothing new.
