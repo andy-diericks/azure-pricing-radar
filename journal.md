@@ -363,3 +363,8 @@ Claude reads the tail of it to remember.
 - Did: Added `vm-belgium` and `storage-belgium` scope entries to `SCOPES` dict in `scripts/fetch_prices.py`. Updated README "What it tracks today" to list Belgium Central alongside West Europe for VM and Storage. No app code changes — Belgium Central data will appear in the price-changes table automatically once the pipeline runs.
 - Decisions: Followed the exact filter strings specified in the issue DoD verbatim. README copy avoids "real-time" language per ADR 0003.
 - Noticed for later: nothing new.
+
+## 2026-07-25T00:00Z — PM run
+- Triage: none — no unlabeled or needs-human open issues
+- Created: #108 E3.6 needs-human: Add North Europe and France Central regions to price tracking
+- Rationale: Queue at 0 open claude-ready issues. E3.5 (Belgium Central) complete as of run 2026-07-24-4. E3.6 is the next sub-task per the Current Epic E3 sequence and the coverage roadmap priority order. Created needs-human verification issue #108 to scope the region additions and await human validation (following the E3.5 pattern: needs-human planning issue first, implementation issue created after validation). Per "one new scope per week maximum" rule, E3.6 implementation will ship in week of 2026-07-31. Queue now at 1/5 (the single needs-human issue); next PM run will hold until queue drops or human approves #108.
