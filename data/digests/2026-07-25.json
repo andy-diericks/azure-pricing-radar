@@ -1,0 +1,28 @@
+{
+  "generatedAt": "2026-07-25T05:31:41.665Z",
+  "date": "2026-07-25",
+  "totalDrops": 0,
+  "totalIncreases": 0,
+  "totalNewSkus": 4433,
+  "totalRemoved": 0,
+  "sections": [
+    {
+      "scope": "storage-belgium",
+      "displayName": "storage-belgium",
+      "drops": 0,
+      "increases": 0,
+      "newSkus": 660,
+      "removed": 0,
+      "topMovers": []
+    },
+    {
+      "scope": "vm-belgium",
+      "displayName": "vm-belgium",
+      "drops": 0,
+      "increases": 0,
+      "newSkus": 3773,
+      "removed": 0,
+      "topMovers": []
+    }
+  ]
+}

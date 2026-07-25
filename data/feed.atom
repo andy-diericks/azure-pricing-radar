@@ -3,8 +3,26 @@
   <title>Azure Pricing Radar Daily Digest</title>
   <link href="https://andy-diericks.github.io/azure-pricing-radar/"/>
   <link rel="self" href="https://andy-diericks.github.io/azure-pricing-radar/feed.atom" type="application/atom+xml"/>
-  <updated>2026-07-15T00:00:00Z</updated>
+  <updated>1970-01-01T00:00:00Z</updated>
   <id>https://andy-diericks.github.io/azure-pricing-radar/</id>
+  <entry>
+    <title>Azure pricing changes for undefined</title>
+    <id>https://andy-diericks.github.io/azure-pricing-radar/#/digests/undefined</id>
+    <link href="https://andy-diericks.github.io/azure-pricing-radar/#/digests/undefined"/>
+    <updated>2026-07-24T10:36:41.745Z</updated>
+    <content type="text">Azure pricing changes for undefined
+
+9,904 new SKUs</content>
+  </entry>
+  <entry>
+    <title>Azure pricing changes for 2026-07-25</title>
+    <id>https://andy-diericks.github.io/azure-pricing-radar/#/digests/2026-07-25</id>
+    <link href="https://andy-diericks.github.io/azure-pricing-radar/#/digests/2026-07-25"/>
+    <updated>2026-07-25T05:31:41.665Z</updated>
+    <content type="text">Azure pricing changes for 2026-07-25
+
+4,433 new SKUs</content>
+  </entry>
   <entry>
     <title>Azure pricing changes for 2026-07-15</title>
     <id>https://andy-diericks.github.io/azure-pricing-radar/#/digests/2026-07-15</id>
