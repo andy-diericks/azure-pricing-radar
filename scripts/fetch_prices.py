@@ -33,6 +33,8 @@ SCOPES: dict[str, str] = {
     "storage-northeurope": "serviceName eq 'Storage' and armRegionName eq 'northeurope' and priceType eq 'Consumption'",
     "vm-francecentral": "serviceName eq 'Virtual Machines' and armRegionName eq 'francecentral' and priceType eq 'Consumption'",
     "storage-francecentral": "serviceName eq 'Storage' and armRegionName eq 'francecentral' and priceType eq 'Consumption'",
+    "vm-swedencentral": "serviceName eq 'Virtual Machines' and armRegionName eq 'swedencentral' and priceType eq 'Consumption'",
+    "storage-swedencentral": "serviceName eq 'Storage' and armRegionName eq 'swedencentral' and priceType eq 'Consumption'",
 }
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"

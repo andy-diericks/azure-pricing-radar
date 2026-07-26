@@ -122,8 +122,8 @@ others. New entries appear after each data fetch that detects a price change.
 
 ## 🔍 What it tracks today
 
-- **Virtual Machines** — West Europe, Belgium Central, North Europe, France Central
-- **Storage** — West Europe, Belgium Central, North Europe, France Central
+- **Virtual Machines** — West Europe, Belgium Central, North Europe, France Central, Sweden Central
+- **Storage** — West Europe, Belgium Central, North Europe, France Central, Sweden Central
 - **Azure OpenAI** — EU regions
 
 Scopes grow deliberately over time. Want one added? Open an issue.
