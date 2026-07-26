@@ -1,0 +1,28 @@
+{
+  "generatedAt": "2026-07-26T21:40:49.997Z",
+  "date": "2026-07-26",
+  "totalDrops": 0,
+  "totalIncreases": 0,
+  "totalNewSkus": 8411,
+  "totalRemoved": 0,
+  "sections": [
+    {
+      "scope": "storage-swedencentral",
+      "displayName": "storage-swedencentral",
+      "drops": 0,
+      "increases": 0,
+      "newSkus": 1394,
+      "removed": 0,
+      "topMovers": []
+    },
+    {
+      "scope": "vm-swedencentral",
+      "displayName": "vm-swedencentral",
+      "drops": 0,
+      "increases": 0,
+      "newSkus": 7017,
+      "removed": 0,
+      "topMovers": []
+    }
+  ]
+}
