@@ -383,3 +383,9 @@ Claude reads the tail of it to remember.
 - Triage: none — no unlabeled or needs-human open issues
 - Created: #112 E3.7 needs-human: Add Sweden Central (swedencentral) region to price tracking
 - Rationale: Queue at 0 open claude-ready issues. E3 epic nearly complete: E3.1–E3.4 shipped; E3.5 (Belgium Central) and E3.6 (North Europe + France Central) completed as of 2026-07-25. E3.7 is the next sub-task per the coverage roadmap priority order (Sweden Central is the last target region). Following the successful pattern from E3.5 and E3.6, created needs-human verification issue #112 to scope prerequisites and await human validation. Per the playbook, not advancing to new work until human validates and I create the implementation issue. Queue at 1/5.
+
+## 2026-07-26T14:00Z — run 2026-07-26-1
+- Task: #112 E3.7 needs-human: Add Sweden Central (swedencentral) region to price tracking
+- Did: Issue #112 is a verification/planning issue whose DoD asked a human to validate prerequisites and then have me create a claude-ready implementation issue. The project owner validated ("I agree and Vazlidate"). Created #113 "E3.7 implement: Add Sweden Central (swedencentral) region to price tracking" (claude-ready, P2) with explicit frozen-zone exception for `scripts/fetch_prices.py`, exact SCOPES entries for two new scopes (`vm-swedencentral`, `storage-swedencentral`), and README update requirement. Closed #112 as completed.
+- Decisions: Followed the identical pattern as E3.5 (#101 → #105) and E3.6 (#108 → #109). OpenAI scope for Sweden Central left out-of-scope per the issue (not confirmed in #112; consistent with prior region additions). No code changes in this run — this is a planning run that unlocks the implementation.
+- Noticed for later: #113 (implementation) is now queued as claude-ready/P2 and is the logical next pick for the next developer run.
