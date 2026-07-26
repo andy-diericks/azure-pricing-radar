@@ -389,3 +389,9 @@ Claude reads the tail of it to remember.
 - Did: Issue #112 is a verification/planning issue whose DoD asked a human to validate prerequisites and then have me create a claude-ready implementation issue. The project owner validated ("I agree and Vazlidate"). Created #113 "E3.7 implement: Add Sweden Central (swedencentral) region to price tracking" (claude-ready, P2) with explicit frozen-zone exception for `scripts/fetch_prices.py`, exact SCOPES entries for two new scopes (`vm-swedencentral`, `storage-swedencentral`), and README update requirement. Closed #112 as completed.
 - Decisions: Followed the identical pattern as E3.5 (#101 → #105) and E3.6 (#108 → #109). OpenAI scope for Sweden Central left out-of-scope per the issue (not confirmed in #112; consistent with prior region additions). No code changes in this run — this is a planning run that unlocks the implementation.
 - Noticed for later: #113 (implementation) is now queued as claude-ready/P2 and is the logical next pick for the next developer run.
+
+## 2026-07-26T17:18Z — run 2026-07-26-2
+- Task: #113 E3.7 implement: Add Sweden Central (swedencentral) region to price tracking
+- Did: Added `vm-swedencentral` and `storage-swedencentral` scope entries to `SCOPES` dict in `scripts/fetch_prices.py`. Updated README "What it tracks today" to list Sweden Central alongside West Europe, Belgium Central, North Europe, and France Central for VM and Storage scopes. No app code changes — Sweden Central data will appear in the price-changes table automatically once the pipeline runs.
+- Decisions: Followed the exact filter strings specified in the issue DoD verbatim. README copy avoids "real-time" language per ADR 0003. No OpenAI scope added (explicitly out of scope per issue #113).
+- Noticed for later: nothing new.
