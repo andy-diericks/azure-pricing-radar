@@ -180,6 +180,19 @@ describe('computeDigestData', () => {
     expect(result.sections[0].displayName).toBe(SCOPE_DISPLAY_NAMES['vm-eu-west'])
   })
 
+  it('has display names for all newer regional scopes', () => {
+    const newerScopes = [
+      'vm-belgium', 'storage-belgium',
+      'vm-northeurope', 'storage-northeurope',
+      'vm-francecentral', 'storage-francecentral',
+      'vm-swedencentral', 'storage-swedencentral',
+    ] as const
+    for (const scope of newerScopes) {
+      expect(SCOPE_DISPLAY_NAMES[scope]).toBeDefined()
+      expect(SCOPE_DISPLAY_NAMES[scope]).not.toBe(scope)
+    }
+  })
+
   it('uses REGION_DISPLAY_NAMES for known regions', () => {
     const diff: DiffFile = {
       scope: 'vm-eu-west',
@@ -190,6 +203,14 @@ describe('computeDigestData', () => {
     }
     const result = computeDigestData('2026-07-16', [diff])
     expect(result.sections[0].topMovers[0].regionDisplay).toBe(REGION_DISPLAY_NAMES['westeurope'])
+  })
+
+  it('has display names for all tracked arm regions including belgiumcentral', () => {
+    const regions = ['westeurope', 'belgiumcentral', 'northeurope', 'francecentral', 'swedencentral'] as const
+    for (const region of regions) {
+      expect(REGION_DISPLAY_NAMES[region]).toBeDefined()
+      expect(REGION_DISPLAY_NAMES[region]).not.toBe(region)
+    }
   })
 
   it('falls back to raw scope name for unknown scopes', () => {
