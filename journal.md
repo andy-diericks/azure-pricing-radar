@@ -395,3 +395,8 @@ Claude reads the tail of it to remember.
 - Did: Added `vm-swedencentral` and `storage-swedencentral` scope entries to `SCOPES` dict in `scripts/fetch_prices.py`. Updated README "What it tracks today" to list Sweden Central alongside West Europe, Belgium Central, North Europe, and France Central for VM and Storage scopes. No app code changes — Sweden Central data will appear in the price-changes table automatically once the pipeline runs.
 - Decisions: Followed the exact filter strings specified in the issue DoD verbatim. README copy avoids "real-time" language per ADR 0003. No OpenAI scope added (explicitly out of scope per issue #113).
 - Noticed for later: nothing new.
+
+## 2026-07-27T00:00Z — PM run
+- Triage: none — no unlabeled or needs-human open issues
+- Created: #116 E3.1 Daily digest generation (changelog-writing skill), #117 E3.2 Digest archive page, #119 E3.3 RSS/Atom feed of digests
+- Rationale: Queue at 0 open claude-ready issues; all E3.5 through E3.7 coverage tasks completed. E1 (Change Feed) and E2 (SKU Detail Pages) are mature. Next epic priority: E3 (Daily Digest). Created first three sub-tasks of E3 in order per product-vision.md: E3.1 (digest generation from diffs), E3.2 (archive page), E3.3 (RSS feed). All P1 or P2; sized for single developer runs. Queue now at 3/5, ready for developer runs.
