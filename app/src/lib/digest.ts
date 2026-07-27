@@ -2,13 +2,22 @@ export const SCOPE_DISPLAY_NAMES: Record<string, string> = {
   'vm-eu-west': 'Virtual Machines · West Europe',
   'storage-eu-west': 'Storage · West Europe',
   'openai-eu': 'Azure OpenAI · EU',
+  'vm-belgium': 'Virtual Machines · Belgium Central',
+  'storage-belgium': 'Storage · Belgium Central',
+  'vm-northeurope': 'Virtual Machines · North Europe',
+  'storage-northeurope': 'Storage · North Europe',
+  'vm-francecentral': 'Virtual Machines · France Central',
+  'storage-francecentral': 'Storage · France Central',
+  'vm-swedencentral': 'Virtual Machines · Sweden Central',
+  'storage-swedencentral': 'Storage · Sweden Central',
 }
 
 export const REGION_DISPLAY_NAMES: Record<string, string> = {
   westeurope: 'West Europe',
-  swedencentral: 'Sweden Central',
-  francecentral: 'France Central',
+  belgiumcentral: 'Belgium Central',
   northeurope: 'North Europe',
+  francecentral: 'France Central',
+  swedencentral: 'Sweden Central',
 }
 
 export interface DigestMover {
