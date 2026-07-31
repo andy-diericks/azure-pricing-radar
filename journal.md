@@ -421,3 +421,8 @@ Claude reads the tail of it to remember.
 - Triage: none — no unlabeled or needs-human open issues
 - Created: none — Epic E3 remains complete
 - Rationale: Zero open issues of any kind; all E3 sub-tasks continue to be shipped and closed. Current Epic line in product-vision.md remains E3; human has not advanced to E4. Per playbook Step 2, holding until human updates the Current Epic line before creating new issues.
+
+## 2026-07-31T00:00Z — PM run
+- Triage: none — no unlabeled or needs-human open issues
+- Created: none — Epic E3 complete, awaiting epic advancement
+- Rationale: All E3 sub-tasks (E3.1 digest generation, E3.2 archive, E3.3 RSS feed, E3.4 weekly rollup, E3.5–E3.7 regional expansions) are shipped and merged. Queue is at 0 open claude-ready issues. Current Epic line in product-vision.md remains E3; per the playbook, not starting E4 without human advancing the Current Epic line. E4.1 is a design proposal (needs-human) requiring "a new ADR" per product-vision.md — the human must decide on the Reservation pricing design before the developer can implement. Holding per playbook Step 2.
