@@ -79,6 +79,29 @@ const SKU_INDEX_NO_HISTORY: SkuIndex = {
   },
 }
 
+const SKU_INDEX_WITH_RESERVATIONS: SkuIndex = {
+  generatedAt: '2026-07-20T00:00:00Z',
+  skus: {
+    Standard_D2s_v5: {
+      productName: 'Virtual Machines Dsv5 Series',
+      regions: [
+        {
+          armRegionName: 'westeurope',
+          scope: 'vm-eu-west',
+          retailPrice: 0.096,
+          unitOfMeasure: '1 Hour',
+          reservationPrice1yr: 0.0672,
+          reservationPrice3yr: 0.0480,
+          savingsPlanPrice: 0.0768,
+        },
+      ],
+      history: [
+        { at: '2026-07-15T17:41:10Z', armRegionName: 'westeurope', retailPrice: 0.096, direction: 'added' },
+      ],
+    },
+  },
+}
+
 // Two regions, each with 2+ history points — enables compare toggle
 const SKU_INDEX_MULTI_REGION: SkuIndex = {
   generatedAt: '2026-07-20T00:00:00Z',
@@ -341,6 +364,73 @@ describe('SkuPage', () => {
       fireEvent.click(screen.getByRole('button', { name: /single region/i }))
       expect(screen.queryByTestId('cheapest-badge')).not.toBeInTheDocument()
       expect(screen.getByRole('button', { name: /compare all regions/i })).toBeInTheDocument()
+    })
+  })
+
+  describe('pricing comparison section', () => {
+    it('renders the Pricing tiers heading', async () => {
+      render(<SkuPage family="Standard_D2s_v5" />)
+      await waitFor(() => {
+        const h2s = screen.getAllByRole('heading', { level: 2 })
+        expect(h2s.some((h) => h.textContent?.includes('Pricing tiers'))).toBe(true)
+      })
+    })
+
+    it('shows PAYG price with Baseline indicator', async () => {
+      render(<SkuPage family="Standard_D2s_v5" />)
+      await waitFor(() => expect(screen.getByTestId('pricing-comparison')).toBeInTheDocument())
+      const section = screen.getByTestId('pricing-comparison')
+      expect(within(section).getAllByText('Pay as you go').length).toBeGreaterThan(0)
+      expect(within(section).getAllByText('Baseline').length).toBeGreaterThan(0)
+    })
+
+    it('shows em-dash for reservation tiers with no data', async () => {
+      render(<SkuPage family="Standard_D2s_v5" />)
+      await waitFor(() => expect(screen.getByTestId('pricing-comparison')).toBeInTheDocument())
+      const section = screen.getByTestId('pricing-comparison')
+      expect(within(section).getAllByText('1yr Reservation').length).toBeGreaterThan(0)
+      expect(within(section).getAllByText('3yr Reservation').length).toBeGreaterThan(0)
+      expect(within(section).getAllByText('Savings plan').length).toBeGreaterThan(0)
+    })
+
+    it('shows reservation prices and % discounts when data is present', async () => {
+      vi.stubGlobal('fetch', mockFetch(SKU_INDEX_WITH_RESERVATIONS))
+      render(<SkuPage family="Standard_D2s_v5" />)
+      await waitFor(() => expect(screen.getByTestId('pricing-comparison')).toBeInTheDocument())
+      const section = screen.getByTestId('pricing-comparison')
+      // 1yr: $0.0672 = 30% off $0.096
+      expect(within(section).getAllByText(/30\.0% off/i).length).toBeGreaterThan(0)
+      // 3yr: $0.048 = 50% off
+      expect(within(section).getAllByText(/50\.0% off/i).length).toBeGreaterThan(0)
+      // Savings plan: $0.0768 = 20% off
+      expect(within(section).getAllByText(/20\.0% off/i).length).toBeGreaterThan(0)
+    })
+
+    it('shows reservation prices in monospace format when data is present', async () => {
+      vi.stubGlobal('fetch', mockFetch(SKU_INDEX_WITH_RESERVATIONS))
+      render(<SkuPage family="Standard_D2s_v5" />)
+      await waitFor(() => expect(screen.getByTestId('pricing-comparison')).toBeInTheDocument())
+      const section = screen.getByTestId('pricing-comparison')
+      // $0.0672 formatted
+      expect(within(section).getAllByText(/\$0\.0672 \/ hour/i).length).toBeGreaterThan(0)
+    })
+
+    it('uses the cheapest region for the pricing comparison', async () => {
+      render(<SkuPage family="Standard_D2s_v5" />)
+      await waitFor(() => expect(screen.getByTestId('pricing-comparison')).toBeInTheDocument())
+      const section = screen.getByTestId('pricing-comparison')
+      // SKU_INDEX cheapest is westeurope at $0.096
+      expect(section.textContent).toContain('westeurope')
+      expect(within(section).getAllByText(/\$0\.096 \/ hour/i).length).toBeGreaterThan(0)
+    })
+
+    it('renders mobile card list with same tier labels', async () => {
+      render(<SkuPage family="Standard_D2s_v5" />)
+      await waitFor(() => expect(screen.getByTestId('pricing-comparison')).toBeInTheDocument())
+      const section = screen.getByTestId('pricing-comparison')
+      const cardList = section.querySelector('.sku-page__pricing-cards')
+      expect(cardList).toBeInTheDocument()
+      expect(cardList?.querySelectorAll('.sku-page__pricing-card').length).toBe(4)
     })
   })
 
