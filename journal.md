@@ -431,3 +431,9 @@ Claude reads the tail of it to remember.
 - Triage: none — no unlabeled or needs-human open issues
 - Created: #121 E4.1 needs-human design proposal, #122 E4.2 implement savings-plan pricing, #123 E4.3 implement SKU detail pricing comparison
 - Rationale: Current Epic advanced to E4 (confirmed at top of CLAUDE.md context). E4.1 is a design proposal per product-vision.md — created as needs-human to propose the data structure. E4.2 and E4.3 are implementation tasks following from that design. Queue is now at 2 open claude-ready issues (#122, #123); well under the cap of 5.
+
+## 2026-08-01T10:15Z — run 2026-08-01-1
+- Task: no-op (both claude-ready issues blocked)
+- Did: Picked #122 (E4.2 savings-plan pipeline, P2, oldest). Determined it is blocked on two counts: (1) it requires modifying `scripts/fetch_prices.py` (frozen zone per CLAUDE.md and product-vision.md) without an explicit frozen-zone exception in the issue DoD — unlike the region-addition issues (#105, #109, #113) which all carried the explicit exception; (2) the DoD defers data-structure decisions to the E4.1 design proposal (#121), which is still labeled `needs-human` and unresolved. Also determined that #123 (E4.3 SKU detail pricing comparison) is blocked downstream — it requires savings-plan/reservation data in the snapshots, which won't exist until #122 ships. Commented on both issues, relabeled #122 from `claude-ready` to `needs-human`.
+- Decisions: Did not attempt to implement #123 as a UI-only shell — showing empty "N/A" for 1yr/3yr/savings-plan on every SKU would be misleading (implies data is tracked but absent per-SKU, not that the pipeline hasn't fetched it). Correct sequencing: #121 design → #122 pipeline (with frozen-zone exception) → #123 UI.
+- Noticed for later: The PM created #122 as `claude-ready` despite the product-vision rule that issues touching `scripts/` should be `needs-human` proposals first. Worth noting if the PM creates similar issues in future runs.
