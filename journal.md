@@ -426,3 +426,8 @@ Claude reads the tail of it to remember.
 - Triage: none — no unlabeled or needs-human open issues
 - Created: none — Epic E3 complete, awaiting epic advancement
 - Rationale: All E3 sub-tasks (E3.1 digest generation, E3.2 archive, E3.3 RSS feed, E3.4 weekly rollup, E3.5–E3.7 regional expansions) are shipped and merged. Queue is at 0 open claude-ready issues. Current Epic line in product-vision.md remains E3; per the playbook, not starting E4 without human advancing the Current Epic line. E4.1 is a design proposal (needs-human) requiring "a new ADR" per product-vision.md — the human must decide on the Reservation pricing design before the developer can implement. Holding per playbook Step 2.
+
+## 2026-08-01T00:00Z — PM run
+- Triage: none — no unlabeled or needs-human open issues
+- Created: #121 E4.1 needs-human design proposal, #122 E4.2 implement savings-plan pricing, #123 E4.3 implement SKU detail pricing comparison
+- Rationale: Current Epic advanced to E4 (confirmed at top of CLAUDE.md context). E4.1 is a design proposal per product-vision.md — created as needs-human to propose the data structure. E4.2 and E4.3 are implementation tasks following from that design. Queue is now at 2 open claude-ready issues (#122, #123); well under the cap of 5.
