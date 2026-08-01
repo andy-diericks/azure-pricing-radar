@@ -1,0 +1,29 @@
+{
+ "scope": "storage-swedencentral",
+ "at": "2026-08-01T05:42:27.108761+00:00",
+ "added": [],
+ "removed": [],
+ "changed": [
+  {
+   "key": "DZH318Z0C120/00XP|5bc2e94e-7bf8-5780-8639-4df16668942b|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "Hot RA-GRS Blob Inventory",
+    "productName": "General Block Blob v2 Hierarchical Namespace",
+    "retailPrice": 0.0,
+    "skuName": "Hot RA-GRS",
+    "unitOfMeasure": "1M",
+    "unitPrice": 0.0
+   },
+   "after": {
+    "retailPrice": 0.004,
+    "unitPrice": 0.004,
+    "unitOfMeasure": "1M",
+    "productName": "General Block Blob v2 Hierarchical Namespace",
+    "skuName": "Hot RA-GRS",
+    "meterName": "Hot RA-GRS Blob Inventory",
+    "armRegionName": "swedencentral"
+   }
+  }
+ ]
+}

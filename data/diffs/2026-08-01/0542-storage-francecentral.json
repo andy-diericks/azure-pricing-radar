@@ -1,0 +1,29 @@
+{
+ "scope": "storage-francecentral",
+ "at": "2026-08-01T05:42:27.108761+00:00",
+ "added": [],
+ "removed": [],
+ "changed": [
+  {
+   "key": "DZH318Z0C120/00SM|bcdf44fd-1aa8-54e5-bcdd-e021b720466e|Consumption|",
+   "before": {
+    "armRegionName": "francecentral",
+    "meterName": "Hot RA-GZRS Blob Inventory",
+    "productName": "General Block Blob v2 Hierarchical Namespace",
+    "retailPrice": 0.0,
+    "skuName": "Hot RA-GZRS",
+    "unitOfMeasure": "1M",
+    "unitPrice": 0.0
+   },
+   "after": {
+    "retailPrice": 0.004,
+    "unitPrice": 0.004,
+    "unitOfMeasure": "1M",
+    "productName": "General Block Blob v2 Hierarchical Namespace",
+    "skuName": "Hot RA-GZRS",
+    "meterName": "Hot RA-GZRS Blob Inventory",
+    "armRegionName": "francecentral"
+   }
+  }
+ ]
+}

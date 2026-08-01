@@ -1,0 +1,428 @@
+{
+ "scope": "vm-francecentral",
+ "at": "2026-08-01T05:42:27.108761+00:00",
+ "added": [],
+ "removed": [],
+ "changed": [
+  {
+   "key": "DZH318Z0S1WK/028L|047cde1a-337c-5952-a432-c449ffba61d4|Consumption|",
+   "before": {
+    "armRegionName": "francecentral",
+    "meterName": "Standard_E192ibs_v6 Spot",
+    "productName": "Virtual Machines Ebsv6-Series Linux",
+    "retailPrice": 4.6042,
+    "skuName": "Standard_E192ibs_v6 Spot",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 4.6042
+   },
+   "after": {
+    "retailPrice": 4.254281,
+    "unitPrice": 4.254281,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Ebsv6-Series Linux",
+    "skuName": "Standard_E192ibs_v6 Spot",
+    "meterName": "Standard_E192ibs_v6 Spot",
+    "armRegionName": "francecentral"
+   }
+  },
+  {
+   "key": "DZH318Z0S1W2/021X|23379757-f287-533a-b790-b224bd7c57f0|Consumption|",
+   "before": {
+    "armRegionName": "francecentral",
+    "meterName": "Standard_E48bs_v6 Spot",
+    "productName": "Virtual Machines Ebsv6-Series Windows",
+    "retailPrice": 1.488,
+    "skuName": "Standard_E48bs_v6 Spot",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 1.488
+   },
+   "after": {
+    "retailPrice": 1.374912,
+    "unitPrice": 1.374912,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Ebsv6-Series Windows",
+    "skuName": "Standard_E48bs_v6 Spot",
+    "meterName": "Standard_E48bs_v6 Spot",
+    "armRegionName": "francecentral"
+   }
+  },
+  {
+   "key": "DZH318Z0S1XH/02N7|248f05c5-e911-5461-9973-7d1cdfcfcb51|Consumption|",
+   "before": {
+    "armRegionName": "francecentral",
+    "meterName": "Standard_E48bds_v6 Spot",
+    "productName": "Virtual Machines Ebdsv6-Series Windows",
+    "retailPrice": 1.614,
+    "skuName": "Standard_E48bds_v6 Spot",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 1.614
+   },
+   "after": {
+    "retailPrice": 1.491336,
+    "unitPrice": 1.491336,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Ebdsv6-Series Windows",
+    "skuName": "Standard_E48bds_v6 Spot",
+    "meterName": "Standard_E48bds_v6 Spot",
+    "armRegionName": "francecentral"
+   }
+  },
+  {
+   "key": "DZH318Z0S1XH/02VR|26acad55-93a5-5b82-aa73-4f1df9048fb5|Consumption|",
+   "before": {
+    "armRegionName": "francecentral",
+    "meterName": "Standard_E128bds_v6 Spot",
+    "productName": "Virtual Machines Ebdsv6-Series Windows",
+    "retailPrice": 4.304,
+    "skuName": "Standard_E128bds_v6 Spot",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 4.304
+   },
+   "after": {
+    "retailPrice": 3.976896,
+    "unitPrice": 3.976896,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Ebdsv6-Series Windows",
+    "skuName": "Standard_E128bds_v6 Spot",
+    "meterName": "Standard_E128bds_v6 Spot",
+    "armRegionName": "francecentral"
+   }
+  },
+  {
+   "key": "DZH318Z0S1XJ/028S|2fd2c585-76db-58b3-945c-4496ee794ccf|Consumption|",
+   "before": {
+    "armRegionName": "francecentral",
+    "meterName": "Standard_E2bds_v6 Spot",
+    "productName": "Virtual Machines Ebdsv6-Series Linux",
+    "retailPrice": 0.0488,
+    "skuName": "Standard_E2bds_v6 Spot",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.0488
+   },
+   "after": {
+    "retailPrice": 0.045091,
+    "unitPrice": 0.045091,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Ebdsv6-Series Linux",
+    "skuName": "Standard_E2bds_v6 Spot",
+    "meterName": "Standard_E2bds_v6 Spot",
+    "armRegionName": "francecentral"
+   }
+  },
+  {
+   "key": "DZH318Z0S1XJ/027R|4d30989d-6896-58ff-8293-bdf43bfc5126|Consumption|",
+   "before": {
+    "armRegionName": "francecentral",
+    "meterName": "Standard_E192ibds_v6 Spot",
+    "productName": "Virtual Machines Ebdsv6-Series Linux",
+    "retailPrice": 5.1586,
+    "skuName": "Standard_E192ibds_v6 Spot",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 5.1586
+   },
+   "after": {
+    "retailPrice": 4.766546,
+    "unitPrice": 4.766546,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Ebdsv6-Series Linux",
+    "skuName": "Standard_E192ibds_v6 Spot",
+    "meterName": "Standard_E192ibds_v6 Spot",
+    "armRegionName": "francecentral"
+   }
+  },
+  {
+   "key": "DZH318Z0S1W2/0285|57431765-0bbb-536c-ab2b-edad1771e306|Consumption|",
+   "before": {
+    "armRegionName": "francecentral",
+    "meterName": "Standard_E192ibs_v6 Spot",
+    "productName": "Virtual Machines Ebsv6-Series Windows",
+    "retailPrice": 6.3706,
+    "skuName": "Standard_E192ibs_v6 Spot",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 6.3706
+   },
+   "after": {
+    "retailPrice": 5.886434,
+    "unitPrice": 5.886434,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Ebsv6-Series Windows",
+    "skuName": "Standard_E192ibs_v6 Spot",
+    "meterName": "Standard_E192ibs_v6 Spot",
+    "armRegionName": "francecentral"
+   }
+  },
+  {
+   "key": "DZH318Z0S1XJ/027M|5a8afb40-3963-5eeb-b8cc-c9d87e55bbd2|Consumption|",
+   "before": {
+    "armRegionName": "francecentral",
+    "meterName": "Standard_E48bds_v6 Spot",
+    "productName": "Virtual Machines Ebdsv6-Series Linux",
+    "retailPrice": 1.1724,
+    "skuName": "Standard_E48bds_v6 Spot",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 1.1724
+   },
+   "after": {
+    "retailPrice": 1.083298,
+    "unitPrice": 1.083298,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Ebdsv6-Series Linux",
+    "skuName": "Standard_E48bds_v6 Spot",
+    "meterName": "Standard_E48bds_v6 Spot",
+    "armRegionName": "francecentral"
+   }
+  },
+  {
+   "key": "DZH318Z0S1W2/020N|6b947734-b6ac-552e-8e72-b703adf1ec37|Consumption|",
+   "before": {
+    "armRegionName": "francecentral",
+    "meterName": "Standard_E64bs_v6 Spot",
+    "productName": "Virtual Machines Ebsv6-Series Windows",
+    "retailPrice": 1.984,
+    "skuName": "Standard_E64bs_v6 Spot",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 1.984
+   },
+   "after": {
+    "retailPrice": 1.833216,
+    "unitPrice": 1.833216,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Ebsv6-Series Windows",
+    "skuName": "Standard_E64bs_v6 Spot",
+    "meterName": "Standard_E64bs_v6 Spot",
+    "armRegionName": "francecentral"
+   }
+  },
+  {
+   "key": "DZH318Z0S1WK/028V|8b2d1c97-de0c-57dc-9214-39d5d6318144|Consumption|",
+   "before": {
+    "armRegionName": "francecentral",
+    "meterName": "Standard_E16bs_v6 Spot",
+    "productName": "Virtual Machines Ebsv6-Series Linux",
+    "retailPrice": 0.3488,
+    "skuName": "Standard_E16bs_v6 Spot",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.3488
+   },
+   "after": {
+    "retailPrice": 0.322291,
+    "unitPrice": 0.322291,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Ebsv6-Series Linux",
+    "skuName": "Standard_E16bs_v6 Spot",
+    "meterName": "Standard_E16bs_v6 Spot",
+    "armRegionName": "francecentral"
+   }
+  },
+  {
+   "key": "DZH318Z0S1WK/028X|90260867-9c8a-5165-9c1c-07b9e1cd5b60|Consumption|",
+   "before": {
+    "armRegionName": "francecentral",
+    "meterName": "Standard_E96bs_v6 Spot",
+    "productName": "Virtual Machines Ebsv6-Series Linux",
+    "retailPrice": 2.0928,
+    "skuName": "Standard_E96bs_v6 Spot",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 2.0928
+   },
+   "after": {
+    "retailPrice": 1.933747,
+    "unitPrice": 1.933747,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Ebsv6-Series Linux",
+    "skuName": "Standard_E96bs_v6 Spot",
+    "meterName": "Standard_E96bs_v6 Spot",
+    "armRegionName": "francecentral"
+   }
+  },
+  {
+   "key": "DZH318Z0S1WK/028H|9dc0e66d-6fff-5a82-a5e2-759876cdac4c|Consumption|",
+   "before": {
+    "armRegionName": "francecentral",
+    "meterName": "Standard_E48bs_v6 Spot",
+    "productName": "Virtual Machines Ebsv6-Series Linux",
+    "retailPrice": 1.0464,
+    "skuName": "Standard_E48bs_v6 Spot",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 1.0464
+   },
+   "after": {
+    "retailPrice": 0.966874,
+    "unitPrice": 0.966874,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Ebsv6-Series Linux",
+    "skuName": "Standard_E48bs_v6 Spot",
+    "meterName": "Standard_E48bs_v6 Spot",
+    "armRegionName": "francecentral"
+   }
+  },
+  {
+   "key": "DZH318Z0S1XH/02QG|a823e62d-6021-5aef-9ba6-d03d9206dbc5|Consumption|",
+   "before": {
+    "armRegionName": "francecentral",
+    "meterName": "Standard_E192ibds_v6 Spot",
+    "productName": "Virtual Machines Ebdsv6-Series Windows",
+    "retailPrice": 6.925,
+    "skuName": "Standard_E192ibds_v6 Spot",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 6.925
+   },
+   "after": {
+    "retailPrice": 6.3987,
+    "unitPrice": 6.3987,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Ebdsv6-Series Windows",
+    "skuName": "Standard_E192ibds_v6 Spot",
+    "meterName": "Standard_E192ibds_v6 Spot",
+    "armRegionName": "francecentral"
+   }
+  },
+  {
+   "key": "DZH318Z0S1XJ/0243|d05b6b30-bd2c-5c0a-9163-624c351bceb5|Consumption|",
+   "before": {
+    "armRegionName": "francecentral",
+    "meterName": "Standard_E128bds_v6 Spot",
+    "productName": "Virtual Machines Ebdsv6-Series Linux",
+    "retailPrice": 3.1264,
+    "skuName": "Standard_E128bds_v6 Spot",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 3.1264
+   },
+   "after": {
+    "retailPrice": 2.888794,
+    "unitPrice": 2.888794,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Ebdsv6-Series Linux",
+    "skuName": "Standard_E128bds_v6 Spot",
+    "meterName": "Standard_E128bds_v6 Spot",
+    "armRegionName": "francecentral"
+   }
+  },
+  {
+   "key": "DZH318Z0S1XH/02N2|ddb2e51b-63fa-50e2-8eb8-dc2228217dbf|Consumption|",
+   "before": {
+    "armRegionName": "francecentral",
+    "meterName": "Standard_E2bds_v6 Spot",
+    "productName": "Virtual Machines Ebdsv6-Series Windows",
+    "retailPrice": 0.0672,
+    "skuName": "Standard_E2bds_v6 Spot",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.0672
+   },
+   "after": {
+    "retailPrice": 0.062093,
+    "unitPrice": 0.062093,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Ebdsv6-Series Windows",
+    "skuName": "Standard_E2bds_v6 Spot",
+    "meterName": "Standard_E2bds_v6 Spot",
+    "armRegionName": "francecentral"
+   }
+  },
+  {
+   "key": "DZH318Z0S1W2/022C|df620e4a-809a-5707-9bbf-6e8ddacd9aa8|Consumption|",
+   "before": {
+    "armRegionName": "francecentral",
+    "meterName": "Standard_E96bs_v6 Spot",
+    "productName": "Virtual Machines Ebsv6-Series Windows",
+    "retailPrice": 2.976,
+    "skuName": "Standard_E96bs_v6 Spot",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 2.976
+   },
+   "after": {
+    "retailPrice": 2.749824,
+    "unitPrice": 2.749824,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Ebsv6-Series Windows",
+    "skuName": "Standard_E96bs_v6 Spot",
+    "meterName": "Standard_E96bs_v6 Spot",
+    "armRegionName": "francecentral"
+   }
+  },
+  {
+   "key": "DZH318Z0S1XH/02NB|ecf7ed5e-af46-5422-b553-8ababc2f3049|Consumption|",
+   "before": {
+    "armRegionName": "francecentral",
+    "meterName": "Standard_E4bds_v6 Spot",
+    "productName": "Virtual Machines Ebdsv6-Series Windows",
+    "retailPrice": 0.1346,
+    "skuName": "Standard_E4bds_v6 Spot",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.1346
+   },
+   "after": {
+    "retailPrice": 0.12437,
+    "unitPrice": 0.12437,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Ebdsv6-Series Windows",
+    "skuName": "Standard_E4bds_v6 Spot",
+    "meterName": "Standard_E4bds_v6 Spot",
+    "armRegionName": "francecentral"
+   }
+  },
+  {
+   "key": "DZH318Z0S1XJ/027F|ed8e13d0-c4e8-5b7a-937e-fbfea0f3a93c|Consumption|",
+   "before": {
+    "armRegionName": "francecentral",
+    "meterName": "Standard_E4bds_v6 Spot",
+    "productName": "Virtual Machines Ebdsv6-Series Linux",
+    "retailPrice": 0.0978,
+    "skuName": "Standard_E4bds_v6 Spot",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.0978
+   },
+   "after": {
+    "retailPrice": 0.090367,
+    "unitPrice": 0.090367,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Ebdsv6-Series Linux",
+    "skuName": "Standard_E4bds_v6 Spot",
+    "meterName": "Standard_E4bds_v6 Spot",
+    "armRegionName": "francecentral"
+   }
+  },
+  {
+   "key": "DZH318Z0S1W2/020M|fafca7bc-7ed7-525b-9757-12dc74d0d612|Consumption|",
+   "before": {
+    "armRegionName": "francecentral",
+    "meterName": "Standard_E16bs_v6 Spot",
+    "productName": "Virtual Machines Ebsv6-Series Windows",
+    "retailPrice": 0.496,
+    "skuName": "Standard_E16bs_v6 Spot",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.496
+   },
+   "after": {
+    "retailPrice": 0.458304,
+    "unitPrice": 0.458304,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Ebsv6-Series Windows",
+    "skuName": "Standard_E16bs_v6 Spot",
+    "meterName": "Standard_E16bs_v6 Spot",
+    "armRegionName": "francecentral"
+   }
+  },
+  {
+   "key": "DZH318Z0S1WK/028W|fb43d0c7-f3c6-55ca-9435-026a0491ff5e|Consumption|",
+   "before": {
+    "armRegionName": "francecentral",
+    "meterName": "Standard_E64bs_v6 Spot",
+    "productName": "Virtual Machines Ebsv6-Series Linux",
+    "retailPrice": 1.3952,
+    "skuName": "Standard_E64bs_v6 Spot",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 1.3952
+   },
+   "after": {
+    "retailPrice": 1.289165,
+    "unitPrice": 1.289165,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Ebsv6-Series Linux",
+    "skuName": "Standard_E64bs_v6 Spot",
+    "meterName": "Standard_E64bs_v6 Spot",
+    "armRegionName": "francecentral"
+   }
+  }
+ ]
+}

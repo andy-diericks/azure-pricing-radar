@@ -29820,10 +29820,10 @@
 "armRegionName": "belgiumcentral",
 "meterName": "B32as v2 Spot",
 "productName": "Virtual Machines Basv2 Series Windows",
-"retailPrice": 0.793764,
+"retailPrice": 0.873171,
 "skuName": "B32as v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.793764
+"unitPrice": 0.873171
 },
 "DZH318Z0K9JF/02XK|9dba1ba5-cd34-56a9-8506-3d1737248406|Consumption|": {
 "armRegionName": "belgiumcentral",
@@ -29838,19 +29838,19 @@
 "armRegionName": "belgiumcentral",
 "meterName": "B2ats v2 Spot",
 "productName": "Virtual Machines Basv2 Series Windows",
-"retailPrice": 0.010376,
+"retailPrice": 0.011414,
 "skuName": "B2ats v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.010376
+"unitPrice": 0.011414
 },
 "DZH318Z0K9JF/02XM|a576b453-e859-5e47-b734-e2f5fec5e401|Consumption|": {
 "armRegionName": "belgiumcentral",
 "meterName": "B32als v2 Spot",
 "productName": "Virtual Machines Basv2 Series Windows",
-"retailPrice": 0.711275,
+"retailPrice": 0.78243,
 "skuName": "B32als v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.711275
+"unitPrice": 0.78243
 },
 "DZH318Z0K9JF/02XP|7b454b47-2643-587a-9650-a32b6c7a25d3|Consumption|": {
 "armRegionName": "belgiumcentral",
@@ -29874,10 +29874,10 @@
 "armRegionName": "belgiumcentral",
 "meterName": "B16as v2 Spot",
 "productName": "Virtual Machines Basv2 Series Windows",
-"retailPrice": 0.396882,
+"retailPrice": 0.436586,
 "skuName": "B16as v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.396882
+"unitPrice": 0.436586
 },
 "DZH318Z0K9JF/02XV|92be01e3-5b49-5dbb-a017-1f5b3deeaa74|Consumption|": {
 "armRegionName": "belgiumcentral",
@@ -29892,10 +29892,10 @@
 "armRegionName": "belgiumcentral",
 "meterName": "B16als v2 Spot",
 "productName": "Virtual Machines Basv2 Series Windows",
-"retailPrice": 0.355897,
+"retailPrice": 0.3915,
 "skuName": "B16als v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.355897
+"unitPrice": 0.3915
 },
 "DZH318Z0K9JF/02XZ|224ddfa7-f935-5536-903b-53ef5718cbf6|Consumption|": {
 "armRegionName": "belgiumcentral",
@@ -29910,10 +29910,10 @@
 "armRegionName": "belgiumcentral",
 "meterName": "B8as v2 Spot",
 "productName": "Virtual Machines Basv2 Series Windows",
-"retailPrice": 0.198182,
+"retailPrice": 0.218007,
 "skuName": "B8as v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.198182
+"unitPrice": 0.218007
 },
 "DZH318Z0K9JF/02Z2|0a2b64c1-d82a-599c-8e90-891dc8eb14f6|Consumption|": {
 "armRegionName": "belgiumcentral",
@@ -29937,19 +29937,19 @@
 "armRegionName": "belgiumcentral",
 "meterName": "B8als v2 Spot",
 "productName": "Virtual Machines Basv2 Series Windows",
-"retailPrice": 0.177948,
+"retailPrice": 0.19575,
 "skuName": "B8als v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.177948
+"unitPrice": 0.19575
 },
 "DZH318Z0K9JF/02Z6|d278d664-d190-5b2f-a55a-33ec28b25f21|Consumption|": {
 "armRegionName": "belgiumcentral",
 "meterName": "B4as v2 Spot",
 "productName": "Virtual Machines Basv2 Series Windows",
-"retailPrice": 0.099091,
+"retailPrice": 0.109004,
 "skuName": "B4as v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.099091
+"unitPrice": 0.109004
 },
 "DZH318Z0K9JF/02Z8|1d185eb3-e179-52ce-9a88-e7b7e23d60cf|Consumption|": {
 "armRegionName": "belgiumcentral",
@@ -29964,19 +29964,19 @@
 "armRegionName": "belgiumcentral",
 "meterName": "B4als v2 Spot",
 "productName": "Virtual Machines Basv2 Series Windows",
-"retailPrice": 0.088715,
+"retailPrice": 0.09759,
 "skuName": "B4als v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.088715
+"unitPrice": 0.09759
 },
 "DZH318Z0K9JF/02ZD|e78450c0-8954-5d0d-9422-8ddd167f54ae|Consumption|": {
 "armRegionName": "belgiumcentral",
 "meterName": "B2as v2 Spot",
 "productName": "Virtual Machines Basv2 Series Windows",
-"retailPrice": 0.049597,
+"retailPrice": 0.054559,
 "skuName": "B2as v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.049597
+"unitPrice": 0.054559
 },
 "DZH318Z0K9JF/02ZF|08555d94-db29-50ed-acb8-53984459d63c|Consumption|": {
 "armRegionName": "belgiumcentral",
@@ -30009,10 +30009,10 @@
 "armRegionName": "belgiumcentral",
 "meterName": "B2als v2 Spot",
 "productName": "Virtual Machines Basv2 Series Windows",
-"retailPrice": 0.027185,
+"retailPrice": 0.029905,
 "skuName": "B2als v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.027185
+"unitPrice": 0.029905
 },
 "DZH318Z0K9JH/04ML|621f75c1-d67b-55a3-a71a-03ddc0c55f1c|Consumption|": {
 "armRegionName": "belgiumcentral",
@@ -30027,37 +30027,37 @@
 "armRegionName": "belgiumcentral",
 "meterName": "B8as v2 Spot",
 "productName": "Virtual Machines Basv2 Series",
-"retailPrice": 0.179505,
+"retailPrice": 0.197462,
 "skuName": "B8as v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.179505
+"unitPrice": 0.197462
 },
 "DZH318Z0K9JH/04MN|73b57840-54e2-5f02-b4c6-1578a108543a|Consumption|": {
 "armRegionName": "belgiumcentral",
 "meterName": "B4as v2 Spot",
 "productName": "Virtual Machines Basv2 Series",
-"retailPrice": 0.089752,
+"retailPrice": 0.098731,
 "skuName": "B4as v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.089752
+"unitPrice": 0.098731
 },
 "DZH318Z0K9JH/04MQ|3607c23f-9498-54a2-85e4-73fa2ee32f1b|Consumption|": {
 "armRegionName": "belgiumcentral",
 "meterName": "B32as v2 Spot",
 "productName": "Virtual Machines Basv2 Series",
-"retailPrice": 0.716982,
+"retailPrice": 0.788707,
 "skuName": "B32as v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.716982
+"unitPrice": 0.788707
 },
 "DZH318Z0K9JH/04MR|70868c75-a114-5df4-9450-fd6f83617651|Consumption|": {
 "armRegionName": "belgiumcentral",
 "meterName": "B4als v2 Spot",
 "productName": "Virtual Machines Basv2 Series",
-"retailPrice": 0.079376,
+"retailPrice": 0.087317,
 "skuName": "B4als v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.079376
+"unitPrice": 0.087317
 },
 "DZH318Z0K9JH/04MS|0da8e5be-69c1-583a-b237-ed8932f6eef1|Consumption|": {
 "armRegionName": "belgiumcentral",
@@ -30072,10 +30072,10 @@
 "armRegionName": "belgiumcentral",
 "meterName": "B2as v2 Spot",
 "productName": "Virtual Machines Basv2 Series",
-"retailPrice": 0.044824,
+"retailPrice": 0.049308,
 "skuName": "B2as v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.044824
+"unitPrice": 0.049308
 },
 "DZH318Z0K9JH/04MV|542da6cb-03c4-504f-951c-1c43151727ca|Consumption|": {
 "armRegionName": "belgiumcentral",
@@ -30135,28 +30135,28 @@
 "armRegionName": "belgiumcentral",
 "meterName": "B16als v2 Spot",
 "productName": "Virtual Machines Basv2 Series",
-"retailPrice": 0.317506,
+"retailPrice": 0.349268,
 "skuName": "B16als v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.317506
+"unitPrice": 0.349268
 },
 "DZH318Z0K9JH/04N5|29f85a57-0b57-5985-80a2-7b4aa6500485|Consumption|": {
 "armRegionName": "belgiumcentral",
 "meterName": "B32als v2 Spot",
 "productName": "Virtual Machines Basv2 Series",
-"retailPrice": 0.635011,
+"retailPrice": 0.698537,
 "skuName": "B32als v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.635011
+"unitPrice": 0.698537
 },
 "DZH318Z0K9JH/04N7|5aef4490-0750-51a3-b0e5-61c014593bc5|Consumption|": {
 "armRegionName": "belgiumcentral",
 "meterName": "B16as v2 Spot",
 "productName": "Virtual Machines Basv2 Series",
-"retailPrice": 0.358491,
+"retailPrice": 0.394354,
 "skuName": "B16as v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.358491
+"unitPrice": 0.394354
 },
 "DZH318Z0K9JH/04N8|32285207-6732-5993-a73a-cdeb4fb9fee2|Consumption|": {
 "armRegionName": "belgiumcentral",
@@ -30171,10 +30171,10 @@
 "armRegionName": "belgiumcentral",
 "meterName": "B8als v2 Spot",
 "productName": "Virtual Machines Basv2 Series",
-"retailPrice": 0.158753,
+"retailPrice": 0.174634,
 "skuName": "B8als v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.158753
+"unitPrice": 0.174634
 },
 "DZH318Z0K9JH/04NC|c167f23b-5f18-592d-a075-5dbb0198319c|Consumption|": {
 "armRegionName": "belgiumcentral",
@@ -30189,10 +30189,10 @@
 "armRegionName": "belgiumcentral",
 "meterName": "B2als v2 Spot",
 "productName": "Virtual Machines Basv2 Series",
-"retailPrice": 0.022412,
+"retailPrice": 0.024654,
 "skuName": "B2als v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.022412
+"unitPrice": 0.024654
 },
 "DZH318Z0K9JH/04NG|2c659992-2ef9-5ff3-8c3c-b4991fa67263|Consumption|": {
 "armRegionName": "belgiumcentral",
@@ -30207,28 +30207,28 @@
 "armRegionName": "belgiumcentral",
 "meterName": "B2ats v2 Spot",
 "productName": "Virtual Machines Basv2 Series",
-"retailPrice": 0.005602,
+"retailPrice": 0.006162,
 "skuName": "B2ats v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.005602
+"unitPrice": 0.006162
 },
 "DZH318Z0K9K9/05JC|7b011030-167e-5643-a590-665fe121108b|Consumption|": {
 "armRegionName": "belgiumcentral",
 "meterName": "B4s v2 Spot",
 "productName": "Virtual Machines Bsv2 Series",
-"retailPrice": 0.068026,
+"retailPrice": 0.074822,
 "skuName": "B4s v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.068026
+"unitPrice": 0.074822
 },
 "DZH318Z0K9K9/05JD|63881c1d-050a-5c3d-82db-fe73ca08a017|Consumption|": {
 "armRegionName": "belgiumcentral",
 "meterName": "B2s v2 Spot",
 "productName": "Virtual Machines Bsv2 Series",
-"retailPrice": 0.034013,
+"retailPrice": 0.037411,
 "skuName": "B2s v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.034013
+"unitPrice": 0.037411
 },
 "DZH318Z0K9K9/05JF|7bf08520-3f4e-55f7-b7b6-0236bdde80f1|Consumption|": {
 "armRegionName": "belgiumcentral",
@@ -30243,10 +30243,10 @@
 "armRegionName": "belgiumcentral",
 "meterName": "B32s v2 Spot",
 "productName": "Virtual Machines Bsv2 Series",
-"retailPrice": 0.544205,
+"retailPrice": 0.598579,
 "skuName": "B32s v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.544205
+"unitPrice": 0.598579
 },
 "DZH318Z0K9K9/05JJ|8a24c4d2-e7c1-5da4-917e-fd1e71c7a910|Consumption|": {
 "armRegionName": "belgiumcentral",
@@ -30270,10 +30270,10 @@
 "armRegionName": "belgiumcentral",
 "meterName": "B32ls v2 Spot",
 "productName": "Virtual Machines Bsv2 Series",
-"retailPrice": 0.481848,
+"retailPrice": 0.529992,
 "skuName": "B32ls v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.481848
+"unitPrice": 0.529992
 },
 "DZH318Z0K9K9/05JN|6a995ac5-7eff-5783-8d08-777143381499|Consumption|": {
 "armRegionName": "belgiumcentral",
@@ -30315,28 +30315,28 @@
 "armRegionName": "belgiumcentral",
 "meterName": "B16s v2 Spot",
 "productName": "Virtual Machines Bsv2 Series",
-"retailPrice": 0.272102,
+"retailPrice": 0.29929,
 "skuName": "B16s v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.272102
+"unitPrice": 0.29929
 },
 "DZH318Z0K9K9/05JV|c7e2016a-59c8-5101-ae09-d64dd7608bc5|Consumption|": {
 "armRegionName": "belgiumcentral",
 "meterName": "B8s v2 Spot",
 "productName": "Virtual Machines Bsv2 Series",
-"retailPrice": 0.136051,
+"retailPrice": 0.149645,
 "skuName": "B8s v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.136051
+"unitPrice": 0.149645
 },
 "DZH318Z0K9K9/05JW|350232ca-4e0d-579d-bf9f-ad5f130ca2a1|Consumption|": {
 "armRegionName": "belgiumcentral",
 "meterName": "B16ls v2 Spot",
 "productName": "Virtual Machines Bsv2 Series",
-"retailPrice": 0.240924,
+"retailPrice": 0.264996,
 "skuName": "B16ls v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.240924
+"unitPrice": 0.264996
 },
 "DZH318Z0K9K9/05K0|caefe3c9-8d0a-5153-bdb0-a087abcfc375|Consumption|": {
 "armRegionName": "belgiumcentral",
@@ -30351,10 +30351,10 @@
 "armRegionName": "belgiumcentral",
 "meterName": "B8ls v2 Spot",
 "productName": "Virtual Machines Bsv2 Series",
-"retailPrice": 0.120462,
+"retailPrice": 0.132498,
 "skuName": "B8ls v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.120462
+"unitPrice": 0.132498
 },
 "DZH318Z0K9K9/05K4|e67fd92b-2bce-51ab-8f28-382bb97df27f|Consumption|": {
 "armRegionName": "belgiumcentral",
@@ -30369,10 +30369,10 @@
 "armRegionName": "belgiumcentral",
 "meterName": "B4ls v2 Spot",
 "productName": "Virtual Machines Bsv2 Series",
-"retailPrice": 0.060231,
+"retailPrice": 0.066249,
 "skuName": "B4ls v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.060231
+"unitPrice": 0.066249
 },
 "DZH318Z0K9K9/05K6|e49db196-d71e-5fbe-95f4-035968211d37|Consumption|": {
 "armRegionName": "belgiumcentral",
@@ -30396,28 +30396,28 @@
 "armRegionName": "belgiumcentral",
 "meterName": "B2ts v2 Spot",
 "productName": "Virtual Machines Bsv2 Series",
-"retailPrice": 0.004252,
+"retailPrice": 0.004678,
 "skuName": "B2ts v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.004252
+"unitPrice": 0.004678
 },
 "DZH318Z0K9K9/05KD|032c5377-970e-5198-9168-903df8271257|Consumption|": {
 "armRegionName": "belgiumcentral",
 "meterName": "B2ls v2 Spot",
 "productName": "Virtual Machines Bsv2 Series",
-"retailPrice": 0.017006,
+"retailPrice": 0.018706,
 "skuName": "B2ls v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.017006
+"unitPrice": 0.018706
 },
 "DZH318Z0K9KD/02XS|d8a14d84-c3d6-5259-b768-ca1a436006f6|Consumption|": {
 "armRegionName": "belgiumcentral",
 "meterName": "B2ls v2 Spot",
 "productName": "Virtual Machines Bsv2 Series Windows",
-"retailPrice": 0.020266,
+"retailPrice": 0.022291,
 "skuName": "B2ls v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.020266
+"unitPrice": 0.022291
 },
 "DZH318Z0K9KD/02XT|31f96afb-3eb0-5130-bc41-567e9defccb0|Consumption|": {
 "armRegionName": "belgiumcentral",
@@ -30432,28 +30432,28 @@
 "armRegionName": "belgiumcentral",
 "meterName": "B32s v2 Spot",
 "productName": "Virtual Machines Bsv2 Series Windows",
-"retailPrice": 0.596287,
+"retailPrice": 0.655865,
 "skuName": "B32s v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.596287
+"unitPrice": 0.655865
 },
 "DZH318Z0K9KD/02XX|e27d1558-02be-5a07-8078-af22225e8305|Consumption|": {
 "armRegionName": "belgiumcentral",
 "meterName": "B4ls v2 Spot",
 "productName": "Virtual Machines Bsv2 Series Windows",
-"retailPrice": 0.066608,
+"retailPrice": 0.073264,
 "skuName": "B4ls v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.066608
+"unitPrice": 0.073264
 },
 "DZH318Z0K9KD/02XZ|02b3f73f-5c28-505a-a4a1-88af601ca662|Consumption|": {
 "armRegionName": "belgiumcentral",
 "meterName": "B32ls v2 Spot",
 "productName": "Virtual Machines Bsv2 Series Windows",
-"retailPrice": 0.53393,
+"retailPrice": 0.587278,
 "skuName": "B32ls v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.53393
+"unitPrice": 0.587278
 },
 "DZH318Z0K9KD/02Z0|92db1693-97d0-5210-b12c-b573a92bc823|Consumption|": {
 "armRegionName": "belgiumcentral",
@@ -30468,19 +30468,19 @@
 "armRegionName": "belgiumcentral",
 "meterName": "B4s v2 Spot",
 "productName": "Virtual Machines Bsv2 Series Windows",
-"retailPrice": 0.074403,
+"retailPrice": 0.081837,
 "skuName": "B4s v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.074403
+"unitPrice": 0.081837
 },
 "DZH318Z0K9KD/02Z3|2040bd6e-1203-51e6-8dd7-fdfe7301160e|Consumption|": {
 "armRegionName": "belgiumcentral",
 "meterName": "B2ts v2 Spot",
 "productName": "Virtual Machines Bsv2 Series Windows",
-"retailPrice": 0.007511,
+"retailPrice": 0.008262,
 "skuName": "B2ts v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.007511
+"unitPrice": 0.008262
 },
 "DZH318Z0K9KD/02Z4|6942f0b1-4815-5385-9643-7cb27113f94b|Consumption|": {
 "armRegionName": "belgiumcentral",
@@ -30495,10 +30495,10 @@
 "armRegionName": "belgiumcentral",
 "meterName": "B16s v2 Spot",
 "productName": "Virtual Machines Bsv2 Series Windows",
-"retailPrice": 0.298321,
+"retailPrice": 0.328127,
 "skuName": "B16s v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.298321
+"unitPrice": 0.328127
 },
 "DZH318Z0K9KD/02Z7|13ebd4cd-9334-541b-998d-6d88fa04681c|Consumption|": {
 "armRegionName": "belgiumcentral",
@@ -30513,10 +30513,10 @@
 "armRegionName": "belgiumcentral",
 "meterName": "B16ls v2 Spot",
 "productName": "Virtual Machines Bsv2 Series Windows",
-"retailPrice": 0.267142,
+"retailPrice": 0.293834,
 "skuName": "B16ls v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.267142
+"unitPrice": 0.293834
 },
 "DZH318Z0K9KD/02ZC|fd668363-4c68-5b8e-b700-4fdca162ff10|Consumption|": {
 "armRegionName": "belgiumcentral",
@@ -30531,19 +30531,19 @@
 "armRegionName": "belgiumcentral",
 "meterName": "B8s v2 Spot",
 "productName": "Virtual Machines Bsv2 Series Windows",
-"retailPrice": 0.14916,
+"retailPrice": 0.164064,
 "skuName": "B8s v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.14916
+"unitPrice": 0.164064
 },
 "DZH318Z0K9KD/02ZJ|b64e69e0-7e70-5a0c-99c9-a452d5fb3767|Consumption|": {
 "armRegionName": "belgiumcentral",
 "meterName": "B8ls v2 Spot",
 "productName": "Virtual Machines Bsv2 Series Windows",
-"retailPrice": 0.133571,
+"retailPrice": 0.146917,
 "skuName": "B8ls v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.133571
+"unitPrice": 0.146917
 },
 "DZH318Z0K9KD/02ZK|b60929e1-b061-58f3-9168-c7d614aa68e1|Consumption|": {
 "armRegionName": "belgiumcentral",
@@ -30603,10 +30603,10 @@
 "armRegionName": "belgiumcentral",
 "meterName": "B2s v2 Spot",
 "productName": "Virtual Machines Bsv2 Series Windows",
-"retailPrice": 0.037202,
+"retailPrice": 0.040918,
 "skuName": "B2s v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.037202
+"unitPrice": 0.040918
 },
 "DZH318Z0LDPG/01ZF|b2e0b5bb-9543-5251-956e-b1d88d313d47|Consumption|": {
 "armRegionName": "belgiumcentral",
@@ -33285,10 +33285,10 @@
 "armRegionName": "belgiumcentral",
 "meterName": "Standard_E48bs_v6 Spot",
 "productName": "Virtual Machines Ebsv6-Series Windows",
-"retailPrice": 1.4412,
+"retailPrice": 1.331669,
 "skuName": "Standard_E48bs_v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 1.4412
+"unitPrice": 1.331669
 },
 "DZH318Z0S1W2/027K|1add5b81-f530-5c05-a619-f9e646c000a4|Consumption|": {
 "armRegionName": "belgiumcentral",
@@ -33330,28 +33330,28 @@
 "armRegionName": "belgiumcentral",
 "meterName": "Standard_E96bs_v6 Spot",
 "productName": "Virtual Machines Ebsv6-Series Windows",
-"retailPrice": 2.8824,
+"retailPrice": 2.663338,
 "skuName": "Standard_E96bs_v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 2.8824
+"unitPrice": 2.663338
 },
 "DZH318Z0S1W2/0289|6c8b3533-1aee-560e-ab6d-5f9605256727|Consumption|": {
 "armRegionName": "belgiumcentral",
 "meterName": "Standard_E16bs_v6 Spot",
 "productName": "Virtual Machines Ebsv6-Series Windows",
-"retailPrice": 0.4804,
+"retailPrice": 0.44389,
 "skuName": "Standard_E16bs_v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.4804
+"unitPrice": 0.44389
 },
 "DZH318Z0S1W2/028B|decabdf0-4f12-5bda-ace6-cad284438833|Consumption|": {
 "armRegionName": "belgiumcentral",
 "meterName": "Standard_E192ibs_v6 Spot",
 "productName": "Virtual Machines Ebsv6-Series Windows",
-"retailPrice": 6.1648,
+"retailPrice": 5.696275,
 "skuName": "Standard_E192ibs_v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 6.1648
+"unitPrice": 5.696275
 },
 "DZH318Z0S1W2/028G|4d1d7383-3efe-519e-aa77-484169de23cc|Consumption|": {
 "armRegionName": "belgiumcentral",
@@ -33375,10 +33375,10 @@
 "armRegionName": "belgiumcentral",
 "meterName": "Standard_E64bs_v6 Spot",
 "productName": "Virtual Machines Ebsv6-Series Windows",
-"retailPrice": 1.9216,
+"retailPrice": 1.775558,
 "skuName": "Standard_E64bs_v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 1.9216
+"unitPrice": 1.775558
 },
 "DZH318Z0S1W2/02BN|9f6a94d2-3741-5042-ac4e-7d4db07f1622|Consumption|": {
 "armRegionName": "belgiumcentral",
@@ -33438,19 +33438,19 @@
 "armRegionName": "belgiumcentral",
 "meterName": "Standard_E96bs_v6 Spot",
 "productName": "Virtual Machines Ebsv6-Series Linux",
-"retailPrice": 1.9992,
+"retailPrice": 1.847261,
 "skuName": "Standard_E96bs_v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 1.9992
+"unitPrice": 1.847261
 },
 "DZH318Z0S1WK/010V|b709e460-21d8-50ae-8de1-a952e7f48738|Consumption|": {
 "armRegionName": "belgiumcentral",
 "meterName": "Standard_E64bs_v6 Spot",
 "productName": "Virtual Machines Ebsv6-Series Linux",
-"retailPrice": 1.3328,
+"retailPrice": 1.231507,
 "skuName": "Standard_E64bs_v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 1.3328
+"unitPrice": 1.231507
 },
 "DZH318Z0S1WK/010Z|2b99e0fb-4b93-5b1b-878c-3be671bf6220|Consumption|": {
 "armRegionName": "belgiumcentral",
@@ -33474,10 +33474,10 @@
 "armRegionName": "belgiumcentral",
 "meterName": "Standard_E48bs_v6 Spot",
 "productName": "Virtual Machines Ebsv6-Series Linux",
-"retailPrice": 0.9996,
+"retailPrice": 0.92363,
 "skuName": "Standard_E48bs_v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.9996
+"unitPrice": 0.92363
 },
 "DZH318Z0S1WK/0119|f62dc6e0-3b96-5a07-98d7-d69d9d3162dd|Consumption|": {
 "armRegionName": "belgiumcentral",
@@ -33501,10 +33501,10 @@
 "armRegionName": "belgiumcentral",
 "meterName": "Standard_E192ibs_v6 Spot",
 "productName": "Virtual Machines Ebsv6-Series Linux",
-"retailPrice": 4.3984,
+"retailPrice": 4.064122,
 "skuName": "Standard_E192ibs_v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 4.3984
+"unitPrice": 4.064122
 },
 "DZH318Z0S1WK/011H|70abd106-d583-50c9-b3bc-de7c5895ed43|Consumption|": {
 "armRegionName": "belgiumcentral",
@@ -33546,10 +33546,10 @@
 "armRegionName": "belgiumcentral",
 "meterName": "Standard_E16bs_v6 Spot",
 "productName": "Virtual Machines Ebsv6-Series Linux",
-"retailPrice": 0.3332,
+"retailPrice": 0.307877,
 "skuName": "Standard_E16bs_v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.3332
+"unitPrice": 0.307877
 },
 "DZH318Z0S1WK/0126|cc39f635-ba5f-5db1-819f-ea12e79047ad|Consumption|": {
 "armRegionName": "belgiumcentral",
@@ -33618,10 +33618,10 @@
 "armRegionName": "belgiumcentral",
 "meterName": "Standard_E48bds_v6 Spot",
 "productName": "Virtual Machines Ebdsv6-Series Windows",
-"retailPrice": 1.5592,
+"retailPrice": 1.440701,
 "skuName": "Standard_E48bds_v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 1.5592
+"unitPrice": 1.440701
 },
 "DZH318Z0S1XH/01N4|e9399016-3068-5ece-a6f5-2e5ddfdff51b|Consumption|": {
 "armRegionName": "belgiumcentral",
@@ -33654,10 +33654,10 @@
 "armRegionName": "belgiumcentral",
 "meterName": "Standard_E4bds_v6 Spot",
 "productName": "Virtual Machines Ebdsv6-Series Windows",
-"retailPrice": 0.13,
+"retailPrice": 0.12012,
 "skuName": "Standard_E4bds_v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.13
+"unitPrice": 0.12012
 },
 "DZH318Z0S1XH/01NL|6364f57f-f604-5508-a9b0-ae422912a8fb|Consumption|": {
 "armRegionName": "belgiumcentral",
@@ -33672,10 +33672,10 @@
 "armRegionName": "belgiumcentral",
 "meterName": "Standard_E128bds_v6 Spot",
 "productName": "Virtual Machines Ebdsv6-Series Windows",
-"retailPrice": 4.1578,
+"retailPrice": 3.841807,
 "skuName": "Standard_E128bds_v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 4.1578
+"unitPrice": 3.841807
 },
 "DZH318Z0S1XH/01NW|e5fa62ef-43e6-50a6-a0f5-317b12a42eb6|Consumption|": {
 "armRegionName": "belgiumcentral",
@@ -33699,10 +33699,10 @@
 "armRegionName": "belgiumcentral",
 "meterName": "Standard_E192ibds_v6 Spot",
 "productName": "Virtual Machines Ebdsv6-Series Windows",
-"retailPrice": 6.6838,
+"retailPrice": 6.175831,
 "skuName": "Standard_E192ibds_v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 6.6838
+"unitPrice": 6.175831
 },
 "DZH318Z0S1XH/01Q0|5d98efff-9cb3-5526-8130-5a85763e1abc|Consumption|": {
 "armRegionName": "belgiumcentral",
@@ -33735,10 +33735,10 @@
 "armRegionName": "belgiumcentral",
 "meterName": "Standard_E2bds_v6 Spot",
 "productName": "Virtual Machines Ebdsv6-Series Windows",
-"retailPrice": 0.065,
+"retailPrice": 0.06006,
 "skuName": "Standard_E2bds_v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.065
+"unitPrice": 0.06006
 },
 "DZH318Z0S1XH/01RL|7be240ee-1f87-5268-9b30-acdd756cab3d|Consumption|": {
 "armRegionName": "belgiumcentral",
@@ -33789,19 +33789,19 @@
 "armRegionName": "belgiumcentral",
 "meterName": "Standard_E128bds_v6 Spot",
 "productName": "Virtual Machines Ebdsv6-Series Linux",
-"retailPrice": 2.9802,
+"retailPrice": 2.753705,
 "skuName": "Standard_E128bds_v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 2.9802
+"unitPrice": 2.753705
 },
 "DZH318Z0S1XJ/0207|1a5c72f7-3ba6-5049-8e4d-f314e32e8946|Consumption|": {
 "armRegionName": "belgiumcentral",
 "meterName": "Standard_E4bds_v6 Spot",
 "productName": "Virtual Machines Ebdsv6-Series Linux",
-"retailPrice": 0.0932,
+"retailPrice": 0.086117,
 "skuName": "Standard_E4bds_v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.0932
+"unitPrice": 0.086117
 },
 "DZH318Z0S1XJ/0209|0d780984-00fd-5463-a2bf-c50a520d249e|Consumption|": {
 "armRegionName": "belgiumcentral",
@@ -33825,10 +33825,10 @@
 "armRegionName": "belgiumcentral",
 "meterName": "Standard_E48bds_v6 Spot",
 "productName": "Virtual Machines Ebdsv6-Series Linux",
-"retailPrice": 1.1176,
+"retailPrice": 1.032662,
 "skuName": "Standard_E48bds_v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 1.1176
+"unitPrice": 1.032662
 },
 "DZH318Z0S1XJ/020D|ecf3fed3-6fdb-5af8-ad58-bbcba0fcef48|Consumption|": {
 "armRegionName": "belgiumcentral",
@@ -33879,10 +33879,10 @@
 "armRegionName": "belgiumcentral",
 "meterName": "Standard_E2bds_v6 Spot",
 "productName": "Virtual Machines Ebdsv6-Series Linux",
-"retailPrice": 0.0466,
+"retailPrice": 0.043058,
 "skuName": "Standard_E2bds_v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.0466
+"unitPrice": 0.043058
 },
 "DZH318Z0S1XJ/0213|3f9fc71f-47ce-57be-b122-e5857595d990|Consumption|": {
 "armRegionName": "belgiumcentral",
@@ -33897,10 +33897,10 @@
 "armRegionName": "belgiumcentral",
 "meterName": "Standard_E192ibds_v6 Spot",
 "productName": "Virtual Machines Ebdsv6-Series Linux",
-"retailPrice": 4.9174,
+"retailPrice": 4.543678,
 "skuName": "Standard_E192ibds_v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 4.9174
+"unitPrice": 4.543678
 },
 "DZH318Z0S1XJ/021L|6d88b70a-48d4-5652-a66a-8001c1cb68e2|Consumption|": {
 "armRegionName": "belgiumcentral",

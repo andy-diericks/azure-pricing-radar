@@ -15,6 +15,40 @@
 9,904 new SKUs</content>
   </entry>
   <entry>
+    <title>Azure pricing changes for 2026-08-01</title>
+    <id>https://andy-diericks.github.io/azure-pricing-radar/#/digests/2026-08-01</id>
+    <link href="https://andy-diericks.github.io/azure-pricing-radar/#/digests/2026-08-01"/>
+    <updated>2026-08-01T05:42:47.414Z</updated>
+    <content type="text">Azure pricing changes for 2026-08-01
+
+748 price drops, 507 price increases, 280 new SKUs
+
+Virtual Machines · Belgium Central
+  B32ls v2 Spot (Belgium Central): +10.0% — $0.48 → $0.53/1 Hour
+  B8als v2 Spot (Belgium Central): +10.0% — $0.18 → $0.20/1 Hour
+  B32ls v2 Spot (Belgium Central): +10.0% — $0.53 → $0.59/1 Hour
+
+Virtual Machines · West Europe
+  HB120-32rs_v3 Spot (West Europe): -20.0% — $1.31 → $1.05/1 Hour
+  D16ps v6 Spot (West Europe): -20.0% — $0.18 → $0.15/1 Hour
+  D32pls v6 Spot (West Europe): -20.0% — $0.33 → $0.26/1 Hour
+
+Virtual Machines · France Central
+  Standard_E192ibs_v6 Spot (France Central): -7.6% — $4.60 → $4.25/1 Hour
+  Standard_E48bs_v6 Spot (France Central): -7.6% — $1.49 → $1.37/1 Hour
+  Standard_E48bds_v6 Spot (France Central): -7.6% — $1.61 → $1.49/1 Hour
+
+Virtual Machines · North Europe
+  NC4as T4 v3 Spot (North Europe): -20.0% — $0.32 → $0.26/1 Hour
+  NC64asT4 v3 Spot (North Europe): -20.0% — $3.25 → $2.60/1 Hour
+  NC8as T4 v3 Spot (North Europe): -20.0% — $0.35 → $0.28/1 Hour
+
+Virtual Machines · Sweden Central
+  Standard_NC96ads_A100_v4 Spot (Sweden Central): -20.0% — $9.02 → $7.21/1 Hour
+  NC40adsH100v5 Spot (Sweden Central): -20.0% — $4.02 → $3.22/1 Hour
+  NC80adisH100v5 Spot (Sweden Central): -20.0% — $8.05 → $6.44/1 Hour</content>
+  </entry>
+  <entry>
     <title>Azure pricing changes for 2026-07-26</title>
     <id>https://andy-diericks.github.io/azure-pricing-radar/#/digests/2026-07-26</id>
     <link href="https://andy-diericks.github.io/azure-pricing-radar/#/digests/2026-07-26"/>

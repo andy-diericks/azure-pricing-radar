@@ -10191,10 +10191,10 @@
 "armRegionName": "swedencentral",
 "meterName": "Hot RA-GRS Blob Inventory",
 "productName": "General Block Blob v2 Hierarchical Namespace",
-"retailPrice": 0.0,
+"retailPrice": 0.004,
 "skuName": "Hot RA-GRS",
 "unitOfMeasure": "1M",
-"unitPrice": 0.0
+"unitPrice": 0.004
 },
 "DZH318Z0C120/00XP|6b04f027-9b86-5431-9da0-a9cc02d94116|Consumption|": {
 "armRegionName": "swedencentral",

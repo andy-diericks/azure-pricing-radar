@@ -1,0 +1,243 @@
+{
+  "generatedAt": "2026-08-01T05:42:47.414Z",
+  "date": "2026-08-01",
+  "totalDrops": 748,
+  "totalIncreases": 507,
+  "totalNewSkus": 280,
+  "totalRemoved": 0,
+  "sections": [
+    {
+      "scope": "storage-francecentral",
+      "displayName": "Storage · France Central",
+      "drops": 0,
+      "increases": 0,
+      "newSkus": 0,
+      "removed": 0,
+      "topMovers": []
+    },
+    {
+      "scope": "storage-swedencentral",
+      "displayName": "Storage · Sweden Central",
+      "drops": 0,
+      "increases": 0,
+      "newSkus": 0,
+      "removed": 0,
+      "topMovers": []
+    },
+    {
+      "scope": "vm-belgium",
+      "displayName": "Virtual Machines · Belgium Central",
+      "drops": 20,
+      "increases": 44,
+      "newSkus": 0,
+      "removed": 0,
+      "topMovers": [
+        {
+          "skuName": "B32ls v2 Spot",
+          "productName": "Virtual Machines Bsv2 Series",
+          "armRegionName": "belgiumcentral",
+          "regionDisplay": "Belgium Central",
+          "priceBefore": 0.481848,
+          "priceAfter": 0.529992,
+          "unitOfMeasure": "1 Hour",
+          "pctChange": 10,
+          "direction": "increase"
+        },
+        {
+          "skuName": "B8als v2 Spot",
+          "productName": "Virtual Machines Basv2 Series Windows",
+          "armRegionName": "belgiumcentral",
+          "regionDisplay": "Belgium Central",
+          "priceBefore": 0.177948,
+          "priceAfter": 0.19575,
+          "unitOfMeasure": "1 Hour",
+          "pctChange": 10,
+          "direction": "increase"
+        },
+        {
+          "skuName": "B32ls v2 Spot",
+          "productName": "Virtual Machines Bsv2 Series Windows",
+          "armRegionName": "belgiumcentral",
+          "regionDisplay": "Belgium Central",
+          "priceBefore": 0.53393,
+          "priceAfter": 0.587278,
+          "unitOfMeasure": "1 Hour",
+          "pctChange": 10,
+          "direction": "increase"
+        }
+      ]
+    },
+    {
+      "scope": "vm-eu-west",
+      "displayName": "Virtual Machines · West Europe",
+      "drops": 164,
+      "increases": 3,
+      "newSkus": 188,
+      "removed": 0,
+      "topMovers": [
+        {
+          "skuName": "HB120-32rs_v3 Spot",
+          "productName": "Virtual Machines HBrsv3 Series",
+          "armRegionName": "westeurope",
+          "regionDisplay": "West Europe",
+          "priceBefore": 1.308996,
+          "priceAfter": 1.047384,
+          "unitOfMeasure": "1 Hour",
+          "pctChange": -20,
+          "direction": "drop"
+        },
+        {
+          "skuName": "D16ps v6 Spot",
+          "productName": "Virtual Machines Dpsv6 Series",
+          "armRegionName": "westeurope",
+          "regionDisplay": "West Europe",
+          "priceBefore": 0.184183,
+          "priceAfter": 0.147333,
+          "unitOfMeasure": "1 Hour",
+          "pctChange": -20,
+          "direction": "drop"
+        },
+        {
+          "skuName": "D32pls v6 Spot",
+          "productName": "Virtual Machines Dplsv6 Series",
+          "armRegionName": "westeurope",
+          "regionDisplay": "West Europe",
+          "priceBefore": 0.326306,
+          "priceAfter": 0.261021,
+          "unitOfMeasure": "1 Hour",
+          "pctChange": -20,
+          "direction": "drop"
+        }
+      ]
+    },
+    {
+      "scope": "vm-francecentral",
+      "displayName": "Virtual Machines · France Central",
+      "drops": 20,
+      "increases": 0,
+      "newSkus": 0,
+      "removed": 0,
+      "topMovers": [
+        {
+          "skuName": "Standard_E192ibs_v6 Spot",
+          "productName": "Virtual Machines Ebsv6-Series Linux",
+          "armRegionName": "francecentral",
+          "regionDisplay": "France Central",
+          "priceBefore": 4.6042,
+          "priceAfter": 4.254281,
+          "unitOfMeasure": "1 Hour",
+          "pctChange": -7.6,
+          "direction": "drop"
+        },
+        {
+          "skuName": "Standard_E48bs_v6 Spot",
+          "productName": "Virtual Machines Ebsv6-Series Windows",
+          "armRegionName": "francecentral",
+          "regionDisplay": "France Central",
+          "priceBefore": 1.488,
+          "priceAfter": 1.374912,
+          "unitOfMeasure": "1 Hour",
+          "pctChange": -7.6,
+          "direction": "drop"
+        },
+        {
+          "skuName": "Standard_E48bds_v6 Spot",
+          "productName": "Virtual Machines Ebdsv6-Series Windows",
+          "armRegionName": "francecentral",
+          "regionDisplay": "France Central",
+          "priceBefore": 1.614,
+          "priceAfter": 1.491336,
+          "unitOfMeasure": "1 Hour",
+          "pctChange": -7.6,
+          "direction": "drop"
+        }
+      ]
+    },
+    {
+      "scope": "vm-northeurope",
+      "displayName": "Virtual Machines · North Europe",
+      "drops": 366,
+      "increases": 325,
+      "newSkus": 92,
+      "removed": 0,
+      "topMovers": [
+        {
+          "skuName": "NC4as T4 v3 Spot",
+          "productName": "Virtual Machines NCasT4 v3 Series Windows",
+          "armRegionName": "northeurope",
+          "regionDisplay": "North Europe",
+          "priceBefore": 0.321661,
+          "priceAfter": 0.25736,
+          "unitOfMeasure": "1 Hour",
+          "pctChange": -20,
+          "direction": "drop"
+        },
+        {
+          "skuName": "NC64asT4 v3 Spot",
+          "productName": "Virtual Machines NCasT4 v3 Series Windows",
+          "armRegionName": "northeurope",
+          "regionDisplay": "North Europe",
+          "priceBefore": 3.252908,
+          "priceAfter": 2.602639,
+          "unitOfMeasure": "1 Hour",
+          "pctChange": -20,
+          "direction": "drop"
+        },
+        {
+          "skuName": "NC8as T4 v3 Spot",
+          "productName": "Virtual Machines NCasT4 v3 Series",
+          "armRegionName": "northeurope",
+          "regionDisplay": "North Europe",
+          "priceBefore": 0.349614,
+          "priceAfter": 0.279724,
+          "unitOfMeasure": "1 Hour",
+          "pctChange": -20,
+          "direction": "drop"
+        }
+      ]
+    },
+    {
+      "scope": "vm-swedencentral",
+      "displayName": "Virtual Machines · Sweden Central",
+      "drops": 178,
+      "increases": 135,
+      "newSkus": 0,
+      "removed": 0,
+      "topMovers": [
+        {
+          "skuName": "Standard_NC96ads_A100_v4 Spot",
+          "productName": "NCads A100 v4 Series Windows",
+          "armRegionName": "swedencentral",
+          "regionDisplay": "Sweden Central",
+          "priceBefore": 9.016034,
+          "priceAfter": 7.212357,
+          "unitOfMeasure": "1 Hour",
+          "pctChange": -20,
+          "direction": "drop"
+        },
+        {
+          "skuName": "NC40adsH100v5 Spot",
+          "productName": "Virtual Machines NCadsH100v5 Series Windows",
+          "armRegionName": "swedencentral",
+          "regionDisplay": "Sweden Central",
+          "priceBefore": 4.0229,
+          "priceAfter": 3.218539,
+          "unitOfMeasure": "1 Hour",
+          "pctChange": -20,
+          "direction": "drop"
+        },
+        {
+          "skuName": "NC80adisH100v5 Spot",
+          "productName": "Virtual Machines NCadsH100v5 Series Windows",
+          "armRegionName": "swedencentral",
+          "regionDisplay": "Sweden Central",
+          "priceBefore": 8.045801,
+          "priceAfter": 6.437077,
+          "unitOfMeasure": "1 Hour",
+          "pctChange": -20,
+          "direction": "drop"
+        }
+      ]
+    }
+  ]
+}
