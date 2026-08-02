@@ -328,6 +328,47 @@
   flex-shrink: 0;
 }
 
+/* Discount history section */
+.sku-page__discount {
+  margin-top: var(--space-8);
+  padding-top: var(--space-6);
+  border-top: 1px solid rgba(147, 164, 190, 0.15);
+}
+
+.sku-page__discount-legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+  margin-top: var(--space-3);
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+}
+
+.sku-page__discount-legend-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-text-primary);
+}
+
+.sku-page__discount-swatch {
+  display: inline-block;
+  width: 20px;
+  height: 3px;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  flex-shrink: 0;
+}
+
+.sku-page__discount-note {
+  margin: 0;
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  font-style: italic;
+  width: 100%;
+}
+
 /* Multi-region tooltip entries */
 .phc__tooltip-region-entry + .phc__tooltip-region-entry {
   padding-top: var(--space-2);
