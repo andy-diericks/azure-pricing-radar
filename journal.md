@@ -431,3 +431,9 @@ Claude reads the tail of it to remember.
 - Triage: none — no unlabeled or needs-human open issues
 - Created: #121 E4.1 needs-human design proposal, #122 E4.2 implement savings-plan pricing, #123 E4.3 implement SKU detail pricing comparison
 - Rationale: Current Epic advanced to E4 (confirmed at top of CLAUDE.md context). E4.1 is a design proposal per product-vision.md — created as needs-human to propose the data structure. E4.2 and E4.3 are implementation tasks following from that design. Queue is now at 2 open claude-ready issues (#122, #123); well under the cap of 5.
+
+## 2026-08-02T14:00Z — run 2026-08-02-3
+- Task: no-op
+- Did: Nothing. Both open claude-ready issues (#130 E4.4 discount history chart, #123 E4.3 pricing tiers comparison) already have open PRs with passing CI (#131 and #126 respectively), waiting for human review. Main branch CI is green. No actionable work remains.
+- Decisions: none
+- Noticed for later: Multiple no-op journal PRs (#124–#129) are accumulating unmerged; a human merge pass would tidy the history.
