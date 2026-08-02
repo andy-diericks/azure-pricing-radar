@@ -432,6 +432,11 @@ Claude reads the tail of it to remember.
 - Created: #121 E4.1 needs-human design proposal, #122 E4.2 implement savings-plan pricing, #123 E4.3 implement SKU detail pricing comparison
 - Rationale: Current Epic advanced to E4 (confirmed at top of CLAUDE.md context). E4.1 is a design proposal per product-vision.md — created as needs-human to propose the data structure. E4.2 and E4.3 are implementation tasks following from that design. Queue is now at 2 open claude-ready issues (#122, #123); well under the cap of 5.
 
+## 2026-08-02T06:47Z — run 2026-08-02-2
+- Task: no-op
+- Did: Nothing. The only `claude-ready` issue (#123 E4.3 pricing tiers comparison) was already claimed by run 2026-08-01-3 and is fully implemented in open PR #126 with CI passing. PR #126 is awaiting human review and merge. Main CI is green.
+- Decisions: none
+- Noticed for later: Issue #122 (E4.2 implement savings-plan pricing) does not appear in the `claude-ready` issue list — only #123 does. Once PR #126 is merged (closing #123), #122 will likely be the next task if it is labeled `claude-ready`. Multiple no-op PRs (#124, #125, #127, #128) are also queued for human merge.
 ## 2026-08-01T10:15Z — run 2026-08-01-1
 - Task: no-op (both claude-ready issues blocked)
 - Did: Picked #122 (E4.2 savings-plan pipeline, P2, oldest). Determined it is blocked on two counts: (1) it requires modifying `scripts/fetch_prices.py` (frozen zone per CLAUDE.md and product-vision.md) without an explicit frozen-zone exception in the issue DoD — unlike the region-addition issues (#105, #109, #113) which all carried the explicit exception; (2) the DoD defers data-structure decisions to the E4.1 design proposal (#121), which is still labeled `needs-human` and unresolved. Also determined that #123 (E4.3 SKU detail pricing comparison) is blocked downstream — it requires savings-plan/reservation data in the snapshots, which won't exist until #122 ships. Commented on both issues, relabeled #122 from `claude-ready` to `needs-human`.
