@@ -437,6 +437,16 @@ Claude reads the tail of it to remember.
 - Did: Nothing. The only `claude-ready` issue (#123 E4.3 pricing tiers comparison) was already claimed by run 2026-08-01-3 and is fully implemented in open PR #126 with CI passing. PR #126 is awaiting human review and merge. Main CI is green.
 - Decisions: none
 - Noticed for later: Issue #122 (E4.2 implement savings-plan pricing) does not appear in the `claude-ready` issue list — only #123 does. Once PR #126 is merged (closing #123), #122 will likely be the next task if it is labeled `claude-ready`. Multiple no-op PRs (#124, #125, #127, #128) are also queued for human merge.
+## 2026-08-01T10:15Z — run 2026-08-01-1
+- Task: no-op (both claude-ready issues blocked)
+- Did: Picked #122 (E4.2 savings-plan pipeline, P2, oldest). Determined it is blocked on two counts: (1) it requires modifying `scripts/fetch_prices.py` (frozen zone per CLAUDE.md and product-vision.md) without an explicit frozen-zone exception in the issue DoD — unlike the region-addition issues (#105, #109, #113) which all carried the explicit exception; (2) the DoD defers data-structure decisions to the E4.1 design proposal (#121), which is still labeled `needs-human` and unresolved. Also determined that #123 (E4.3 SKU detail pricing comparison) is blocked downstream — it requires savings-plan/reservation data in the snapshots, which won't exist until #122 ships. Commented on both issues, relabeled #122 from `claude-ready` to `needs-human`.
+- Decisions: Did not attempt to implement #123 as a UI-only shell — showing empty "N/A" for 1yr/3yr/savings-plan on every SKU would be misleading (implies data is tracked but absent per-SKU, not that the pipeline hasn't fetched it). Correct sequencing: #121 design → #122 pipeline (with frozen-zone exception) → #123 UI.
+- Noticed for later: The PM created #122 as `claude-ready` despite the product-vision rule that issues touching `scripts/` should be `needs-human` proposals first. Worth noting if the PM creates similar issues in future runs.
+## 2026-08-01T21:09Z — run 2026-08-01-4
+- Task: no-op
+- Did: Nothing. PR #126 (issue #123 E4.3 pricing tiers comparison) is open with passing CI, awaiting human review. No other `claude-ready` issues exist.
+- Decisions: none
+- Noticed for later: No-op PRs #124 and #125 are also open and accumulating; a human could batch-merge all three journal-only PRs together with #126.
 ## 2026-08-01T14:00Z — run 2026-08-01-2
 - Task: no-op
 - Did: Nothing. The only open `claude-ready` issue is #123 (E4.3 SKU pricing comparison), which remains unactionable: it requires reservation/savings-plan pricing data in the snapshots, but E4.1 (#121, needs-human) hasn't defined the data structure and E4.2 (#122, needs-human) hasn't extended the pipeline to fetch it. CI on main is green. PR #124 (previous no-op) is still awaiting merge.
