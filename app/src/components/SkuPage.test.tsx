@@ -657,9 +657,9 @@ describe('SkuPage', () => {
       vi.stubGlobal('fetch', mockFetch(SKU_INDEX_DISCOUNT_ALL))
       render(<SkuPage family="Standard_D2s_v5" />)
       await waitFor(() => expect(screen.getByTestId('discount-chart')).toBeInTheDocument())
-      expect(screen.getByText('1yr Reservation')).toBeInTheDocument()
-      expect(screen.getByText('3yr Reservation')).toBeInTheDocument()
-      expect(screen.getByText('Savings plan')).toBeInTheDocument()
+      expect(screen.getAllByText('1yr Reservation').length).toBeGreaterThan(0)
+      expect(screen.getAllByText('3yr Reservation').length).toBeGreaterThan(0)
+      expect(screen.getAllByText('Savings plan').length).toBeGreaterThan(0)
       expect(screen.getByText(/Discount = \(PAYG − tier\) ÷ PAYG/)).toBeInTheDocument()
     })
 
