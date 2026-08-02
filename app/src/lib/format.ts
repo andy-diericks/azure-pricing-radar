@@ -45,6 +45,10 @@ export function formatLastUpdated(isoString: string): string {
   return `${day} ${month} ${year}, ${hours}:${minutes} UTC`
 }
 
+export function formatDiscountPct(value: number): string {
+  return value.toFixed(1) + '%'
+}
+
 export function directionColor(direction: string): string {
   const map: Record<string, string> = {
     drop: '#34D399',
