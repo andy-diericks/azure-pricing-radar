@@ -9,7 +9,7 @@ import {
   YAxis,
 } from 'recharts'
 import { loadSkuIndex } from '../lib/loadSkuIndex'
-import { formatPrice, formatDateAxis, formatDateFull, directionColor } from '../lib/format'
+import { formatPrice, formatDateAxis, formatDateFull, formatDiscountPct, directionColor } from '../lib/format'
 import type { SkuEntry, SkuHistoryPoint, SkuIndex } from '../lib/skuIndex'
 import { ogImageUrl } from '../lib/ogImage'
 import { TrendSummaryCard } from './TrendSummaryCard'
@@ -523,6 +523,159 @@ function SkuHistory({ entry }: HistoryProps) {
   )
 }
 
+interface DiscountPoint {
+  at: string
+  d1yr?: number
+  d3yr?: number
+  dSP?: number
+}
+
+interface DiscountSeriesDef {
+  key: keyof Omit<DiscountPoint, 'at'>
+  label: string
+  color: string
+  dash?: string
+}
+
+const DISCOUNT_SERIES: DiscountSeriesDef[] = [
+  { key: 'd1yr', label: '1yr Reservation', color: '#38BDF8' },
+  { key: 'd3yr', label: '3yr Reservation', color: '#FBBF24' },
+  { key: 'dSP', label: 'Savings plan', color: '#38BDF8', dash: '6 3' },
+]
+
+interface DiscountTooltipProps {
+  active?: boolean
+  payload?: ReadonlyArray<{
+    dataKey?: string | number | ((o: unknown) => unknown)
+    value?: unknown
+    color?: string
+  }>
+  label?: string | number
+}
+
+function DiscountTooltip({ active, payload, label }: DiscountTooltipProps) {
+  if (!active || !payload?.length || typeof label !== 'string' || !label) return null
+  return (
+    <div className="phc__tooltip">
+      <div className="phc__tooltip-date">{formatDateFull(label)}</div>
+      {payload.map((item, i) => {
+        const series = DISCOUNT_SERIES.find((s) => s.key === item.dataKey)
+        if (!series || typeof item.value !== 'number') return null
+        return (
+          <div key={i} className="phc__tooltip-region-entry">
+            <div className="phc__tooltip-region-name" style={{ color: series.color }}>
+              {series.label}
+            </div>
+            <div className="phc__tooltip-price">{formatDiscountPct(item.value)} off</div>
+          </div>
+        )
+      })}
+    </div>
+  )
+}
+
+interface DiscountChartProps {
+  entry: SkuEntry
+  primaryRegion: string
+}
+
+function DiscountHistoryChart({ entry, primaryRegion }: DiscountChartProps) {
+  const chartData = useMemo((): DiscountPoint[] => {
+    return entry.history
+      .filter((h) => h.armRegionName === primaryRegion && h.retailPrice !== null)
+      .sort((a, b) => a.at.localeCompare(b.at))
+      .map((h) => {
+        const payg = h.retailPrice as number
+        const pt: DiscountPoint = { at: h.at }
+        if (h.reservationPrice1yr != null)
+          pt.d1yr = ((payg - h.reservationPrice1yr) / payg) * 100
+        if (h.reservationPrice3yr != null)
+          pt.d3yr = ((payg - h.reservationPrice3yr) / payg) * 100
+        if (h.savingsPlanPrice != null)
+          pt.dSP = ((payg - h.savingsPlanPrice) / payg) * 100
+        return pt
+      })
+      .filter((pt) => pt.d1yr != null || pt.d3yr != null || pt.dSP != null)
+  }, [entry.history, primaryRegion])
+
+  const activeSeries = DISCOUNT_SERIES.filter((s) => chartData.some((pt) => pt[s.key] != null))
+
+  const rangeMs =
+    chartData.length > 1
+      ? new Date(chartData[chartData.length - 1].at).getTime() -
+        new Date(chartData[0].at).getTime()
+      : 0
+
+  return (
+    <div className="sku-page__discount">
+      <h2 className="sku-page__history-heading">Discount history vs PAYG</h2>
+      {chartData.length < 2 ? (
+        <div className="sku-page__empty" data-testid="discount-empty">
+          <ChartEmptyIcon />
+          <p className="sku-page__empty-headline">No reservation pricing data yet</p>
+          <p className="sku-page__empty-subline">
+            Available once reservation and savings-plan prices are tracked
+          </p>
+        </div>
+      ) : (
+        <>
+          <div className="sku-page__chart-container" data-testid="discount-chart">
+            <ResponsiveContainer width="100%" height="100%">
+              <AreaChart data={chartData} margin={{ top: 8, right: 16, left: 8, bottom: 8 }}>
+                <CartesianGrid strokeDasharray="3 3" stroke="#1e2d47" />
+                <XAxis
+                  dataKey="at"
+                  tickFormatter={(v: string) => formatDateAxis(v, rangeMs)}
+                  tick={{ fill: '#93A4BE', fontSize: 13 }}
+                  axisLine={{ stroke: '#1e2d47', strokeWidth: 1 }}
+                  tickLine={false}
+                />
+                <YAxis
+                  tickFormatter={(v: number) => formatDiscountPct(v)}
+                  tick={{ fill: '#93A4BE', fontSize: 13 }}
+                  axisLine={{ stroke: '#1e2d47', strokeWidth: 1 }}
+                  tickLine={false}
+                  width={60}
+                />
+                <Tooltip content={(props) => <DiscountTooltip {...props} />} />
+                {activeSeries.map((s) => (
+                  <Area
+                    key={s.key}
+                    type="monotone"
+                    dataKey={s.key}
+                    stroke={s.color}
+                    strokeWidth={2}
+                    strokeDasharray={s.dash}
+                    fill={s.color}
+                    fillOpacity={0}
+                    dot={false}
+                    activeDot={{ r: 5, fill: s.color }}
+                    isAnimationActive={false}
+                    connectNulls={false}
+                  />
+                ))}
+              </AreaChart>
+            </ResponsiveContainer>
+          </div>
+          <div className="sku-page__discount-legend">
+            {activeSeries.map((s) => (
+              <div key={s.key} className="sku-page__discount-legend-item">
+                <span
+                  className="sku-page__discount-swatch"
+                  style={{ background: s.dash ? 'transparent' : s.color, borderColor: s.color }}
+                  aria-hidden="true"
+                />
+                {s.label}
+              </div>
+            ))}
+            <p className="sku-page__discount-note">Discount = (PAYG − tier) ÷ PAYG</p>
+          </div>
+        </>
+      )}
+    </div>
+  )
+}
+
 export function SkuPage({ family }: Props) {
   const [index, setIndex] = useState<SkuIndex | null>(null)
   const [loadError, setLoadError] = useState<string | null>(null)
@@ -691,6 +844,13 @@ export function SkuPage({ family }: Props) {
             }
           />
           <SkuHistory entry={entry} />
+          <DiscountHistoryChart
+            entry={entry}
+            primaryRegion={
+              entry.regions.slice().sort((a, b) => a.retailPrice - b.retailPrice)[0]
+                ?.armRegionName ?? ''
+            }
+          />
         </div>
       </main>
     </div>
