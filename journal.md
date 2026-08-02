@@ -432,6 +432,11 @@ Claude reads the tail of it to remember.
 - Created: #121 E4.1 needs-human design proposal, #122 E4.2 implement savings-plan pricing, #123 E4.3 implement SKU detail pricing comparison
 - Rationale: Current Epic advanced to E4 (confirmed at top of CLAUDE.md context). E4.1 is a design proposal per product-vision.md — created as needs-human to propose the data structure. E4.2 and E4.3 are implementation tasks following from that design. Queue is now at 2 open claude-ready issues (#122, #123); well under the cap of 5.
 
+## 2026-08-01T21:09Z — run 2026-08-01-4
+- Task: no-op
+- Did: Nothing. PR #126 (issue #123 E4.3 pricing tiers comparison) is open with passing CI, awaiting human review. No other `claude-ready` issues exist.
+- Decisions: none
+- Noticed for later: No-op PRs #124 and #125 are also open and accumulating; a human could batch-merge all three journal-only PRs together with #126.
 ## 2026-08-01T14:00Z — run 2026-08-01-2
 - Task: no-op
 - Did: Nothing. The only open `claude-ready` issue is #123 (E4.3 SKU pricing comparison), which remains unactionable: it requires reservation/savings-plan pricing data in the snapshots, but E4.1 (#121, needs-human) hasn't defined the data structure and E4.2 (#122, needs-human) hasn't extended the pipeline to fetch it. CI on main is green. PR #124 (previous no-op) is still awaiting merge.
