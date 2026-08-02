@@ -14,6 +14,10 @@ export interface SkuHistoryPoint {
   retailPrice: number | null
   priceBefore?: number
   direction: 'added' | 'removed' | 'changed'
+  // Populated when E4.2 pipeline extension is active
+  reservationPrice1yr?: number | null
+  reservationPrice3yr?: number | null
+  savingsPlanPrice?: number | null
 }
 
 export interface SkuEntry {

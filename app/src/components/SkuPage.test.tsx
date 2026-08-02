@@ -14,11 +14,13 @@ vi.mock('recharts', () => ({
     fill,
     fillOpacity,
     dataKey,
+    strokeDasharray,
   }: {
     stroke: string
     fill: string
     fillOpacity: number
     dataKey?: string
+    strokeDasharray?: string
   }) => (
     <div
       data-testid="area"
@@ -26,6 +28,7 @@ vi.mock('recharts', () => ({
       data-fill={fill}
       data-fill-opacity={String(fillOpacity)}
       data-key={dataKey}
+      data-dash={strokeDasharray ?? ''}
     />
   ),
   XAxis: () => null,
@@ -117,6 +120,70 @@ const SKU_INDEX_MULTI_REGION: SkuIndex = {
         { at: '2026-07-16T12:00:00Z', armRegionName: 'westeurope', retailPrice: 0.088, priceBefore: 0.096, direction: 'changed' },
         { at: '2026-07-15T17:41:10Z', armRegionName: 'northeurope', retailPrice: 0.102, direction: 'added' },
         { at: '2026-07-16T12:00:00Z', armRegionName: 'northeurope', retailPrice: 0.095, priceBefore: 0.102, direction: 'changed' },
+      ],
+    },
+  },
+}
+
+// SKU with 2 history points that have 1yr reservation data only
+const SKU_INDEX_DISCOUNT_1YR: SkuIndex = {
+  generatedAt: '2026-07-20T00:00:00Z',
+  skus: {
+    Standard_D2s_v5: {
+      productName: 'Virtual Machines Dsv5 Series',
+      regions: [
+        { armRegionName: 'westeurope', scope: 'vm-eu-west', retailPrice: 0.096, unitOfMeasure: '1 Hour' },
+      ],
+      history: [
+        {
+          at: '2026-07-15T17:41:10Z',
+          armRegionName: 'westeurope',
+          retailPrice: 0.1,
+          direction: 'added',
+          reservationPrice1yr: 0.06,
+        },
+        {
+          at: '2026-07-16T12:00:00Z',
+          armRegionName: 'westeurope',
+          retailPrice: 0.096,
+          priceBefore: 0.1,
+          direction: 'changed',
+          reservationPrice1yr: 0.058,
+        },
+      ],
+    },
+  },
+}
+
+// SKU with 2 history points that have all 3 discount tiers
+const SKU_INDEX_DISCOUNT_ALL: SkuIndex = {
+  generatedAt: '2026-07-20T00:00:00Z',
+  skus: {
+    Standard_D2s_v5: {
+      productName: 'Virtual Machines Dsv5 Series',
+      regions: [
+        { armRegionName: 'westeurope', scope: 'vm-eu-west', retailPrice: 0.096, unitOfMeasure: '1 Hour' },
+      ],
+      history: [
+        {
+          at: '2026-07-15T17:41:10Z',
+          armRegionName: 'westeurope',
+          retailPrice: 0.1,
+          direction: 'added',
+          reservationPrice1yr: 0.06,
+          reservationPrice3yr: 0.05,
+          savingsPlanPrice: 0.07,
+        },
+        {
+          at: '2026-07-16T12:00:00Z',
+          armRegionName: 'westeurope',
+          retailPrice: 0.096,
+          priceBefore: 0.1,
+          direction: 'changed',
+          reservationPrice1yr: 0.058,
+          reservationPrice3yr: 0.048,
+          savingsPlanPrice: 0.068,
+        },
       ],
     },
   },
@@ -507,6 +574,116 @@ describe('SkuPage', () => {
       fireEvent.click(screen.getByRole('button', { name: 'northeurope' }))
       const h2s = screen.getAllByRole('heading', { level: 2 })
       expect(h2s.some((h) => h.textContent?.includes('westeurope · northeurope'))).toBe(true)
+    })
+  })
+
+  describe('discount history chart', () => {
+    it('shows empty state when no history has reservation prices', async () => {
+      render(<SkuPage family="Standard_D2s_v5" />)
+      await waitFor(() =>
+        expect(screen.getByTestId('discount-empty')).toBeInTheDocument(),
+      )
+      expect(screen.getByText(/no reservation pricing data yet/i)).toBeInTheDocument()
+      expect(screen.queryByTestId('discount-chart')).not.toBeInTheDocument()
+    })
+
+    it('shows empty state when only 1 history point has reservation data', async () => {
+      const singlePoint: SkuIndex = {
+        generatedAt: '2026-07-20T00:00:00Z',
+        skus: {
+          Standard_D2s_v5: {
+            productName: 'Virtual Machines Dsv5 Series',
+            regions: [{ armRegionName: 'westeurope', scope: 'vm-eu-west', retailPrice: 0.096, unitOfMeasure: '1 Hour' }],
+            history: [
+              { at: '2026-07-15T17:41:10Z', armRegionName: 'westeurope', retailPrice: 0.1, direction: 'added', reservationPrice1yr: 0.06 },
+            ],
+          },
+        },
+      }
+      vi.stubGlobal('fetch', mockFetch(singlePoint))
+      render(<SkuPage family="Standard_D2s_v5" />)
+      await waitFor(() => expect(screen.getByTestId('discount-empty')).toBeInTheDocument())
+      expect(screen.queryByTestId('discount-chart')).not.toBeInTheDocument()
+    })
+
+    it('renders discount chart when 2+ history points have 1yr reservation data', async () => {
+      vi.stubGlobal('fetch', mockFetch(SKU_INDEX_DISCOUNT_1YR))
+      render(<SkuPage family="Standard_D2s_v5" />)
+      await waitFor(() => expect(screen.getByTestId('discount-chart')).toBeInTheDocument())
+      expect(screen.queryByTestId('discount-empty')).not.toBeInTheDocument()
+    })
+
+    it('renders exactly 1 Area series when only 1yr reservation data is available', async () => {
+      vi.stubGlobal('fetch', mockFetch(SKU_INDEX_DISCOUNT_1YR))
+      render(<SkuPage family="Standard_D2s_v5" />)
+      await waitFor(() => expect(screen.getByTestId('discount-chart')).toBeInTheDocument())
+      const discountAreas = screen
+        .getAllByTestId('area')
+        .filter((el) => el.dataset.key === 'd1yr' || el.dataset.key === 'd3yr' || el.dataset.key === 'dSP')
+      expect(discountAreas.length).toBe(1)
+      expect(discountAreas[0].dataset.key).toBe('d1yr')
+    })
+
+    it('renders 3 Area series when all discount tiers are available', async () => {
+      vi.stubGlobal('fetch', mockFetch(SKU_INDEX_DISCOUNT_ALL))
+      render(<SkuPage family="Standard_D2s_v5" />)
+      await waitFor(() => expect(screen.getByTestId('discount-chart')).toBeInTheDocument())
+      const discountAreas = screen
+        .getAllByTestId('area')
+        .filter((el) => el.dataset.key === 'd1yr' || el.dataset.key === 'd3yr' || el.dataset.key === 'dSP')
+      expect(discountAreas.length).toBe(3)
+    })
+
+    it('savings-plan series uses a dashed stroke to distinguish from 1yr', async () => {
+      vi.stubGlobal('fetch', mockFetch(SKU_INDEX_DISCOUNT_ALL))
+      render(<SkuPage family="Standard_D2s_v5" />)
+      await waitFor(() => expect(screen.getByTestId('discount-chart')).toBeInTheDocument())
+      const spArea = screen.getAllByTestId('area').find((el) => el.dataset.key === 'dSP')
+      expect(spArea?.dataset.dash).toBe('6 3')
+    })
+
+    it('1yr and 3yr series have different colors', async () => {
+      vi.stubGlobal('fetch', mockFetch(SKU_INDEX_DISCOUNT_ALL))
+      render(<SkuPage family="Standard_D2s_v5" />)
+      await waitFor(() => expect(screen.getByTestId('discount-chart')).toBeInTheDocument())
+      const areas = screen.getAllByTestId('area')
+      const d1yr = areas.find((el) => el.dataset.key === 'd1yr')
+      const d3yr = areas.find((el) => el.dataset.key === 'd3yr')
+      expect(d1yr?.dataset.stroke).toBe('#38BDF8')
+      expect(d3yr?.dataset.stroke).toBe('#FBBF24')
+    })
+
+    it('shows legend with active series labels and calculation note', async () => {
+      vi.stubGlobal('fetch', mockFetch(SKU_INDEX_DISCOUNT_ALL))
+      render(<SkuPage family="Standard_D2s_v5" />)
+      await waitFor(() => expect(screen.getByTestId('discount-chart')).toBeInTheDocument())
+      expect(screen.getByText('1yr Reservation')).toBeInTheDocument()
+      expect(screen.getByText('3yr Reservation')).toBeInTheDocument()
+      expect(screen.getByText('Savings plan')).toBeInTheDocument()
+      expect(screen.getByText(/Discount = \(PAYG − tier\) ÷ PAYG/)).toBeInTheDocument()
+    })
+
+    it('uses the cheapest region for the primary region discount data', async () => {
+      const multiRegionDiscount: SkuIndex = {
+        generatedAt: '2026-07-20T00:00:00Z',
+        skus: {
+          Standard_D2s_v5: {
+            productName: 'Virtual Machines Dsv5 Series',
+            regions: [
+              { armRegionName: 'westeurope', scope: 'vm-eu-west', retailPrice: 0.08, unitOfMeasure: '1 Hour' },
+              { armRegionName: 'northeurope', scope: 'vm-eu-west', retailPrice: 0.12, unitOfMeasure: '1 Hour' },
+            ],
+            history: [
+              { at: '2026-07-15T17:41:10Z', armRegionName: 'northeurope', retailPrice: 0.12, direction: 'added', reservationPrice1yr: 0.07 },
+              { at: '2026-07-16T12:00:00Z', armRegionName: 'northeurope', retailPrice: 0.11, priceBefore: 0.12, direction: 'changed', reservationPrice1yr: 0.065 },
+            ],
+          },
+        },
+      }
+      vi.stubGlobal('fetch', mockFetch(multiRegionDiscount))
+      render(<SkuPage family="Standard_D2s_v5" />)
+      // westeurope is cheapest but has no reservation history → empty state
+      await waitFor(() => expect(screen.getByTestId('discount-empty')).toBeInTheDocument())
     })
   })
 })

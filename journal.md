@@ -437,3 +437,38 @@ Claude reads the tail of it to remember.
 - Did: Extended `SkuRegion` with optional `reservationPrice1yr`, `reservationPrice3yr`, `savingsPlanPrice` fields (undefined until E4.2 ships). Added `PricingComparison` component inside `SkuPage.tsx` that renders a "Pricing tiers" section showing all four pricing tiers in a table (desktop) and card list (mobile ≤640px). PAYG row always shows the current retail price with "Baseline" indicator; other tiers show formatted price + `(payg - tier) / payg * 100`% discount in `#34D399` when data is present, or "—" when absent. Added `computeDiscount` helper. Wired into `SkuPage` for the cheapest region. Added `SkuPage.css` classes for the new section using ADR 0002 tokens only. Added 7 new tests covering heading, PAYG+Baseline, absent tiers, discount calculations, reservation prices, region selection, and mobile card count. 393 tests green; lint, typecheck, build all pass.
 - Decisions: Implemented the component so it works today (PAYG only — reservation/savings-plan data absent until E4.2) and auto-populates when E4.2 extends the pipeline. Dual-render pattern (table + card list, CSS toggles at 640px) follows the existing PriceChangesTable convention. Added optional fields to `SkuRegion` rather than the `SkuEntry` level because pricing tiers are per-region (a VM can have different 1yr reservation prices in different regions).
 - Noticed for later: The no-op PRs #124 and #125 remain open from earlier today; human can close or merge them.
+## 2026-08-02T06:47Z — run 2026-08-02-2
+- Task: no-op
+- Did: Nothing. The only `claude-ready` issue (#123 E4.3 pricing tiers comparison) was already claimed by run 2026-08-01-3 and is fully implemented in open PR #126 with CI passing. PR #126 is awaiting human review and merge. Main CI is green.
+- Decisions: none
+- Noticed for later: Issue #122 (E4.2 implement savings-plan pricing) does not appear in the `claude-ready` issue list — only #123 does. Once PR #126 is merged (closing #123), #122 will likely be the next task if it is labeled `claude-ready`. Multiple no-op PRs (#124, #125, #127, #128) are also queued for human merge.
+## 2026-08-01T10:15Z — run 2026-08-01-1
+- Task: no-op (both claude-ready issues blocked)
+- Did: Picked #122 (E4.2 savings-plan pipeline, P2, oldest). Determined it is blocked on two counts: (1) it requires modifying `scripts/fetch_prices.py` (frozen zone per CLAUDE.md and product-vision.md) without an explicit frozen-zone exception in the issue DoD — unlike the region-addition issues (#105, #109, #113) which all carried the explicit exception; (2) the DoD defers data-structure decisions to the E4.1 design proposal (#121), which is still labeled `needs-human` and unresolved. Also determined that #123 (E4.3 SKU detail pricing comparison) is blocked downstream — it requires savings-plan/reservation data in the snapshots, which won't exist until #122 ships. Commented on both issues, relabeled #122 from `claude-ready` to `needs-human`.
+- Decisions: Did not attempt to implement #123 as a UI-only shell — showing empty "N/A" for 1yr/3yr/savings-plan on every SKU would be misleading (implies data is tracked but absent per-SKU, not that the pipeline hasn't fetched it). Correct sequencing: #121 design → #122 pipeline (with frozen-zone exception) → #123 UI.
+- Noticed for later: The PM created #122 as `claude-ready` despite the product-vision rule that issues touching `scripts/` should be `needs-human` proposals first. Worth noting if the PM creates similar issues in future runs.
+## 2026-08-01T21:09Z — run 2026-08-01-4
+- Task: no-op
+- Did: Nothing. PR #126 (issue #123 E4.3 pricing tiers comparison) is open with passing CI, awaiting human review. No other `claude-ready` issues exist.
+- Decisions: none
+- Noticed for later: No-op PRs #124 and #125 are also open and accumulating; a human could batch-merge all three journal-only PRs together with #126.
+## 2026-08-01T14:00Z — run 2026-08-01-2
+- Task: no-op
+- Did: Nothing. The only open `claude-ready` issue is #123 (E4.3 SKU pricing comparison), which remains unactionable: it requires reservation/savings-plan pricing data in the snapshots, but E4.1 (#121, needs-human) hasn't defined the data structure and E4.2 (#122, needs-human) hasn't extended the pipeline to fetch it. CI on main is green. PR #124 (previous no-op) is still awaiting merge.
+- Decisions: Did not relabel #123 — the previous run already commented on the dependency; the label remains unchanged pending human review.
+- Noticed for later: E4 is fully blocked until a human resolves #121 (design proposal) and advances E4.2 through the frozen-zone exception process.
+## 2026-08-02T10:16Z — run 2026-08-02-3
+- Task: #130 E4.4: Effective discount over time chart
+- Did: Added `DiscountHistoryChart` sub-component to `SkuPage.tsx` that appears below the price-history section. Extended `SkuHistoryPoint` in `skuIndex.ts` with optional `reservationPrice1yr`, `reservationPrice3yr`, and `savingsPlanPrice` fields (forward-compatible with E4.2). Added `formatDiscountPct(value)` to `lib/format.ts`. Chart computes effective discount% = (PAYG − tier) / PAYG at each history point and renders an AreaChart with up to 3 Area series (1yr: solid `#38BDF8`, 3yr: solid `#FBBF24`, savings plan: dashed `#38BDF8`); legend and calculation note below chart. Shows a graceful empty state ("No reservation pricing data yet") when fewer than 2 history points have any reservation price — this is the current behavior until E4.2 pipeline ships. Added 9 new tests covering empty states (no data, 1 data point), chart render, series count, correct colors/dash style, legend labels, and multi-region primary-region selection. 395 tests green; lint, typecheck, build all pass.
+- Decisions: Used a dashed stroke (`strokeDasharray="6 3"`) for the savings-plan series to distinguish it from 1yr reservation when both use `#38BDF8` — avoids needing a third non-directional color token (which would require an ADR 0002 update). Legend swatches render as horizontal lines (20×3px) matching the chart line style. Primary region for discount data follows the same cheapest-region logic as TrendSummaryCard and the regions table.
+- Noticed for later: Once E4.2 ships and pipeline data includes reservation prices, the chart will auto-populate without any code changes.
+## 2026-08-02T03:55Z — run 2026-08-02-1
+- Task: no-op
+- Did: Nothing. The only claude-ready issue is #123 (E4.3: pricing tiers comparison), and it is already fully implemented by open PR #126 (CI passing). #121 and #122 are labeled needs-human. Main CI is green.
+- Decisions: none
+- Noticed for later: PR #126 is waiting for human review and merge. Once #123 is closed and #121/#122 are unblocked, the next developer run will have work to do.
+## 2026-08-02T14:00Z — run 2026-08-02-3
+- Task: no-op
+- Did: Nothing. Both open claude-ready issues (#130 E4.4 discount history chart, #123 E4.3 pricing tiers comparison) already have open PRs with passing CI (#131 and #126 respectively), waiting for human review. Main branch CI is green. No actionable work remains.
+- Decisions: none
+- Noticed for later: Multiple no-op journal PRs (#124–#129) are accumulating unmerged; a human merge pass would tidy the history.
