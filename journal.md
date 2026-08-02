@@ -437,3 +437,8 @@ Claude reads the tail of it to remember.
 - Did: Nothing. The only claude-ready issue is #123 (E4.3: pricing tiers comparison), and it is already fully implemented by open PR #126 (CI passing). #121 and #122 are labeled needs-human. Main CI is green.
 - Decisions: none
 - Noticed for later: PR #126 is waiting for human review and merge. Once #123 is closed and #121/#122 are unblocked, the next developer run will have work to do.
+## 2026-08-02T14:00Z — run 2026-08-02-3
+- Task: no-op
+- Did: Nothing. Both open claude-ready issues (#130 E4.4 discount history chart, #123 E4.3 pricing tiers comparison) already have open PRs with passing CI (#131 and #126 respectively), waiting for human review. Main branch CI is green. No actionable work remains.
+- Decisions: none
+- Noticed for later: Multiple no-op journal PRs (#124–#129) are accumulating unmerged; a human merge pass would tidy the history.
