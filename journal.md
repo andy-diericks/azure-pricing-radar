@@ -472,3 +472,9 @@ Claude reads the tail of it to remember.
 - Did: Nothing. Both open claude-ready issues (#130 E4.4 discount history chart, #123 E4.3 pricing tiers comparison) already have open PRs with passing CI (#131 and #126 respectively), waiting for human review. Main branch CI is green. No actionable work remains.
 - Decisions: none
 - Noticed for later: Multiple no-op journal PRs (#124–#129) are accumulating unmerged; a human merge pass would tidy the history.
+
+## 2026-08-02T17:22Z — run 2026-08-02-4
+- Task: #133 CI fix — PR #126 (E4.3 pricing tiers comparison) failing typecheck
+- Did: PR #126 had a TS2304 error: `Cannot find name 'PricingComparison'` at SkuPage.tsx:840. The component was referenced but never defined. Implemented `PricingComparison` (takes a `SkuRegion` prop, renders "Pricing tiers" section with PAYG, 1yr/3yr reservation, and savings-plan tiers, discount % computed as (PAYG − tier) / PAYG, em-dash for missing tiers, desktop table + mobile card list). Added `SkuRegion` to the type import. Updated one pre-existing discount-legend test that used `getByText` (singular) for "1yr Reservation" / "Savings plan" — these labels now legitimately appear in both the legend and the new pricing section, so changed to `getAllByText`. 402 tests green; lint, typecheck, build all pass.
+- Decisions: Placed `PricingComparison` immediately before `SkuPage` (after `DiscountHistoryChart`), keeping all internal sub-components together. Used `sku-page__product` for the region name paragraph (reuses existing class; no new CSS needed). Discount display text format "X.X% off" matches the issue DoD specification.
+- Noticed for later: nothing new.
