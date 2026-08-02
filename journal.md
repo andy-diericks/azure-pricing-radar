@@ -432,6 +432,11 @@ Claude reads the tail of it to remember.
 - Created: #121 E4.1 needs-human design proposal, #122 E4.2 implement savings-plan pricing, #123 E4.3 implement SKU detail pricing comparison
 - Rationale: Current Epic advanced to E4 (confirmed at top of CLAUDE.md context). E4.1 is a design proposal per product-vision.md — created as needs-human to propose the data structure. E4.2 and E4.3 are implementation tasks following from that design. Queue is now at 2 open claude-ready issues (#122, #123); well under the cap of 5.
 
+## 2026-08-01T14:00Z — run 2026-08-01-2
+- Task: no-op
+- Did: Nothing. The only open `claude-ready` issue is #123 (E4.3 SKU pricing comparison), which remains unactionable: it requires reservation/savings-plan pricing data in the snapshots, but E4.1 (#121, needs-human) hasn't defined the data structure and E4.2 (#122, needs-human) hasn't extended the pipeline to fetch it. CI on main is green. PR #124 (previous no-op) is still awaiting merge.
+- Decisions: Did not relabel #123 — the previous run already commented on the dependency; the label remains unchanged pending human review.
+- Noticed for later: E4 is fully blocked until a human resolves #121 (design proposal) and advances E4.2 through the frozen-zone exception process.
 ## 2026-08-02T10:16Z — run 2026-08-02-3
 - Task: #130 E4.4: Effective discount over time chart
 - Did: Added `DiscountHistoryChart` sub-component to `SkuPage.tsx` that appears below the price-history section. Extended `SkuHistoryPoint` in `skuIndex.ts` with optional `reservationPrice1yr`, `reservationPrice3yr`, and `savingsPlanPrice` fields (forward-compatible with E4.2). Added `formatDiscountPct(value)` to `lib/format.ts`. Chart computes effective discount% = (PAYG − tier) / PAYG at each history point and renders an AreaChart with up to 3 Area series (1yr: solid `#38BDF8`, 3yr: solid `#FBBF24`, savings plan: dashed `#38BDF8`); legend and calculation note below chart. Shows a graceful empty state ("No reservation pricing data yet") when fewer than 2 history points have any reservation price — this is the current behavior until E4.2 pipeline ships. Added 9 new tests covering empty states (no data, 1 data point), chart render, series count, correct colors/dash style, legend labels, and multi-region primary-region selection. 395 tests green; lint, typecheck, build all pass.
