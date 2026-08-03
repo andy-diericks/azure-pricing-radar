@@ -126,6 +126,10 @@ others. New entries appear after each data fetch that detects a price change.
 - **Storage** — West Europe, Belgium Central, North Europe, France Central, Sweden Central
 - **Azure OpenAI** — EU regions
 
+**Pricing dimensions tracked per VM SKU:**
+- PAYG (Consumption) price — tracked for all services
+- 1-year savings-plan price — tracked for Virtual Machines
+
 Scopes grow deliberately over time. Want one added? Open an issue.
 
 ## 💻 Run locally

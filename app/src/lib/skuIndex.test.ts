@@ -133,6 +133,46 @@ describe('aggregateSkuIndex', () => {
     expect(skus).toEqual({})
   })
 
+  it('propagates savingsPlanPrice from added diff items', () => {
+    const diffs = [
+      {
+        at: '2026-07-15T17:41:10Z',
+        added: [{ ...VM_ENTRY_1, key: 'KEY001|meter1|Consumption|', savingsPlanPrice: 0.067 }],
+        removed: [],
+        changed: [],
+      },
+    ]
+    const skus = aggregateSkuIndex(sampleLatest, diffs)
+    const point = skus['Standard_D2s_v5'].history.find(h => h.direction === 'added')
+    expect(point?.savingsPlanPrice).toBe(0.067)
+  })
+
+  it('propagates savingsPlanPrice from changed diff items', () => {
+    const changed = {
+      key: 'KEY001|meter1|Consumption|',
+      before: { ...VM_ENTRY_1 },
+      after: { ...VM_ENTRY_1, retailPrice: 0.086, unitPrice: 0.086, savingsPlanPrice: 0.060 },
+    }
+    const diffs = [{ at: '2026-07-16T00:00:00Z', added: [], removed: [], changed: [changed] }]
+    const skus = aggregateSkuIndex(sampleLatest, diffs)
+    const point = skus['Standard_D2s_v5'].history.find(h => h.direction === 'changed')
+    expect(point?.savingsPlanPrice).toBe(0.060)
+  })
+
+  it('omits savingsPlanPrice when not present in diff items', () => {
+    const diffs = [
+      {
+        at: '2026-07-15T17:41:10Z',
+        added: [{ ...VM_ENTRY_1, key: 'KEY001|meter1|Consumption|' }],
+        removed: [],
+        changed: [],
+      },
+    ]
+    const skus = aggregateSkuIndex(sampleLatest, diffs)
+    const point = skus['Standard_D2s_v5'].history.find(h => h.direction === 'added')
+    expect(point?.savingsPlanPrice).toBeUndefined()
+  })
+
   it('matches the SkuIndex schema shape', () => {
     const skus = aggregateSkuIndex(sampleLatest, sampleDiffs)
     const index: SkuIndex = { generatedAt: '2026-07-20T00:00:00.000Z', skus }
