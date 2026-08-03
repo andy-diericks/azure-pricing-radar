@@ -58,7 +58,14 @@ def index_by_key(items: list[dict]) -> dict[str, dict]:
     out: dict[str, dict] = {}
     for it in items:
         key = "|".join(str(it.get(f, "")) for f in KEY_FIELDS)
-        out[key] = {f: it.get(f) for f in TRACKED_FIELDS}
+        entry = {f: it.get(f) for f in TRACKED_FIELDS}
+        # Extract 1-year savings-plan price from the nested savingsPlan array
+        # (present only on Consumption items; Storage and OpenAI return [])
+        for sp in (it.get("savingsPlan") or []):
+            if sp.get("term") == "1 Year":
+                entry["savingsPlanPrice"] = sp.get("retailPrice")
+                break
+        out[key] = entry
     return out
 
 
