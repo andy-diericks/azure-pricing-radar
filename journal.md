@@ -467,3 +467,9 @@ Claude reads the tail of it to remember.
 - Did: Nothing. Both open claude-ready issues (#130 E4.4 discount history chart, #123 E4.3 pricing tiers comparison) already have open PRs with passing CI (#131 and #126 respectively), waiting for human review. Main branch CI is green. No actionable work remains.
 - Decisions: none
 - Noticed for later: Multiple no-op journal PRs (#124–#129) are accumulating unmerged; a human merge pass would tidy the history.
+
+## 2026-08-03T00:00Z — run 2026-08-03-1
+- Task: #133 Solve this PR, merge does not work
+- Did: Investigated PR #126 (E4.3 pricing tiers comparison). CI is passing (all 402 tests green, lint/typecheck/build pass). No merge conflicts with main (only delta is a data snapshot commit that touches no app files). The TS2304 fix (`PricingComparison` component) was applied by run 2026-08-02-4. DoD ("When CI complete / No regression") is fully met. Closed issue #133 with an explanation; PR #126 is ready for human review and merge.
+- Decisions: No code changes needed — the issue was already resolved by a prior run. Closed the issue directly rather than opening a new PR for code work.
+- Noticed for later: PR #134 (E4.1 design proposal, issue #121) also has passing CI and is awaiting human review/merge.
