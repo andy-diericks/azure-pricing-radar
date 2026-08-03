@@ -85,7 +85,9 @@ export function aggregateSkuIndex(
     for (const item of added ?? []) {
       const sku = skus[item.skuName]
       if (sku) {
-        sku.history.push({ at, armRegionName: item.armRegionName, retailPrice: item.retailPrice, direction: 'added' })
+        const point: SkuHistoryPoint = { at, armRegionName: item.armRegionName, retailPrice: item.retailPrice, direction: 'added' }
+        if (typeof item.savingsPlanPrice === 'number') point.savingsPlanPrice = item.savingsPlanPrice
+        sku.history.push(point)
       }
     }
     for (const item of removed ?? []) {
@@ -97,13 +99,15 @@ export function aggregateSkuIndex(
     for (const item of changed ?? []) {
       const sku = skus[item.after.skuName]
       if (sku) {
-        sku.history.push({
+        const point: SkuHistoryPoint = {
           at,
           armRegionName: item.after.armRegionName,
           retailPrice: item.after.retailPrice,
           priceBefore: item.before.retailPrice,
           direction: 'changed',
-        })
+        }
+        if (typeof item.after.savingsPlanPrice === 'number') point.savingsPlanPrice = item.after.savingsPlanPrice
+        sku.history.push(point)
       }
     }
   }
