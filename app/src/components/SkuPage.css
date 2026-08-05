@@ -328,45 +328,107 @@
   flex-shrink: 0;
 }
 
-/* Discount history section */
-.sku-page__discount {
+/* Pricing tiers comparison */
+.sku-page__pricing {
   margin-top: var(--space-8);
   padding-top: var(--space-6);
   border-top: 1px solid rgba(147, 164, 190, 0.15);
 }
 
-.sku-page__discount-legend {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: var(--space-4);
-  margin-top: var(--space-3);
-  font-size: var(--text-xs);
-  color: var(--color-text-secondary);
+.sku-page__pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
 }
 
-.sku-page__discount-legend-item {
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
+.sku-page__pricing-table th {
+  text-align: left;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 1px solid rgba(147, 164, 190, 0.15);
+}
+
+.sku-page__pricing-table td {
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 1px solid rgba(147, 164, 190, 0.08);
   color: var(--color-text-primary);
 }
 
-.sku-page__discount-swatch {
-  display: inline-block;
-  width: 20px;
-  height: 3px;
-  border-radius: 2px;
-  border: 1px solid transparent;
-  flex-shrink: 0;
+.sku-page__pricing-tier {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
 }
 
-.sku-page__discount-note {
-  margin: 0;
-  font-size: var(--text-xs);
+.sku-page__pricing-price {
+  font-family: var(--font-mono);
+  color: var(--color-text-primary);
+}
+
+.sku-page__pricing-unavailable {
   color: var(--color-text-secondary);
-  font-style: italic;
-  width: 100%;
+  opacity: 0.5;
+}
+
+.sku-page__pricing-baseline {
+  color: var(--color-text-secondary);
+  font-size: var(--text-xs);
+}
+
+.sku-page__pricing-saving {
+  color: #34D399;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+}
+
+/* Mobile card list — visible only on narrow screens */
+.sku-page__pricing-cards {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sku-page__pricing-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  gap: var(--space-1) var(--space-3);
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid rgba(147, 164, 190, 0.08);
+  min-height: 44px;
+  align-items: center;
+}
+
+.sku-page__pricing-card .sku-page__pricing-tier {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.sku-page__pricing-card .sku-page__pricing-price {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.sku-page__pricing-card .sku-page__pricing-discount {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  align-self: center;
+}
+
+@media (max-width: 640px) {
+  .sku-page__pricing-table {
+    display: none;
+  }
+
+  .sku-page__pricing-cards {
+    display: block;
+  }
+
+  .sku-page__pricing-table th,
+  .sku-page__pricing-table td {
+    padding: var(--space-2);
+  }
 }
 
 /* Multi-region tooltip entries */

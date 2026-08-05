@@ -3,6 +3,9 @@ export interface SkuRegion {
   scope: string
   retailPrice: number
   unitOfMeasure: string
+  reservationPrice1yr?: number
+  reservationPrice3yr?: number
+  savingsPlanPrice?: number
 }
 
 export interface SkuHistoryPoint {

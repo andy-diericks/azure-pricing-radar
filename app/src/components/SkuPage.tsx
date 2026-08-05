@@ -10,7 +10,7 @@ import {
 } from 'recharts'
 import { loadSkuIndex } from '../lib/loadSkuIndex'
 import { formatPrice, formatDateAxis, formatDateFull, formatDiscountPct, directionColor } from '../lib/format'
-import type { SkuEntry, SkuHistoryPoint, SkuIndex } from '../lib/skuIndex'
+import type { SkuEntry, SkuHistoryPoint, SkuIndex, SkuRegion } from '../lib/skuIndex'
 import { ogImageUrl } from '../lib/ogImage'
 import { TrendSummaryCard } from './TrendSummaryCard'
 import '../App.css'
@@ -676,6 +676,86 @@ function DiscountHistoryChart({ entry, primaryRegion }: DiscountChartProps) {
   )
 }
 
+interface PricingComparisonProps {
+  region: SkuRegion
+}
+
+function PricingComparison({ region }: PricingComparisonProps) {
+  const payg = region.retailPrice
+  const unit = region.unitOfMeasure.toLowerCase().replace(/^1 /, '')
+
+  function discountText(tierPrice: number): string {
+    if (payg === 0) return '—'
+    const pct = ((payg - tierPrice) / payg) * 100
+    return `${pct.toFixed(1)}% off`
+  }
+
+  const tiers: Array<{ label: string; price: number | undefined; baseline: boolean }> = [
+    { label: 'Pay as you go', price: payg, baseline: true },
+    { label: '1yr Reservation', price: region.reservationPrice1yr, baseline: false },
+    { label: '3yr Reservation', price: region.reservationPrice3yr, baseline: false },
+    { label: 'Savings plan', price: region.savingsPlanPrice, baseline: false },
+  ]
+
+  return (
+    <section data-testid="pricing-comparison" className="sku-page__pricing">
+      <h2 className="sku-page__history-heading">Pricing tiers</h2>
+      <p className="sku-page__product">{region.armRegionName}</p>
+      <table className="sku-page__pricing-table">
+        <thead>
+          <tr>
+            <th>Tier</th>
+            <th>Price</th>
+            <th>Discount</th>
+          </tr>
+        </thead>
+        <tbody>
+          {tiers.map((tier) => (
+            <tr key={tier.label}>
+              <td className="sku-page__pricing-tier">{tier.label}</td>
+              <td className="sku-page__pricing-price">
+                {tier.price !== undefined ? (
+                  formatPrice(tier.price, unit)
+                ) : (
+                  <span className="sku-page__pricing-unavailable">—</span>
+                )}
+              </td>
+              <td>
+                {tier.baseline ? (
+                  <span className="sku-page__pricing-baseline">Baseline</span>
+                ) : tier.price !== undefined ? (
+                  <span className="sku-page__pricing-saving">{discountText(tier.price)}</span>
+                ) : (
+                  <span className="sku-page__pricing-unavailable">—</span>
+                )}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <ul className="sku-page__pricing-cards">
+        {tiers.map((tier) => (
+          <li key={tier.label} className="sku-page__pricing-card">
+            <span className="sku-page__pricing-tier">{tier.label}</span>
+            <span className="sku-page__pricing-price">
+              {tier.price !== undefined ? formatPrice(tier.price, unit) : '—'}
+            </span>
+            <span className="sku-page__pricing-discount">
+              {tier.baseline ? (
+                <span className="sku-page__pricing-baseline">Baseline</span>
+              ) : tier.price !== undefined ? (
+                <span className="sku-page__pricing-saving">{discountText(tier.price)}</span>
+              ) : (
+                '—'
+              )}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )
+}
+
 export function SkuPage({ family }: Props) {
   const [index, setIndex] = useState<SkuIndex | null>(null)
   const [loadError, setLoadError] = useState<string | null>(null)
@@ -836,6 +916,11 @@ export function SkuPage({ family }: Props) {
               ))}
             </tbody>
           </table>
+          {entry.regions.length > 0 && (
+            <PricingComparison
+              region={entry.regions.slice().sort((a, b) => a.retailPrice - b.retailPrice)[0]}
+            />
+          )}
           <TrendSummaryCard
             entry={entry}
             primaryRegion={
