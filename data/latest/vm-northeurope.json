@@ -16665,6 +16665,16 @@
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.201432
 },
+"DZH318Z09JCP/0005|dab09265-8253-57c7-98e5-775812e9911a|Consumption|": {
+"armRegionName": "northeurope",
+"meterName": "Type 1",
+"productName": "NVadsA10v5 DedicatedHost",
+"retailPrice": 8.606,
+"savingsPlanPrice": 7.1636344,
+"skuName": "Type 1",
+"unitOfMeasure": "1 Hour",
+"unitPrice": 8.606
+},
 "DZH318Z09LQN/0007|e1b86a59-4c68-5959-8a71-62017cf4965e|Consumption|": {
 "armRegionName": "northeurope",
 "meterName": "E96bds v5 Spot",

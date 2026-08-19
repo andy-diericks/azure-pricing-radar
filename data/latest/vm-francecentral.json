@@ -13142,6 +13142,16 @@
 "unitOfMeasure": "1 Hour",
 "unitPrice": 1.04412
 },
+"DZH318Z09JCP/000K|aee339cd-e91e-51b5-971b-d43a50860429|Consumption|": {
+"armRegionName": "francecentral",
+"meterName": "Type 1",
+"productName": "NVadsA10v5 DedicatedHost",
+"retailPrice": 8.965,
+"savingsPlanPrice": 7.462466,
+"skuName": "Type 1",
+"unitOfMeasure": "1 Hour",
+"unitPrice": 8.965
+},
 "DZH318Z09LQN/00LZ|f78669cd-d793-5849-943a-ffc5153d6636|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "E2bds v5 Low Priority",

@@ -1,0 +1,19 @@
+{
+ "scope": "vm-northeurope",
+ "at": "2026-08-19T15:39:33.662032+00:00",
+ "added": [
+  {
+   "key": "DZH318Z09JCP/0005|dab09265-8253-57c7-98e5-775812e9911a|Consumption|",
+   "retailPrice": 8.606,
+   "unitPrice": 8.606,
+   "unitOfMeasure": "1 Hour",
+   "productName": "NVadsA10v5 DedicatedHost",
+   "skuName": "Type 1",
+   "meterName": "Type 1",
+   "armRegionName": "northeurope",
+   "savingsPlanPrice": 7.1636344
+  }
+ ],
+ "removed": [],
+ "changed": []
+}

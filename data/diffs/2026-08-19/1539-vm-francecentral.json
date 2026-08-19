@@ -1,0 +1,19 @@
+{
+ "scope": "vm-francecentral",
+ "at": "2026-08-19T15:39:33.662032+00:00",
+ "added": [
+  {
+   "key": "DZH318Z09JCP/000K|aee339cd-e91e-51b5-971b-d43a50860429|Consumption|",
+   "retailPrice": 8.965,
+   "unitPrice": 8.965,
+   "unitOfMeasure": "1 Hour",
+   "productName": "NVadsA10v5 DedicatedHost",
+   "skuName": "Type 1",
+   "meterName": "Type 1",
+   "armRegionName": "francecentral",
+   "savingsPlanPrice": 7.462466
+  }
+ ],
+ "removed": [],
+ "changed": []
+}
