@@ -13142,16 +13142,6 @@
 "unitOfMeasure": "1 Hour",
 "unitPrice": 1.04412
 },
-"DZH318Z09JCP/000K|aee339cd-e91e-51b5-971b-d43a50860429|Consumption|": {
-"armRegionName": "francecentral",
-"meterName": "Type 1",
-"productName": "NVadsA10v5 DedicatedHost",
-"retailPrice": 8.965,
-"savingsPlanPrice": 7.462466,
-"skuName": "Type 1",
-"unitOfMeasure": "1 Hour",
-"unitPrice": 8.965
-},
 "DZH318Z09LQN/00LZ|f78669cd-d793-5849-943a-ffc5153d6636|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "E2bds v5 Low Priority",
@@ -14038,15 +14028,6 @@
 "skuName": "Standard_E32bs_v5 Spot",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.521875
-},
-"DZH318Z09LR5/017V|54155221-f6f9-5a69-8c70-230c8f68b4c7|Consumption|": {
-"armRegionName": "francecentral",
-"meterName": "E32bs v5 Low Priority",
-"productName": "Virtual Machines Ebsv5 Series",
-"retailPrice": 0.565,
-"skuName": "Standard_E32bs_v5 Low Priority",
-"unitOfMeasure": "1 Hour",
-"unitPrice": 0.565
 },
 "DZH318Z09LR5/017W|106bdfbc-cda1-5df8-904a-fede45aefb38|Consumption|": {
 "armRegionName": "francecentral",
@@ -19906,15 +19887,6 @@
 "skuName": "F32s v2 Spot",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.570662
-},
-"DZH318Z0BPWJ/010K|540d5f91-2b52-5d1c-a934-3925a2795dbf|Consumption|": {
-"armRegionName": "francecentral",
-"meterName": "F4s v2 Spot",
-"productName": "Virtual Machines FSv2 Series Windows",
-"retailPrice": 0.071333,
-"skuName": "F4s v2 Spot",
-"unitOfMeasure": "1 Hour",
-"unitPrice": 0.071333
 },
 "DZH318Z0BQ34/00NR|b5d29d2a-1a24-4612-aa8b-9c901c668329|Consumption|": {
 "armRegionName": "francecentral",
@@ -26593,15 +26565,6 @@
 "skuName": "E2as v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.148
-},
-"DZH318Z0CM2D/00T3|cd322aac-18ba-50a8-aa08-064db37f7b9a|Consumption|": {
-"armRegionName": "francecentral",
-"meterName": "E2as v4 Spot",
-"productName": "Virtual Machines Easv4 Series",
-"retailPrice": 0.02735,
-"skuName": "E2as v4 Spot",
-"unitOfMeasure": "1 Hour",
-"unitPrice": 0.02735
 },
 "DZH318Z0CM2D/00T4|43f79ede-b5fd-5274-9981-04c0663e861a|Consumption|": {
 "armRegionName": "francecentral",
@@ -45465,16 +45428,6 @@
 "skuName": "FX48-12ms v2 Spot",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 1.237051
-},
-"DZH318Z0H7F3/0431|cd664840-8b94-5e52-ae14-179b94ab7906|Consumption|": {
-"armRegionName": "francecentral",
-"meterName": "FX32-8ms v2",
-"productName": "Virtual Machines FXmsv2 Series",
-"retailPrice": 4.463,
-"savingsPlanPrice": 3.07947,
-"skuName": "FX32-8ms v2",
-"unitOfMeasure": "1 Hour",
-"unitPrice": 4.463
 },
 "DZH318Z0H7F3/0434|077e8c03-a313-531e-9a31-08198bfd5bcc|Consumption|": {
 "armRegionName": "francecentral",

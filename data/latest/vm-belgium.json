@@ -745,15 +745,6 @@
 "unitOfMeasure": "1 Hour",
 "unitPrice": 3.123
 },
-"DZH318Z08M9H/02Z1|8101d7d9-e65d-5737-9925-ff747aab584a|Consumption|": {
-"armRegionName": "belgiumcentral",
-"meterName": "E64 v5 Spot",
-"productName": "Virtual Machines Ev5 Series Windows",
-"retailPrice": 1.442918,
-"skuName": "Standard_E64_v5 Spot",
-"unitOfMeasure": "1 Hour",
-"unitPrice": 1.442918
-},
 "DZH318Z08M9H/02Z2|1cf9ce02-63e1-5d78-8e27-99f69dbf7261|Consumption|": {
 "armRegionName": "belgiumcentral",
 "meterName": "E48 v5 Spot",
@@ -14820,15 +14811,6 @@
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.458
 },
-"DZH318Z0CM92/058S|80f1ea89-1c3b-5f1e-b93f-6eab3751402d|Consumption|": {
-"armRegionName": "belgiumcentral",
-"meterName": "E16-4as_v4",
-"productName": "Virtual Machines Easv4 Series Windows",
-"retailPrice": 1.832,
-"skuName": "E16-4as_v4",
-"unitOfMeasure": "1 Hour",
-"unitPrice": 1.832
-},
 "DZH318Z0CM92/058V|a25ead82-d87e-5b99-8206-a9526653d853|Consumption|": {
 "armRegionName": "belgiumcentral",
 "meterName": "E16-4as_v4 Spot",
@@ -16025,15 +16007,6 @@
 "skuName": "E20ds v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 2.65
-},
-"DZH318Z0CSHB/0B48|80ee8658-2aea-51f1-a512-86f4e9cd4d8a|Consumption|": {
-"armRegionName": "belgiumcentral",
-"meterName": "E16-8ds v4 Low Priority",
-"productName": "Virtual Machines Edsv4 Series Windows",
-"retailPrice": 0.848,
-"skuName": "E16-8ds v4 Low Priority",
-"unitOfMeasure": "1 Hour",
-"unitPrice": 0.848
 },
 "DZH318Z0CSHB/0B49|dc930c1e-fd04-52be-adde-cb496bbb1dcc|Consumption|": {
 "armRegionName": "belgiumcentral",
@@ -23282,15 +23255,6 @@
 "skuName": "D4ads v6 Low Priority",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.0552
-},
-"DZH318Z0F5F9/0213|80c7aa9b-c205-5f3a-8463-9050f0dad12e|Consumption|": {
-"armRegionName": "belgiumcentral",
-"meterName": "D8ads v6",
-"productName": "Virtual Machines Dadsv6 Series Windows",
-"retailPrice": 0.92,
-"skuName": "D8ads v6",
-"unitOfMeasure": "1 Hour",
-"unitPrice": 0.92
 },
 "DZH318Z0F5F9/0214|cbc49840-6ce5-559d-94aa-f5e7a4c84b48|Consumption|": {
 "armRegionName": "belgiumcentral",

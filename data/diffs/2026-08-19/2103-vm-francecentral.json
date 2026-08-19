@@ -1,0 +1,60 @@
+{
+ "scope": "vm-francecentral",
+ "at": "2026-08-19T21:03:13.179384+00:00",
+ "added": [],
+ "removed": [
+  {
+   "key": "DZH318Z09JCP/000K|aee339cd-e91e-51b5-971b-d43a50860429|Consumption|",
+   "armRegionName": "francecentral",
+   "meterName": "Type 1",
+   "productName": "NVadsA10v5 DedicatedHost",
+   "retailPrice": 8.965,
+   "savingsPlanPrice": 7.462466,
+   "skuName": "Type 1",
+   "unitOfMeasure": "1 Hour",
+   "unitPrice": 8.965
+  },
+  {
+   "key": "DZH318Z09LR5/017V|54155221-f6f9-5a69-8c70-230c8f68b4c7|Consumption|",
+   "armRegionName": "francecentral",
+   "meterName": "E32bs v5 Low Priority",
+   "productName": "Virtual Machines Ebsv5 Series",
+   "retailPrice": 0.565,
+   "skuName": "Standard_E32bs_v5 Low Priority",
+   "unitOfMeasure": "1 Hour",
+   "unitPrice": 0.565
+  },
+  {
+   "key": "DZH318Z0BPWJ/010K|540d5f91-2b52-5d1c-a934-3925a2795dbf|Consumption|",
+   "armRegionName": "francecentral",
+   "meterName": "F4s v2 Spot",
+   "productName": "Virtual Machines FSv2 Series Windows",
+   "retailPrice": 0.071333,
+   "skuName": "F4s v2 Spot",
+   "unitOfMeasure": "1 Hour",
+   "unitPrice": 0.071333
+  },
+  {
+   "key": "DZH318Z0CM2D/00T3|cd322aac-18ba-50a8-aa08-064db37f7b9a|Consumption|",
+   "armRegionName": "francecentral",
+   "meterName": "E2as v4 Spot",
+   "productName": "Virtual Machines Easv4 Series",
+   "retailPrice": 0.02735,
+   "skuName": "E2as v4 Spot",
+   "unitOfMeasure": "1 Hour",
+   "unitPrice": 0.02735
+  },
+  {
+   "key": "DZH318Z0H7F3/0431|cd664840-8b94-5e52-ae14-179b94ab7906|Consumption|",
+   "armRegionName": "francecentral",
+   "meterName": "FX32-8ms v2",
+   "productName": "Virtual Machines FXmsv2 Series",
+   "retailPrice": 4.463,
+   "savingsPlanPrice": 3.07947,
+   "skuName": "FX32-8ms v2",
+   "unitOfMeasure": "1 Hour",
+   "unitPrice": 4.463
+  }
+ ],
+ "changed": []
+}
