@@ -1,0 +1,79 @@
+{
+ "scope": "vm-francecentral",
+ "at": "2026-08-20T21:04:20.278941+00:00",
+ "added": [
+  {
+   "key": "DZH318Z092QL/00DB|54225ae4-04c8-5191-80a0-cd39c0a804d5|Consumption|",
+   "retailPrice": 0.37,
+   "unitPrice": 0.37,
+   "unitOfMeasure": "1 Hour",
+   "productName": "Virtual Machines Dpldsv5 Series",
+   "skuName": "Standard_D8plds_v5",
+   "meterName": "D8plds v5",
+   "armRegionName": "francecentral",
+   "savingsPlanPrice": 0.281237
+  },
+  {
+   "key": "DZH318Z0LDR1/018S|54481861-2ad3-546e-8c92-9a2b2d07125d|Consumption|",
+   "retailPrice": 0.190714,
+   "unitPrice": 0.190714,
+   "unitOfMeasure": "1 Hour",
+   "productName": "Virtual Machines Dnldsv6 Series Windows",
+   "skuName": "D8nlds v6 Spot",
+   "meterName": "D8nlds v6 Spot",
+   "armRegionName": "francecentral"
+  },
+  {
+   "key": "DZH318Z0LDRD/01DJ|f66d1584-2431-516c-900f-055bac6bd93e|Consumption|",
+   "retailPrice": 0.860059,
+   "unitPrice": 0.860059,
+   "unitOfMeasure": "1 Hour",
+   "productName": "Virtual Machines Dndsv6 Series Windows",
+   "skuName": "D32nds v6 Spot",
+   "meterName": "D32nds v6 Spot",
+   "armRegionName": "francecentral"
+  },
+  {
+   "key": "DZH318Z0F5DX/09RJ|f6759fc7-a256-5dce-bdef-d100990988fb|Consumption|",
+   "retailPrice": 1.511479,
+   "unitPrice": 1.511479,
+   "unitOfMeasure": "1 Hour",
+   "productName": "Virtual Machines Eadsv6 Series",
+   "skuName": "E96-48ads v6 Spot",
+   "meterName": "E96-48ads v6 Spot",
+   "armRegionName": "francecentral"
+  },
+  {
+   "key": "DZH318Z0CSHC/00M2|f676a05d-de8c-5890-b934-ccbf539fffff|Consumption|",
+   "retailPrice": 3.84,
+   "unitPrice": 3.84,
+   "unitOfMeasure": "1 Hour",
+   "productName": "Virtual Machines Esv4 Series Windows",
+   "skuName": "E32-8s v4",
+   "meterName": "E32-8s v4",
+   "armRegionName": "francecentral"
+  },
+  {
+   "key": "DZH318Z0BQ34/0302|f67ac60e-b88f-56ad-a855-ae663847350f|Consumption|",
+   "retailPrice": 0.346315,
+   "unitPrice": 0.346315,
+   "unitOfMeasure": "1 Hour",
+   "productName": "Virtual Machines Dv2 Series",
+   "skuName": "D14 v2 Spot",
+   "meterName": "D14 v2/DS14 v2 Spot",
+   "armRegionName": "francecentral"
+  },
+  {
+   "key": "DZH318Z0BPWD/01D1|90bb4aa7-2e50-4052-94ae-1aa9b11f03f0|Consumption|",
+   "retailPrice": 1.306,
+   "unitPrice": 1.306,
+   "unitOfMeasure": "1 Hour",
+   "productName": "Virtual Machines DSv3 Series Windows",
+   "skuName": "D32-8s v3 Low Priority",
+   "meterName": "D32-8s v3 Low Priority",
+   "armRegionName": "francecentral"
+  }
+ ],
+ "removed": [],
+ "changed": []
+}
