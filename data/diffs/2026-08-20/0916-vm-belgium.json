@@ -1,0 +1,48 @@
+{
+ "scope": "vm-belgium",
+ "at": "2026-08-20T09:16:43.001257+00:00",
+ "added": [
+  {
+   "key": "DZH318Z0F5F9/0213|80c7aa9b-c205-5f3a-8463-9050f0dad12e|Consumption|",
+   "retailPrice": 0.92,
+   "unitPrice": 0.92,
+   "unitOfMeasure": "1 Hour",
+   "productName": "Virtual Machines Dadsv6 Series Windows",
+   "skuName": "D8ads v6",
+   "meterName": "D8ads v6",
+   "armRegionName": "belgiumcentral"
+  },
+  {
+   "key": "DZH318Z0CSHB/0B48|80ee8658-2aea-51f1-a512-86f4e9cd4d8a|Consumption|",
+   "retailPrice": 0.848,
+   "unitPrice": 0.848,
+   "unitOfMeasure": "1 Hour",
+   "productName": "Virtual Machines Edsv4 Series Windows",
+   "skuName": "E16-8ds v4 Low Priority",
+   "meterName": "E16-8ds v4 Low Priority",
+   "armRegionName": "belgiumcentral"
+  },
+  {
+   "key": "DZH318Z0CM92/058S|80f1ea89-1c3b-5f1e-b93f-6eab3751402d|Consumption|",
+   "retailPrice": 1.832,
+   "unitPrice": 1.832,
+   "unitOfMeasure": "1 Hour",
+   "productName": "Virtual Machines Easv4 Series Windows",
+   "skuName": "E16-4as_v4",
+   "meterName": "E16-4as_v4",
+   "armRegionName": "belgiumcentral"
+  },
+  {
+   "key": "DZH318Z08M9H/02Z1|8101d7d9-e65d-5737-9925-ff747aab584a|Consumption|",
+   "retailPrice": 1.442918,
+   "unitPrice": 1.442918,
+   "unitOfMeasure": "1 Hour",
+   "productName": "Virtual Machines Ev5 Series Windows",
+   "skuName": "Standard_E64_v5 Spot",
+   "meterName": "E64 v5 Spot",
+   "armRegionName": "belgiumcentral"
+  }
+ ],
+ "removed": [],
+ "changed": []
+}
