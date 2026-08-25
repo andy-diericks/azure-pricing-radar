@@ -159,7 +159,7 @@ describe('BiggestMovers component', () => {
     render(<BiggestMovers rows={[row]} onItemClick={handler} now={NOW} />)
     const items = screen.getAllByRole('button')
     fireEvent.click(items[0])
-    expect(handler).toHaveBeenCalledWith('mykey')
+    expect(handler).toHaveBeenCalledWith('Standard_D2s_v5')
   })
 
   it('calls onItemClick on Enter key', () => {
@@ -168,7 +168,7 @@ describe('BiggestMovers component', () => {
     render(<BiggestMovers rows={[row]} onItemClick={handler} now={NOW} />)
     const items = screen.getAllByRole('button')
     fireEvent.keyDown(items[0], { key: 'Enter' })
-    expect(handler).toHaveBeenCalledWith('mykey')
+    expect(handler).toHaveBeenCalledWith('Standard_D2s_v5')
   })
 
   it('shows items in both 7-day and 30-day windows for recent rows', () => {

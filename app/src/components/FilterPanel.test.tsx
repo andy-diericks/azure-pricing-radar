@@ -103,4 +103,41 @@ describe('FilterPanel', () => {
     render(<FilterPanel rows={[makeRow()]} filters={filters} onChange={vi.fn()} />)
     expect(screen.getByText('≥10%')).toBeInTheDocument()
   })
+
+  it('shows no active-filter bar when no filters are set', () => {
+    render(<FilterPanel rows={[makeRow()]} filters={EMPTY_FILTERS} onChange={vi.fn()} />)
+    expect(screen.queryByRole('button', { name: /clear all/i })).not.toBeInTheDocument()
+  })
+
+  it('renders a removable chip for each active filter and a Clear all button', () => {
+    const filters = {
+      ...EMPTY_FILTERS,
+      selectedDirections: ['drop' as const],
+      minMagnitude: 10,
+      searchTerm: 'D2s',
+    }
+    render(<FilterPanel rows={[makeRow()]} filters={filters} onChange={vi.fn()} />)
+    expect(screen.getByRole('button', { name: /remove filter: drop/i })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /remove filter: ≥10% change/i })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /remove filter: “d2s”/i })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /clear all/i })).toBeInTheDocument()
+  })
+
+  it('Clear all resets every filter to empty', () => {
+    const onChange = vi.fn()
+    const filters = { ...EMPTY_FILTERS, selectedDirections: ['drop' as const], minMagnitude: 10 }
+    render(<FilterPanel rows={[makeRow()]} filters={filters} onChange={onChange} />)
+    fireEvent.click(screen.getByRole('button', { name: /clear all/i }))
+    expect(onChange).toHaveBeenCalledWith(EMPTY_FILTERS)
+  })
+
+  it('removing a chip drops just that filter', () => {
+    const onChange = vi.fn()
+    const filters = { ...EMPTY_FILTERS, selectedDirections: ['drop' as const, 'increase' as const] }
+    render(<FilterPanel rows={[makeRow()]} filters={filters} onChange={onChange} />)
+    fireEvent.click(screen.getByRole('button', { name: /remove filter: drop/i }))
+    expect(onChange).toHaveBeenCalledWith(
+      expect.objectContaining({ selectedDirections: ['increase'] }),
+    )
+  })
 })

@@ -26,8 +26,8 @@ repository — no backend, no tracking, no accounts.
 dramatic price changes over the last 7 days and 30 days. Each time window lists
 the top 3 biggest drops (green) and top 3 biggest increases (red), sorted by
 percentage magnitude. Each entry shows the SKU name, region, percentage change,
-and before → after price. Click any entry to jump to the full price-changes
-feed below.
+and before → after price. Click any entry to open that SKU's full price-history
+page.
 
 **SKU search** — a search box above the table for instant, case-insensitive
 substring filtering by SKU name (e.g. typing `standard` narrows to all
@@ -35,7 +35,8 @@ substring filtering by SKU name (e.g. typing `standard` narrows to all
 shareable filtered views. Works in combination with the facet filters below.
 
 **Facet filters** — filter by service, region, direction, and minimum magnitude.
-All active filters (search + facets) are encoded in the URL for sharing.
+Active filters appear as removable chips with a **Clear all** button, and all
+filters (search + facets) are encoded in the URL for sharing.
 
 **Change-count summary** — a compact stats row above the table showing how
 many changes of each type are in the current diff (e.g. _3 drops · 1 increase

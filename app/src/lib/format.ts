@@ -54,7 +54,9 @@ export function directionColor(direction: string): string {
     drop: '#34D399',
     increase: '#F87171',
     new: '#FBBF24',
-    removed: '#38BDF8',
+    // 'removed' is de-emphasised grey everywhere it is shown (badges, filters,
+    // digests) — keep this in sync with --color-text-secondary.
+    removed: '#93A4BE',
   }
   return map[direction] ?? '#38BDF8'
 }

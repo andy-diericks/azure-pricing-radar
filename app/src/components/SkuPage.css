@@ -117,7 +117,7 @@
   display: inline-block;
   padding: var(--space-2) var(--space-4);
   background: var(--color-accent);
-  color: #0b1120;
+  color: var(--color-bg-page);
   font-size: var(--text-sm);
   font-weight: 600;
   border-radius: var(--radius-control);
@@ -376,7 +376,7 @@
 }
 
 .sku-page__pricing-saving {
-  color: #34D399;
+  color: var(--color-price-drop);
   font-family: var(--font-mono);
   font-size: var(--text-sm);
 }
