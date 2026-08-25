@@ -38,6 +38,13 @@ function rawPctAbs(row: TableRow): number {
   return Math.abs(((row.priceAfter - row.priceBefore) / row.priceBefore) * 100)
 }
 
+// A removed SKU has no "after" price — the loader stores 0 as a placeholder.
+// Showing "$0.00" reads like the price crashed to zero, so render an em dash
+// instead (mirroring how a new SKU's absent "before" is shown).
+function formatAfter(row: TableRow): string {
+  return row.direction === 'removed' ? '—' : formatPrice(row.priceAfter)
+}
+
 function getSortValue(row: TableRow, key: Exclude<SortKey, 'before'>): number | string {
   switch (key) {
     case 'direction': return DIRECTION_ORDER[row.direction]
@@ -284,7 +291,7 @@ export function PriceChangesTable({ rows, loading, error, onRowClick }: Props) {
                 <td className="pct__num pct__mono">
                   {row.priceBefore !== null ? `${formatPrice(row.priceBefore)}` : '—'}
                 </td>
-                <td className="pct__num pct__mono">{`${formatPrice(row.priceAfter)}`}</td>
+                <td className="pct__num pct__mono">{formatAfter(row)}</td>
                 <td className={`pct__num pct__mono pct__pct--${row.direction}`}>
                   {formatPctChange(row.priceBefore, row.priceAfter, row.direction)}
                 </td>
@@ -328,7 +335,7 @@ export function PriceChangesTable({ rows, loading, error, onRowClick }: Props) {
                 {row.priceBefore !== null ? `${formatPrice(row.priceBefore)}` : '—'}
               </span>
               <span className="pct__secondary" aria-hidden="true">→</span>
-              <span className="pct__mono">{`${formatPrice(row.priceAfter)}`}</span>
+              <span className="pct__mono">{formatAfter(row)}</span>
               <span className={`pct__mono pct__pct--${row.direction}`}>
                 {formatPctChange(row.priceBefore, row.priceAfter, row.direction)}
               </span>

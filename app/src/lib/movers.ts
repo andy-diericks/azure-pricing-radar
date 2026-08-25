@@ -22,6 +22,11 @@ export function computeMovers(rows: TableRow[], windowMs: number, now: number): 
       (r.direction === 'drop' || r.direction === 'increase') &&
       r.priceBefore !== null &&
       r.priceBefore !== 0 &&
+      // Exclude "changes" where the retail price did not actually move. These
+      // arise when a non-price field changed but retailPrice stayed equal — the
+      // diff loader still labels them 'increase', which would otherwise surface
+      // as a misleading "+0.0%" biggest mover.
+      r.priceAfter !== r.priceBefore &&
       new Date(r.at).getTime() >= cutoff,
   )
 
