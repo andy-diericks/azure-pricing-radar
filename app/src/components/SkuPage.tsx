@@ -13,6 +13,7 @@ import { formatPrice, formatDateAxis, formatDateFull, formatDiscountPct, directi
 import type { SkuEntry, SkuHistoryPoint, SkuIndex, SkuRegion } from '../lib/skuIndex'
 import { ogImageUrl } from '../lib/ogImage'
 import { TrendSummaryCard } from './TrendSummaryCard'
+import { Footer } from './Footer'
 import '../App.css'
 import './SkuPage.css'
 
@@ -889,6 +890,7 @@ export function SkuPage({ family }: Props) {
             </div>
           </div>
         </main>
+        <Footer />
       </div>
     )
   }
@@ -937,6 +939,7 @@ export function SkuPage({ family }: Props) {
           <DiscountHistoryChart entry={entry} primaryRegion={primaryRegionName} />
         </div>
       </main>
+      <Footer />
     </div>
   )
 }

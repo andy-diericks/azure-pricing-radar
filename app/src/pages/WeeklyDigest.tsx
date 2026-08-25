@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { loadDigests } from '../lib/loadDigests'
+import { Footer } from '../components/Footer'
 import {
   getIsoWeekLabel,
   filterDigestsForWeek,
@@ -209,6 +210,7 @@ export function WeeklyDigest() {
           <a href="#/digests">View daily digest archive →</a>
         </p>
       </main>
+      <Footer />
     </div>
   )
 }

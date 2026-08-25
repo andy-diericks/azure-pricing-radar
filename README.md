@@ -64,6 +64,10 @@ changes were detected.
 **Mobile layout** — on small screens the table switches to a card list with
 44 px touch targets and the same full data.
 
+**Provenance footer** — every page carries a footer stating the data source
+(Azure Retail Prices API), the 6-hour cadence, currency, and that this is an
+independent open-data project, with links to the source and methodology.
+
 Prices are checked every 6 hours ([why not more often?](docs/adr/0003-fetch-cadence.md)) —
 this is a radar for same-day detection, not a real-time ticker.
 

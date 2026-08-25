@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { loadDigests } from '../lib/loadDigests'
+import { Footer } from '../components/Footer'
 import type { DigestData, DigestMover } from '../lib/digest'
 import './DigestArchive.css'
 
@@ -187,6 +188,7 @@ export function DigestArchive() {
           )}
         </section>
       </main>
+      <Footer />
     </div>
   )
 }
