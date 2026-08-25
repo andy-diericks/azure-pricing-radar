@@ -121,7 +121,7 @@ describe('directionColor', () => {
   })
 
   it('returns accent blue for removed SKUs', () => {
-    expect(directionColor('removed')).toBe('#38BDF8')
+    expect(directionColor('removed')).toBe('#93A4BE')
   })
 
   it('returns accent blue for unknown direction', () => {

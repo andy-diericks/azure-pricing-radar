@@ -48,8 +48,8 @@ export default function App() {
 
   const filteredRows = useMemo(() => applyFilters(rows, filters), [rows, filters])
 
-  function handleMoverClick() {
-    document.getElementById('price-changes-card')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  function handleMoverClick(skuName: string) {
+    window.location.hash = `#/sku/${encodeURIComponent(skuName)}`
   }
 
   return (

@@ -167,6 +167,66 @@ proposal (likely a new ADR) BEFORE any scope change.
   share becomes a backlink.
 - E5.5 Sub-2s performance pass and Lighthouse >= 95 across key pages.
 
+## E6 — Design & consistency (from the design review)
+Follow-ups from a full look-and-feel / consistency audit of the shipped app.
+Ordered by value to users (FinOps engineers / architects), not by effort.
+These map to standards 1 (trustworthy), 2 (instant answers), and 6 (visual
+excellence) above — they are quality debt on already-shipped features, so per
+that rule they take priority over starting a brand-new epic.
+
+**Already shipped** (design-review quick wins, PR on `claude/design-review-quickwins`):
+- ✅ "Biggest movers" cards now open the SKU's history page (were a dead end).
+- ✅ "Clear all" + removable active-filter chips on the change feed.
+- ✅ "Removed" is one consistent colour across every surface.
+- ✅ Direction/background colours read from tokens, not hard-coded hex.
+
+Remaining, highest user value first:
+- E6.1 **Global SKU lookup** — a prominent search that routes to
+  `#/sku/<family>` for *any* tracked SKU, not just rows currently in the feed.
+  Answers "history of this SKU?" directly; the detail page's "request tracking"
+  off-ramp already assumes people arrive this way. (Distinct from E1.4, which
+  only filters visible feed rows.)
+- E6.2 **Data provenance footer** — one line on the source (Azure Retail
+  Prices API), the 6-hourly cadence, a "how this works / methodology" link, and
+  the GitHub repo. Directly serves standard 1 (trustworthy) and shareability.
+- E6.3 **Rescale the magnitude slider** — real Azure moves cluster under ~30%,
+  so the linear 0–100% range wastes most of its travel. Cap near 50% or use a
+  non-linear scale.
+- E6.4 **Stronger typographic hierarchy** — section headings sit at 16px (=body);
+  promote to the existing 20/28 steps and add a real page title / hero stat so
+  the eye has somewhere to land. Tokens already exist.
+- E6.5 **Header nav as tabs + calmer status** — make "This week" / "Digests"
+  read as navigation, and move the "last checked / last changed" timestamps out
+  of the crowded title row.
+- E6.6 **Shared `CountBadge` component** — the drop/increase/new/removed counts
+  are drawn three different ways (inline text, pills, big-number grid). One
+  component used everywhere; also makes the "removed" colour single-sourced.
+- E6.7 **Shared `StateMessage` component** — standardise empty / loading / error
+  states (the table has polished icon states; movers, digests and the chart use
+  plain text).
+- E6.8 **Unify the two digest designs** — the weekly (`wd__*`) and daily-archive
+  (`da__*`) pages are visually divergent; share summary / count / mover
+  components so digests feel like one family.
+- E6.9 **De-duplicate 7-day vs 30-day movers** — when the two windows are
+  identical (sparse data) collapse to one, so it doesn't read like a bug.
+- E6.10 **Sortable-column affordance** — table headers only reveal they sort
+  once active; add a faint resting glyph on hover/focus.
+- E6.11 **Wordmark links home on every page** (it's a `<span>` on home, an
+  `<a>` on subpages).
+- E6.12 **Mobile pass at 390px** — verify the header and filter groups wrap
+  cleanly and touch targets stay ≥ 44px (standard 7).
+- E6.13 **Chart colours from tokens** — `SkuPage`'s palette/axis colours are JS
+  string literals echoing the tokens; source them from one place so the chart
+  can't drift from the palette.
+- E6.14 **Soft-surface tokens** — the many ad-hoc `rgba(<token>, 0.08–0.13)`
+  tints should become a small named set so tinted badges match everywhere.
+
+**Needs-human first (touch frozen ADR 0002 — propose, don't self-serve):**
+- E6.H1 Add a `--color-border` token. Borders today are two hand-written
+  shades (`#1e2d47`, `#1a2640`) with no token at all.
+- E6.H2 Formalise "removed = secondary grey" in ADR 0002 (currently only a
+  convention in code).
+
 ---
 
 When an epic completes, journal "Epic <id> complete" and note what the human

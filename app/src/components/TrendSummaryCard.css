@@ -50,17 +50,17 @@
 }
 
 .tsc__badge--drop {
-  color: #34D399;
+  color: var(--color-price-drop);
   background: rgba(52, 211, 153, 0.1);
 }
 
 .tsc__badge--increase {
-  color: #F87171;
+  color: var(--color-price-increase);
   background: rgba(248, 113, 113, 0.1);
 }
 
 .tsc__badge--stable {
-  color: #FBBF24;
+  color: var(--color-price-new);
   background: rgba(251, 191, 36, 0.1);
 }
 

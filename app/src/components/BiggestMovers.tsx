@@ -43,7 +43,7 @@ function MoverItemCard({ item, onClick }: MoverItemCardProps) {
 interface WindowSectionProps {
   label: string
   movers: MoversResult
-  onItemClick?: (rowKey: string) => void
+  onItemClick?: (skuName: string) => void
 }
 
 function WindowSection({ label, movers, onItemClick }: WindowSectionProps) {
@@ -64,7 +64,7 @@ function WindowSection({ label, movers, onItemClick }: WindowSectionProps) {
                 <MoverItemCard
                   key={item.row.key}
                   item={item}
-                  onClick={onItemClick ? () => onItemClick(item.row.key) : undefined}
+                  onClick={onItemClick ? () => onItemClick(item.row.skuName) : undefined}
                 />
               ))}
             </div>
@@ -76,7 +76,7 @@ function WindowSection({ label, movers, onItemClick }: WindowSectionProps) {
                 <MoverItemCard
                   key={item.row.key}
                   item={item}
-                  onClick={onItemClick ? () => onItemClick(item.row.key) : undefined}
+                  onClick={onItemClick ? () => onItemClick(item.row.skuName) : undefined}
                 />
               ))}
             </div>
@@ -90,7 +90,7 @@ function WindowSection({ label, movers, onItemClick }: WindowSectionProps) {
 interface Props {
   rows: TableRow[]
   loading?: boolean
-  onItemClick?: (rowKey: string) => void
+  onItemClick?: (skuName: string) => void
   now?: number
 }
 

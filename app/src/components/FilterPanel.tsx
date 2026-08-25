@@ -1,6 +1,13 @@
 import type { ChangeDirection, TableRow } from '../types'
 import type { FilterState } from '../lib/filters'
+import { EMPTY_FILTERS } from '../lib/filters'
 import './FilterPanel.css'
+
+interface ActiveChip {
+  key: string
+  label: string
+  onRemove: () => void
+}
 
 const ALL_DIRECTIONS: ChangeDirection[] = ['drop', 'increase', 'new', 'removed']
 const DIRECTION_LABELS: Record<ChangeDirection, string> = {
@@ -26,8 +33,66 @@ export function FilterPanel({ rows, filters, onChange }: Props) {
     return arr.includes(item) ? arr.filter(x => x !== item) : [...arr, item]
   }
 
+  const chips: ActiveChip[] = [
+    ...filters.selectedServices.map(s => ({
+      key: `service:${s}`,
+      label: s,
+      onRemove: () => onChange({ ...filters, selectedServices: filters.selectedServices.filter(x => x !== s) }),
+    })),
+    ...filters.selectedRegions.map(r => ({
+      key: `region:${r}`,
+      label: r,
+      onRemove: () => onChange({ ...filters, selectedRegions: filters.selectedRegions.filter(x => x !== r) }),
+    })),
+    ...filters.selectedDirections.map(d => ({
+      key: `direction:${d}`,
+      label: DIRECTION_LABELS[d],
+      onRemove: () => onChange({ ...filters, selectedDirections: filters.selectedDirections.filter(x => x !== d) }),
+    })),
+  ]
+  if (filters.minMagnitude > 0) {
+    chips.push({
+      key: 'magnitude',
+      label: `≥${filters.minMagnitude}% change`,
+      onRemove: () => onChange({ ...filters, minMagnitude: 0 }),
+    })
+  }
+  if (filters.searchTerm) {
+    chips.push({
+      key: 'search',
+      label: `“${filters.searchTerm}”`,
+      onRemove: () => onChange({ ...filters, searchTerm: '' }),
+    })
+  }
+
   return (
     <div className="fp" role="group" aria-label="Filter price changes">
+      {chips.length > 0 && (
+        <div className="fp__active">
+          <span className="fp__active-label">Active</span>
+          <div className="fp__chips">
+            {chips.map(chip => (
+              <button
+                key={chip.key}
+                type="button"
+                className="fp__chip"
+                onClick={chip.onRemove}
+                aria-label={`Remove filter: ${chip.label}`}
+              >
+                <span>{chip.label}</span>
+                <span className="fp__chip-x" aria-hidden="true">×</span>
+              </button>
+            ))}
+          </div>
+          <button
+            type="button"
+            className="fp__clear"
+            onClick={() => onChange(EMPTY_FILTERS)}
+          >
+            Clear all
+          </button>
+        </div>
+      )}
       {services.length > 1 && (
         <div className="fp__group">
           <span className="fp__label">Service</span>
