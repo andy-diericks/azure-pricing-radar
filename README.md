@@ -29,10 +29,16 @@ percentage magnitude. Each entry shows the SKU name, region, percentage change,
 and before → after price. Click any entry to open that SKU's full price-history
 page.
 
-**SKU search** — a search box above the table for instant, case-insensitive
-substring filtering by SKU name (e.g. typing `standard` narrows to all
-`Standard_*` SKUs). The search term is preserved in the URL (`?search=…`) for
-shareable filtered views. Works in combination with the facet filters below.
+**Global SKU lookup** — a search box at the top of the dashboard to jump
+straight to the full price-history page of _any_ tracked SKU, not just those in
+the current change feed. Autocompletes over every tracked family (by SKU name or
+product) and is fully keyboard-navigable. The family list loads lazily on first
+use, so the home page stays fast.
+
+**Feed search** — a search box above the table for instant, case-insensitive
+substring filtering of the change feed by SKU name (e.g. typing `standard`
+narrows to all `Standard_*` SKUs). The search term is preserved in the URL
+(`?search=…`) for shareable filtered views. Works with the facet filters below.
 
 **Facet filters** — filter by service, region, direction, and minimum magnitude.
 Active filters appear as removable chips with a **Clear all** button, and all

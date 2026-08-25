@@ -4,6 +4,7 @@ dist/
 __pycache__/
 .DS_Store
 app/public/sku-index.json
+app/public/sku-families.json
 app/public/og-images/
 app/public/feed.atom
 app/public/feed.rss
