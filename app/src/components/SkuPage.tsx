@@ -198,9 +198,11 @@ function ChartEmptyIcon() {
 
 interface HistoryProps {
   entry: SkuEntry
+  /** Region the rest of the page describes, so the chart opens on the same one. */
+  initialRegion?: string
 }
 
-function SkuHistory({ entry }: HistoryProps) {
+function SkuHistory({ entry, initialRegion }: HistoryProps) {
   const [compareMode, setCompareMode] = useState(false)
 
   const historyRegions = useMemo(
@@ -214,6 +216,7 @@ function SkuHistory({ entry }: HistoryProps) {
 
   const defaultRegion = useMemo(() => {
     const withHistory = new Set(historyRegions)
+    if (initialRegion && withHistory.has(initialRegion)) return initialRegion
     return (
       entry.regions
         .slice()
@@ -222,7 +225,7 @@ function SkuHistory({ entry }: HistoryProps) {
       historyRegions[0] ??
       ''
     )
-  }, [entry.regions, historyRegions])
+  }, [entry.regions, historyRegions, initialRegion])
 
   const [selectedRegions, setSelectedRegions] = useState<string[]>(() =>
     defaultRegion ? [defaultRegion] : historyRegions.slice(0, 1),
@@ -890,6 +893,18 @@ export function SkuPage({ family }: Props) {
     )
   }
 
+  // One region drives every section below (pricing tiers, trend, chart,
+  // discounts): the cheapest region that actually has price history, falling
+  // back to the cheapest region overall. Using a single region keeps the
+  // headline numbers and the chart from describing different regions.
+  const regionsWithHistory = new Set(
+    entry.history.filter((h) => h.retailPrice !== null).map((h) => h.armRegionName),
+  )
+  const sortedRegions = entry.regions.slice().sort((a, b) => a.retailPrice - b.retailPrice)
+  const primaryRegion =
+    sortedRegions.find((r) => regionsWithHistory.has(r.armRegionName)) ?? sortedRegions[0] ?? null
+  const primaryRegionName = primaryRegion?.armRegionName ?? ''
+
   return (
     <div className="app">
       {header}
@@ -916,26 +931,10 @@ export function SkuPage({ family }: Props) {
               ))}
             </tbody>
           </table>
-          {entry.regions.length > 0 && (
-            <PricingComparison
-              region={entry.regions.slice().sort((a, b) => a.retailPrice - b.retailPrice)[0]}
-            />
-          )}
-          <TrendSummaryCard
-            entry={entry}
-            primaryRegion={
-              entry.regions.slice().sort((a, b) => a.retailPrice - b.retailPrice)[0]
-                ?.armRegionName ?? ''
-            }
-          />
-          <SkuHistory entry={entry} />
-          <DiscountHistoryChart
-            entry={entry}
-            primaryRegion={
-              entry.regions.slice().sort((a, b) => a.retailPrice - b.retailPrice)[0]
-                ?.armRegionName ?? ''
-            }
-          />
+          {primaryRegion && <PricingComparison region={primaryRegion} />}
+          <TrendSummaryCard entry={entry} primaryRegion={primaryRegionName} />
+          <SkuHistory entry={entry} initialRegion={primaryRegionName} />
+          <DiscountHistoryChart entry={entry} primaryRegion={primaryRegionName} />
         </div>
       </main>
     </div>

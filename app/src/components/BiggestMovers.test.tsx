@@ -100,6 +100,18 @@ describe('computeMovers', () => {
     expect(drops).toHaveLength(0)
   })
 
+  it('excludes rows whose price did not actually move (fake +0.0% movers)', () => {
+    const rows: TableRow[] = [
+      // A 'changed' diff where retailPrice stayed equal is labelled 'increase'
+      // by the loader — it must not surface as a "biggest increase".
+      makeRow({ key: 'flat', direction: 'increase', priceBefore: 3.904, priceAfter: 3.904 }),
+      makeRow({ key: 'real', direction: 'increase', priceBefore: 1.0, priceAfter: 1.2 }),
+    ]
+    const { increases } = computeMovers(rows, WINDOW_30_MS, NOW)
+    expect(increases).toHaveLength(1)
+    expect(increases[0].row.key).toBe('real')
+  })
+
   it('computes pct correctly', () => {
     const rows = [makeRow({ priceBefore: 0.1, priceAfter: 0.09 })] // -10%
     const { drops } = computeMovers(rows, WINDOW_7_MS, NOW)

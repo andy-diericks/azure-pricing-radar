@@ -109,6 +109,23 @@ describe('DigestArchive', () => {
     await waitFor(() => expect(screen.getByText('Daily digests')).toBeInTheDocument())
   })
 
+  it('explains what the digest terms mean (legend)', async () => {
+    vi.stubGlobal('fetch', makeMockFetch(DIGEST_NO_CHANGES))
+    render(<DigestArchive />)
+    await waitFor(() => expect(screen.getByLabelText('What the terms mean')).toBeInTheDocument())
+    expect(screen.getByText('prices that went down')).toBeInTheDocument()
+    expect(screen.getByText('prices that went up')).toBeInTheDocument()
+    expect(screen.getByText('SKUs no longer offered')).toBeInTheDocument()
+  })
+
+  it('renders a plain-language summary sentence for each day', async () => {
+    vi.stubGlobal('fetch', makeMockFetch(DIGEST_NO_CHANGES))
+    render(<DigestArchive />)
+    await waitFor(() =>
+      expect(screen.getByText(/9,904 SKUs started being tracked\./)).toBeInTheDocument(),
+    )
+  })
+
   it('renders the home link in the header', async () => {
     vi.stubGlobal('fetch', makeMockFetch(DIGEST_NO_CHANGES))
     render(<DigestArchive />)

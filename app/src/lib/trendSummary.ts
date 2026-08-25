@@ -67,18 +67,29 @@ export function computeTrendSummary(
         )
       : null
 
-  const changeCount = entry.history.filter((h) => h.direction === 'changed').length
+  // Count actual price movements in the region the trend and chart describe:
+  // adjacent history points whose retail price differs. Counting only 'changed'
+  // diff events (as before) missed moves that happen via remove + re-add, which
+  // made the count show 0 even when the trend badge showed a large change.
+  let changeCount = 0
+  for (let i = 1; i < regionPoints.length; i++) {
+    if (regionPoints[i].price !== regionPoints[i - 1].price) changeCount++
+  }
 
-  const cheapestRegion = entry.regions
-    .slice()
-    .sort((a, b) => a.retailPrice - b.retailPrice)[0] ?? null
+  // "Current price" must be for the same region as the trend, otherwise the
+  // headline number contradicts the chart below it.
+  const primaryRegionEntry =
+    entry.regions.find((r) => r.armRegionName === primaryRegion) ?? null
+  const currentPrice =
+    primaryRegionEntry?.retailPrice ??
+    (regionPoints.length > 0 ? regionPoints[regionPoints.length - 1].price : null)
 
   return {
     thirtyDay,
     ninetyDay,
     firstSeen,
     changeCount,
-    currentPrice: cheapestRegion?.retailPrice ?? null,
-    unitOfMeasure: cheapestRegion?.unitOfMeasure ?? '',
+    currentPrice,
+    unitOfMeasure: primaryRegionEntry?.unitOfMeasure ?? '',
   }
 }

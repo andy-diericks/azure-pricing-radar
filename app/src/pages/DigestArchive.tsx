@@ -18,6 +18,35 @@ function buildHeadline(entry: DigestData): string {
   return parts.length > 0 ? parts.join(' · ') : 'No changes detected'
 }
 
+const n = (v: number) => v.toLocaleString('en-US')
+
+// A plain-language sentence describing the day, so counts like "634 new" are
+// not left to the reader to interpret.
+function buildPlainSummary(entry: DigestData): string {
+  if (
+    entry.totalDrops + entry.totalIncreases + entry.totalNewSkus + entry.totalRemoved ===
+    0
+  ) {
+    return 'Prices were checked but nothing changed compared with the previous snapshot.'
+  }
+  const clauses: string[] = []
+  const moved = entry.totalDrops + entry.totalIncreases
+  if (moved > 0) {
+    const bits: string[] = []
+    if (entry.totalDrops) bits.push(`${n(entry.totalDrops)} went down`)
+    if (entry.totalIncreases) bits.push(`${n(entry.totalIncreases)} went up`)
+    clauses.push(`${n(moved)} price${moved !== 1 ? 's' : ''} changed (${bits.join(', ')})`)
+  }
+  if (entry.totalNewSkus) {
+    clauses.push(`${n(entry.totalNewSkus)} SKU${entry.totalNewSkus !== 1 ? 's' : ''} started being tracked`)
+  }
+  if (entry.totalRemoved) {
+    clauses.push(`${n(entry.totalRemoved)} SKU${entry.totalRemoved !== 1 ? 's' : ''} ${entry.totalRemoved !== 1 ? 'are' : 'is'} no longer offered`)
+  }
+  const sentence = clauses.join('; ')
+  return sentence.charAt(0).toUpperCase() + sentence.slice(1) + '.'
+}
+
 function MoverBadge({ mover }: { mover: DigestMover }) {
   const sign = mover.pctChange < 0 ? '' : '+'
   const cls = `da__mover-pct da__mover-pct--${mover.direction}`
@@ -43,6 +72,7 @@ function DigestEntry({ entry }: { entry: DigestData }) {
         </time>
         <span className="da__entry-headline">{buildHeadline(entry)}</span>
       </div>
+      <p className="da__entry-summary">{buildPlainSummary(entry)}</p>
       <div className="da__entry-counts">
         {entry.totalDrops > 0 && (
           <span className="da__count da__count--drop">
@@ -109,6 +139,24 @@ export function DigestArchive() {
       <main id="da-main" className="main">
         <section className="card">
           <h1 className="card__heading">Daily digests</h1>
+          <p className="da__intro">
+            Each day we snapshot Azure retail prices and compare them with the previous
+            snapshot. A digest is the summary of what changed that day.
+          </p>
+          <ul className="da__legend" aria-label="What the terms mean">
+            <li>
+              <span className="da__count da__count--drop">drops</span> prices that went down
+            </li>
+            <li>
+              <span className="da__count da__count--increase">increases</span> prices that went up
+            </li>
+            <li>
+              <span className="da__count da__count--new">new</span> SKUs Azure started offering
+            </li>
+            <li>
+              <span className="da__count da__count--removed">removed</span> SKUs no longer offered
+            </li>
+          </ul>
           {loading && (
             <div className="da__list" aria-label="Loading digests">
               <SkeletonEntry />

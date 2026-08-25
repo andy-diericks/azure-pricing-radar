@@ -121,6 +121,8 @@ describe('PriceChangesTable', () => {
     )
     expect(screen.getAllByText(/✕ Removed/)[0]).toBeInTheDocument()
     expect(screen.getAllByText('$0.096')[0]).toBeInTheDocument()
+    // A removed SKU has no "after" price — it must show '—', never a misleading $0.00.
+    expect(screen.queryByText('$0.00')).toBeNull()
   })
 
   it('shows dash in % column for new and removed rows', () => {

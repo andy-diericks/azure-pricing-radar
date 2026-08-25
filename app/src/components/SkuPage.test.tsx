@@ -663,7 +663,7 @@ describe('SkuPage', () => {
       expect(screen.getByText(/Discount = \(PAYG − tier\) ÷ PAYG/)).toBeInTheDocument()
     })
 
-    it('uses the cheapest region for the primary region discount data', async () => {
+    it('falls back to the cheapest region that has history so all sections agree', async () => {
       const multiRegionDiscount: SkuIndex = {
         generatedAt: '2026-07-20T00:00:00Z',
         skus: {
@@ -682,8 +682,10 @@ describe('SkuPage', () => {
       }
       vi.stubGlobal('fetch', mockFetch(multiRegionDiscount))
       render(<SkuPage family="Standard_D2s_v5" />)
-      // westeurope is cheapest but has no reservation history → empty state
-      await waitFor(() => expect(screen.getByTestId('discount-empty')).toBeInTheDocument())
+      // westeurope is cheapest but has NO history, so the page consistently uses
+      // northeurope (the cheapest region that does) for every section — the
+      // discount chart therefore renders instead of showing an empty state.
+      await waitFor(() => expect(screen.getByTestId('discount-chart')).toBeInTheDocument())
     })
   })
 })

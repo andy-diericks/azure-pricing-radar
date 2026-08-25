@@ -147,7 +147,22 @@ describe('computeTrendSummary', () => {
       expect(result.changeCount).toBe(0)
     })
 
-    it('returns currentPrice from cheapest region', () => {
+    it('counts price movements that happen via add/re-add, not only "changed" events', () => {
+      // A SKU (e.g. a Low Priority / Spot tier) can reappear at a different
+      // price without a 'changed' diff. That is still a price movement, so the
+      // count must not be 0 while the trend shows a change.
+      const entry = makeEntry({
+        history: [
+          { at: '2026-07-15T00:00:00Z', armRegionName: 'westeurope', retailPrice: 0.653, direction: 'added' },
+          { at: '2026-07-20T00:00:00Z', armRegionName: 'westeurope', retailPrice: 2.189, direction: 'added' },
+        ],
+      })
+      const result = computeTrendSummary(entry, 'westeurope', NOW)
+      expect(result.changeCount).toBe(1)
+      expect(result.thirtyDay.direction).toBe('increase')
+    })
+
+    it('returns currentPrice for the primary region so it matches the chart', () => {
       const entry = makeEntry({
         regions: [
           { armRegionName: 'westeurope', scope: 'vm-eu-west', retailPrice: 0.088, unitOfMeasure: '1 Hour' },
@@ -155,8 +170,10 @@ describe('computeTrendSummary', () => {
         ],
         history: [],
       })
-      const result = computeTrendSummary(entry, 'westeurope', NOW)
-      expect(result.currentPrice).toBe(0.088)
+      // Primary region is northeurope here even though westeurope is cheaper —
+      // the current price must follow the region the trend/chart describe.
+      const result = computeTrendSummary(entry, 'northeurope', NOW)
+      expect(result.currentPrice).toBe(0.095)
       expect(result.unitOfMeasure).toBe('1 Hour')
     })
 
