@@ -6,6 +6,7 @@ import { ChangesSummary } from './components/ChangesSummary'
 import { FilterPanel } from './components/FilterPanel'
 import { SearchInput } from './components/SearchInput'
 import { BiggestMovers } from './components/BiggestMovers'
+import { Footer } from './components/Footer'
 import { loadDiffs } from './lib/loadDiffs'
 import { parseFiltersFromSearch, filtersToSearch, applyFilters } from './lib/filters'
 import type { FilterState } from './lib/filters'
@@ -73,6 +74,7 @@ export default function App() {
           <PriceChangesTable rows={filteredRows} loading={loading} error={error} onRowClick={handleRowClick} />
         </section>
       </main>
+      <Footer />
     </div>
   )
 }
