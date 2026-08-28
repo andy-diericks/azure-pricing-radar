@@ -1,0 +1,744 @@
+{
+ "scope": "vm-eu-west",
+ "at": "2026-08-28T14:35:29.069839+00:00",
+ "added": [],
+ "removed": [],
+ "changed": [
+  {
+   "key": "DZH318Z0F6ZF/004F|5b207a76-972d-5e76-9412-e2fa71a08992|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "EC96asv6",
+    "productName": "Virtual Machines ECasv6 series",
+    "retailPrice": 6.922,
+    "savingsPlanPrice": 4.70696,
+    "skuName": "EC96asv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 6.922
+   },
+   "after": {
+    "retailPrice": 6.922,
+    "unitPrice": 6.922,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines ECasv6 series",
+    "skuName": "EC96asv6",
+    "meterName": "EC96asv6",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 6.4719
+   }
+  },
+  {
+   "key": "DZH318Z0M7ZD/00BQ|5bfc101b-d497-55e2-af58-2af7340d15e6|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "DC96edsv6",
+    "productName": "Virtual Machines DCedsv6 Series",
+    "retailPrice": 7.164,
+    "savingsPlanPrice": 4.94316,
+    "skuName": "DC96edsv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 7.164
+   },
+   "after": {
+    "retailPrice": 7.164,
+    "unitPrice": 7.164,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines DCedsv6 Series",
+    "skuName": "DC96edsv6",
+    "meterName": "DC96edsv6",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 6.698
+   }
+  },
+  {
+   "key": "DZH318Z0M7Z3/002W|5fbf7293-a119-5168-b6ac-abd40aa2864d|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "DC96esv6",
+    "productName": "Virtual Machines DCesv6 Series",
+    "retailPrice": 5.796,
+    "savingsPlanPrice": 3.99924,
+    "skuName": "DC96esv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 5.796
+   },
+   "after": {
+    "retailPrice": 5.796,
+    "unitPrice": 5.796,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines DCesv6 Series",
+    "skuName": "DC96esv6",
+    "meterName": "DC96esv6",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 5.4196
+   }
+  },
+  {
+   "key": "DZH318Z0M7ZD/0099|611cf350-7095-5783-bce7-67b0de3a313e|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "DC48edsv6",
+    "productName": "Virtual Machines DCedsv6 Series",
+    "retailPrice": 3.582,
+    "savingsPlanPrice": 2.47158,
+    "skuName": "DC48edsv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 3.582
+   },
+   "after": {
+    "retailPrice": 3.582,
+    "unitPrice": 3.582,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines DCedsv6 Series",
+    "skuName": "DC48edsv6",
+    "meterName": "DC48edsv6",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 3.349
+   }
+  },
+  {
+   "key": "DZH318Z0M7Z3/0021|6dbc443f-fb20-59ae-93ac-2db70a2d2d23|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "DC48esv6",
+    "productName": "Virtual Machines DCesv6 Series",
+    "retailPrice": 2.898,
+    "savingsPlanPrice": 1.99962,
+    "skuName": "DC48esv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 2.898
+   },
+   "after": {
+    "retailPrice": 2.898,
+    "unitPrice": 2.898,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines DCesv6 Series",
+    "skuName": "DC48esv6",
+    "meterName": "DC48esv6",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 2.7098
+   }
+  },
+  {
+   "key": "DZH318Z0M7XV/009K|6e4e7057-a53b-5726-9fad-6690b5a4ec39|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "EC2esv6",
+    "productName": "Virtual Machines ECesv6 Series",
+    "retailPrice": 0.16,
+    "savingsPlanPrice": 0.1088,
+    "skuName": "EC2esv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.16
+   },
+   "after": {
+    "retailPrice": 0.16,
+    "unitPrice": 0.16,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines ECesv6 Series",
+    "skuName": "EC2esv6",
+    "meterName": "EC2esv6",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 0.1496
+   }
+  },
+  {
+   "key": "DZH318Z0M7ZD/009D|6fedda44-d2ec-5e50-a59a-5758818b0a5b|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "DC64edsv6",
+    "productName": "Virtual Machines DCedsv6 Series",
+    "retailPrice": 4.776,
+    "savingsPlanPrice": 3.29544,
+    "skuName": "DC64edsv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 4.776
+   },
+   "after": {
+    "retailPrice": 4.776,
+    "unitPrice": 4.776,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines DCedsv6 Series",
+    "skuName": "DC64edsv6",
+    "meterName": "DC64edsv6",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 4.46505
+   }
+  },
+  {
+   "key": "DZH318Z0FG7F/003G|73abe91d-77e5-5266-834b-4209d9277ed6|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "DC48asv6",
+    "productName": "Virtual Machines DCasv6 series",
+    "retailPrice": 2.635,
+    "savingsPlanPrice": 1.87085,
+    "skuName": "DC48asv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 2.635
+   },
+   "after": {
+    "retailPrice": 2.635,
+    "unitPrice": 2.635,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines DCasv6 series",
+    "skuName": "DC48asv6",
+    "meterName": "DC48asv6",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 2.46415
+   }
+  },
+  {
+   "key": "DZH318Z0F6ZS/008B|76f17045-43b3-50f2-afd2-f3a071d36ad3|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "EC16adsv6",
+    "productName": "Virtual Machines ECadsv6 series Linux",
+    "retailPrice": 1.403,
+    "savingsPlanPrice": 0.95404,
+    "skuName": "EC16adsv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 1.403
+   },
+   "after": {
+    "retailPrice": 1.403,
+    "unitPrice": 1.403,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines ECadsv6 series Linux",
+    "skuName": "EC16adsv6",
+    "meterName": "EC16adsv6",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 1.3124
+   }
+  },
+  {
+   "key": "DZH318Z0F6ZS/0074|79b96624-9d31-58d5-932b-cf61878306c1|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "EC32adsv6",
+    "productName": "Virtual Machines ECadsv6 series Linux",
+    "retailPrice": 2.806,
+    "savingsPlanPrice": 1.90808,
+    "skuName": "EC32adsv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 2.806
+   },
+   "after": {
+    "retailPrice": 2.806,
+    "unitPrice": 2.806,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines ECadsv6 series Linux",
+    "skuName": "EC32adsv6",
+    "meterName": "EC32adsv6",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 2.62395
+   }
+  },
+  {
+   "key": "DZH318Z0M7ZD/00BN|7d536fc1-aab7-5f85-88de-be5b511de12b|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "DC2edsv6",
+    "productName": "Virtual Machines DCedsv6 Series",
+    "retailPrice": 0.149,
+    "savingsPlanPrice": 0.10281,
+    "skuName": "DC2edsv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.149
+   },
+   "after": {
+    "retailPrice": 0.149,
+    "unitPrice": 0.149,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines DCedsv6 Series",
+    "skuName": "DC2edsv6",
+    "meterName": "DC2edsv6",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 0.1394
+   }
+  },
+  {
+   "key": "DZH318Z0M7Z3/0028|7f399dbc-c1dc-5f44-9e1d-09bd24e7edc9|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "DC2esv6",
+    "productName": "Virtual Machines DCesv6 Series",
+    "retailPrice": 0.121,
+    "savingsPlanPrice": 0.08349,
+    "skuName": "DC2esv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.121
+   },
+   "after": {
+    "retailPrice": 0.121,
+    "unitPrice": 0.121,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines DCesv6 Series",
+    "skuName": "DC2esv6",
+    "meterName": "DC2esv6",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 0.11305
+   }
+  },
+  {
+   "key": "DZH318Z0M7XV/009F|82228295-5a49-5083-9f84-4439d86ce91a|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "EC128esv6",
+    "productName": "Virtual Machines ECesv6 Series",
+    "retailPrice": 10.214,
+    "savingsPlanPrice": 6.94552,
+    "skuName": "EC128esv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 10.214
+   },
+   "after": {
+    "retailPrice": 10.214,
+    "unitPrice": 10.214,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines ECesv6 Series",
+    "skuName": "EC128esv6",
+    "meterName": "EC128esv6",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 9.5506
+   }
+  },
+  {
+   "key": "DZH318Z0FG7F/003B|8a05ff42-4488-564c-88a5-7398656e6a13|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "DC4asv6",
+    "productName": "Virtual Machines DCasv6 series",
+    "retailPrice": 0.22,
+    "savingsPlanPrice": 0.1562,
+    "skuName": "DC4asv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.22
+   },
+   "after": {
+    "retailPrice": 0.22,
+    "unitPrice": 0.22,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines DCasv6 series",
+    "skuName": "DC4asv6",
+    "meterName": "DC4asv6",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 0.2057
+   }
+  },
+  {
+   "key": "DZH318Z0F6ZF/004P|925d9be6-8886-5849-ac84-d39a13a713ae|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "EC4asv6",
+    "productName": "Virtual Machines ECasv6 series",
+    "retailPrice": 0.288,
+    "savingsPlanPrice": 0.19584,
+    "skuName": "EC4asv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.288
+   },
+   "after": {
+    "retailPrice": 0.288,
+    "unitPrice": 0.288,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines ECasv6 series",
+    "skuName": "EC4asv6",
+    "meterName": "EC4asv6",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 0.26945
+   }
+  },
+  {
+   "key": "DZH318Z0FG7C/008L|941a0a69-9f2b-5479-8dec-7b0a6aeda5f7|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "DC64adsv6",
+    "productName": "Virtual Machines DCadsv6 series",
+    "retailPrice": 4.416,
+    "savingsPlanPrice": 3.13536,
+    "skuName": "DC64adsv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 4.416
+   },
+   "after": {
+    "retailPrice": 4.416,
+    "unitPrice": 4.416,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines DCadsv6 series",
+    "skuName": "DC64adsv6",
+    "meterName": "DC64adsv6",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 4.1293
+   }
+  },
+  {
+   "key": "DZH318Z0M7XV/005Z|96cd0391-e305-5340-bd9d-87389ee41c5d|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "EC16esv6",
+    "productName": "Virtual Machines ECesv6 Series",
+    "retailPrice": 1.277,
+    "savingsPlanPrice": 0.86836,
+    "skuName": "EC16esv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 1.277
+   },
+   "after": {
+    "retailPrice": 1.277,
+    "unitPrice": 1.277,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines ECesv6 Series",
+    "skuName": "EC16esv6",
+    "meterName": "EC16esv6",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 1.1934
+   }
+  },
+  {
+   "key": "DZH318Z0M7Z3/0022|9c662639-4815-51e1-b7c6-a966ba2b9c66|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "DC128esv6",
+    "productName": "Virtual Machines DCesv6 Series",
+    "retailPrice": 7.729,
+    "savingsPlanPrice": 5.33301,
+    "skuName": "DC128esv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 7.729
+   },
+   "after": {
+    "retailPrice": 7.729,
+    "unitPrice": 7.729,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines DCesv6 Series",
+    "skuName": "DC128esv6",
+    "meterName": "DC128esv6",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 7.2267
+   }
+  },
+  {
+   "key": "DZH318Z0F6ZF/005R|9fc4a9ce-7fad-5414-b780-f3dfcd77aa6d|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "EC8asv6",
+    "productName": "Virtual Machines ECasv6 series",
+    "retailPrice": 0.577,
+    "savingsPlanPrice": 0.39236,
+    "skuName": "EC8asv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.577
+   },
+   "after": {
+    "retailPrice": 0.577,
+    "unitPrice": 0.577,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines ECasv6 series",
+    "skuName": "EC8asv6",
+    "meterName": "EC8asv6",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 0.5389
+   }
+  },
+  {
+   "key": "DZH318Z0F6ZS/008J|a249ccd7-5382-593f-9d16-be8a896109bf|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "EC4adsv6",
+    "productName": "Virtual Machines ECadsv6 series Linux",
+    "retailPrice": 0.351,
+    "savingsPlanPrice": 0.23868,
+    "skuName": "EC4adsv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.351
+   },
+   "after": {
+    "retailPrice": 0.351,
+    "unitPrice": 0.351,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines ECadsv6 series Linux",
+    "skuName": "EC4adsv6",
+    "meterName": "EC4adsv6",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 0.3281
+   }
+  },
+  {
+   "key": "DZH318Z0M7XV/005B|a67fd913-c21a-5c88-b6fb-c8bdc77cb92e|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "EC8esv6",
+    "productName": "Virtual Machines ECesv6 Series",
+    "retailPrice": 0.638,
+    "savingsPlanPrice": 0.43384,
+    "skuName": "EC8esv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.638
+   },
+   "after": {
+    "retailPrice": 0.638,
+    "unitPrice": 0.638,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines ECesv6 Series",
+    "skuName": "EC8esv6",
+    "meterName": "EC8esv6",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 0.5967
+   }
+  },
+  {
+   "key": "DZH318Z0F6ZF/005T|a83b7017-e4ec-581b-89a6-4a4c61ac7909|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "EC32asv6",
+    "productName": "Virtual Machines ECasv6 series",
+    "retailPrice": 2.307,
+    "savingsPlanPrice": 1.56876,
+    "skuName": "EC32asv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 2.307
+   },
+   "after": {
+    "retailPrice": 2.307,
+    "unitPrice": 2.307,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines ECasv6 series",
+    "skuName": "EC32asv6",
+    "meterName": "EC32asv6",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 2.1573
+   }
+  },
+  {
+   "key": "DZH318Z0FG7F/003R|aff3bc04-c7a3-5c33-9579-d89cbbeaabb2|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "DC96asv6",
+    "productName": "Virtual Machines DCasv6 series",
+    "retailPrice": 5.27,
+    "savingsPlanPrice": 3.7417,
+    "skuName": "DC96asv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 5.27
+   },
+   "after": {
+    "retailPrice": 5.27,
+    "unitPrice": 5.27,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines DCasv6 series",
+    "skuName": "DC96asv6",
+    "meterName": "DC96asv6",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 4.92745
+   }
+  },
+  {
+   "key": "DZH318Z0F6ZF/0057|b518929c-1601-549a-a2e7-4a6618ac32a1|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "EC2asv6",
+    "productName": "Virtual Machines ECasv6 series",
+    "retailPrice": 0.144,
+    "savingsPlanPrice": 0.09792,
+    "skuName": "EC2asv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.144
+   },
+   "after": {
+    "retailPrice": 0.144,
+    "unitPrice": 0.144,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines ECasv6 series",
+    "skuName": "EC2asv6",
+    "meterName": "EC2asv6",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 0.13515
+   }
+  },
+  {
+   "key": "DZH318Z0M7XV/003R|bfe2083d-8e9d-54c6-bc9d-f6d1e459c53b|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "EC64esv6",
+    "productName": "Virtual Machines ECesv6 Series",
+    "retailPrice": 5.107,
+    "savingsPlanPrice": 3.47276,
+    "skuName": "EC64esv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 5.107
+   },
+   "after": {
+    "retailPrice": 5.107,
+    "unitPrice": 5.107,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines ECesv6 Series",
+    "skuName": "EC64esv6",
+    "meterName": "EC64esv6",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 4.7753
+   }
+  },
+  {
+   "key": "DZH318Z0M7ZD/0098|c040b625-3f7c-5961-9c3e-641bebb6663b|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "DC4edsv6",
+    "productName": "Virtual Machines DCedsv6 Series",
+    "retailPrice": 0.298,
+    "savingsPlanPrice": 0.20562,
+    "skuName": "DC4edsv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.298
+   },
+   "after": {
+    "retailPrice": 0.298,
+    "unitPrice": 0.298,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines DCedsv6 Series",
+    "skuName": "DC4edsv6",
+    "meterName": "DC4edsv6",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 0.2788
+   }
+  },
+  {
+   "key": "DZH318Z0M7XV/003S|c60e68bc-cb5c-5bd2-a7bc-48b0da1d3483|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "EC48esv6",
+    "productName": "Virtual Machines ECesv6 Series",
+    "retailPrice": 3.83,
+    "savingsPlanPrice": 2.6044,
+    "skuName": "EC48esv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 3.83
+   },
+   "after": {
+    "retailPrice": 3.83,
+    "unitPrice": 3.83,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines ECesv6 Series",
+    "skuName": "EC48esv6",
+    "meterName": "EC48esv6",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 3.58105
+   }
+  },
+  {
+   "key": "DZH318Z0F6ZF/004L|c7961a27-5432-521e-8aa6-58b3d2586c30|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "EC16asv6",
+    "productName": "Virtual Machines ECasv6 series",
+    "retailPrice": 1.154,
+    "savingsPlanPrice": 0.78472,
+    "skuName": "EC16asv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 1.154
+   },
+   "after": {
+    "retailPrice": 1.154,
+    "unitPrice": 1.154,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines ECasv6 series",
+    "skuName": "EC16asv6",
+    "meterName": "EC16asv6",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 1.07865
+   }
+  },
+  {
+   "key": "DZH318Z0F6ZF/0050|c935dc4a-5821-56b4-bd8e-337e31c4ac62|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "EC48asv6",
+    "productName": "Virtual Machines ECasv6 series",
+    "retailPrice": 3.461,
+    "savingsPlanPrice": 2.35348,
+    "skuName": "EC48asv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 3.461
+   },
+   "after": {
+    "retailPrice": 3.461,
+    "unitPrice": 3.461,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines ECasv6 series",
+    "skuName": "EC48asv6",
+    "meterName": "EC48asv6",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 3.23595
+   }
+  },
+  {
+   "key": "DZH318Z0M7ZD/009L|d4ea8783-f8c2-552a-a315-7357b2c72603|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "DC16edsv6",
+    "productName": "Virtual Machines DCedsv6 Series",
+    "retailPrice": 1.194,
+    "savingsPlanPrice": 0.82386,
+    "skuName": "DC16edsv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 1.194
+   },
+   "after": {
+    "retailPrice": 1.194,
+    "unitPrice": 1.194,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines DCedsv6 Series",
+    "skuName": "DC16edsv6",
+    "meterName": "DC16edsv6",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 1.11605
+   }
+  },
+  {
+   "key": "DZH318Z0M7XV/005M|dc6209c1-48ce-5649-b6b7-b86c16bda926|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "EC4esv6",
+    "productName": "Virtual Machines ECesv6 Series",
+    "retailPrice": 0.319,
+    "savingsPlanPrice": 0.21692,
+    "skuName": "EC4esv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.319
+   },
+   "after": {
+    "retailPrice": 0.319,
+    "unitPrice": 0.319,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines ECesv6 Series",
+    "skuName": "EC4esv6",
+    "meterName": "EC4esv6",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 0.29835
+   }
+  },
+  {
+   "key": "DZH318Z0FG7F/003T|e388f501-da0c-5508-b216-60b88e851faa|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "DC8asv6",
+    "productName": "Virtual Machines DCasv6 series",
+    "retailPrice": 0.439,
+    "savingsPlanPrice": 0.31169,
+    "skuName": "DC8asv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.439
+   },
+   "after": {
+    "retailPrice": 0.439,
+    "unitPrice": 0.439,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines DCasv6 series",
+    "skuName": "DC8asv6",
+    "meterName": "DC8asv6",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 0.41055
+   }
+  }
+ ]
+}

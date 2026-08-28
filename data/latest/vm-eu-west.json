@@ -44917,7 +44917,7 @@
 "meterName": "EC96asv6",
 "productName": "Virtual Machines ECasv6 series",
 "retailPrice": 6.922,
-"savingsPlanPrice": 4.70696,
+"savingsPlanPrice": 6.4719,
 "skuName": "EC96asv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 6.922
@@ -44936,7 +44936,7 @@
 "meterName": "EC16asv6",
 "productName": "Virtual Machines ECasv6 series",
 "retailPrice": 1.154,
-"savingsPlanPrice": 0.78472,
+"savingsPlanPrice": 1.07865,
 "skuName": "EC16asv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 1.154
@@ -44946,7 +44946,7 @@
 "meterName": "EC4asv6",
 "productName": "Virtual Machines ECasv6 series",
 "retailPrice": 0.288,
-"savingsPlanPrice": 0.19584,
+"savingsPlanPrice": 0.26945,
 "skuName": "EC4asv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.288
@@ -44984,7 +44984,7 @@
 "meterName": "EC48asv6",
 "productName": "Virtual Machines ECasv6 series",
 "retailPrice": 3.461,
-"savingsPlanPrice": 2.35348,
+"savingsPlanPrice": 3.23595,
 "skuName": "EC48asv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 3.461
@@ -45021,7 +45021,7 @@
 "meterName": "EC2asv6",
 "productName": "Virtual Machines ECasv6 series",
 "retailPrice": 0.144,
-"savingsPlanPrice": 0.09792,
+"savingsPlanPrice": 0.13515,
 "skuName": "EC2asv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.144
@@ -45049,7 +45049,7 @@
 "meterName": "EC8asv6",
 "productName": "Virtual Machines ECasv6 series",
 "retailPrice": 0.577,
-"savingsPlanPrice": 0.39236,
+"savingsPlanPrice": 0.5389,
 "skuName": "EC8asv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.577
@@ -45068,7 +45068,7 @@
 "meterName": "EC32asv6",
 "productName": "Virtual Machines ECasv6 series",
 "retailPrice": 2.307,
-"savingsPlanPrice": 1.56876,
+"savingsPlanPrice": 2.1573,
 "skuName": "EC32asv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 2.307
@@ -45143,7 +45143,7 @@
 "meterName": "EC32adsv6",
 "productName": "Virtual Machines ECadsv6 series Linux",
 "retailPrice": 2.806,
-"savingsPlanPrice": 1.90808,
+"savingsPlanPrice": 2.62395,
 "skuName": "EC32adsv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 2.806
@@ -45245,7 +45245,7 @@
 "meterName": "EC16adsv6",
 "productName": "Virtual Machines ECadsv6 series Linux",
 "retailPrice": 1.403,
-"savingsPlanPrice": 0.95404,
+"savingsPlanPrice": 1.3124,
 "skuName": "EC16adsv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 1.403
@@ -45255,7 +45255,7 @@
 "meterName": "EC4adsv6",
 "productName": "Virtual Machines ECadsv6 series Linux",
 "retailPrice": 0.351,
-"savingsPlanPrice": 0.23868,
+"savingsPlanPrice": 0.3281,
 "skuName": "EC4adsv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.351
@@ -47215,7 +47215,7 @@
 "meterName": "DC64adsv6",
 "productName": "Virtual Machines DCadsv6 series",
 "retailPrice": 4.416,
-"savingsPlanPrice": 3.13536,
+"savingsPlanPrice": 4.1293,
 "skuName": "DC64adsv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 4.416
@@ -47645,7 +47645,7 @@
 "meterName": "DC4asv6",
 "productName": "Virtual Machines DCasv6 series",
 "retailPrice": 0.22,
-"savingsPlanPrice": 0.1562,
+"savingsPlanPrice": 0.2057,
 "skuName": "DC4asv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.22
@@ -47664,7 +47664,7 @@
 "meterName": "DC48asv6",
 "productName": "Virtual Machines DCasv6 series",
 "retailPrice": 2.635,
-"savingsPlanPrice": 1.87085,
+"savingsPlanPrice": 2.46415,
 "skuName": "DC48asv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 2.635
@@ -47719,7 +47719,7 @@
 "meterName": "DC96asv6",
 "productName": "Virtual Machines DCasv6 series",
 "retailPrice": 5.27,
-"savingsPlanPrice": 3.7417,
+"savingsPlanPrice": 4.92745,
 "skuName": "DC96asv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 5.27
@@ -47738,7 +47738,7 @@
 "meterName": "DC8asv6",
 "productName": "Virtual Machines DCasv6 series",
 "retailPrice": 0.439,
-"savingsPlanPrice": 0.31169,
+"savingsPlanPrice": 0.41055,
 "skuName": "DC8asv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.439
@@ -66711,7 +66711,7 @@
 "meterName": "EC64esv6",
 "productName": "Virtual Machines ECesv6 Series",
 "retailPrice": 5.107,
-"savingsPlanPrice": 3.47276,
+"savingsPlanPrice": 4.7753,
 "skuName": "EC64esv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 5.107
@@ -66721,7 +66721,7 @@
 "meterName": "EC48esv6",
 "productName": "Virtual Machines ECesv6 Series",
 "retailPrice": 3.83,
-"savingsPlanPrice": 2.6044,
+"savingsPlanPrice": 3.58105,
 "skuName": "EC48esv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 3.83
@@ -66767,7 +66767,7 @@
 "meterName": "EC8esv6",
 "productName": "Virtual Machines ECesv6 Series",
 "retailPrice": 0.638,
-"savingsPlanPrice": 0.43384,
+"savingsPlanPrice": 0.5967,
 "skuName": "EC8esv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.638
@@ -66786,7 +66786,7 @@
 "meterName": "EC4esv6",
 "productName": "Virtual Machines ECesv6 Series",
 "retailPrice": 0.319,
-"savingsPlanPrice": 0.21692,
+"savingsPlanPrice": 0.29835,
 "skuName": "EC4esv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.319
@@ -66815,7 +66815,7 @@
 "meterName": "EC16esv6",
 "productName": "Virtual Machines ECesv6 Series",
 "retailPrice": 1.277,
-"savingsPlanPrice": 0.86836,
+"savingsPlanPrice": 1.1934,
 "skuName": "EC16esv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 1.277
@@ -66843,7 +66843,7 @@
 "meterName": "EC128esv6",
 "productName": "Virtual Machines ECesv6 Series",
 "retailPrice": 10.214,
-"savingsPlanPrice": 6.94552,
+"savingsPlanPrice": 9.5506,
 "skuName": "EC128esv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 10.214
@@ -66853,7 +66853,7 @@
 "meterName": "EC2esv6",
 "productName": "Virtual Machines ECesv6 Series",
 "retailPrice": 0.16,
-"savingsPlanPrice": 0.1088,
+"savingsPlanPrice": 0.1496,
 "skuName": "EC2esv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.16
@@ -67205,7 +67205,7 @@
 "meterName": "DC48esv6",
 "productName": "Virtual Machines DCesv6 Series",
 "retailPrice": 2.898,
-"savingsPlanPrice": 1.99962,
+"savingsPlanPrice": 2.7098,
 "skuName": "DC48esv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 2.898
@@ -67215,7 +67215,7 @@
 "meterName": "DC128esv6",
 "productName": "Virtual Machines DCesv6 Series",
 "retailPrice": 7.729,
-"savingsPlanPrice": 5.33301,
+"savingsPlanPrice": 7.2267,
 "skuName": "DC128esv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 7.729
@@ -67263,7 +67263,7 @@
 "meterName": "DC2esv6",
 "productName": "Virtual Machines DCesv6 Series",
 "retailPrice": 0.121,
-"savingsPlanPrice": 0.08349,
+"savingsPlanPrice": 0.11305,
 "skuName": "DC2esv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.121
@@ -67348,7 +67348,7 @@
 "meterName": "DC96esv6",
 "productName": "Virtual Machines DCesv6 Series",
 "retailPrice": 5.796,
-"savingsPlanPrice": 3.99924,
+"savingsPlanPrice": 5.4196,
 "skuName": "DC96esv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 5.796
@@ -67431,7 +67431,7 @@
 "meterName": "DC4edsv6",
 "productName": "Virtual Machines DCedsv6 Series",
 "retailPrice": 0.298,
-"savingsPlanPrice": 0.20562,
+"savingsPlanPrice": 0.2788,
 "skuName": "DC4edsv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.298
@@ -67441,7 +67441,7 @@
 "meterName": "DC48edsv6",
 "productName": "Virtual Machines DCedsv6 Series",
 "retailPrice": 3.582,
-"savingsPlanPrice": 2.47158,
+"savingsPlanPrice": 3.349,
 "skuName": "DC48edsv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 3.582
@@ -67451,7 +67451,7 @@
 "meterName": "DC64edsv6",
 "productName": "Virtual Machines DCedsv6 Series",
 "retailPrice": 4.776,
-"savingsPlanPrice": 3.29544,
+"savingsPlanPrice": 4.46505,
 "skuName": "DC64edsv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 4.776
@@ -67489,7 +67489,7 @@
 "meterName": "DC16edsv6",
 "productName": "Virtual Machines DCedsv6 Series",
 "retailPrice": 1.194,
-"savingsPlanPrice": 0.82386,
+"savingsPlanPrice": 1.11605,
 "skuName": "DC16edsv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 1.194
@@ -67527,7 +67527,7 @@
 "meterName": "DC2edsv6",
 "productName": "Virtual Machines DCedsv6 Series",
 "retailPrice": 0.149,
-"savingsPlanPrice": 0.10281,
+"savingsPlanPrice": 0.1394,
 "skuName": "DC2edsv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.149
@@ -67537,7 +67537,7 @@
 "meterName": "DC96edsv6",
 "productName": "Virtual Machines DCedsv6 Series",
 "retailPrice": 7.164,
-"savingsPlanPrice": 4.94316,
+"savingsPlanPrice": 6.698,
 "skuName": "DC96edsv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 7.164

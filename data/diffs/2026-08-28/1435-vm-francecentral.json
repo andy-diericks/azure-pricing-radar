@@ -1,0 +1,353 @@
+{
+ "scope": "vm-francecentral",
+ "at": "2026-08-28T14:35:29.069839+00:00",
+ "added": [],
+ "removed": [],
+ "changed": [
+  {
+   "key": "DZH318Z0F6ZF/00M5|019a4c65-54cb-51cf-80a3-7a3a34686867|Consumption|",
+   "before": {
+    "armRegionName": "francecentral",
+    "meterName": "EC32asv6",
+    "productName": "Virtual Machines ECasv6 series",
+    "retailPrice": 2.24,
+    "savingsPlanPrice": 1.5232,
+    "skuName": "EC32asv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 2.24
+   },
+   "after": {
+    "retailPrice": 2.24,
+    "unitPrice": 2.24,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines ECasv6 series",
+    "skuName": "EC32asv6",
+    "meterName": "EC32asv6",
+    "armRegionName": "francecentral",
+    "savingsPlanPrice": 2.0944
+   }
+  },
+  {
+   "key": "DZH318Z0FG7F/010J|02beb0b3-fbd6-545d-aace-ea1f7aa44742|Consumption|",
+   "before": {
+    "armRegionName": "francecentral",
+    "meterName": "DC96asv6",
+    "productName": "Virtual Machines DCasv6 series",
+    "retailPrice": 5.117,
+    "savingsPlanPrice": 3.63307,
+    "skuName": "DC96asv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 5.117
+   },
+   "after": {
+    "retailPrice": 5.117,
+    "unitPrice": 5.117,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines DCasv6 series",
+    "skuName": "DC96asv6",
+    "meterName": "DC96asv6",
+    "armRegionName": "francecentral",
+    "savingsPlanPrice": 4.7838
+   }
+  },
+  {
+   "key": "DZH318Z0F6ZF/00M9|0b3e07ac-3a75-5c89-a091-c71cfc3c24a8|Consumption|",
+   "before": {
+    "armRegionName": "francecentral",
+    "meterName": "EC16asv6",
+    "productName": "Virtual Machines ECasv6 series",
+    "retailPrice": 1.12,
+    "savingsPlanPrice": 0.7616,
+    "skuName": "EC16asv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 1.12
+   },
+   "after": {
+    "retailPrice": 1.12,
+    "unitPrice": 1.12,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines ECasv6 series",
+    "skuName": "EC16asv6",
+    "meterName": "EC16asv6",
+    "armRegionName": "francecentral",
+    "savingsPlanPrice": 1.0472
+   }
+  },
+  {
+   "key": "DZH318Z0F6ZF/00LT|18bf1448-6b38-5a9c-8ed9-785dda9c46c3|Consumption|",
+   "before": {
+    "armRegionName": "francecentral",
+    "meterName": "EC2asv6",
+    "productName": "Virtual Machines ECasv6 series",
+    "retailPrice": 0.14,
+    "savingsPlanPrice": 0.0952,
+    "skuName": "EC2asv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.14
+   },
+   "after": {
+    "retailPrice": 0.14,
+    "unitPrice": 0.14,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines ECasv6 series",
+    "skuName": "EC2asv6",
+    "meterName": "EC2asv6",
+    "armRegionName": "francecentral",
+    "savingsPlanPrice": 0.1309
+   }
+  },
+  {
+   "key": "DZH318Z0F6ZS/016P|1b4bd1f2-c8cd-5886-b7ac-a6476b086248|Consumption|",
+   "before": {
+    "armRegionName": "francecentral",
+    "meterName": "EC4adsv6",
+    "productName": "Virtual Machines ECadsv6 series Linux",
+    "retailPrice": 0.341,
+    "savingsPlanPrice": 0.23188,
+    "skuName": "EC4adsv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.341
+   },
+   "after": {
+    "retailPrice": 0.341,
+    "unitPrice": 0.341,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines ECadsv6 series Linux",
+    "skuName": "EC4adsv6",
+    "meterName": "EC4adsv6",
+    "armRegionName": "francecentral",
+    "savingsPlanPrice": 0.31875
+   }
+  },
+  {
+   "key": "DZH318Z0FG7C/00FV|574be664-c194-5bec-ae67-791ea41e4656|Consumption|",
+   "before": {
+    "armRegionName": "francecentral",
+    "meterName": "DC2adsv6",
+    "productName": "Virtual Machines DCadsv6 series",
+    "retailPrice": 0.134,
+    "savingsPlanPrice": 0.09514,
+    "skuName": "DC2adsv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.134
+   },
+   "after": {
+    "retailPrice": 0.134,
+    "unitPrice": 0.134,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines DCadsv6 series",
+    "skuName": "DC2adsv6",
+    "meterName": "DC2adsv6",
+    "armRegionName": "francecentral",
+    "savingsPlanPrice": 0.12495
+   }
+  },
+  {
+   "key": "DZH318Z0FG7F/0110|5b114c11-2b6d-50cc-9f28-d135eac003c6|Consumption|",
+   "before": {
+    "armRegionName": "francecentral",
+    "meterName": "DC48asv6",
+    "productName": "Virtual Machines DCasv6 series",
+    "retailPrice": 2.558,
+    "savingsPlanPrice": 1.81618,
+    "skuName": "DC48asv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 2.558
+   },
+   "after": {
+    "retailPrice": 2.558,
+    "unitPrice": 2.558,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines DCasv6 series",
+    "skuName": "DC48asv6",
+    "meterName": "DC48asv6",
+    "armRegionName": "francecentral",
+    "savingsPlanPrice": 2.3919
+   }
+  },
+  {
+   "key": "DZH318Z0F6ZS/0164|5b3da6f2-9aa8-53d6-88fc-646c3afd4967|Consumption|",
+   "before": {
+    "armRegionName": "francecentral",
+    "meterName": "EC96adsv6",
+    "productName": "Virtual Machines ECadsv6 series Linux",
+    "retailPrice": 8.179,
+    "savingsPlanPrice": 5.56172,
+    "skuName": "EC96adsv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 8.179
+   },
+   "after": {
+    "retailPrice": 8.179,
+    "unitPrice": 8.179,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines ECadsv6 series Linux",
+    "skuName": "EC96adsv6",
+    "meterName": "EC96adsv6",
+    "armRegionName": "francecentral",
+    "savingsPlanPrice": 7.64745
+   }
+  },
+  {
+   "key": "DZH318Z0F6ZF/00LR|620b979e-e642-521c-b250-fa5e2430732e|Consumption|",
+   "before": {
+    "armRegionName": "francecentral",
+    "meterName": "EC48asv6",
+    "productName": "Virtual Machines ECasv6 series",
+    "retailPrice": 3.36,
+    "savingsPlanPrice": 2.2848,
+    "skuName": "EC48asv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 3.36
+   },
+   "after": {
+    "retailPrice": 3.36,
+    "unitPrice": 3.36,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines ECasv6 series",
+    "skuName": "EC48asv6",
+    "meterName": "EC48asv6",
+    "armRegionName": "francecentral",
+    "savingsPlanPrice": 3.1416
+   }
+  },
+  {
+   "key": "DZH318Z0F6ZS/016J|6248423e-3efd-5112-9851-14a85973af4a|Consumption|",
+   "before": {
+    "armRegionName": "francecentral",
+    "meterName": "EC8adsv6",
+    "productName": "Virtual Machines ECadsv6 series Linux",
+    "retailPrice": 0.682,
+    "savingsPlanPrice": 0.46376,
+    "skuName": "EC8adsv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.682
+   },
+   "after": {
+    "retailPrice": 0.682,
+    "unitPrice": 0.682,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines ECadsv6 series Linux",
+    "skuName": "EC8adsv6",
+    "meterName": "EC8adsv6",
+    "armRegionName": "francecentral",
+    "savingsPlanPrice": 0.6375
+   }
+  },
+  {
+   "key": "DZH318Z0FG7C/00FN|6922f4c0-3bae-56c5-946c-4e7955762998|Consumption|",
+   "before": {
+    "armRegionName": "francecentral",
+    "meterName": "DC64adsv6",
+    "productName": "Virtual Machines DCadsv6 series",
+    "retailPrice": 4.288,
+    "savingsPlanPrice": 3.04448,
+    "skuName": "DC64adsv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 4.288
+   },
+   "after": {
+    "retailPrice": 4.288,
+    "unitPrice": 4.288,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines DCadsv6 series",
+    "skuName": "DC64adsv6",
+    "meterName": "DC64adsv6",
+    "armRegionName": "francecentral",
+    "savingsPlanPrice": 4.00945
+   }
+  },
+  {
+   "key": "DZH318Z0F6ZF/00MJ|7011770a-9c14-5939-951a-a6d6dd6ce17d|Consumption|",
+   "before": {
+    "armRegionName": "francecentral",
+    "meterName": "EC8asv6",
+    "productName": "Virtual Machines ECasv6 series",
+    "retailPrice": 0.56,
+    "savingsPlanPrice": 0.3808,
+    "skuName": "EC8asv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.56
+   },
+   "after": {
+    "retailPrice": 0.56,
+    "unitPrice": 0.56,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines ECasv6 series",
+    "skuName": "EC8asv6",
+    "meterName": "EC8asv6",
+    "armRegionName": "francecentral",
+    "savingsPlanPrice": 0.5236
+   }
+  },
+  {
+   "key": "DZH318Z0FG7F/010R|76ab46ad-b748-5bfe-a54d-bf11ba459095|Consumption|",
+   "before": {
+    "armRegionName": "francecentral",
+    "meterName": "DC16asv6",
+    "productName": "Virtual Machines DCasv6 series",
+    "retailPrice": 0.853,
+    "savingsPlanPrice": 0.60563,
+    "skuName": "DC16asv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.853
+   },
+   "after": {
+    "retailPrice": 0.853,
+    "unitPrice": 0.853,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines DCasv6 series",
+    "skuName": "DC16asv6",
+    "meterName": "DC16asv6",
+    "armRegionName": "francecentral",
+    "savingsPlanPrice": 0.7973
+   }
+  },
+  {
+   "key": "DZH318Z0F6ZS/0169|7710b4bb-8cbc-5dd1-8aba-8f6432cd581a|Consumption|",
+   "before": {
+    "armRegionName": "francecentral",
+    "meterName": "EC64adsv6",
+    "productName": "Virtual Machines ECadsv6 series Linux",
+    "retailPrice": 5.453,
+    "savingsPlanPrice": 3.70804,
+    "skuName": "EC64adsv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 5.453
+   },
+   "after": {
+    "retailPrice": 5.453,
+    "unitPrice": 5.453,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines ECadsv6 series Linux",
+    "skuName": "EC64adsv6",
+    "meterName": "EC64adsv6",
+    "armRegionName": "francecentral",
+    "savingsPlanPrice": 5.0983
+   }
+  },
+  {
+   "key": "DZH318Z0FG7C/00FH|f07fbaa8-7261-51c2-9673-ddb6a5d260ff|Consumption|",
+   "before": {
+    "armRegionName": "francecentral",
+    "meterName": "DC96adsv6",
+    "productName": "Virtual Machines DCadsv6 series",
+    "retailPrice": 6.432,
+    "savingsPlanPrice": 4.56672,
+    "skuName": "DC96adsv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 6.432
+   },
+   "after": {
+    "retailPrice": 6.432,
+    "unitPrice": 6.432,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines DCadsv6 series",
+    "skuName": "DC96adsv6",
+    "meterName": "DC96adsv6",
+    "armRegionName": "francecentral",
+    "savingsPlanPrice": 6.01375
+   }
+  }
+ ]
+}

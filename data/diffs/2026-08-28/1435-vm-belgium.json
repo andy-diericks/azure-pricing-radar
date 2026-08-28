@@ -1,0 +1,261 @@
+{
+ "scope": "vm-belgium",
+ "at": "2026-08-28T14:35:29.069839+00:00",
+ "added": [],
+ "removed": [],
+ "changed": [
+  {
+   "key": "DZH318Z0FG7F/032T|450c0296-dbba-56e9-877b-c95aaf3ea6c8|Consumption|",
+   "before": {
+    "armRegionName": "belgiumcentral",
+    "meterName": "DC48asv6",
+    "productName": "Virtual Machines DCasv6 series",
+    "retailPrice": 2.64,
+    "savingsPlanPrice": 1.8744,
+    "skuName": "DC48asv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 2.64
+   },
+   "after": {
+    "retailPrice": 2.64,
+    "unitPrice": 2.64,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines DCasv6 series",
+    "skuName": "DC48asv6",
+    "meterName": "DC48asv6",
+    "armRegionName": "belgiumcentral",
+    "savingsPlanPrice": 2.4684
+   }
+  },
+  {
+   "key": "DZH318Z0F6ZF/0322|47fab7c6-cb87-5bcc-96ea-e51a4078cd4d|Consumption|",
+   "before": {
+    "armRegionName": "belgiumcentral",
+    "meterName": "EC32asv6",
+    "productName": "Virtual Machines ECasv6 series",
+    "retailPrice": 2.31,
+    "savingsPlanPrice": 1.6401,
+    "skuName": "EC32asv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 2.31
+   },
+   "after": {
+    "retailPrice": 2.31,
+    "unitPrice": 2.31,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines ECasv6 series",
+    "skuName": "EC32asv6",
+    "meterName": "EC32asv6",
+    "armRegionName": "belgiumcentral",
+    "savingsPlanPrice": 2.15985
+   }
+  },
+  {
+   "key": "DZH318Z0FG7F/033K|48008e4e-550b-5904-b511-a4ee6e09bc96|Consumption|",
+   "before": {
+    "armRegionName": "belgiumcentral",
+    "meterName": "DC2asv6",
+    "productName": "Virtual Machines DCasv6 series",
+    "retailPrice": 0.11,
+    "savingsPlanPrice": 0.0781,
+    "skuName": "DC2asv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.11
+   },
+   "after": {
+    "retailPrice": 0.11,
+    "unitPrice": 0.11,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines DCasv6 series",
+    "skuName": "DC2asv6",
+    "meterName": "DC2asv6",
+    "armRegionName": "belgiumcentral",
+    "savingsPlanPrice": 0.10285
+   }
+  },
+  {
+   "key": "DZH318Z0FG7F/033F|57ed91bb-9721-5803-bd49-43ec06c9e6c6|Consumption|",
+   "before": {
+    "armRegionName": "belgiumcentral",
+    "meterName": "DC4asv6",
+    "productName": "Virtual Machines DCasv6 series",
+    "retailPrice": 0.22,
+    "savingsPlanPrice": 0.1562,
+    "skuName": "DC4asv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.22
+   },
+   "after": {
+    "retailPrice": 0.22,
+    "unitPrice": 0.22,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines DCasv6 series",
+    "skuName": "DC4asv6",
+    "meterName": "DC4asv6",
+    "armRegionName": "belgiumcentral",
+    "savingsPlanPrice": 0.2057
+   }
+  },
+  {
+   "key": "DZH318Z0F6ZF/031T|6784a1e8-7e19-51f0-8871-3671874bc68a|Consumption|",
+   "before": {
+    "armRegionName": "belgiumcentral",
+    "meterName": "EC64asv6",
+    "productName": "Virtual Machines ECasv6 series",
+    "retailPrice": 4.621,
+    "savingsPlanPrice": 3.28091,
+    "skuName": "EC64asv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 4.621
+   },
+   "after": {
+    "retailPrice": 4.621,
+    "unitPrice": 4.621,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines ECasv6 series",
+    "skuName": "EC64asv6",
+    "meterName": "EC64asv6",
+    "armRegionName": "belgiumcentral",
+    "savingsPlanPrice": 4.32055
+   }
+  },
+  {
+   "key": "DZH318Z0F6ZF/032C|a2d313de-a0cd-5381-addd-abf49b8752b1|Consumption|",
+   "before": {
+    "armRegionName": "belgiumcentral",
+    "meterName": "EC2asv6",
+    "productName": "Virtual Machines ECasv6 series",
+    "retailPrice": 0.144,
+    "savingsPlanPrice": 0.10224,
+    "skuName": "EC2asv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.144
+   },
+   "after": {
+    "retailPrice": 0.144,
+    "unitPrice": 0.144,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines ECasv6 series",
+    "skuName": "EC2asv6",
+    "meterName": "EC2asv6",
+    "armRegionName": "belgiumcentral",
+    "savingsPlanPrice": 0.13515
+   }
+  },
+  {
+   "key": "DZH318Z0F6ZF/0323|c0681dfb-ef27-5857-a132-7c9f45cdbda6|Consumption|",
+   "before": {
+    "armRegionName": "belgiumcentral",
+    "meterName": "EC16asv6",
+    "productName": "Virtual Machines ECasv6 series",
+    "retailPrice": 1.155,
+    "savingsPlanPrice": 0.82005,
+    "skuName": "EC16asv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 1.155
+   },
+   "after": {
+    "retailPrice": 1.155,
+    "unitPrice": 1.155,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines ECasv6 series",
+    "skuName": "EC16asv6",
+    "meterName": "EC16asv6",
+    "armRegionName": "belgiumcentral",
+    "savingsPlanPrice": 1.08035
+   }
+  },
+  {
+   "key": "DZH318Z0FG7F/0338|cd004905-cc7c-543c-9035-9e3af9bb4ba9|Consumption|",
+   "before": {
+    "armRegionName": "belgiumcentral",
+    "meterName": "DC32asv6",
+    "productName": "Virtual Machines DCasv6 series",
+    "retailPrice": 1.76,
+    "savingsPlanPrice": 1.2496,
+    "skuName": "DC32asv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 1.76
+   },
+   "after": {
+    "retailPrice": 1.76,
+    "unitPrice": 1.76,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines DCasv6 series",
+    "skuName": "DC32asv6",
+    "meterName": "DC32asv6",
+    "armRegionName": "belgiumcentral",
+    "savingsPlanPrice": 1.6456
+   }
+  },
+  {
+   "key": "DZH318Z0FG7F/0337|d35a168d-cfdb-5d89-a728-4e7bb250f7dd|Consumption|",
+   "before": {
+    "armRegionName": "belgiumcentral",
+    "meterName": "DC8asv6",
+    "productName": "Virtual Machines DCasv6 series",
+    "retailPrice": 0.44,
+    "savingsPlanPrice": 0.3124,
+    "skuName": "DC8asv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.44
+   },
+   "after": {
+    "retailPrice": 0.44,
+    "unitPrice": 0.44,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines DCasv6 series",
+    "skuName": "DC8asv6",
+    "meterName": "DC8asv6",
+    "armRegionName": "belgiumcentral",
+    "savingsPlanPrice": 0.4114
+   }
+  },
+  {
+   "key": "DZH318Z0FG7F/0333|ddbda692-6f7a-5436-91a6-eec99bb2c8f7|Consumption|",
+   "before": {
+    "armRegionName": "belgiumcentral",
+    "meterName": "DC16asv6",
+    "productName": "Virtual Machines DCasv6 series",
+    "retailPrice": 0.88,
+    "savingsPlanPrice": 0.6248,
+    "skuName": "DC16asv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.88
+   },
+   "after": {
+    "retailPrice": 0.88,
+    "unitPrice": 0.88,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines DCasv6 series",
+    "skuName": "DC16asv6",
+    "meterName": "DC16asv6",
+    "armRegionName": "belgiumcentral",
+    "savingsPlanPrice": 0.8228
+   }
+  },
+  {
+   "key": "DZH318Z0FG7F/032J|f01fad09-c281-5ff9-893b-49184589861a|Consumption|",
+   "before": {
+    "armRegionName": "belgiumcentral",
+    "meterName": "DC96asv6",
+    "productName": "Virtual Machines DCasv6 series",
+    "retailPrice": 5.28,
+    "savingsPlanPrice": 3.7488,
+    "skuName": "DC96asv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 5.28
+   },
+   "after": {
+    "retailPrice": 5.28,
+    "unitPrice": 5.28,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines DCasv6 series",
+    "skuName": "DC96asv6",
+    "meterName": "DC96asv6",
+    "armRegionName": "belgiumcentral",
+    "savingsPlanPrice": 4.9368
+   }
+  }
+ ]
+}
