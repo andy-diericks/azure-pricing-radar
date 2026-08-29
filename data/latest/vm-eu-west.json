@@ -47307,7 +47307,7 @@
 "meterName": "DC32adsv6",
 "productName": "Virtual Machines DCadsv6 series",
 "retailPrice": 2.208,
-"savingsPlanPrice": 1.56768,
+"savingsPlanPrice": 2.06465,
 "skuName": "DC32adsv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 2.208
@@ -47317,7 +47317,7 @@
 "meterName": "DC48adsv6",
 "productName": "Virtual Machines DCadsv6 series",
 "retailPrice": 3.312,
-"savingsPlanPrice": 2.35152,
+"savingsPlanPrice": 3.09655,
 "skuName": "DC48adsv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 3.312
@@ -66863,7 +66863,7 @@
 "meterName": "DC8edsv6",
 "productName": "Virtual Machines DCedsv6 Series Windows",
 "retailPrice": 0.965,
-"savingsPlanPrice": 0.66585,
+"savingsPlanPrice": 0.87125,
 "skuName": "DC8edsv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.965
@@ -66938,7 +66938,7 @@
 "meterName": "DC96edsv6",
 "productName": "Virtual Machines DCedsv6 Series Windows",
 "retailPrice": 11.58,
-"savingsPlanPrice": 7.9902,
+"savingsPlanPrice": 10.4516,
 "skuName": "DC96edsv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 11.58
@@ -66948,7 +66948,7 @@
 "meterName": "DC4edsv6",
 "productName": "Virtual Machines DCedsv6 Series Windows",
 "retailPrice": 0.482,
-"savingsPlanPrice": 0.33258,
+"savingsPlanPrice": 0.4352,
 "skuName": "DC4edsv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.482
@@ -67137,7 +67137,7 @@
 "meterName": "DC96esv6",
 "productName": "Virtual Machines DCesv6 Series Windows",
 "retailPrice": 10.212,
-"savingsPlanPrice": 7.04628,
+"savingsPlanPrice": 9.1732,
 "skuName": "DC96esv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 10.212
@@ -67147,7 +67147,7 @@
 "meterName": "DC48esv6",
 "productName": "Virtual Machines DCesv6 Series Windows",
 "retailPrice": 5.106,
-"savingsPlanPrice": 3.52314,
+"savingsPlanPrice": 4.5866,
 "skuName": "DC48esv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 5.106
@@ -67167,7 +67167,7 @@
 "meterName": "DC64esv6",
 "productName": "Virtual Machines DCesv6 Series Windows",
 "retailPrice": 6.808,
-"savingsPlanPrice": 4.69752,
+"savingsPlanPrice": 6.11575,
 "skuName": "DC64esv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 6.808
@@ -67547,7 +67547,7 @@
 "meterName": "EC32esv6",
 "productName": "Virtual Machines ECesv6 Series Windows",
 "retailPrice": 4.026,
-"savingsPlanPrice": 2.73768,
+"savingsPlanPrice": 3.63885,
 "skuName": "EC32esv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 4.026
@@ -67641,7 +67641,7 @@
 "meterName": "EC8esv6",
 "productName": "Virtual Machines ECesv6 Series Windows",
 "retailPrice": 1.006,
-"savingsPlanPrice": 0.68408,
+"savingsPlanPrice": 0.9095,
 "skuName": "EC8esv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 1.006
@@ -67651,7 +67651,7 @@
 "meterName": "EC2esv6",
 "productName": "Virtual Machines ECesv6 Series Windows",
 "retailPrice": 0.252,
-"savingsPlanPrice": 0.17136,
+"savingsPlanPrice": 0.2278,
 "skuName": "EC2esv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.252
@@ -67661,7 +67661,7 @@
 "meterName": "EC128esv6",
 "productName": "Virtual Machines ECesv6 Series Windows",
 "retailPrice": 16.102,
-"savingsPlanPrice": 10.94936,
+"savingsPlanPrice": 14.5554,
 "skuName": "EC128esv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 16.102
@@ -67671,7 +67671,7 @@
 "meterName": "EC4esv6",
 "productName": "Virtual Machines ECesv6 Series Windows",
 "retailPrice": 0.503,
-"savingsPlanPrice": 0.34204,
+"savingsPlanPrice": 0.45475,
 "skuName": "EC4esv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.503
@@ -67699,7 +67699,7 @@
 "meterName": "EC16edsv6",
 "productName": "Virtual Machines ECedsv6 Series",
 "retailPrice": 1.578,
-"savingsPlanPrice": 1.07304,
+"savingsPlanPrice": 1.4756,
 "skuName": "EC16edsv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 1.578
@@ -67801,7 +67801,7 @@
 "meterName": "EC8edsv6",
 "productName": "Virtual Machines ECedsv6 Series",
 "retailPrice": 0.789,
-"savingsPlanPrice": 0.53652,
+"savingsPlanPrice": 0.7378,
 "skuName": "EC8edsv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.789
@@ -67831,7 +67831,7 @@
 "meterName": "EC2edsv6",
 "productName": "Virtual Machines ECedsv6 Series",
 "retailPrice": 0.197,
-"savingsPlanPrice": 0.13396,
+"savingsPlanPrice": 0.18445,
 "skuName": "EC2edsv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.197
@@ -67841,7 +67841,7 @@
 "meterName": "EC32edsv6",
 "productName": "Virtual Machines ECedsv6 Series",
 "retailPrice": 3.156,
-"savingsPlanPrice": 2.14608,
+"savingsPlanPrice": 2.9512,
 "skuName": "EC32edsv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 3.156
@@ -67860,7 +67860,7 @@
 "meterName": "EC8edsv6",
 "productName": "Virtual Machines ECedsv6 Series Windows",
 "retailPrice": 1.157,
-"savingsPlanPrice": 0.78676,
+"savingsPlanPrice": 1.0506,
 "skuName": "EC8edsv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 1.157
@@ -67870,7 +67870,7 @@
 "meterName": "EC4edsv6",
 "productName": "Virtual Machines ECedsv6 Series Windows",
 "retailPrice": 0.579,
-"savingsPlanPrice": 0.39372,
+"savingsPlanPrice": 0.5253,
 "skuName": "EC4edsv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.579
@@ -67889,7 +67889,7 @@
 "meterName": "EC128edsv6",
 "productName": "Virtual Machines ECedsv6 Series Windows",
 "retailPrice": 18.513,
-"savingsPlanPrice": 12.58884,
+"savingsPlanPrice": 16.80875,
 "skuName": "EC128edsv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 18.513
@@ -67917,7 +67917,7 @@
 "meterName": "EC16edsv6",
 "productName": "Virtual Machines ECedsv6 Series Windows",
 "retailPrice": 2.314,
-"savingsPlanPrice": 1.57352,
+"savingsPlanPrice": 2.1012,
 "skuName": "EC16edsv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 2.314
@@ -67955,7 +67955,7 @@
 "meterName": "EC48edsv6",
 "productName": "Virtual Machines ECedsv6 Series Windows",
 "retailPrice": 6.942,
-"savingsPlanPrice": 4.72056,
+"savingsPlanPrice": 6.3036,
 "skuName": "EC48edsv6",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 6.942

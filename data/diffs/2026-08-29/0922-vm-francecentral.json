@@ -1,0 +1,77 @@
+{
+ "scope": "vm-francecentral",
+ "at": "2026-08-29T09:22:48.500056+00:00",
+ "added": [],
+ "removed": [],
+ "changed": [
+  {
+   "key": "DZH318Z0FG7C/00G4|05eb0fa6-339c-58f0-9a8b-8183f5af283c|Consumption|",
+   "before": {
+    "armRegionName": "francecentral",
+    "meterName": "DC48adsv6",
+    "productName": "Virtual Machines DCadsv6 series",
+    "retailPrice": 3.216,
+    "savingsPlanPrice": 2.28336,
+    "skuName": "DC48adsv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 3.216
+   },
+   "after": {
+    "retailPrice": 3.216,
+    "unitPrice": 3.216,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines DCadsv6 series",
+    "skuName": "DC48adsv6",
+    "meterName": "DC48adsv6",
+    "armRegionName": "francecentral",
+    "savingsPlanPrice": 3.0073
+   }
+  },
+  {
+   "key": "DZH318Z0FG7C/00G2|105e14b5-669c-50e4-bac5-19ff2ced9573|Consumption|",
+   "before": {
+    "armRegionName": "francecentral",
+    "meterName": "DC32adsv6",
+    "productName": "Virtual Machines DCadsv6 series",
+    "retailPrice": 2.144,
+    "savingsPlanPrice": 1.52224,
+    "skuName": "DC32adsv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 2.144
+   },
+   "after": {
+    "retailPrice": 2.144,
+    "unitPrice": 2.144,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines DCadsv6 series",
+    "skuName": "DC32adsv6",
+    "meterName": "DC32adsv6",
+    "armRegionName": "francecentral",
+    "savingsPlanPrice": 2.0043
+   }
+  },
+  {
+   "key": "DZH318Z0FG7C/00GF|eca42d99-8302-5d80-8914-1addc0d6c917|Consumption|",
+   "before": {
+    "armRegionName": "francecentral",
+    "meterName": "DC8adsv6",
+    "productName": "Virtual Machines DCadsv6 series",
+    "retailPrice": 0.536,
+    "savingsPlanPrice": 0.38056,
+    "skuName": "DC8adsv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.536
+   },
+   "after": {
+    "retailPrice": 0.536,
+    "unitPrice": 0.536,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines DCadsv6 series",
+    "skuName": "DC8adsv6",
+    "meterName": "DC8adsv6",
+    "armRegionName": "francecentral",
+    "savingsPlanPrice": 0.5015
+   }
+  }
+ ]
+}
