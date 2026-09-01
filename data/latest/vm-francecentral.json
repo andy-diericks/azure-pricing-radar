@@ -1525,16 +1525,6 @@
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.65641
 },
-"DZH318Z08M9J/00PS|531b478b-e6b1-56f7-abdc-1d5e2b17d740|Consumption|": {
-"armRegionName": "francecentral",
-"meterName": "E2 v5",
-"productName": "Virtual Machines Ev5 Series",
-"retailPrice": 0.148,
-"savingsPlanPrice": 0.1000776,
-"skuName": "Standard_E2_v5",
-"unitOfMeasure": "1 Hour",
-"unitPrice": 0.148
-},
 "DZH318Z08M9J/00PV|50fe9d6c-4e88-5ec9-a3ca-661960ed5c5f|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "E20 v5 Spot",
@@ -52480,15 +52470,6 @@
 "skuName": "F48as v7 Spot",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 1.119518
-},
-"DZH318Z0TBJ8/00R4|a257adb4-8cf1-56a2-8fa9-397dd9c2067b|Consumption|": {
-"armRegionName": "francecentral",
-"meterName": "F1as v7 Spot",
-"productName": "Virtual Machines Fasv7 Series Windows",
-"retailPrice": 0.023285,
-"skuName": "F1as v7 Spot",
-"unitOfMeasure": "1 Hour",
-"unitPrice": 0.023285
 },
 "DZH318Z0TBJ8/00R5|456565fc-2fa7-515a-9a47-50580b287dc7|Consumption|": {
 "armRegionName": "francecentral",

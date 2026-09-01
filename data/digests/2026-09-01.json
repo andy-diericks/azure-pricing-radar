@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-01T13:42:06.808Z",
+  "generatedAt": "2026-09-01T17:58:00.964Z",
   "date": "2026-09-01",
   "totalDrops": 276,
   "totalIncreases": 1850,
-  "totalNewSkus": 24,
-  "totalRemoved": 213,
+  "totalNewSkus": 237,
+  "totalRemoved": 352,
   "sections": [
     {
       "scope": "vm-belgium",
@@ -220,6 +220,33 @@
           "direction": "drop"
         }
       ]
+    },
+    {
+      "scope": "vm-eu-west",
+      "displayName": "Virtual Machines · West Europe",
+      "drops": 0,
+      "increases": 0,
+      "newSkus": 155,
+      "removed": 137,
+      "topMovers": []
+    },
+    {
+      "scope": "vm-francecentral",
+      "displayName": "Virtual Machines · France Central",
+      "drops": 0,
+      "increases": 0,
+      "newSkus": 0,
+      "removed": 2,
+      "topMovers": []
+    },
+    {
+      "scope": "vm-swedencentral",
+      "displayName": "Virtual Machines · Sweden Central",
+      "drops": 0,
+      "increases": 0,
+      "newSkus": 58,
+      "removed": 0,
+      "topMovers": []
     }
   ]
 }
