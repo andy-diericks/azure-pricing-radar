@@ -18,10 +18,10 @@
     <title>Azure pricing changes for 2026-09-01</title>
     <id>https://andy-diericks.github.io/azure-pricing-radar/#/digests/2026-09-01</id>
     <link href="https://andy-diericks.github.io/azure-pricing-radar/#/digests/2026-09-01"/>
-    <updated>2026-09-01T17:58:00.964Z</updated>
+    <updated>2026-09-01T22:50:52.818Z</updated>
     <content type="text">Azure pricing changes for 2026-09-01
 
-276 price drops, 1850 price increases, 237 new SKUs, 352 removed
+276 price drops, 1850 price increases, 255 new SKUs, 837 removed
 
 Virtual Machines · Belgium Central
   EC2asv6 (Belgium Central): +10.4% — $0.14 → $0.16/1 Hour
