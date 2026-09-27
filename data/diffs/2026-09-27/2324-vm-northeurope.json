@@ -1,0 +1,468 @@
+{
+ "scope": "vm-northeurope",
+ "at": "2026-09-27T23:24:39.618084+00:00",
+ "added": [],
+ "removed": [],
+ "changed": [
+  {
+   "key": "DZH318Z0R685/0018|13df694d-2ac2-5dd2-90a2-09d1e30ad043|Consumption|",
+   "before": {
+    "armRegionName": "northeurope",
+    "meterName": "NC16ldsxlRTX6Kv6",
+    "productName": "Virtual Machines NCldsxlRTX6kv6",
+    "retailPrice": 1.617,
+    "savingsPlanPrice": 1.35828,
+    "skuName": "NC16ldsxlRTX6Kv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 1.617
+   },
+   "after": {
+    "retailPrice": 1.617,
+    "unitPrice": 1.617,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines NCldsxlRTX6kv6",
+    "skuName": "NC16ldsxlRTX6Kv6",
+    "meterName": "NC16ldsxlRTX6Kv6",
+    "armRegionName": "northeurope",
+    "savingsPlanPrice": 1.23396
+   }
+  },
+  {
+   "key": "DZH318Z0R685/0028|1439202b-7099-5ef1-8960-3a0d4511a04d|Consumption|",
+   "before": {
+    "armRegionName": "northeurope",
+    "meterName": "NC256ldsxlRTX6Kv6",
+    "productName": "Virtual Machines NCldsxlRTX6kv6",
+    "retailPrice": 15.74,
+    "savingsPlanPrice": 13.2216,
+    "skuName": "NC256ldsxlRTX6Kv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 15.74
+   },
+   "after": {
+    "retailPrice": 15.74,
+    "unitPrice": 15.74,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines NCldsxlRTX6kv6",
+    "skuName": "NC256ldsxlRTX6Kv6",
+    "meterName": "NC256ldsxlRTX6Kv6",
+    "armRegionName": "northeurope",
+    "savingsPlanPrice": 12.012
+   }
+  },
+  {
+   "key": "DZH318Z0R67V/00HQ|1661e233-95b5-533e-93b7-48c859530a62|Consumption|",
+   "before": {
+    "armRegionName": "northeurope",
+    "meterName": "NC36dsxlRTX6kv6",
+    "productName": "Virtual Machines NCdsxlRTX6kv6",
+    "retailPrice": 2.063,
+    "savingsPlanPrice": 1.73292,
+    "skuName": "NC36dsxlRTX6kv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 2.063
+   },
+   "after": {
+    "retailPrice": 2.063,
+    "unitPrice": 2.063,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines NCdsxlRTX6kv6",
+    "skuName": "NC36dsxlRTX6kv6",
+    "meterName": "NC36dsxlRTX6kv6",
+    "armRegionName": "northeurope",
+    "savingsPlanPrice": 1.73208
+   }
+  },
+  {
+   "key": "DZH318Z0R685/00CN|22d5c046-2913-599e-bbe5-ba26e66560fd|Consumption|",
+   "before": {
+    "armRegionName": "northeurope",
+    "meterName": "NC132ldsxlRTX6kv6",
+    "productName": "Virtual Machines NCldsxlRTX6kv6",
+    "retailPrice": 7.87,
+    "savingsPlanPrice": 6.6108,
+    "skuName": "NC132ldsxlRTX6kv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 7.87
+   },
+   "after": {
+    "retailPrice": 7.87,
+    "unitPrice": 7.87,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines NCldsxlRTX6kv6",
+    "skuName": "NC132ldsxlRTX6kv6",
+    "meterName": "NC132ldsxlRTX6kv6",
+    "armRegionName": "northeurope",
+    "savingsPlanPrice": 6.006
+   }
+  },
+  {
+   "key": "DZH318Z0R685/00GG|3e6b788c-5426-52ab-90c5-f96c29f150f9|Consumption|",
+   "before": {
+    "armRegionName": "northeurope",
+    "meterName": "NC36ldsxlRTX6kv6",
+    "productName": "Virtual Machines NCldsxlRTX6kv6",
+    "retailPrice": 1.779,
+    "savingsPlanPrice": 1.49436,
+    "skuName": "NC36ldsxlRTX6kv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 1.779
+   },
+   "after": {
+    "retailPrice": 1.779,
+    "unitPrice": 1.779,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines NCldsxlRTX6kv6",
+    "skuName": "NC36ldsxlRTX6kv6",
+    "meterName": "NC36ldsxlRTX6kv6",
+    "armRegionName": "northeurope",
+    "savingsPlanPrice": 1.35744
+   }
+  },
+  {
+   "key": "DZH318Z0R685/001T|4945e253-f3f4-5070-ad88-cd2be2f86b5c|Consumption|",
+   "before": {
+    "armRegionName": "northeurope",
+    "meterName": "NC320ldsxlRTX6Kv6",
+    "productName": "Virtual Machines NCldsxlRTX6kv6",
+    "retailPrice": 20.462,
+    "savingsPlanPrice": 17.18808,
+    "skuName": "NC320ldsxlRTX6Kv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 20.462
+   },
+   "after": {
+    "retailPrice": 20.462,
+    "unitPrice": 20.462,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines NCldsxlRTX6kv6",
+    "skuName": "NC320ldsxlRTX6Kv6",
+    "meterName": "NC320ldsxlRTX6Kv6",
+    "armRegionName": "northeurope",
+    "savingsPlanPrice": 15.6156
+   }
+  },
+  {
+   "key": "DZH318Z0R685/00FV|49f291c4-2313-52b8-a01e-11324721425a|Consumption|",
+   "before": {
+    "armRegionName": "northeurope",
+    "meterName": "NC324ldsxlRTX6kv6",
+    "productName": "Virtual Machines NCldsxlRTX6kv6",
+    "retailPrice": 20.462,
+    "savingsPlanPrice": 17.18808,
+    "skuName": "NC324ldsxlRTX6kv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 20.462
+   },
+   "after": {
+    "retailPrice": 20.462,
+    "unitPrice": 20.462,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines NCldsxlRTX6kv6",
+    "skuName": "NC324ldsxlRTX6kv6",
+    "meterName": "NC324ldsxlRTX6kv6",
+    "armRegionName": "northeurope",
+    "savingsPlanPrice": 15.6156
+   }
+  },
+  {
+   "key": "DZH318Z0R67V/0065|51385b49-9d23-5ecc-9b4d-131dcac50a82|Consumption|",
+   "before": {
+    "armRegionName": "northeurope",
+    "meterName": "NC32dsxlRTX6Kv6",
+    "productName": "Virtual Machines NCdsxlRTX6kv6",
+    "retailPrice": 2.063,
+    "savingsPlanPrice": 1.73292,
+    "skuName": "NC32dsxlRTX6Kv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 2.063
+   },
+   "after": {
+    "retailPrice": 2.063,
+    "unitPrice": 2.063,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines NCdsxlRTX6kv6",
+    "skuName": "NC32dsxlRTX6Kv6",
+    "meterName": "NC32dsxlRTX6Kv6",
+    "armRegionName": "northeurope",
+    "savingsPlanPrice": 1.73208
+   }
+  },
+  {
+   "key": "DZH318Z0R67V/0061|57e069a3-b48e-536c-bd91-b2c0cace03ae|Consumption|",
+   "before": {
+    "armRegionName": "northeurope",
+    "meterName": "NC256dsxlRTX6Kv6",
+    "productName": "Virtual Machines NCdsxlRTX6kv6",
+    "retailPrice": 18.258,
+    "savingsPlanPrice": 15.33672,
+    "skuName": "NC256dsxlRTX6Kv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 18.258
+   },
+   "after": {
+    "retailPrice": 18.258,
+    "unitPrice": 18.258,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines NCdsxlRTX6kv6",
+    "skuName": "NC256dsxlRTX6Kv6",
+    "meterName": "NC256dsxlRTX6Kv6",
+    "armRegionName": "northeurope",
+    "savingsPlanPrice": 15.32748
+   }
+  },
+  {
+   "key": "DZH318Z0R67V/006B|5aa39bee-55ba-5ed8-b1c6-a52f1a2209c5|Consumption|",
+   "before": {
+    "armRegionName": "northeurope",
+    "meterName": "NC320dsxlRTX6Kv6",
+    "productName": "Virtual Machines NCdsxlRTX6kv6",
+    "retailPrice": 23.736,
+    "savingsPlanPrice": 19.93824,
+    "skuName": "NC320dsxlRTX6Kv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 23.736
+   },
+   "after": {
+    "retailPrice": 23.736,
+    "unitPrice": 23.736,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines NCdsxlRTX6kv6",
+    "skuName": "NC320dsxlRTX6Kv6",
+    "meterName": "NC320dsxlRTX6Kv6",
+    "armRegionName": "northeurope",
+    "savingsPlanPrice": 19.92564
+   }
+  },
+  {
+   "key": "DZH318Z0R685/00RP|5e0ca4db-688c-58aa-8b29-c2ee121b8076|Consumption|",
+   "before": {
+    "armRegionName": "northeurope",
+    "meterName": "NC288ldsxlRTX6kv6",
+    "productName": "Virtual Machines NCldsxlRTX6kv6",
+    "retailPrice": 15.74,
+    "savingsPlanPrice": 13.2216,
+    "skuName": "NC288ldsxlRTX6kv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 15.74
+   },
+   "after": {
+    "retailPrice": 15.74,
+    "unitPrice": 15.74,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines NCldsxlRTX6kv6",
+    "skuName": "NC288ldsxlRTX6kv6",
+    "meterName": "NC288ldsxlRTX6kv6",
+    "armRegionName": "northeurope",
+    "savingsPlanPrice": 12.012
+   }
+  },
+  {
+   "key": "DZH318Z0R685/00CL|8311ec7e-5a14-59ca-bdbb-b93a1525207c|Consumption|",
+   "before": {
+    "armRegionName": "northeurope",
+    "meterName": "NC72ldsxlRTX6kv6",
+    "productName": "Virtual Machines NCldsxlRTX6kv6",
+    "retailPrice": 3.491,
+    "savingsPlanPrice": 2.66448,
+    "skuName": "NC72ldsxlRTX6kv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 3.491
+   },
+   "after": {
+    "retailPrice": 3.491,
+    "unitPrice": 3.491,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines NCldsxlRTX6kv6",
+    "skuName": "NC72ldsxlRTX6kv6",
+    "meterName": "NC72ldsxlRTX6kv6",
+    "armRegionName": "northeurope",
+    "savingsPlanPrice": 2.93244
+   }
+  },
+  {
+   "key": "DZH318Z0R67V/00MS|c86f4675-df56-5cad-9f16-935e69f968b5|Consumption|",
+   "before": {
+    "armRegionName": "northeurope",
+    "meterName": "NC132dsxlRTX6kv6",
+    "productName": "Virtual Machines NCdsxlRTX6kv6",
+    "retailPrice": 9.129,
+    "savingsPlanPrice": 7.66836,
+    "skuName": "NC132dsxlRTX6kv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 9.129
+   },
+   "after": {
+    "retailPrice": 9.129,
+    "unitPrice": 9.129,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines NCdsxlRTX6kv6",
+    "skuName": "NC132dsxlRTX6kv6",
+    "meterName": "NC132dsxlRTX6kv6",
+    "armRegionName": "northeurope",
+    "savingsPlanPrice": 7.66332
+   }
+  },
+  {
+   "key": "DZH318Z0R67V/00DX|caf0bf66-98f7-504e-abe2-89885e29fd76|Consumption|",
+   "before": {
+    "armRegionName": "northeurope",
+    "meterName": "NC264dsxlRTX6kv6",
+    "productName": "Virtual Machines NCdsxlRTX6kv6",
+    "retailPrice": 18.258,
+    "savingsPlanPrice": 15.33672,
+    "skuName": "NC264dsxlRTX6kv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 18.258
+   },
+   "after": {
+    "retailPrice": 18.258,
+    "unitPrice": 18.258,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines NCdsxlRTX6kv6",
+    "skuName": "NC264dsxlRTX6kv6",
+    "meterName": "NC264dsxlRTX6kv6",
+    "armRegionName": "northeurope",
+    "savingsPlanPrice": 15.32748
+   }
+  },
+  {
+   "key": "DZH318Z0R67V/0069|d613d1b5-e8a1-5488-a453-24c135d2dcb1|Consumption|",
+   "before": {
+    "armRegionName": "northeurope",
+    "meterName": "NC64dsxlRTX6Kv6",
+    "productName": "Virtual Machines NCdsxlRTX6kv6",
+    "retailPrice": 4.05,
+    "savingsPlanPrice": 3.402,
+    "skuName": "NC64dsxlRTX6Kv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 4.05
+   },
+   "after": {
+    "retailPrice": 4.05,
+    "unitPrice": 4.05,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines NCdsxlRTX6kv6",
+    "skuName": "NC64dsxlRTX6Kv6",
+    "meterName": "NC64dsxlRTX6Kv6",
+    "armRegionName": "northeurope",
+    "savingsPlanPrice": 3.39948
+   }
+  },
+  {
+   "key": "DZH318Z0R67V/0062|e80ca836-020b-5e67-996b-1e81a615d00c|Consumption|",
+   "before": {
+    "armRegionName": "northeurope",
+    "meterName": "NC128dsxlRTX6Kv6",
+    "productName": "Virtual Machines NCdsxlRTX6kv6",
+    "retailPrice": 9.129,
+    "savingsPlanPrice": 7.66836,
+    "skuName": "NC128dsxlRTX6Kv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 9.129
+   },
+   "after": {
+    "retailPrice": 9.129,
+    "unitPrice": 9.129,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines NCdsxlRTX6kv6",
+    "skuName": "NC128dsxlRTX6Kv6",
+    "meterName": "NC128dsxlRTX6Kv6",
+    "armRegionName": "northeurope",
+    "savingsPlanPrice": 7.66332
+   }
+  },
+  {
+   "key": "DZH318Z0R67V/00WW|f0a3d62d-644b-5659-93cf-39905ad1f75c|Consumption|",
+   "before": {
+    "armRegionName": "northeurope",
+    "meterName": "NC288dsxlRTX6kv6",
+    "productName": "Virtual Machines NCdsxlRTX6kv6",
+    "retailPrice": 15.74,
+    "savingsPlanPrice": 13.2216,
+    "skuName": "NC288dsxlRTX6kv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 15.74
+   },
+   "after": {
+    "retailPrice": 15.74,
+    "unitPrice": 15.74,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines NCdsxlRTX6kv6",
+    "skuName": "NC288dsxlRTX6kv6",
+    "meterName": "NC288dsxlRTX6kv6",
+    "armRegionName": "northeurope",
+    "savingsPlanPrice": 13.2132
+   }
+  },
+  {
+   "key": "DZH318Z0R67V/00CF|f3f0124e-6899-5f86-b46f-72945e96b170|Consumption|",
+   "before": {
+    "armRegionName": "northeurope",
+    "meterName": "NC324dsxlRTX6kv6",
+    "productName": "Virtual Machines NCdsxlRTX6kv6",
+    "retailPrice": 23.736,
+    "savingsPlanPrice": 19.93824,
+    "skuName": "NC324dsxlRTX6kv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 23.736
+   },
+   "after": {
+    "retailPrice": 23.736,
+    "unitPrice": 23.736,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines NCdsxlRTX6kv6",
+    "skuName": "NC324dsxlRTX6kv6",
+    "meterName": "NC324dsxlRTX6kv6",
+    "armRegionName": "northeurope",
+    "savingsPlanPrice": 19.92564
+   }
+  },
+  {
+   "key": "DZH318Z0R685/002G|fa8481af-6e29-5f05-81b8-db07c4fb3735|Consumption|",
+   "before": {
+    "armRegionName": "northeurope",
+    "meterName": "NC128ldsxlRTX6Kv6",
+    "productName": "Virtual Machines NCldsxlRTX6kv6",
+    "retailPrice": 7.87,
+    "savingsPlanPrice": 6.6108,
+    "skuName": "NC128ldsxlRTX6Kv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 7.87
+   },
+   "after": {
+    "retailPrice": 7.87,
+    "unitPrice": 7.87,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines NCldsxlRTX6kv6",
+    "skuName": "NC128ldsxlRTX6Kv6",
+    "meterName": "NC128ldsxlRTX6Kv6",
+    "armRegionName": "northeurope",
+    "savingsPlanPrice": 6.006
+   }
+  },
+  {
+   "key": "DZH318Z0R685/0011|fd41cbac-7038-5475-83a7-b75a771a4675|Consumption|",
+   "before": {
+    "armRegionName": "northeurope",
+    "meterName": "NC64ldsxlRTX6Kv6",
+    "productName": "Virtual Machines NCldsxlRTX6kv6",
+    "retailPrice": 3.491,
+    "savingsPlanPrice": 2.93244,
+    "skuName": "NC64ldsxlRTX6Kv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 3.491
+   },
+   "after": {
+    "retailPrice": 3.491,
+    "unitPrice": 3.491,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines NCldsxlRTX6kv6",
+    "skuName": "NC64ldsxlRTX6Kv6",
+    "meterName": "NC64ldsxlRTX6Kv6",
+    "armRegionName": "northeurope",
+    "savingsPlanPrice": 2.66448
+   }
+  }
+ ]
+}
