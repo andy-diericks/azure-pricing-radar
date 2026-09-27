@@ -1,0 +1,28 @@
+{
+  "generatedAt": "2026-09-27T18:39:48.454Z",
+  "date": "2026-09-27",
+  "totalDrops": 0,
+  "totalIncreases": 0,
+  "totalNewSkus": 0,
+  "totalRemoved": 0,
+  "sections": [
+    {
+      "scope": "vm-eu-west",
+      "displayName": "Virtual Machines · West Europe",
+      "drops": 0,
+      "increases": 0,
+      "newSkus": 0,
+      "removed": 0,
+      "topMovers": []
+    },
+    {
+      "scope": "vm-northeurope",
+      "displayName": "Virtual Machines · North Europe",
+      "drops": 0,
+      "increases": 0,
+      "newSkus": 0,
+      "removed": 0,
+      "topMovers": []
+    }
+  ]
+}

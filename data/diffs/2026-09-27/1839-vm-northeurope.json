@@ -1,0 +1,77 @@
+{
+ "scope": "vm-northeurope",
+ "at": "2026-09-27T18:39:22.078935+00:00",
+ "added": [],
+ "removed": [],
+ "changed": [
+  {
+   "key": "DZH318Z0R67V/00WQ|3df7c9d5-b8f9-5857-9558-80f70869c229|Consumption|",
+   "before": {
+    "armRegionName": "northeurope",
+    "meterName": "NC144dsxlRTX6kv6",
+    "productName": "Virtual Machines NCdsxlRTX6kv6",
+    "retailPrice": 9.129,
+    "savingsPlanPrice": 7.66836,
+    "skuName": "NC144dsxlRTX6kv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 9.129
+   },
+   "after": {
+    "retailPrice": 9.129,
+    "unitPrice": 9.129,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines NCdsxlRTX6kv6",
+    "skuName": "NC144dsxlRTX6kv6",
+    "meterName": "NC144dsxlRTX6kv6",
+    "armRegionName": "northeurope",
+    "savingsPlanPrice": 7.66332
+   }
+  },
+  {
+   "key": "DZH318Z0R685/00CL|8311ec7e-5a14-59ca-bdbb-b93a1525207c|Consumption|",
+   "before": {
+    "armRegionName": "northeurope",
+    "meterName": "NC72ldsxlRTX6kv6",
+    "productName": "Virtual Machines NCldsxlRTX6kv6",
+    "retailPrice": 3.491,
+    "savingsPlanPrice": 2.93244,
+    "skuName": "NC72ldsxlRTX6kv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 3.491
+   },
+   "after": {
+    "retailPrice": 3.491,
+    "unitPrice": 3.491,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines NCldsxlRTX6kv6",
+    "skuName": "NC72ldsxlRTX6kv6",
+    "meterName": "NC72ldsxlRTX6kv6",
+    "armRegionName": "northeurope",
+    "savingsPlanPrice": 2.66448
+   }
+  },
+  {
+   "key": "DZH318Z0R67V/00GH|a80bd15e-60c1-5e83-a6f9-05684a94fa96|Consumption|",
+   "before": {
+    "armRegionName": "northeurope",
+    "meterName": "NC72dsxlRTX6kv6",
+    "productName": "Virtual Machines NCdsxlRTX6kv6",
+    "retailPrice": 4.05,
+    "savingsPlanPrice": 3.402,
+    "skuName": "NC72dsxlRTX6kv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 4.05
+   },
+   "after": {
+    "retailPrice": 4.05,
+    "unitPrice": 4.05,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines NCdsxlRTX6kv6",
+    "skuName": "NC72dsxlRTX6kv6",
+    "meterName": "NC72dsxlRTX6kv6",
+    "armRegionName": "northeurope",
+    "savingsPlanPrice": 3.39948
+   }
+  }
+ ]
+}
