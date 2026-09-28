@@ -1,0 +1,31 @@
+{
+ "scope": "vm-eu-west",
+ "at": "2026-09-28T08:57:36.991958+00:00",
+ "added": [],
+ "removed": [],
+ "changed": [
+  {
+   "key": "DZH318Z0R685/00HL|b53d749c-0681-54ad-a225-a6c8e296289a|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "NC72ldsxlRTX6kv6",
+    "productName": "Virtual Machines NCldsxlRTX6kv6",
+    "retailPrice": 3.491,
+    "savingsPlanPrice": 2.93244,
+    "skuName": "NC72ldsxlRTX6kv6",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 3.491
+   },
+   "after": {
+    "retailPrice": 3.491,
+    "unitPrice": 3.491,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines NCldsxlRTX6kv6",
+    "skuName": "NC72ldsxlRTX6kv6",
+    "meterName": "NC72ldsxlRTX6kv6",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 2.93076
+   }
+  }
+ ]
+}
