@@ -1,0 +1,50 @@
+{
+ "scope": "storage-belgium",
+ "at": "2026-10-01T09:25:53.106418+00:00",
+ "added": [],
+ "removed": [],
+ "changed": [
+  {
+   "key": "DZH318Z0BP04/07MD|98bbdeda-68f3-570a-8fd4-f106c6bf3a31|Consumption|",
+   "before": {
+    "armRegionName": "belgiumcentral",
+    "meterName": "Confidential Compute Encryption ZRS Provisioned Capacity",
+    "productName": "Premium SSD Managed Disks",
+    "retailPrice": 5.2e-05,
+    "skuName": "Confidential Compute Encryption ZRS",
+    "unitOfMeasure": "1 GiB/Hour",
+    "unitPrice": 5.2e-05
+   },
+   "after": {
+    "retailPrice": 5e-05,
+    "unitPrice": 5e-05,
+    "unitOfMeasure": "1 GiB/Hour",
+    "productName": "Premium SSD Managed Disks",
+    "skuName": "Confidential Compute Encryption ZRS",
+    "meterName": "Confidential Compute Encryption ZRS Provisioned Capacity",
+    "armRegionName": "belgiumcentral"
+   }
+  },
+  {
+   "key": "DZH318Z0BP04/07MF|e024577f-bbe6-53aa-a66d-cc21c4b77964|Consumption|",
+   "before": {
+    "armRegionName": "belgiumcentral",
+    "meterName": "Confidential Compute Encryption LRS Provisioned Capacity",
+    "productName": "Premium SSD Managed Disks",
+    "retailPrice": 3.5e-05,
+    "skuName": "Confidential Compute Encryption LRS",
+    "unitOfMeasure": "1 GiB/Hour",
+    "unitPrice": 3.5e-05
+   },
+   "after": {
+    "retailPrice": 3.3e-05,
+    "unitPrice": 3.3e-05,
+    "unitOfMeasure": "1 GiB/Hour",
+    "productName": "Premium SSD Managed Disks",
+    "skuName": "Confidential Compute Encryption LRS",
+    "meterName": "Confidential Compute Encryption LRS Provisioned Capacity",
+    "armRegionName": "belgiumcentral"
+   }
+  }
+ ]
+}

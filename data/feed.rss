@@ -15,6 +15,44 @@
 9,904 new SKUs</description>
     </item>
     <item>
+      <title>Azure pricing changes for 2026-10-01</title>
+      <link>https://andy-diericks.github.io/azure-pricing-radar/#/digests/2026-10-01</link>
+      <guid>https://andy-diericks.github.io/azure-pricing-radar/#/digests/2026-10-01</guid>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Azure pricing changes for 2026-10-01
+
+898 price drops, 626 price increases, 2,052 new SKUs
+
+Storage · Belgium Central
+  Confidential Compute Encryption LRS (Belgium Central): -5.7% — $0.00 → $0.00/1 GiB/Hour
+  Confidential Compute Encryption ZRS (Belgium Central): -3.8% — $0.00 → $0.00/1 GiB/Hour
+
+Virtual Machines · Belgium Central
+  F1 Spot (Belgium Central): +10.2% — $0.01 → $0.01/1 Hour
+  F8s Spot (Belgium Central): +10.2% — $0.17 → $0.18/1 Hour
+  F16s Spot (Belgium Central): +10.2% — $0.34 → $0.37/1 Hour
+
+Virtual Machines · West Europe
+  NM16adsMA35D Spot (West Europe): -94.9% — $0.47 → $0.02/1 Hour
+  NM16adsMA35D (West Europe): -94.9% — $2.54 → $0.13/1 Hour
+  NM16adsMA35D Low Priority (West Europe): -94.9% — $0.51 → $0.03/1 Hour
+
+Virtual Machines · France Central
+  DS3 v2 Spot (France Central): +10.2% — $0.12 → $0.13/1 Hour
+  DS5 v2 Spot (France Central): +10.2% — $0.48 → $0.53/1 Hour
+  DS15 v2 Spot (France Central): +10.2% — $0.63 → $0.69/1 Hour
+
+Virtual Machines · North Europe
+  NM16adsMA35D Low Priority (North Europe): -94.9% — $0.47 → $0.02/1 Hour
+  NM16adsMA35D Spot (North Europe): -94.9% — $0.43 → $0.02/1 Hour
+  NM16adsMA35D (North Europe): -94.9% — $2.34 → $0.12/1 Hour
+
+Virtual Machines · Sweden Central
+  Standard_NC96ads_A100_v4 Spot (Sweden Central): -20.0% — $5.77 → $4.62/1 Hour
+  NC40adsH100v5 Spot (Sweden Central): -20.0% — $2.57 → $2.06/1 Hour
+  NC80adisH100v5 Spot (Sweden Central): -20.0% — $5.15 → $4.12/1 Hour</description>
+    </item>
+    <item>
       <title>Azure pricing changes for 2026-09-28</title>
       <link>https://andy-diericks.github.io/azure-pricing-radar/#/digests/2026-09-28</link>
       <guid>https://andy-diericks.github.io/azure-pricing-radar/#/digests/2026-09-28</guid>
