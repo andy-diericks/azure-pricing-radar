@@ -68094,15 +68094,6 @@
 "unitOfMeasure": "1 Hour",
 "unitPrice": 101.76
 },
-"DZH318Z0LTLX/0003|8e5af6b3-e4b9-5411-8571-e92f9e9c7b27|Consumption|": {
-"armRegionName": "northeurope",
-"meterName": "NM16adsMA35D Spot",
-"productName": "Virtual Machines NMadsMA35D Series",
-"retailPrice": 0.022176,
-"skuName": "NM16adsMA35D Spot",
-"unitOfMeasure": "1 Hour",
-"unitPrice": 0.022176
-},
 "DZH318Z0LTLX/000C|67358b02-b135-513a-9e84-4d0b0d51a447|Consumption|": {
 "armRegionName": "northeurope",
 "meterName": "NM16adsMA35D Low Priority",
@@ -68112,24 +68103,6 @@
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.024
 },
-"DZH318Z0LTLX/000J|9f4c8698-e485-53a5-867b-8912af57e11f|Consumption|": {
-"armRegionName": "northeurope",
-"meterName": "NM16adsMA35D",
-"productName": "Virtual Machines NMadsMA35D Series",
-"retailPrice": 0.12,
-"skuName": "NM16adsMA35D",
-"unitOfMeasure": "1 Hour",
-"unitPrice": 0.12
-},
-"DZH318Z0LTLZ/000J|f86ab47b-6398-5d74-8466-159f7d02e93a|Consumption|": {
-"armRegionName": "northeurope",
-"meterName": "NM16adsMA35D",
-"productName": "Virtual Machines NMadsMA35D Series Windows",
-"retailPrice": 0.856,
-"skuName": "NM16adsMA35D",
-"unitOfMeasure": "1 Hour",
-"unitPrice": 0.856
-},
 "DZH318Z0LTLZ/000N|44b8316a-c59f-50ff-8c50-216f9326733f|Consumption|": {
 "armRegionName": "northeurope",
 "meterName": "NM16adsMA35D Low Priority",
@@ -68138,15 +68111,6 @@
 "skuName": "NM16adsMA35D Low Priority",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.342
-},
-"DZH318Z0LTLZ/000V|de37b223-e9d4-504a-8e76-c752e23c5f7d|Consumption|": {
-"armRegionName": "northeurope",
-"meterName": "NM16adsMA35D Spot",
-"productName": "Virtual Machines NMadsMA35D Series Windows",
-"retailPrice": 0.158189,
-"skuName": "NM16adsMA35D Spot",
-"unitOfMeasure": "1 Hour",
-"unitPrice": 0.158189
 },
 "DZH318Z0M2S0/000T|5745141a-7185-5a5a-8f25-5796430f57a8|Consumption|": {
 "armRegionName": "northeurope",

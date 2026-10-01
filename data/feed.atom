@@ -18,10 +18,10 @@
     <title>Azure pricing changes for 2026-10-01</title>
     <id>https://andy-diericks.github.io/azure-pricing-radar/#/digests/2026-10-01</id>
     <link href="https://andy-diericks.github.io/azure-pricing-radar/#/digests/2026-10-01"/>
-    <updated>2026-10-01T09:26:44.258Z</updated>
+    <updated>2026-10-01T19:50:14.812Z</updated>
     <content type="text">Azure pricing changes for 2026-10-01
 
-898 price drops, 626 price increases, 2,052 new SKUs
+898 price drops, 626 price increases, 2,052 new SKUs, 1754 removed
 
 Storage · Belgium Central
   Confidential Compute Encryption LRS (Belgium Central): -5.7% — $0.00 → $0.00/1 GiB/Hour
