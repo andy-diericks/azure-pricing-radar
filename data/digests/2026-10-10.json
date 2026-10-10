@@ -1,0 +1,19 @@
+{
+  "generatedAt": "2026-10-10T00:20:05.939Z",
+  "date": "2026-10-10",
+  "totalDrops": 0,
+  "totalIncreases": 0,
+  "totalNewSkus": 22,
+  "totalRemoved": 0,
+  "sections": [
+    {
+      "scope": "vm-swedencentral",
+      "displayName": "Virtual Machines · Sweden Central",
+      "drops": 0,
+      "increases": 0,
+      "newSkus": 22,
+      "removed": 0,
+      "topMovers": []
+    }
+  ]
+}

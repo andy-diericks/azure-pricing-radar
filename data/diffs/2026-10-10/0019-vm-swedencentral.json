@@ -1,0 +1,228 @@
+{
+ "scope": "vm-swedencentral",
+ "at": "2026-10-10T00:19:36.626063+00:00",
+ "added": [
+  {
+   "key": "DZH318Z0SGNH/00B6|1895a418-db44-5e74-a408-d692dfc60b74|Consumption|",
+   "retailPrice": 0.1426,
+   "unitPrice": 0.1426,
+   "unitOfMeasure": "1 Hour",
+   "productName": "Virtual Machines Lasv5 Series Windows",
+   "skuName": "Standard_L4as_v5 Spot",
+   "meterName": "Standard_L4as_v5 Spot",
+   "armRegionName": "swedencentral"
+  },
+  {
+   "key": "DZH318Z0SGNH/009L|1be794ab-b689-5487-908f-34f644758c8e|Consumption|",
+   "retailPrice": 8.557,
+   "unitPrice": 8.557,
+   "unitOfMeasure": "1 Hour",
+   "productName": "Virtual Machines Lasv5 Series Windows",
+   "skuName": "Standard_L48as_v5",
+   "meterName": "Standard_L48as_v5",
+   "armRegionName": "swedencentral"
+  },
+  {
+   "key": "DZH318Z0SGNH/00CG|1d62fb00-5f59-5c05-b2bb-3cad5d5ea149|Consumption|",
+   "retailPrice": 2.282,
+   "unitPrice": 2.282,
+   "unitOfMeasure": "1 Hour",
+   "productName": "Virtual Machines Lasv5 Series Windows",
+   "skuName": "Standard_L64as_v5 Spot",
+   "meterName": "Standard_L64as_v5 Spot",
+   "armRegionName": "swedencentral"
+  },
+  {
+   "key": "DZH318Z0SGNH/00CM|2ba50324-e03c-5206-8710-e4458fd21ca3|Consumption|",
+   "retailPrice": 1.426,
+   "unitPrice": 1.426,
+   "unitOfMeasure": "1 Hour",
+   "productName": "Virtual Machines Lasv5 Series Windows",
+   "skuName": "Standard_L8as_v5",
+   "meterName": "Standard_L8as_v5",
+   "armRegionName": "swedencentral"
+  },
+  {
+   "key": "DZH318Z0SGNH/00BC|37a26a04-275e-5adf-bc86-82369c8e97ff|Consumption|",
+   "retailPrice": 0.357,
+   "unitPrice": 0.357,
+   "unitOfMeasure": "1 Hour",
+   "productName": "Virtual Machines Lasv5 Series Windows",
+   "skuName": "Standard_L2as_v5",
+   "meterName": "Standard_L2as_v5",
+   "armRegionName": "swedencentral"
+  },
+  {
+   "key": "DZH318Z0SGNH/00B1|5392a9bf-0a1c-58bf-a79e-47b9558437a7|Consumption|",
+   "retailPrice": 0.713,
+   "unitPrice": 0.713,
+   "unitOfMeasure": "1 Hour",
+   "productName": "Virtual Machines Lasv5 Series Windows",
+   "skuName": "Standard_L4as_v5",
+   "meterName": "Standard_L4as_v5",
+   "armRegionName": "swedencentral"
+  },
+  {
+   "key": "DZH318Z0SGNH/00DX|53ecbdfb-123c-5d68-b382-f09c64881f32|Consumption|",
+   "retailPrice": 14.262,
+   "unitPrice": 14.262,
+   "unitOfMeasure": "1 Hour",
+   "productName": "Virtual Machines Lasv5 Series Windows",
+   "skuName": "Standard_L80as_v5",
+   "meterName": "Standard_L80as_v5",
+   "armRegionName": "swedencentral"
+  },
+  {
+   "key": "DZH318Z0SGNH/009Z|55c3b233-93c5-5824-a567-32f4f6ac2a5f|Consumption|",
+   "retailPrice": 22.819,
+   "unitPrice": 22.819,
+   "unitOfMeasure": "1 Hour",
+   "productName": "Virtual Machines Lasv5 Series Windows",
+   "skuName": "Standard_L128as_v5",
+   "meterName": "Standard_L128as_v5",
+   "armRegionName": "swedencentral"
+  },
+  {
+   "key": "DZH318Z0SGNH/008B|6e3b48a0-adfa-52a0-8bb6-2b62a0178a77|Consumption|",
+   "retailPrice": 17.114,
+   "unitPrice": 17.114,
+   "unitOfMeasure": "1 Hour",
+   "productName": "Virtual Machines Lasv5 Series Windows",
+   "skuName": "Standard_L96as_v5",
+   "meterName": "Standard_L96as_v5",
+   "armRegionName": "swedencentral"
+  },
+  {
+   "key": "DZH318Z0SGNH/00CC|711e3566-5555-5939-b936-6742d46763a7|Consumption|",
+   "retailPrice": 11.41,
+   "unitPrice": 11.41,
+   "unitOfMeasure": "1 Hour",
+   "productName": "Virtual Machines Lasv5 Series Windows",
+   "skuName": "Standard_L64as_v5",
+   "meterName": "Standard_L64as_v5",
+   "armRegionName": "swedencentral"
+  },
+  {
+   "key": "DZH318Z0SGNH/009W|7b8fddc7-f8a4-5ef1-ac84-2222a17d10e0|Consumption|",
+   "retailPrice": 4.5638,
+   "unitPrice": 4.5638,
+   "unitOfMeasure": "1 Hour",
+   "productName": "Virtual Machines Lasv5 Series Windows",
+   "skuName": "Standard_L128as_v5 Spot",
+   "meterName": "Standard_L128as_v5 Spot",
+   "armRegionName": "swedencentral"
+  },
+  {
+   "key": "DZH318Z0SGNH/00BW|7cc69e2b-a37d-5e24-8481-32b2476880d7|Consumption|",
+   "retailPrice": 0.5704,
+   "unitPrice": 0.5704,
+   "unitOfMeasure": "1 Hour",
+   "productName": "Virtual Machines Lasv5 Series Windows",
+   "skuName": "Standard_L16as_v5 Spot",
+   "meterName": "Standard_L16as_v5 Spot",
+   "armRegionName": "swedencentral"
+  },
+  {
+   "key": "DZH318Z0SGNH/00CH|7e38876f-e3b9-52ba-bddf-8b50bb698877|Consumption|",
+   "retailPrice": 0.2852,
+   "unitPrice": 0.2852,
+   "unitOfMeasure": "1 Hour",
+   "productName": "Virtual Machines Lasv5 Series Windows",
+   "skuName": "Standard_L8as_v5 Spot",
+   "meterName": "Standard_L8as_v5 Spot",
+   "armRegionName": "swedencentral"
+  },
+  {
+   "key": "DZH318Z0SGNH/008J|8b2b433b-fdc8-5bdc-94fb-91bf0d9e1f95|Consumption|",
+   "retailPrice": 30.64,
+   "unitPrice": 30.64,
+   "unitOfMeasure": "1 Hour",
+   "productName": "Virtual Machines Lasv5 Series Windows",
+   "skuName": "L160iasv5",
+   "meterName": "L160iasv5",
+   "armRegionName": "swedencentral"
+  },
+  {
+   "key": "DZH318Z0SGNH/00B2|8b2e3af2-ed7d-5d1f-a8ae-08c2ca5a9ad3|Consumption|",
+   "retailPrice": 0.0714,
+   "unitPrice": 0.0714,
+   "unitOfMeasure": "1 Hour",
+   "productName": "Virtual Machines Lasv5 Series Windows",
+   "skuName": "Standard_L2as_v5 Spot",
+   "meterName": "Standard_L2as_v5 Spot",
+   "armRegionName": "swedencentral"
+  },
+  {
+   "key": "DZH318Z0SGNH/006N|a8990150-936f-53bc-8600-9c820722eaee|Consumption|",
+   "retailPrice": 3.4228,
+   "unitPrice": 3.4228,
+   "unitOfMeasure": "1 Hour",
+   "productName": "Virtual Machines Lasv5 Series Windows",
+   "skuName": "Standard_L96as_v5 Spot",
+   "meterName": "Standard_L96as_v5 Spot",
+   "armRegionName": "swedencentral"
+  },
+  {
+   "key": "DZH318Z0SGNH/006M|be9d9fe6-a9e2-5943-8a0e-9e01f5499f7e|Consumption|",
+   "retailPrice": 6.128,
+   "unitPrice": 6.128,
+   "unitOfMeasure": "1 Hour",
+   "productName": "Virtual Machines Lasv5 Series Windows",
+   "skuName": "L160iasv5 Spot",
+   "meterName": "L160iasv5 Spot",
+   "armRegionName": "swedencentral"
+  },
+  {
+   "key": "DZH318Z0SGNH/00BD|c1f9f089-d50f-5335-a43f-a5e27e3d9f9d|Consumption|",
+   "retailPrice": 2.852,
+   "unitPrice": 2.852,
+   "unitOfMeasure": "1 Hour",
+   "productName": "Virtual Machines Lasv5 Series Windows",
+   "skuName": "Standard_L16as_v5",
+   "meterName": "Standard_L16as_v5",
+   "armRegionName": "swedencentral"
+  },
+  {
+   "key": "DZH318Z0SGNH/009N|ee4f6f49-3f8f-5522-9c28-a34401ae0be4|Consumption|",
+   "retailPrice": 1.7114,
+   "unitPrice": 1.7114,
+   "unitOfMeasure": "1 Hour",
+   "productName": "Virtual Machines Lasv5 Series Windows",
+   "skuName": "Standard_L48as_v5 Spot",
+   "meterName": "Standard_L48as_v5 Spot",
+   "armRegionName": "swedencentral"
+  },
+  {
+   "key": "DZH318Z0SGNH/009F|f01fab54-0bd8-5326-9c3b-40412ca5408c|Consumption|",
+   "retailPrice": 1.141,
+   "unitPrice": 1.141,
+   "unitOfMeasure": "1 Hour",
+   "productName": "Virtual Machines Lasv5 Series Windows",
+   "skuName": "Standard_L32as_v5 Spot",
+   "meterName": "Standard_L32as_v5 Spot",
+   "armRegionName": "swedencentral"
+  },
+  {
+   "key": "DZH318Z0SGNH/00DT|f231a4eb-7da4-5f3b-865b-c7734e7acfc2|Consumption|",
+   "retailPrice": 2.8524,
+   "unitPrice": 2.8524,
+   "unitOfMeasure": "1 Hour",
+   "productName": "Virtual Machines Lasv5 Series Windows",
+   "skuName": "Standard_L80as_v5 Spot",
+   "meterName": "Standard_L80as_v5 Spot",
+   "armRegionName": "swedencentral"
+  },
+  {
+   "key": "DZH318Z0SGNH/009D|f5dd02c4-27dc-5775-ac1f-9b2daa44fcec|Consumption|",
+   "retailPrice": 5.705,
+   "unitPrice": 5.705,
+   "unitOfMeasure": "1 Hour",
+   "productName": "Virtual Machines Lasv5 Series Windows",
+   "skuName": "Standard_L32as_v5",
+   "meterName": "Standard_L32as_v5",
+   "armRegionName": "swedencentral"
+  }
+ ],
+ "removed": [],
+ "changed": []
+}
