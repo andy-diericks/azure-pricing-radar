@@ -59070,6 +59070,7 @@
 "meterName": "Standard_L4as_v5",
 "productName": "Virtual Machines Lasv5 Series",
 "retailPrice": 0.529,
+"savingsPlanPrice": 0.38617,
 "skuName": "Standard_L4as_v5",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.529
@@ -59133,6 +59134,7 @@
 "meterName": "Standard_L128as_v5",
 "productName": "Virtual Machines Lasv5 Series",
 "retailPrice": 16.931,
+"savingsPlanPrice": 12.35963,
 "skuName": "Standard_L128as_v5",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 16.931

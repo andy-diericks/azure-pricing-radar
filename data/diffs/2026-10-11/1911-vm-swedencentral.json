@@ -1,0 +1,52 @@
+{
+ "scope": "vm-swedencentral",
+ "at": "2026-10-11T19:11:20.761723+00:00",
+ "added": [],
+ "removed": [],
+ "changed": [
+  {
+   "key": "DZH318Z0SGN0/00K4|cbc18384-2e97-5d64-b471-e01c389b92c3|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "Standard_L128as_v5",
+    "productName": "Virtual Machines Lasv5 Series",
+    "retailPrice": 16.931,
+    "skuName": "Standard_L128as_v5",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 16.931
+   },
+   "after": {
+    "retailPrice": 16.931,
+    "unitPrice": 16.931,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Lasv5 Series",
+    "skuName": "Standard_L128as_v5",
+    "meterName": "Standard_L128as_v5",
+    "armRegionName": "swedencentral",
+    "savingsPlanPrice": 12.35963
+   }
+  },
+  {
+   "key": "DZH318Z0SGN0/00HQ|e30b0179-fced-5a69-9d0d-588115d92e0f|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "Standard_L4as_v5",
+    "productName": "Virtual Machines Lasv5 Series",
+    "retailPrice": 0.529,
+    "skuName": "Standard_L4as_v5",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.529
+   },
+   "after": {
+    "retailPrice": 0.529,
+    "unitPrice": 0.529,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Lasv5 Series",
+    "skuName": "Standard_L4as_v5",
+    "meterName": "Standard_L4as_v5",
+    "armRegionName": "swedencentral",
+    "savingsPlanPrice": 0.38617
+   }
+  }
+ ]
+}
