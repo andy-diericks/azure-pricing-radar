@@ -59034,6 +59034,7 @@
 "meterName": "Standard_L96as_v5",
 "productName": "Virtual Machines Lasv5 Series",
 "retailPrice": 12.698,
+"savingsPlanPrice": 9.26954,
 "skuName": "Standard_L96as_v5",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 12.698
@@ -59043,6 +59044,7 @@
 "meterName": "Standard_L32as_v5",
 "productName": "Virtual Machines Lasv5 Series",
 "retailPrice": 4.233,
+"savingsPlanPrice": 3.09009,
 "skuName": "Standard_L32as_v5",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 4.233
@@ -59061,6 +59063,7 @@
 "meterName": "Standard_L48as_v5",
 "productName": "Virtual Machines Lasv5 Series",
 "retailPrice": 6.349,
+"savingsPlanPrice": 4.63477,
 "skuName": "Standard_L48as_v5",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 6.349
@@ -59098,6 +59101,7 @@
 "meterName": "Standard_L2as_v5",
 "productName": "Virtual Machines Lasv5 Series",
 "retailPrice": 0.265,
+"savingsPlanPrice": 0.19345,
 "skuName": "Standard_L2as_v5",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.265
@@ -59107,6 +59111,7 @@
 "meterName": "Standard_L16as_v5",
 "productName": "Virtual Machines Lasv5 Series",
 "retailPrice": 2.116,
+"savingsPlanPrice": 1.54468,
 "skuName": "Standard_L16as_v5",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 2.116
@@ -59125,6 +59130,7 @@
 "meterName": "Standard_L64as_v5",
 "productName": "Virtual Machines Lasv5 Series",
 "retailPrice": 8.466,
+"savingsPlanPrice": 6.18018,
 "skuName": "Standard_L64as_v5",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 8.466
@@ -59162,6 +59168,7 @@
 "meterName": "Standard_L8as_v5",
 "productName": "Virtual Machines Lasv5 Series",
 "retailPrice": 1.058,
+"savingsPlanPrice": 0.77234,
 "skuName": "Standard_L8as_v5",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 1.058
@@ -59180,6 +59187,7 @@
 "meterName": "L160iasv5",
 "productName": "Virtual Machines Lasv5 Series",
 "retailPrice": 23.28,
+"savingsPlanPrice": 16.9944,
 "skuName": "L160iasv5",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 23.28
@@ -59198,6 +59206,7 @@
 "meterName": "Standard_L80as_v5",
 "productName": "Virtual Machines Lasv5 Series",
 "retailPrice": 10.582,
+"savingsPlanPrice": 7.72486,
 "skuName": "Standard_L80as_v5",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 10.582

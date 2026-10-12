@@ -1,0 +1,206 @@
+{
+ "scope": "vm-swedencentral",
+ "at": "2026-10-12T09:46:00.142525+00:00",
+ "added": [],
+ "removed": [],
+ "changed": [
+  {
+   "key": "DZH318Z0SGN0/00KB|084c2645-e1c0-5de9-b127-649fb4c8b55f|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "Standard_L8as_v5",
+    "productName": "Virtual Machines Lasv5 Series",
+    "retailPrice": 1.058,
+    "skuName": "Standard_L8as_v5",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 1.058
+   },
+   "after": {
+    "retailPrice": 1.058,
+    "unitPrice": 1.058,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Lasv5 Series",
+    "skuName": "Standard_L8as_v5",
+    "meterName": "Standard_L8as_v5",
+    "armRegionName": "swedencentral",
+    "savingsPlanPrice": 0.77234
+   }
+  },
+  {
+   "key": "DZH318Z0SGN0/00LR|1bd93eba-8bf6-5c33-87e6-e3cae062cf65|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "Standard_L80as_v5",
+    "productName": "Virtual Machines Lasv5 Series",
+    "retailPrice": 10.582,
+    "skuName": "Standard_L80as_v5",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 10.582
+   },
+   "after": {
+    "retailPrice": 10.582,
+    "unitPrice": 10.582,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Lasv5 Series",
+    "skuName": "Standard_L80as_v5",
+    "meterName": "Standard_L80as_v5",
+    "armRegionName": "swedencentral",
+    "savingsPlanPrice": 7.72486
+   }
+  },
+  {
+   "key": "DZH318Z0SGN0/00JR|1fcbfc6a-d86e-5a3e-9c87-585d5138668c|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "Standard_L2as_v5",
+    "productName": "Virtual Machines Lasv5 Series",
+    "retailPrice": 0.265,
+    "skuName": "Standard_L2as_v5",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.265
+   },
+   "after": {
+    "retailPrice": 0.265,
+    "unitPrice": 0.265,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Lasv5 Series",
+    "skuName": "Standard_L2as_v5",
+    "meterName": "Standard_L2as_v5",
+    "armRegionName": "swedencentral",
+    "savingsPlanPrice": 0.19345
+   }
+  },
+  {
+   "key": "DZH318Z0SGN0/00K3|74a84273-87c9-50ad-b031-240e1561350d|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "Standard_L64as_v5",
+    "productName": "Virtual Machines Lasv5 Series",
+    "retailPrice": 8.466,
+    "skuName": "Standard_L64as_v5",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 8.466
+   },
+   "after": {
+    "retailPrice": 8.466,
+    "unitPrice": 8.466,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Lasv5 Series",
+    "skuName": "Standard_L64as_v5",
+    "meterName": "Standard_L64as_v5",
+    "armRegionName": "swedencentral",
+    "savingsPlanPrice": 6.18018
+   }
+  },
+  {
+   "key": "DZH318Z0SGN0/00H4|8ca3b000-555e-57f0-9388-4a7e89397680|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "Standard_L32as_v5",
+    "productName": "Virtual Machines Lasv5 Series",
+    "retailPrice": 4.233,
+    "skuName": "Standard_L32as_v5",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 4.233
+   },
+   "after": {
+    "retailPrice": 4.233,
+    "unitPrice": 4.233,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Lasv5 Series",
+    "skuName": "Standard_L32as_v5",
+    "meterName": "Standard_L32as_v5",
+    "armRegionName": "swedencentral",
+    "savingsPlanPrice": 3.09009
+   }
+  },
+  {
+   "key": "DZH318Z0SGN0/00KQ|8f824775-ac12-5589-b6e6-76ef78544463|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "L160iasv5",
+    "productName": "Virtual Machines Lasv5 Series",
+    "retailPrice": 23.28,
+    "skuName": "L160iasv5",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 23.28
+   },
+   "after": {
+    "retailPrice": 23.28,
+    "unitPrice": 23.28,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Lasv5 Series",
+    "skuName": "L160iasv5",
+    "meterName": "L160iasv5",
+    "armRegionName": "swedencentral",
+    "savingsPlanPrice": 16.9944
+   }
+  },
+  {
+   "key": "DZH318Z0SGN0/00H9|9951a01a-920d-5495-8a2c-b9ce2e28cc4e|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "Standard_L48as_v5",
+    "productName": "Virtual Machines Lasv5 Series",
+    "retailPrice": 6.349,
+    "skuName": "Standard_L48as_v5",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 6.349
+   },
+   "after": {
+    "retailPrice": 6.349,
+    "unitPrice": 6.349,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Lasv5 Series",
+    "skuName": "Standard_L48as_v5",
+    "meterName": "Standard_L48as_v5",
+    "armRegionName": "swedencentral",
+    "savingsPlanPrice": 4.63477
+   }
+  },
+  {
+   "key": "DZH318Z0SGN0/00JV|99c3a56c-c330-5a15-b669-73102a90f53a|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "Standard_L16as_v5",
+    "productName": "Virtual Machines Lasv5 Series",
+    "retailPrice": 2.116,
+    "skuName": "Standard_L16as_v5",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 2.116
+   },
+   "after": {
+    "retailPrice": 2.116,
+    "unitPrice": 2.116,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Lasv5 Series",
+    "skuName": "Standard_L16as_v5",
+    "meterName": "Standard_L16as_v5",
+    "armRegionName": "swedencentral",
+    "savingsPlanPrice": 1.54468
+   }
+  },
+  {
+   "key": "DZH318Z0SGN0/00G4|a098270c-97f3-5b5d-ac71-59f71272f21d|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "Standard_L96as_v5",
+    "productName": "Virtual Machines Lasv5 Series",
+    "retailPrice": 12.698,
+    "skuName": "Standard_L96as_v5",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 12.698
+   },
+   "after": {
+    "retailPrice": 12.698,
+    "unitPrice": 12.698,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Lasv5 Series",
+    "skuName": "Standard_L96as_v5",
+    "meterName": "Standard_L96as_v5",
+    "armRegionName": "swedencentral",
+    "savingsPlanPrice": 9.26954
+   }
+  }
+ ]
+}
