@@ -863,15 +863,6 @@
 "unitOfMeasure": "10K",
 "unitPrice": 0.299
 },
-"DZH318Z0BJRM/00DT|ac8a11dc-3f25-5772-8d8d-1c319f036473|Consumption|": {
-"armRegionName": "northeurope",
-"meterName": "Priority Data Retrieval",
-"productName": "Azure Data Lake Storage Gen2 Hierarchical Namespace",
-"retailPrice": 0.12,
-"skuName": "Archive RA-GRS",
-"unitOfMeasure": "1 GB",
-"unitPrice": 0.12
-},
 "DZH318Z0BJRM/00DT|c8f87832-9622-4c43-ae26-ceacde659145|Consumption|": {
 "armRegionName": "northeurope",
 "meterName": "Archive RA-GRS Early Delete",
@@ -1681,15 +1672,6 @@
 "skuName": "Hot GRS",
 "unitOfMeasure": "1 GB",
 "unitPrice": 0.0007
-},
-"DZH318Z0BJRN/00CW|a970d176-6044-4d9a-b478-33a809b45444|Consumption|": {
-"armRegionName": "northeurope",
-"meterName": "Hot Data Scanned for Query Acceleration",
-"productName": "Azure Data Lake Storage Gen2 Flat Namespace",
-"retailPrice": 0.002,
-"skuName": "Hot GRS",
-"unitOfMeasure": "1 GB",
-"unitPrice": 0.002
 },
 "DZH318Z0BJRN/00CW|b1247d60-de6c-4a10-9ea9-c2fe3dcc718b|Consumption|": {
 "armRegionName": "northeurope",
@@ -4634,15 +4616,6 @@
 "unitOfMeasure": "10K",
 "unitPrice": 0.06
 },
-"DZH318Z0BNZ5/00J6|ad578a2f-e53b-534c-8ce4-f4da57fdef1f|Consumption|": {
-"armRegionName": "northeurope",
-"meterName": "Account Encrypted List Operations",
-"productName": "Tables",
-"retailPrice": 0.108,
-"skuName": "Account Encrypted GRS",
-"unitOfMeasure": "10K",
-"unitPrice": 0.108
-},
 "DZH318Z0BNZ5/00J6|bd39366d-65e0-55bc-b86a-cfec44845594|Consumption|": {
 "armRegionName": "northeurope",
 "meterName": "Account Encrypted Delete Operations",
@@ -4696,15 +4669,6 @@
 "skuName": "Account Encrypted ZRS",
 "unitOfMeasure": "10K",
 "unitPrice": 0.09
-},
-"DZH318Z0BNZ5/00M3|aca2ef4b-230b-5ff4-8d4c-78845984c726|Consumption|": {
-"armRegionName": "northeurope",
-"meterName": "Account Encrypted List Operations",
-"productName": "Tables",
-"retailPrice": 0.108,
-"skuName": "Account Encrypted ZRS",
-"unitOfMeasure": "10K",
-"unitPrice": 0.108
 },
 "DZH318Z0BNZ5/00M3|bd39366d-65e0-55bc-b86a-cfec44845594|Consumption|": {
 "armRegionName": "northeurope",
@@ -8738,15 +8702,6 @@
 "unitOfMeasure": "10K",
 "unitPrice": 0.002
 },
-"DZH318Z0BP88/028G|ac49c320-9747-55a0-963d-263c6b6758ba|Consumption|": {
-"armRegionName": "northeurope",
-"meterName": "Confidential Compute Encryption ZRS Provisioned Capacity",
-"productName": "Standard SSD Managed Disks",
-"retailPrice": 3.1e-05,
-"skuName": "Confidential Compute Encryption ZRS",
-"unitOfMeasure": "1 GiB/Hour",
-"unitPrice": 3.1e-05
-},
 "DZH318Z0BP88/028H|2b4706f4-97eb-587e-8ccb-4f1b04c8a66d|Consumption|": {
 "armRegionName": "northeurope",
 "meterName": "Confidential Compute Encryption LRS Provisioned Capacity",
@@ -11705,15 +11660,6 @@
 "productName": "Blob Features",
 "retailPrice": 1.2,
 "skuName": "Hot GRS",
-"unitOfMeasure": "1/Month",
-"unitPrice": 1.2
-},
-"DZH318Z0CBTJ/016K|9c3b5e48-c10d-5c07-abff-731e7e1cc5c1|Consumption|": {
-"armRegionName": "northeurope",
-"meterName": "Cool ZRS Named Encryption Scopes",
-"productName": "Blob Features",
-"retailPrice": 1.2,
-"skuName": "Cool ZRS",
 "unitOfMeasure": "1/Month",
 "unitPrice": 1.2
 },
