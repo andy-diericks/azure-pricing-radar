@@ -1,0 +1,88 @@
+{
+ "scope": "storage-belgium",
+ "at": "2026-11-01T19:12:49.431743+00:00",
+ "added": [
+  {
+   "key": "DZH318Z0CBTJ/065L|3812d636-382b-8360-ad84-c50c964651a5|Consumption|",
+   "retailPrice": 0.0,
+   "unitPrice": 0.0,
+   "unitOfMeasure": "1 GB",
+   "productName": "Blob Features",
+   "skuName": "Public Endpoint Standard",
+   "meterName": "Public Endpoint Standard Data Processed",
+   "armRegionName": "belgiumcentral"
+  },
+  {
+   "key": "DZH318Z0BPH7/03P2|5e7d225c-fe34-b3ca-d289-12aaa33ac202|Consumption|",
+   "retailPrice": 0.0,
+   "unitPrice": 0.0,
+   "unitOfMeasure": "1/Month",
+   "productName": "General Block Blob v2",
+   "skuName": "Turbo LRS",
+   "meterName": "Bandwidth Included (gbps)",
+   "armRegionName": "belgiumcentral"
+  },
+  {
+   "key": "DZH318Z0BPH7/03P2|75d91d64-ef87-8673-7685-6286300ed84a|Consumption|",
+   "retailPrice": 20.0,
+   "unitPrice": 20.0,
+   "unitOfMeasure": "1/Month",
+   "productName": "General Block Blob v2",
+   "skuName": "Turbo LRS",
+   "meterName": "Account Enabled",
+   "armRegionName": "belgiumcentral"
+  },
+  {
+   "key": "DZH318Z0BPH7/03P2|d7896b4e-2258-9e58-f98d-7ed815f68361|Consumption|",
+   "retailPrice": 0.143,
+   "unitPrice": 0.143,
+   "unitOfMeasure": "1 GB/Month",
+   "productName": "General Block Blob v2",
+   "skuName": "Turbo LRS",
+   "meterName": "Turbo LRS Data Stored",
+   "armRegionName": "belgiumcentral"
+  },
+  {
+   "key": "DZH318Z0BPH7/03P2|db075764-8c1d-a3ac-7c8c-2a3f60cc7cc7|Consumption|",
+   "retailPrice": 0.0,
+   "unitPrice": 0.0,
+   "unitOfMeasure": "1/Month",
+   "productName": "General Block Blob v2",
+   "skuName": "Turbo LRS",
+   "meterName": "TPS Included",
+   "armRegionName": "belgiumcentral"
+  },
+  {
+   "key": "DZH318Z0CBTJ/065N|dbcbc036-64b2-bc8e-8181-0d0f19e9ff9c|Consumption|",
+   "retailPrice": 0.004,
+   "unitPrice": 0.004,
+   "unitOfMeasure": "1 GB",
+   "productName": "Blob Features",
+   "skuName": "Private Endpoint Premium",
+   "meterName": "Private Endpoint Premium Data Processed",
+   "armRegionName": "belgiumcentral"
+  },
+  {
+   "key": "DZH318Z0CBTJ/065L|e4ac77ce-78dc-b03d-6b8b-82c0e7177696|Consumption|",
+   "retailPrice": 0.091,
+   "unitPrice": 0.091,
+   "unitOfMeasure": "1",
+   "productName": "Blob Features",
+   "skuName": "Public Endpoint Standard",
+   "meterName": "Public Endpoint Standard Hour Enabled",
+   "armRegionName": "belgiumcentral"
+  },
+  {
+   "key": "DZH318Z0CBTJ/065N|e77f2843-9f6a-a59a-e880-4d6fad9725ef|Consumption|",
+   "retailPrice": 0.65,
+   "unitPrice": 0.65,
+   "unitOfMeasure": "1",
+   "productName": "Blob Features",
+   "skuName": "Private Endpoint Premium",
+   "meterName": "Private Endpoint Premium Hour Enabled",
+   "armRegionName": "belgiumcentral"
+  }
+ ],
+ "removed": [],
+ "changed": []
+}

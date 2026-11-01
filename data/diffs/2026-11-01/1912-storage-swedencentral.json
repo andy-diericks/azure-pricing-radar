@@ -1,0 +1,108 @@
+{
+ "scope": "storage-swedencentral",
+ "at": "2026-11-01T19:12:49.431743+00:00",
+ "added": [
+  {
+   "key": "DZH318Z0BPH7/03PT|41a9ffdf-1efe-8ca8-ea8c-3d5f611304a9|Consumption|",
+   "retailPrice": 0.0,
+   "unitPrice": 0.0,
+   "unitOfMeasure": "1/Month",
+   "productName": "General Block Blob v2",
+   "skuName": "Turbo LRS",
+   "meterName": "Bandwidth Included (gbps)",
+   "armRegionName": "swedencentral"
+  },
+  {
+   "key": "DZH318Z0CBTJ/067N|5693507a-eb85-81cc-ed8b-cf0b5acadc25|Consumption|",
+   "retailPrice": 0.65,
+   "unitPrice": 0.65,
+   "unitOfMeasure": "1",
+   "productName": "Blob Features",
+   "skuName": "Private Endpoint Premium",
+   "meterName": "Private Endpoint Premium Hour Enabled",
+   "armRegionName": "swedencentral"
+  },
+  {
+   "key": "DZH318Z0BZ26/008P|5a329151-b5b9-ba62-5184-b3160bb1ba92|Consumption|",
+   "retailPrice": 78.0,
+   "unitPrice": 78.0,
+   "unitOfMeasure": "1/Month",
+   "productName": "Storage - Bandwidth",
+   "skuName": "Turbo",
+   "meterName": "Turbo Bandwidth Provisioned (gbps)",
+   "armRegionName": "swedencentral"
+  },
+  {
+   "key": "DZH318Z0CBTJ/067Q|61c7ce11-371a-b4c9-4e89-87462fa0e0bf|Consumption|",
+   "retailPrice": 0.0,
+   "unitPrice": 0.0,
+   "unitOfMeasure": "1 GB",
+   "productName": "Blob Features",
+   "skuName": "Public Endpoint Standard",
+   "meterName": "Public Endpoint Standard Data Processed",
+   "armRegionName": "swedencentral"
+  },
+  {
+   "key": "DZH318Z0BPH7/03PT|82e4d4e4-a94b-b8c5-df8a-1b283d5ca41b|Consumption|",
+   "retailPrice": 20.0,
+   "unitPrice": 20.0,
+   "unitOfMeasure": "1/Month",
+   "productName": "General Block Blob v2",
+   "skuName": "Turbo LRS",
+   "meterName": "Account Enabled",
+   "armRegionName": "swedencentral"
+  },
+  {
+   "key": "DZH318Z0BZ26/008P|8ffc9e7f-addc-af85-9288-18c9a8a90201|Consumption|",
+   "retailPrice": 78.0,
+   "unitPrice": 78.0,
+   "unitOfMeasure": "1/Month",
+   "productName": "Storage - Bandwidth",
+   "skuName": "Turbo",
+   "meterName": "Turbo TPS Provisioned",
+   "armRegionName": "swedencentral"
+  },
+  {
+   "key": "DZH318Z0CBTJ/067N|a94b6bdd-e2c0-afc7-3b88-2995a743b97e|Consumption|",
+   "retailPrice": 0.004,
+   "unitPrice": 0.004,
+   "unitOfMeasure": "1 GB",
+   "productName": "Blob Features",
+   "skuName": "Private Endpoint Premium",
+   "meterName": "Private Endpoint Premium Data Processed",
+   "armRegionName": "swedencentral"
+  },
+  {
+   "key": "DZH318Z0BPH7/03PT|bfe9c629-3961-811c-ef80-4234c8fa8692|Consumption|",
+   "retailPrice": 0.143,
+   "unitPrice": 0.143,
+   "unitOfMeasure": "1 GB/Month",
+   "productName": "General Block Blob v2",
+   "skuName": "Turbo LRS",
+   "meterName": "Turbo LRS Data Stored",
+   "armRegionName": "swedencentral"
+  },
+  {
+   "key": "DZH318Z0BPH7/03PT|eff7b568-beb6-bb57-d18a-6ee7459b43b8|Consumption|",
+   "retailPrice": 0.0,
+   "unitPrice": 0.0,
+   "unitOfMeasure": "1/Month",
+   "productName": "General Block Blob v2",
+   "skuName": "Turbo LRS",
+   "meterName": "TPS Included",
+   "armRegionName": "swedencentral"
+  },
+  {
+   "key": "DZH318Z0CBTJ/067Q|f916f3c9-dcd0-9a31-ae86-30f752dd6be5|Consumption|",
+   "retailPrice": 0.091,
+   "unitPrice": 0.091,
+   "unitOfMeasure": "1",
+   "productName": "Blob Features",
+   "skuName": "Public Endpoint Standard",
+   "meterName": "Public Endpoint Standard Hour Enabled",
+   "armRegionName": "swedencentral"
+  }
+ ],
+ "removed": [],
+ "changed": []
+}

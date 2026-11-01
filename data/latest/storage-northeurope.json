@@ -10160,6 +10160,42 @@
 "unitOfMeasure": "1 GB/Month",
 "unitPrice": 0.0085
 },
+"DZH318Z0BPH7/03QP|3223509f-d0d1-adb6-db8f-2d20e9e81848|Consumption|": {
+"armRegionName": "northeurope",
+"meterName": "Account Enabled",
+"productName": "General Block Blob v2",
+"retailPrice": 20.0,
+"skuName": "Turbo LRS",
+"unitOfMeasure": "1/Month",
+"unitPrice": 20.0
+},
+"DZH318Z0BPH7/03QP|75022707-6a53-bd5d-f981-f4ab9b8816bf|Consumption|": {
+"armRegionName": "northeurope",
+"meterName": "Turbo LRS Data Stored",
+"productName": "General Block Blob v2",
+"retailPrice": 0.1573,
+"skuName": "Turbo LRS",
+"unitOfMeasure": "1 GB/Month",
+"unitPrice": 0.1573
+},
+"DZH318Z0BPH7/03QP|c0a0f39f-9ed0-9399-9188-bb67cd362a60|Consumption|": {
+"armRegionName": "northeurope",
+"meterName": "TPS Included",
+"productName": "General Block Blob v2",
+"retailPrice": 0.0,
+"skuName": "Turbo LRS",
+"unitOfMeasure": "1/Month",
+"unitPrice": 0.0
+},
+"DZH318Z0BPH7/03QP|eee0a8b8-9bc4-95a1-0783-bc8b6460a0d1|Consumption|": {
+"armRegionName": "northeurope",
+"meterName": "Bandwidth Included (gbps)",
+"productName": "General Block Blob v2",
+"retailPrice": 0.0,
+"skuName": "Turbo LRS",
+"unitOfMeasure": "1/Month",
+"unitPrice": 0.0
+},
 "DZH318Z0BZ0C/000P|02b61f72-47c2-4978-8725-a02adb3bd4f3|Consumption|": {
 "armRegionName": "northeurope",
 "meterName": "Standard 1 Million Blob Rules",
@@ -10330,6 +10366,24 @@
 "skuName": "Geo-Replication",
 "unitOfMeasure": "1 GB",
 "unitPrice": 0.0
+},
+"DZH318Z0BZ26/009K|4c08f3ff-1dec-ae76-7786-86f5f0e09c74|Consumption|": {
+"armRegionName": "northeurope",
+"meterName": "Turbo Bandwidth Provisioned (gbps)",
+"productName": "Storage - Bandwidth",
+"retailPrice": 85.8,
+"skuName": "Turbo",
+"unitOfMeasure": "1/Month",
+"unitPrice": 85.8
+},
+"DZH318Z0BZ26/009K|546c60a3-cfc6-93ed-848b-c2f54e415cd9|Consumption|": {
+"armRegionName": "northeurope",
+"meterName": "Turbo TPS Provisioned",
+"productName": "Storage - Bandwidth",
+"retailPrice": 85.8,
+"skuName": "Turbo",
+"unitOfMeasure": "1/Month",
+"unitPrice": 85.8
 },
 "DZH318Z0C120/0009|0d9168fa-21f4-5ab9-8bc4-5055a64a2bf9|Consumption|": {
 "armRegionName": "northeurope",
@@ -11941,6 +11995,42 @@
 "skuName": "Data Geo Priority Replication GRS",
 "unitOfMeasure": "1 GB",
 "unitPrice": 0.015
+},
+"DZH318Z0CBTJ/06DC|b4985ab2-eabd-a670-0785-5c9d1c39459a|Consumption|": {
+"armRegionName": "northeurope",
+"meterName": "Private Endpoint Premium Hour Enabled",
+"productName": "Blob Features",
+"retailPrice": 0.715,
+"skuName": "Private Endpoint Premium",
+"unitOfMeasure": "1",
+"unitPrice": 0.715
+},
+"DZH318Z0CBTJ/06DC|dc1c699b-392b-9c4c-038f-033d6cd861f7|Consumption|": {
+"armRegionName": "northeurope",
+"meterName": "Private Endpoint Premium Data Processed",
+"productName": "Blob Features",
+"retailPrice": 0.004,
+"skuName": "Private Endpoint Premium",
+"unitOfMeasure": "1 GB",
+"unitPrice": 0.004
+},
+"DZH318Z0CBTJ/06DD|6c6c21b0-9eee-9ddc-548b-4178b07ff98c|Consumption|": {
+"armRegionName": "northeurope",
+"meterName": "Public Endpoint Standard Data Processed",
+"productName": "Blob Features",
+"retailPrice": 0.0,
+"skuName": "Public Endpoint Standard",
+"unitOfMeasure": "1 GB",
+"unitPrice": 0.0
+},
+"DZH318Z0CBTJ/06DD|a3b4cfba-a04f-bf6b-b28f-57c8eea9277b|Consumption|": {
+"armRegionName": "northeurope",
+"meterName": "Public Endpoint Standard Hour Enabled",
+"productName": "Blob Features",
+"retailPrice": 0.1001,
+"skuName": "Public Endpoint Standard",
+"unitOfMeasure": "1",
+"unitPrice": 0.1001
 },
 "DZH318Z0CPS4/002R|228e7ee8-947e-5179-8af4-b98c2c2dee02|Consumption|": {
 "armRegionName": "northeurope",

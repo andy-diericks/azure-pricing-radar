@@ -1,0 +1,108 @@
+{
+ "scope": "storage-francecentral",
+ "at": "2026-11-01T19:12:49.431743+00:00",
+ "added": [
+  {
+   "key": "DZH318Z0CBTJ/06D5|0d819f35-a014-80bc-9c8a-3f8e14c54765|Consumption|",
+   "retailPrice": 0.0875,
+   "unitPrice": 0.0875,
+   "unitOfMeasure": "1",
+   "productName": "Blob Features",
+   "skuName": "Public Endpoint Standard",
+   "meterName": "Public Endpoint Standard Hour Enabled",
+   "armRegionName": "francecentral"
+  },
+  {
+   "key": "DZH318Z0BPH7/03QL|263e21dc-0436-a9f4-8781-c56a1615fc99|Consumption|",
+   "retailPrice": 0.1375,
+   "unitPrice": 0.1375,
+   "unitOfMeasure": "1 GB/Month",
+   "productName": "General Block Blob v2",
+   "skuName": "Turbo LRS",
+   "meterName": "Turbo LRS Data Stored",
+   "armRegionName": "francecentral"
+  },
+  {
+   "key": "DZH318Z0BPH7/03QL|380de59b-8c5c-8fc6-1284-db648d0d4f62|Consumption|",
+   "retailPrice": 20.0,
+   "unitPrice": 20.0,
+   "unitOfMeasure": "1/Month",
+   "productName": "General Block Blob v2",
+   "skuName": "Turbo LRS",
+   "meterName": "Account Enabled",
+   "armRegionName": "francecentral"
+  },
+  {
+   "key": "DZH318Z0CBTJ/06D4|67f52649-b0b4-8e8c-0d84-a83edcdb28fd|Consumption|",
+   "retailPrice": 0.625,
+   "unitPrice": 0.625,
+   "unitOfMeasure": "1",
+   "productName": "Blob Features",
+   "skuName": "Private Endpoint Premium",
+   "meterName": "Private Endpoint Premium Hour Enabled",
+   "armRegionName": "francecentral"
+  },
+  {
+   "key": "DZH318Z0BPH7/03QL|a9b77874-ea2a-84d3-2f8a-8198de819436|Consumption|",
+   "retailPrice": 0.0,
+   "unitPrice": 0.0,
+   "unitOfMeasure": "1/Month",
+   "productName": "General Block Blob v2",
+   "skuName": "Turbo LRS",
+   "meterName": "TPS Included",
+   "armRegionName": "francecentral"
+  },
+  {
+   "key": "DZH318Z0BZ26/009L|bf3e2487-4fef-8f37-6587-5af304d6bb7e|Consumption|",
+   "retailPrice": 75.0,
+   "unitPrice": 75.0,
+   "unitOfMeasure": "1/Month",
+   "productName": "Storage - Bandwidth",
+   "skuName": "Turbo",
+   "meterName": "Turbo TPS Provisioned",
+   "armRegionName": "francecentral"
+  },
+  {
+   "key": "DZH318Z0BPH7/03QL|c2447b82-0fb2-aca8-9c85-2e44949217b2|Consumption|",
+   "retailPrice": 0.0,
+   "unitPrice": 0.0,
+   "unitOfMeasure": "1/Month",
+   "productName": "General Block Blob v2",
+   "skuName": "Turbo LRS",
+   "meterName": "Bandwidth Included (gbps)",
+   "armRegionName": "francecentral"
+  },
+  {
+   "key": "DZH318Z0CBTJ/06D5|c9a28d8a-651a-b5fe-ab8d-436e54160dc8|Consumption|",
+   "retailPrice": 0.0,
+   "unitPrice": 0.0,
+   "unitOfMeasure": "1 GB",
+   "productName": "Blob Features",
+   "skuName": "Public Endpoint Standard",
+   "meterName": "Public Endpoint Standard Data Processed",
+   "armRegionName": "francecentral"
+  },
+  {
+   "key": "DZH318Z0BZ26/009L|de14529c-943f-9960-0880-b5c6de93f2e4|Consumption|",
+   "retailPrice": 75.0,
+   "unitPrice": 75.0,
+   "unitOfMeasure": "1/Month",
+   "productName": "Storage - Bandwidth",
+   "skuName": "Turbo",
+   "meterName": "Turbo Bandwidth Provisioned (gbps)",
+   "armRegionName": "francecentral"
+  },
+  {
+   "key": "DZH318Z0CBTJ/06D4|eb7a858e-9fb5-a47e-008c-df8beb608dfd|Consumption|",
+   "retailPrice": 0.004,
+   "unitPrice": 0.004,
+   "unitOfMeasure": "1 GB",
+   "productName": "Blob Features",
+   "skuName": "Private Endpoint Premium",
+   "meterName": "Private Endpoint Premium Data Processed",
+   "armRegionName": "francecentral"
+  }
+ ],
+ "removed": [],
+ "changed": []
+}

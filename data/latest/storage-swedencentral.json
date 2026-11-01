@@ -10016,6 +10016,42 @@
 "unitOfMeasure": "1M",
 "unitPrice": 0.0325
 },
+"DZH318Z0BPH7/03PT|41a9ffdf-1efe-8ca8-ea8c-3d5f611304a9|Consumption|": {
+"armRegionName": "swedencentral",
+"meterName": "Bandwidth Included (gbps)",
+"productName": "General Block Blob v2",
+"retailPrice": 0.0,
+"skuName": "Turbo LRS",
+"unitOfMeasure": "1/Month",
+"unitPrice": 0.0
+},
+"DZH318Z0BPH7/03PT|82e4d4e4-a94b-b8c5-df8a-1b283d5ca41b|Consumption|": {
+"armRegionName": "swedencentral",
+"meterName": "Account Enabled",
+"productName": "General Block Blob v2",
+"retailPrice": 20.0,
+"skuName": "Turbo LRS",
+"unitOfMeasure": "1/Month",
+"unitPrice": 20.0
+},
+"DZH318Z0BPH7/03PT|bfe9c629-3961-811c-ef80-4234c8fa8692|Consumption|": {
+"armRegionName": "swedencentral",
+"meterName": "Turbo LRS Data Stored",
+"productName": "General Block Blob v2",
+"retailPrice": 0.143,
+"skuName": "Turbo LRS",
+"unitOfMeasure": "1 GB/Month",
+"unitPrice": 0.143
+},
+"DZH318Z0BPH7/03PT|eff7b568-beb6-bb57-d18a-6ee7459b43b8|Consumption|": {
+"armRegionName": "swedencentral",
+"meterName": "TPS Included",
+"productName": "General Block Blob v2",
+"retailPrice": 0.0,
+"skuName": "Turbo LRS",
+"unitOfMeasure": "1/Month",
+"unitPrice": 0.0
+},
 "DZH318Z0BZ0C/001R|57f977e9-075e-5856-9b7d-893a3ab35adc|Consumption|": {
 "armRegionName": "swedencentral",
 "meterName": "Standard 1 Million Blob Rules",
@@ -10186,6 +10222,24 @@
 "skuName": "Geo-Replication",
 "unitOfMeasure": "1 GB",
 "unitPrice": 0.0
+},
+"DZH318Z0BZ26/008P|5a329151-b5b9-ba62-5184-b3160bb1ba92|Consumption|": {
+"armRegionName": "swedencentral",
+"meterName": "Turbo Bandwidth Provisioned (gbps)",
+"productName": "Storage - Bandwidth",
+"retailPrice": 78.0,
+"skuName": "Turbo",
+"unitOfMeasure": "1/Month",
+"unitPrice": 78.0
+},
+"DZH318Z0BZ26/008P|8ffc9e7f-addc-af85-9288-18c9a8a90201|Consumption|": {
+"armRegionName": "swedencentral",
+"meterName": "Turbo TPS Provisioned",
+"productName": "Storage - Bandwidth",
+"retailPrice": 78.0,
+"skuName": "Turbo",
+"unitOfMeasure": "1/Month",
+"unitPrice": 78.0
 },
 "DZH318Z0C120/00XP|5bc2e94e-7bf8-5780-8639-4df16668942b|Consumption|": {
 "armRegionName": "swedencentral",
@@ -11662,6 +11716,42 @@
 "skuName": "Data Geo Priority Replication RA-GRS",
 "unitOfMeasure": "1 GB",
 "unitPrice": 0.015
+},
+"DZH318Z0CBTJ/067N|5693507a-eb85-81cc-ed8b-cf0b5acadc25|Consumption|": {
+"armRegionName": "swedencentral",
+"meterName": "Private Endpoint Premium Hour Enabled",
+"productName": "Blob Features",
+"retailPrice": 0.65,
+"skuName": "Private Endpoint Premium",
+"unitOfMeasure": "1",
+"unitPrice": 0.65
+},
+"DZH318Z0CBTJ/067N|a94b6bdd-e2c0-afc7-3b88-2995a743b97e|Consumption|": {
+"armRegionName": "swedencentral",
+"meterName": "Private Endpoint Premium Data Processed",
+"productName": "Blob Features",
+"retailPrice": 0.004,
+"skuName": "Private Endpoint Premium",
+"unitOfMeasure": "1 GB",
+"unitPrice": 0.004
+},
+"DZH318Z0CBTJ/067Q|61c7ce11-371a-b4c9-4e89-87462fa0e0bf|Consumption|": {
+"armRegionName": "swedencentral",
+"meterName": "Public Endpoint Standard Data Processed",
+"productName": "Blob Features",
+"retailPrice": 0.0,
+"skuName": "Public Endpoint Standard",
+"unitOfMeasure": "1 GB",
+"unitPrice": 0.0
+},
+"DZH318Z0CBTJ/067Q|f916f3c9-dcd0-9a31-ae86-30f752dd6be5|Consumption|": {
+"armRegionName": "swedencentral",
+"meterName": "Public Endpoint Standard Hour Enabled",
+"productName": "Blob Features",
+"retailPrice": 0.091,
+"skuName": "Public Endpoint Standard",
+"unitOfMeasure": "1",
+"unitPrice": 0.091
 },
 "DZH318Z0CPS4/003M|2df3e815-39d8-5713-be24-e71f9af52fd9|Consumption|": {
 "armRegionName": "swedencentral",

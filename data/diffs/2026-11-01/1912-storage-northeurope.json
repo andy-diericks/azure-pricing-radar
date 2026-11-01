@@ -1,0 +1,108 @@
+{
+ "scope": "storage-northeurope",
+ "at": "2026-11-01T19:12:49.431743+00:00",
+ "added": [
+  {
+   "key": "DZH318Z0BPH7/03QP|3223509f-d0d1-adb6-db8f-2d20e9e81848|Consumption|",
+   "retailPrice": 20.0,
+   "unitPrice": 20.0,
+   "unitOfMeasure": "1/Month",
+   "productName": "General Block Blob v2",
+   "skuName": "Turbo LRS",
+   "meterName": "Account Enabled",
+   "armRegionName": "northeurope"
+  },
+  {
+   "key": "DZH318Z0BZ26/009K|4c08f3ff-1dec-ae76-7786-86f5f0e09c74|Consumption|",
+   "retailPrice": 85.8,
+   "unitPrice": 85.8,
+   "unitOfMeasure": "1/Month",
+   "productName": "Storage - Bandwidth",
+   "skuName": "Turbo",
+   "meterName": "Turbo Bandwidth Provisioned (gbps)",
+   "armRegionName": "northeurope"
+  },
+  {
+   "key": "DZH318Z0BZ26/009K|546c60a3-cfc6-93ed-848b-c2f54e415cd9|Consumption|",
+   "retailPrice": 85.8,
+   "unitPrice": 85.8,
+   "unitOfMeasure": "1/Month",
+   "productName": "Storage - Bandwidth",
+   "skuName": "Turbo",
+   "meterName": "Turbo TPS Provisioned",
+   "armRegionName": "northeurope"
+  },
+  {
+   "key": "DZH318Z0CBTJ/06DD|6c6c21b0-9eee-9ddc-548b-4178b07ff98c|Consumption|",
+   "retailPrice": 0.0,
+   "unitPrice": 0.0,
+   "unitOfMeasure": "1 GB",
+   "productName": "Blob Features",
+   "skuName": "Public Endpoint Standard",
+   "meterName": "Public Endpoint Standard Data Processed",
+   "armRegionName": "northeurope"
+  },
+  {
+   "key": "DZH318Z0BPH7/03QP|75022707-6a53-bd5d-f981-f4ab9b8816bf|Consumption|",
+   "retailPrice": 0.1573,
+   "unitPrice": 0.1573,
+   "unitOfMeasure": "1 GB/Month",
+   "productName": "General Block Blob v2",
+   "skuName": "Turbo LRS",
+   "meterName": "Turbo LRS Data Stored",
+   "armRegionName": "northeurope"
+  },
+  {
+   "key": "DZH318Z0CBTJ/06DD|a3b4cfba-a04f-bf6b-b28f-57c8eea9277b|Consumption|",
+   "retailPrice": 0.1001,
+   "unitPrice": 0.1001,
+   "unitOfMeasure": "1",
+   "productName": "Blob Features",
+   "skuName": "Public Endpoint Standard",
+   "meterName": "Public Endpoint Standard Hour Enabled",
+   "armRegionName": "northeurope"
+  },
+  {
+   "key": "DZH318Z0CBTJ/06DC|b4985ab2-eabd-a670-0785-5c9d1c39459a|Consumption|",
+   "retailPrice": 0.715,
+   "unitPrice": 0.715,
+   "unitOfMeasure": "1",
+   "productName": "Blob Features",
+   "skuName": "Private Endpoint Premium",
+   "meterName": "Private Endpoint Premium Hour Enabled",
+   "armRegionName": "northeurope"
+  },
+  {
+   "key": "DZH318Z0BPH7/03QP|c0a0f39f-9ed0-9399-9188-bb67cd362a60|Consumption|",
+   "retailPrice": 0.0,
+   "unitPrice": 0.0,
+   "unitOfMeasure": "1/Month",
+   "productName": "General Block Blob v2",
+   "skuName": "Turbo LRS",
+   "meterName": "TPS Included",
+   "armRegionName": "northeurope"
+  },
+  {
+   "key": "DZH318Z0CBTJ/06DC|dc1c699b-392b-9c4c-038f-033d6cd861f7|Consumption|",
+   "retailPrice": 0.004,
+   "unitPrice": 0.004,
+   "unitOfMeasure": "1 GB",
+   "productName": "Blob Features",
+   "skuName": "Private Endpoint Premium",
+   "meterName": "Private Endpoint Premium Data Processed",
+   "armRegionName": "northeurope"
+  },
+  {
+   "key": "DZH318Z0BPH7/03QP|eee0a8b8-9bc4-95a1-0783-bc8b6460a0d1|Consumption|",
+   "retailPrice": 0.0,
+   "unitPrice": 0.0,
+   "unitOfMeasure": "1/Month",
+   "productName": "General Block Blob v2",
+   "skuName": "Turbo LRS",
+   "meterName": "Bandwidth Included (gbps)",
+   "armRegionName": "northeurope"
+  }
+ ],
+ "removed": [],
+ "changed": []
+}

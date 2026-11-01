@@ -19562,10 +19562,10 @@
 "armRegionName": "francecentral",
 "meterName": "NC48ads_A100_v4 Spot",
 "productName": "NCads A100 v4 Series Linux",
-"retailPrice": 1.697018,
+"retailPrice": 1.865986,
 "skuName": "Standard_NC48ads_A100_v4 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 1.697018
+"unitPrice": 1.865986
 },
 "DZH318Z09TGJ/0097|14d858c7-0055-5fff-ac7a-7b57dc49f517|Consumption|": {
 "armRegionName": "francecentral",
@@ -19581,10 +19581,10 @@
 "armRegionName": "francecentral",
 "meterName": "NC24ads_A100_v4 Spot",
 "productName": "NCads A100 v4 Series Linux",
-"retailPrice": 0.848417,
+"retailPrice": 0.932891,
 "skuName": "Standard_NC24ads_A100_v4 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.848417
+"unitPrice": 0.932891
 },
 "DZH318Z09TGJ/009B|148a9b32-8f61-5768-a6db-92ae01c0ebd8|Consumption|": {
 "armRegionName": "francecentral",
@@ -19599,10 +19599,10 @@
 "armRegionName": "francecentral",
 "meterName": "NC96ads_A100_v4 Spot",
 "productName": "NCads A100 v4 Series Linux",
-"retailPrice": 3.393852,
+"retailPrice": 3.731768,
 "skuName": "Standard_NC96ads_A100_v4 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 3.393852
+"unitPrice": 3.731768
 },
 "DZH318Z09TGJ/009J|88c0226d-819a-53c6-9373-d04db3996e99|Consumption|": {
 "armRegionName": "francecentral",
@@ -19655,10 +19655,10 @@
 "armRegionName": "francecentral",
 "meterName": "NC96ads_A100_v4 Spot",
 "productName": "NCads A100 v4 Series Windows",
-"retailPrice": 4.209929,
+"retailPrice": 4.629099,
 "skuName": "Standard_NC96ads_A100_v4 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 4.209929
+"unitPrice": 4.629099
 },
 "DZH318Z09TH1/007M|4504f1b8-4771-5e92-a44f-3ba624b2ae00|Consumption|": {
 "armRegionName": "francecentral",
@@ -19691,10 +19691,10 @@
 "armRegionName": "francecentral",
 "meterName": "NC48ads_A100_v4 Spot",
 "productName": "NCads A100 v4 Series Windows",
-"retailPrice": 2.105057,
+"retailPrice": 2.314651,
 "skuName": "Standard_NC48ads_A100_v4 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 2.105057
+"unitPrice": 2.314651
 },
 "DZH318Z09TH1/007W|3b7d93c2-fa25-5524-bed5-3fec5ff93cae|Consumption|": {
 "armRegionName": "francecentral",
@@ -19709,10 +19709,10 @@
 "armRegionName": "francecentral",
 "meterName": "NC24ads_A100_v4 Spot",
 "productName": "NCads A100 v4 Series Windows",
-"retailPrice": 1.052436,
+"retailPrice": 1.157224,
 "skuName": "Standard_NC24ads_A100_v4 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 1.052436
+"unitPrice": 1.157224
 },
 "DZH318Z09TH1/007Z|8c4d0786-b178-5180-a787-49c4575e6824|Consumption|": {
 "armRegionName": "francecentral",
@@ -22465,100 +22465,100 @@
 "armRegionName": "francecentral",
 "meterName": "D15 v2/DS15 v2 Spot",
 "productName": "Virtual Machines Dv2 Series Windows",
-"retailPrice": 0.69003,
+"retailPrice": 0.715552,
 "skuName": "D15 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.69003
+"unitPrice": 0.715552
 },
 "DZH318Z0BPVM/01KJ|576fcec1-7b68-5eda-bf26-e3ab12dbdf6d|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "D3 v2/DS3 v2 Spot",
 "productName": "Virtual Machines Dv2 Series Windows",
-"retailPrice": 0.131947,
+"retailPrice": 0.136828,
 "skuName": "D3 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.131947
+"unitPrice": 0.136828
 },
 "DZH318Z0BPVM/01KL|e0d615ab-21c9-5e00-9970-129359eb0922|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "D1 v2/DS1 v2 Spot",
 "productName": "Virtual Machines Dv2 Series Windows",
-"retailPrice": 0.033002,
+"retailPrice": 0.034207,
 "skuName": "D1 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.033002
+"unitPrice": 0.034207
 },
 "DZH318Z0BPVM/01KM|822698c2-a8bd-51ba-9492-ff5c44627b7e|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "D5 v2/DS5 v2 Spot",
 "productName": "Virtual Machines Dv2 Series Windows",
-"retailPrice": 0.527564,
+"retailPrice": 0.547078,
 "skuName": "D5 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.527564
+"unitPrice": 0.547078
 },
 "DZH318Z0BPVM/01KQ|a7e1e85e-e786-5714-bbed-735f71587aa3|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "D2 v2/DS2 v2 Spot",
 "productName": "Virtual Machines Dv2 Series Windows",
-"retailPrice": 0.065974,
+"retailPrice": 0.068414,
 "skuName": "D2 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.065974
+"unitPrice": 0.068414
 },
 "DZH318Z0BPVM/01KR|ad67d3df-fcf6-54d3-9608-2efdf5efae7b|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "D15i v2/DS15i v2 Spot",
 "productName": "Virtual Machines Dv2 Series Windows",
-"retailPrice": 0.69003,
+"retailPrice": 0.715552,
 "skuName": "D15i v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.69003
+"unitPrice": 0.715552
 },
 "DZH318Z0BPVM/01KT|bcbff3c2-1f87-56cf-a84f-a2ee5ef4cfa6|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "D4 v2/DS4 v2 Spot",
 "productName": "Virtual Machines Dv2 Series Windows",
-"retailPrice": 0.263894,
+"retailPrice": 0.273655,
 "skuName": "D4 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.263894
+"unitPrice": 0.273655
 },
 "DZH318Z0BPVM/01M7|a28d83d8-0c67-58c1-8e1a-779fa83c2c0f|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "D11 v2/DS11 v2 Spot",
 "productName": "Virtual Machines Dv2 Series Windows",
-"retailPrice": 0.069115,
+"retailPrice": 0.071672,
 "skuName": "D11 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.069115
+"unitPrice": 0.071672
 },
 "DZH318Z0BPVM/01QP|24037f9e-0ec3-5539-9235-e97e683aa79e|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "D14 v2/DS14 v2 Spot",
 "productName": "Virtual Machines Dv2 Series Windows",
-"retailPrice": 0.552024,
+"retailPrice": 0.572442,
 "skuName": "D14 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.552024
+"unitPrice": 0.572442
 },
 "DZH318Z0BPVM/01T3|bdef8d2e-28dc-53d8-9be8-0f5e40718958|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "D13 v2/DS13 v2 Spot",
 "productName": "Virtual Machines Dv2 Series Windows",
-"retailPrice": 0.276012,
+"retailPrice": 0.286221,
 "skuName": "D13 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.276012
+"unitPrice": 0.286221
 },
 "DZH318Z0BPVM/01W5|917d6fd6-339f-51cf-8a2e-56d411e7fbed|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "D12 v2/DS12 v2 Spot",
 "productName": "Virtual Machines Dv2 Series Windows",
-"retailPrice": 0.138006,
+"retailPrice": 0.14311,
 "skuName": "D12 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.138006
+"unitPrice": 0.14311
 },
 "DZH318Z0BPVN/001C|14a496a1-f40c-4cfa-bbf2-82da2944f618|Consumption|": {
 "armRegionName": "francecentral",
@@ -23140,55 +23140,55 @@
 "armRegionName": "francecentral",
 "meterName": "F1/F1s Spot",
 "productName": "Virtual Machines F Series Windows",
-"retailPrice": 0.021655,
+"retailPrice": 0.022456,
 "skuName": "F1 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.021655
+"unitPrice": 0.022456
 },
 "DZH318Z0BPVT/00SP|941a1312-b112-57e9-9ba4-4482de789d7b|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "F4/F4s Spot",
 "productName": "Virtual Machines F Series Windows",
-"retailPrice": 0.086657,
+"retailPrice": 0.089822,
 "skuName": "F4 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.086657
+"unitPrice": 0.089822
 },
 "DZH318Z0BPVT/00SR|80b5c4a8-cbf4-598c-84c5-f29d0c7a9376|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "F8/F8s Spot",
 "productName": "Virtual Machines F Series Windows",
-"retailPrice": 0.173314,
+"retailPrice": 0.179644,
 "skuName": "F8 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.173314
+"unitPrice": 0.179644
 },
 "DZH318Z0BPVT/00SX|7191e5e9-f280-5e56-9b1c-31439a6ebb3c|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "F16/F16s Spot",
 "productName": "Virtual Machines F Series Windows",
-"retailPrice": 0.346474,
+"retailPrice": 0.359289,
 "skuName": "F16 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.346474
+"unitPrice": 0.359289
 },
 "DZH318Z0BPVT/00SZ|82903ba5-1198-5370-80fd-30826e46164f|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "F2/F2s Spot",
 "productName": "Virtual Machines F Series Windows",
-"retailPrice": 0.043309,
+"retailPrice": 0.044911,
 "skuName": "F2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.043309
+"unitPrice": 0.044911
 },
 "DZH318Z0BPVW/011J|d662c475-0e13-5728-8d56-49ac308447f4|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "D12/DS12 Spot",
 "productName": "Virtual Machines D Series Windows",
-"retailPrice": 0.149226,
+"retailPrice": 0.154746,
 "skuName": "D12 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.149226
+"unitPrice": 0.154746
 },
 "DZH318Z0BPVW/0120|2886e53d-b225-5380-8e46-b9d82ddfc899|Consumption|": {
 "armRegionName": "francecentral",
@@ -23230,10 +23230,10 @@
 "armRegionName": "francecentral",
 "meterName": "D14/DS14 Spot",
 "productName": "Virtual Machines D Series Windows",
-"retailPrice": 0.597128,
+"retailPrice": 0.619215,
 "skuName": "D14 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.597128
+"unitPrice": 0.619215
 },
 "DZH318Z0BPVW/012L|681a8741-8d93-54ad-a535-76ead6194087|Consumption|": {
 "armRegionName": "francecentral",
@@ -23248,10 +23248,10 @@
 "armRegionName": "francecentral",
 "meterName": "D11/DS11 Spot",
 "productName": "Virtual Machines D Series Windows",
-"retailPrice": 0.074725,
+"retailPrice": 0.077489,
 "skuName": "D11 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.074725
+"unitPrice": 0.077489
 },
 "DZH318Z0BPVW/012N|ac28e69b-d20c-5772-8c11-0c92088f7dbb|Consumption|": {
 "armRegionName": "francecentral",
@@ -23275,10 +23275,10 @@
 "armRegionName": "francecentral",
 "meterName": "D1/DS1 Spot",
 "productName": "Virtual Machines D Series Windows",
-"retailPrice": 0.031879,
+"retailPrice": 0.033043,
 "skuName": "D1 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.031879
+"unitPrice": 0.033043
 },
 "DZH318Z0BPVW/012R|01a5faf6-9a27-5f93-a54b-3a7a20ea681e|Consumption|": {
 "armRegionName": "francecentral",
@@ -23293,10 +23293,10 @@
 "armRegionName": "francecentral",
 "meterName": "D4/DS4 Spot",
 "productName": "Virtual Machines D Series Windows",
-"retailPrice": 0.255367,
+"retailPrice": 0.264813,
 "skuName": "D4 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.255367
+"unitPrice": 0.264813
 },
 "DZH318Z0BPVW/012T|40e5a870-f397-5212-bcf2-b77940d8e783|Consumption|": {
 "armRegionName": "francecentral",
@@ -23329,10 +23329,10 @@
 "armRegionName": "francecentral",
 "meterName": "D3/DS3 Spot",
 "productName": "Virtual Machines D Series Windows",
-"retailPrice": 0.127684,
+"retailPrice": 0.132406,
 "skuName": "D3 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.127684
+"unitPrice": 0.132406
 },
 "DZH318Z0BPVW/0132|b7ae1857-4dff-5f3d-a4c7-97d1d211d998|Consumption|": {
 "armRegionName": "francecentral",
@@ -23356,10 +23356,10 @@
 "armRegionName": "francecentral",
 "meterName": "D2/DS2 Spot",
 "productName": "Virtual Machines D Series Windows",
-"retailPrice": 0.06373,
+"retailPrice": 0.066087,
 "skuName": "D2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.06373
+"unitPrice": 0.066087
 },
 "DZH318Z0BPVW/013K|795890ac-9557-5ec4-ac93-2e24c09f2e44|Consumption|": {
 "armRegionName": "francecentral",
@@ -23374,10 +23374,10 @@
 "armRegionName": "francecentral",
 "meterName": "D13/DS13 Spot",
 "productName": "Virtual Machines D Series Windows",
-"retailPrice": 0.298452,
+"retailPrice": 0.309491,
 "skuName": "D13 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.298452
+"unitPrice": 0.309491
 },
 "DZH318Z0BPVW/013X|9ebc422f-ee81-5783-8e41-0f85d5e98fd6|Consumption|": {
 "armRegionName": "francecentral",
@@ -23680,10 +23680,10 @@
 "armRegionName": "francecentral",
 "meterName": "DS14 Spot",
 "productName": "Virtual Machines DS Series Windows",
-"retailPrice": 0.597128,
+"retailPrice": 0.619215,
 "skuName": "DS14 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.597128
+"unitPrice": 0.619215
 },
 "DZH318Z0BPW4/00XL|0f54752b-5366-5424-88e1-ac066f6fbdcd|Consumption|": {
 "armRegionName": "francecentral",
@@ -23698,28 +23698,28 @@
 "armRegionName": "francecentral",
 "meterName": "DS12 Spot",
 "productName": "Virtual Machines DS Series Windows",
-"retailPrice": 0.149226,
+"retailPrice": 0.154746,
 "skuName": "DS12 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.149226
+"unitPrice": 0.154746
 },
 "DZH318Z0BPW4/00XN|dfb444ed-849c-5a5b-ba5d-d952e3e04dd8|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "DS11 Spot",
 "productName": "Virtual Machines DS Series Windows",
-"retailPrice": 0.074725,
+"retailPrice": 0.077489,
 "skuName": "DS11 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.074725
+"unitPrice": 0.077489
 },
 "DZH318Z0BPW4/00XP|f0d316bc-3fab-5448-8445-6986cb6adc94|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "DS1 Spot",
 "productName": "Virtual Machines DS Series Windows",
-"retailPrice": 0.031879,
+"retailPrice": 0.033043,
 "skuName": "DS1 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.031879
+"unitPrice": 0.033043
 },
 "DZH318Z0BPW4/00XR|b7ae1857-4dff-5f3d-a4c7-97d1d211d998|Consumption|": {
 "armRegionName": "francecentral",
@@ -23779,19 +23779,19 @@
 "armRegionName": "francecentral",
 "meterName": "DS3 Spot",
 "productName": "Virtual Machines DS Series Windows",
-"retailPrice": 0.127684,
+"retailPrice": 0.132406,
 "skuName": "DS3 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.127684
+"unitPrice": 0.132406
 },
 "DZH318Z0BPW4/00Z4|c272e465-162c-56a9-bc1e-988953d0fb4e|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "DS4 Spot",
 "productName": "Virtual Machines DS Series Windows",
-"retailPrice": 0.255367,
+"retailPrice": 0.264813,
 "skuName": "DS4 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.255367
+"unitPrice": 0.264813
 },
 "DZH318Z0BPW4/00ZF|9480f53a-32a7-5b1d-a0db-2b6345e90183|Consumption|": {
 "armRegionName": "francecentral",
@@ -23833,10 +23833,10 @@
 "armRegionName": "francecentral",
 "meterName": "DS2 Spot",
 "productName": "Virtual Machines DS Series Windows",
-"retailPrice": 0.06373,
+"retailPrice": 0.066087,
 "skuName": "DS2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.06373
+"unitPrice": 0.066087
 },
 "DZH318Z0BPW4/00ZZ|795890ac-9557-5ec4-ac93-2e24c09f2e44|Consumption|": {
 "armRegionName": "francecentral",
@@ -23860,10 +23860,10 @@
 "armRegionName": "francecentral",
 "meterName": "DS13 Spot",
 "productName": "Virtual Machines DS Series Windows",
-"retailPrice": 0.298452,
+"retailPrice": 0.309491,
 "skuName": "DS13 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.298452
+"unitPrice": 0.309491
 },
 "DZH318Z0BPW4/011K|22e4d83f-3a7c-5965-8fed-6c85416f538f|Consumption|": {
 "armRegionName": "francecentral",
@@ -25536,100 +25536,100 @@
 "armRegionName": "francecentral",
 "meterName": "D5 v2/DS5 v2 Spot",
 "productName": "Virtual Machines Dv2 Series",
-"retailPrice": 0.315058,
+"retailPrice": 0.326711,
 "skuName": "D5 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.315058
+"unitPrice": 0.326711
 },
 "DZH318Z0BQ34/02KX|541f7e6a-60e6-5829-ac34-2aa63115f03d|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "D4 v2/DS4 v2 Spot",
 "productName": "Virtual Machines Dv2 Series",
-"retailPrice": 0.157599,
+"retailPrice": 0.163355,
 "skuName": "D4 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.157599
+"unitPrice": 0.163355
 },
 "DZH318Z0BQ34/02L0|0b4bba3c-cfae-5ef9-81bf-c9e4964df70a|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "D2 v2/DS2 v2 Spot",
 "productName": "Virtual Machines Dv2 Series",
-"retailPrice": 0.03927,
+"retailPrice": 0.040722,
 "skuName": "D2 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.03927
+"unitPrice": 0.040722
 },
 "DZH318Z0BQ34/02L1|1cd58360-14fc-5540-9ffc-c069c7f01349|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "D3 v2/DS3 v2 Spot",
 "productName": "Virtual Machines Dv2 Series",
-"retailPrice": 0.0788,
+"retailPrice": 0.081678,
 "skuName": "D3 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.0788
+"unitPrice": 0.081678
 },
 "DZH318Z0BQ34/02LG|c5fd6cca-7899-598c-91d2-7067f8f1f05b|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "D1 v2/DS1 v2 Spot",
 "productName": "Virtual Machines Dv2 Series",
-"retailPrice": 0.019689,
+"retailPrice": 0.020408,
 "skuName": "D1 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.019689
+"unitPrice": 0.020408
 },
 "DZH318Z0BQ34/02MQ|27b601a4-dbb0-5ccd-ac80-0fad3279b917|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "D15i v2/DS15i v2 Spot",
 "productName": "Virtual Machines Dv2 Series",
-"retailPrice": 0.525769,
+"retailPrice": 0.545216,
 "skuName": "D15i v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.525769
+"unitPrice": 0.545216
 },
 "DZH318Z0BQ34/02ZW|750a46c3-d8b9-58c1-a8c8-679bcae89f54|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "D15 v2/DS15 v2 Spot",
 "productName": "Virtual Machines Dv2 Series",
-"retailPrice": 0.525769,
+"retailPrice": 0.545216,
 "skuName": "D15 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.525769
+"unitPrice": 0.545216
 },
 "DZH318Z0BQ34/0302|f67ac60e-b88f-56ad-a855-ae663847350f|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "D14 v2/DS14 v2 Spot",
 "productName": "Virtual Machines Dv2 Series",
-"retailPrice": 0.420526,
+"retailPrice": 0.43608,
 "skuName": "D14 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.420526
+"unitPrice": 0.43608
 },
 "DZH318Z0BQ34/030R|a4666d11-c8d0-5739-8ea4-2f611bde59d9|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "D11 v2/DS11 v2 Spot",
 "productName": "Virtual Machines Dv2 Series",
-"retailPrice": 0.05251,
+"retailPrice": 0.054452,
 "skuName": "D11 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.05251
+"unitPrice": 0.054452
 },
 "DZH318Z0BQ34/037T|f9209cc3-c4f1-560a-a2a0-ba3a6fdd464d|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "D13 v2/DS13 v2 Spot",
 "productName": "Virtual Machines Dv2 Series",
-"retailPrice": 0.210356,
+"retailPrice": 0.21804,
 "skuName": "D13 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.210356
+"unitPrice": 0.21804
 },
 "DZH318Z0BQ34/0386|d2dc4dbd-7d0c-5e4b-8c70-845dbafd2edb|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "D12 v2/DS12 v2 Spot",
 "productName": "Virtual Machines Dv2 Series",
-"retailPrice": 0.105244,
+"retailPrice": 0.109136,
 "skuName": "D12 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.105244
+"unitPrice": 0.109136
 },
 "DZH318Z0BQ35/00GH|0675d257-0a9b-4e73-9d28-359ab3cb9998|Consumption|": {
 "armRegionName": "francecentral",
@@ -25735,10 +25735,10 @@
 "armRegionName": "francecentral",
 "meterName": "D12/DS12 Spot",
 "productName": "Virtual Machines D Series",
-"retailPrice": 0.107984,
+"retailPrice": 0.111929,
 "skuName": "D12 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.107984
+"unitPrice": 0.111929
 },
 "DZH318Z0BQ4B/01J4|852b959d-cc88-5b82-9ef2-4906fd5bae3a|Consumption|": {
 "armRegionName": "francecentral",
@@ -25773,10 +25773,10 @@
 "armRegionName": "francecentral",
 "meterName": "D13/DS13 Spot",
 "productName": "Virtual Machines D Series",
-"retailPrice": 0.215969,
+"retailPrice": 0.223857,
 "skuName": "D13 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.215969
+"unitPrice": 0.223857
 },
 "DZH318Z0BQ4B/01JB|5efd3775-ce0a-59be-9502-50417558f573|Consumption|": {
 "armRegionName": "francecentral",
@@ -25800,10 +25800,10 @@
 "armRegionName": "francecentral",
 "meterName": "D14/DS14 Spot",
 "productName": "Virtual Machines D Series",
-"retailPrice": 0.43197,
+"retailPrice": 0.447948,
 "skuName": "D14 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.43197
+"unitPrice": 0.447948
 },
 "DZH318Z0BQ4B/01JN|1bbc31b0-9837-561a-a63a-a2c5dd698b8f|Consumption|": {
 "armRegionName": "francecentral",
@@ -25839,28 +25839,28 @@
 "armRegionName": "francecentral",
 "meterName": "D2/DS2 Spot",
 "productName": "Virtual Machines D Series",
-"retailPrice": 0.043104,
+"retailPrice": 0.044678,
 "skuName": "D2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.043104
+"unitPrice": 0.044678
 },
 "DZH318Z0BQ4B/01KC|4be239a5-726b-5377-908a-e3fb1e042caa|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "D1/DS1 Spot",
 "productName": "Virtual Machines D Series",
-"retailPrice": 0.021597,
+"retailPrice": 0.022386,
 "skuName": "D1 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.021597
+"unitPrice": 0.022386
 },
 "DZH318Z0BQ4B/01KD|990780d4-8b18-516e-8a9f-2b8fce45f969|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "D4/DS4 Spot",
 "productName": "Virtual Machines D Series",
-"retailPrice": 0.172788,
+"retailPrice": 0.179179,
 "skuName": "D4 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.172788
+"unitPrice": 0.179179
 },
 "DZH318Z0BQ4B/01KF|db098574-292b-5731-9dd1-c07f4f61a683|Consumption|": {
 "armRegionName": "francecentral",
@@ -25913,10 +25913,10 @@
 "armRegionName": "francecentral",
 "meterName": "D3/DS3 Spot",
 "productName": "Virtual Machines D Series",
-"retailPrice": 0.086394,
+"retailPrice": 0.08959,
 "skuName": "D3 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.086394
+"unitPrice": 0.08959
 },
 "DZH318Z0BQ4B/01KT|9debe9d5-f602-570f-a9a2-e053fff8ecf2|Consumption|": {
 "armRegionName": "francecentral",
@@ -25950,10 +25950,10 @@
 "armRegionName": "francecentral",
 "meterName": "D11/DS11 Spot",
 "productName": "Virtual Machines D Series",
-"retailPrice": 0.054104,
+"retailPrice": 0.056081,
 "skuName": "D11 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.054104
+"unitPrice": 0.056081
 },
 "DZH318Z0BQ4C/00NX|b5d29d2a-1a24-4612-aa8b-9c901c668329|Consumption|": {
 "armRegionName": "francecentral",
@@ -26292,163 +26292,163 @@
 "armRegionName": "francecentral",
 "meterName": "DS5 v2 Spot",
 "productName": "Virtual Machines DSv2 Series",
-"retailPrice": 0.315058,
+"retailPrice": 0.326711,
 "skuName": "DS5 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.315058
+"unitPrice": 0.326711
 },
 "DZH318Z0BQ4C/0407|3e398b56-0ad0-54a5-8096-df4a3ccc07bd|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "DS1 v2 Spot",
 "productName": "Virtual Machines DSv2 Series",
-"retailPrice": 0.019689,
+"retailPrice": 0.020408,
 "skuName": "DS1 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.019689
+"unitPrice": 0.020408
 },
 "DZH318Z0BQ4C/040Q|8c971998-1759-519a-849d-b223f009ec57|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "DS4 v2 Spot",
 "productName": "Virtual Machines DSv2 Series",
-"retailPrice": 0.157599,
+"retailPrice": 0.163355,
 "skuName": "DS4 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.157599
+"unitPrice": 0.163355
 },
 "DZH318Z0BQ4C/040S|d1c2f0e3-aa2a-5e3b-b274-d1cb81971f05|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "DS3 v2 Spot",
 "productName": "Virtual Machines DSv2 Series",
-"retailPrice": 0.0788,
+"retailPrice": 0.081678,
 "skuName": "DS3 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.0788
+"unitPrice": 0.081678
 },
 "DZH318Z0BQ4C/040T|d08e2cd5-6162-59f5-87b0-a75c27f2a41a|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "DS2 v2 Spot",
 "productName": "Virtual Machines DSv2 Series",
-"retailPrice": 0.03927,
+"retailPrice": 0.040722,
 "skuName": "DS2 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.03927
+"unitPrice": 0.040722
 },
 "DZH318Z0BQ4C/042Z|efc20809-7f6b-5786-818d-45e9eaad21ab|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "DS15i v2 Spot",
 "productName": "Virtual Machines DSv2 Series",
-"retailPrice": 0.525769,
+"retailPrice": 0.545216,
 "skuName": "DS15i v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.525769
+"unitPrice": 0.545216
 },
 "DZH318Z0BQ4C/04JC|845d5c79-b12c-5b4d-a46c-42e9c7846dff|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "DS11 v2 Spot",
 "productName": "Virtual Machines DSv2 Series",
-"retailPrice": 0.05251,
+"retailPrice": 0.054452,
 "skuName": "DS11-1 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.05251
+"unitPrice": 0.054452
 },
 "DZH318Z0BQ4C/04L3|96924a5a-5176-56e0-a306-446f16e6a263|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "DS14 v2 Spot",
 "productName": "Virtual Machines DSv2 Series",
-"retailPrice": 0.420526,
+"retailPrice": 0.43608,
 "skuName": "DS14-4 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.420526
+"unitPrice": 0.43608
 },
 "DZH318Z0BQ4C/04L7|d44c3806-26e8-5f88-91be-d4bc2d7315c7|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "DS15 v2 Spot",
 "productName": "Virtual Machines DSv2 Series",
-"retailPrice": 0.525769,
+"retailPrice": 0.545216,
 "skuName": "DS15 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.525769
+"unitPrice": 0.545216
 },
 "DZH318Z0BQ4C/04L8|ff3b4b55-8733-5238-9a8d-cddf0f1020d3|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "DS14 v2 Spot",
 "productName": "Virtual Machines DSv2 Series",
-"retailPrice": 0.420526,
+"retailPrice": 0.43608,
 "skuName": "DS14-8 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.420526
+"unitPrice": 0.43608
 },
 "DZH318Z0BQ4C/04LZ|604eb6e1-c55d-5dcd-a81a-bd0adb0dd2f6|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "DS11 v2 Spot",
 "productName": "Virtual Machines DSv2 Series",
-"retailPrice": 0.05251,
+"retailPrice": 0.054452,
 "skuName": "DS11 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.05251
+"unitPrice": 0.054452
 },
 "DZH318Z0BQ4C/04T6|c34888f1-abab-5114-876d-10d554b8cae5|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "DS12 v2 Spot",
 "productName": "Virtual Machines DSv2 Series",
-"retailPrice": 0.105244,
+"retailPrice": 0.109136,
 "skuName": "DS12-1 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.105244
+"unitPrice": 0.109136
 },
 "DZH318Z0BQ4C/04XG|1213e177-62c5-5944-9870-0c2b7fa34b09|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "DS12 v2 Spot",
 "productName": "Virtual Machines DSv2 Series",
-"retailPrice": 0.105244,
+"retailPrice": 0.109136,
 "skuName": "DS12-2 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.105244
+"unitPrice": 0.109136
 },
 "DZH318Z0BQ4C/0526|c05027a0-5dfd-5e31-8f62-351c1e05e93b|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "DS13 v2 Spot",
 "productName": "Virtual Machines DSv2 Series",
-"retailPrice": 0.210356,
+"retailPrice": 0.21804,
 "skuName": "DS13-2 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.210356
+"unitPrice": 0.21804
 },
 "DZH318Z0BQ4C/055J|4f5735ff-964e-58fd-905b-c3ff7b36fc58|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "DS13 v2 Spot",
 "productName": "Virtual Machines DSv2 Series",
-"retailPrice": 0.210356,
+"retailPrice": 0.21804,
 "skuName": "DS13-4 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.210356
+"unitPrice": 0.21804
 },
 "DZH318Z0BQ4C/058X|142d3121-53dc-5365-9818-296163ef5a87|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "DS14 v2 Spot",
 "productName": "Virtual Machines DSv2 Series",
-"retailPrice": 0.420526,
+"retailPrice": 0.43608,
 "skuName": "DS14 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.420526
+"unitPrice": 0.43608
 },
 "DZH318Z0BQ4C/05G4|9b5e95a3-4148-5365-a94c-6373dd3e0a50|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "DS13 v2 Spot",
 "productName": "Virtual Machines DSv2 Series",
-"retailPrice": 0.210356,
+"retailPrice": 0.21804,
 "skuName": "DS13 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.210356
+"unitPrice": 0.21804
 },
 "DZH318Z0BQ4C/05GK|bd72bc24-56a6-5ac6-b8bf-33f44dd82877|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "DS12 v2 Spot",
 "productName": "Virtual Machines DSv2 Series",
-"retailPrice": 0.105244,
+"retailPrice": 0.109136,
 "skuName": "DS12 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.105244
+"unitPrice": 0.109136
 },
 "DZH318Z0BQ4K/00GG|ac6ccd0a-b16a-49e9-9eaa-5c7bd495a072|Consumption|": {
 "armRegionName": "francecentral",
@@ -26997,46 +26997,46 @@
 "armRegionName": "francecentral",
 "meterName": "F16s Spot",
 "productName": "Virtual Machines FS Series",
-"retailPrice": 0.181315,
+"retailPrice": 0.188022,
 "skuName": "F16s Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.181315
+"unitPrice": 0.188022
 },
 "DZH318Z0BQ4P/01B0|172ce024-e2fa-55e6-b09e-eaa4480bcd4e|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "F8s Spot",
 "productName": "Virtual Machines FS Series",
-"retailPrice": 0.090658,
+"retailPrice": 0.094011,
 "skuName": "F8s Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.090658
+"unitPrice": 0.094011
 },
 "DZH318Z0BQ4P/01B2|b85da2fe-5c6d-5ea0-aa82-8266855d6c2d|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "F4s Spot",
 "productName": "Virtual Machines FS Series",
-"retailPrice": 0.045349,
+"retailPrice": 0.047005,
 "skuName": "F4s Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.045349
+"unitPrice": 0.047005
 },
 "DZH318Z0BQ4P/01B3|e04d7c3e-2bfc-5b05-8139-5379d49f8a8d|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "F2s Spot",
 "productName": "Virtual Machines FS Series",
-"retailPrice": 0.022674,
+"retailPrice": 0.023503,
 "skuName": "F2s Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.022674
+"unitPrice": 0.023503
 },
 "DZH318Z0BQ4P/01B5|70b3ede4-0769-5520-a40f-094146a840e9|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "F1s Spot",
 "productName": "Virtual Machines FS Series",
-"retailPrice": 0.01122,
+"retailPrice": 0.011635,
 "skuName": "F1s Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.01122
+"unitPrice": 0.011635
 },
 "DZH318Z0BQ4R/00FG|d8e43eee-3b57-4449-ae3d-66777e6f5cd6|Consumption|": {
 "armRegionName": "francecentral",
@@ -27555,10 +27555,10 @@
 "armRegionName": "francecentral",
 "meterName": "DS14 Spot",
 "productName": "Virtual Machines DS Series",
-"retailPrice": 0.43197,
+"retailPrice": 0.447948,
 "skuName": "DS14 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.43197
+"unitPrice": 0.447948
 },
 "DZH318Z0BQ4S/01G2|1bbc31b0-9837-561a-a63a-a2c5dd698b8f|Consumption|": {
 "armRegionName": "francecentral",
@@ -27584,10 +27584,10 @@
 "armRegionName": "francecentral",
 "meterName": "DS12 Spot",
 "productName": "Virtual Machines DS Series",
-"retailPrice": 0.107984,
+"retailPrice": 0.111929,
 "skuName": "DS12 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.107984
+"unitPrice": 0.111929
 },
 "DZH318Z0BQ4S/01GF|852b959d-cc88-5b82-9ef2-4906fd5bae3a|Consumption|": {
 "armRegionName": "francecentral",
@@ -27612,10 +27612,10 @@
 "armRegionName": "francecentral",
 "meterName": "DS13 Spot",
 "productName": "Virtual Machines DS Series",
-"retailPrice": 0.215969,
+"retailPrice": 0.223857,
 "skuName": "DS13 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.215969
+"unitPrice": 0.223857
 },
 "DZH318Z0BQ4S/01GQ|5efd3775-ce0a-59be-9502-50417558f573|Consumption|": {
 "armRegionName": "francecentral",
@@ -27650,10 +27650,10 @@
 "armRegionName": "francecentral",
 "meterName": "DS4 Spot",
 "productName": "Virtual Machines DS Series",
-"retailPrice": 0.172788,
+"retailPrice": 0.179179,
 "skuName": "DS4 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.172788
+"unitPrice": 0.179179
 },
 "DZH318Z0BQ4S/01HJ|8662ecf6-3135-541d-96c5-e404e6851788|Consumption|": {
 "armRegionName": "francecentral",
@@ -27687,19 +27687,19 @@
 "armRegionName": "francecentral",
 "meterName": "DS11 Spot",
 "productName": "Virtual Machines DS Series",
-"retailPrice": 0.054104,
+"retailPrice": 0.056081,
 "skuName": "DS11 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.054104
+"unitPrice": 0.056081
 },
 "DZH318Z0BQ4S/01HN|9cb25b03-2ad1-532e-9752-e5562c69f0bb|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "DS2 Spot",
 "productName": "Virtual Machines DS Series",
-"retailPrice": 0.043104,
+"retailPrice": 0.044678,
 "skuName": "DS2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.043104
+"unitPrice": 0.044678
 },
 "DZH318Z0BQ4S/01HP|eacca560-9ec0-5500-805a-894a9a843eda|Consumption|": {
 "armRegionName": "francecentral",
@@ -27752,19 +27752,19 @@
 "armRegionName": "francecentral",
 "meterName": "DS1 Spot",
 "productName": "Virtual Machines DS Series",
-"retailPrice": 0.021597,
+"retailPrice": 0.022386,
 "skuName": "DS1 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.021597
+"unitPrice": 0.022386
 },
 "DZH318Z0BQ4S/01JC|b732ead7-e500-5e78-8d4e-9c962fe9c9a5|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "DS3 Spot",
 "productName": "Virtual Machines DS Series",
-"retailPrice": 0.086394,
+"retailPrice": 0.08959,
 "skuName": "DS3 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.086394
+"unitPrice": 0.08959
 },
 "DZH318Z0BQ4W/032L|cf512c44-c51c-4892-991e-c0fd2ba501c1|Consumption|": {
 "armRegionName": "francecentral",
@@ -29125,46 +29125,46 @@
 "armRegionName": "francecentral",
 "meterName": "F16/F16s Spot",
 "productName": "Virtual Machines F Series",
-"retailPrice": 0.181315,
+"retailPrice": 0.188022,
 "skuName": "F16 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.181315
+"unitPrice": 0.188022
 },
 "DZH318Z0BQ51/01B2|f91974f1-5d6f-5083-9433-02bc1ff79d60|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "F4/F4s Spot",
 "productName": "Virtual Machines F Series",
-"retailPrice": 0.045349,
+"retailPrice": 0.047005,
 "skuName": "F4 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.045349
+"unitPrice": 0.047005
 },
 "DZH318Z0BQ51/01B3|83c438eb-7e38-5ace-a018-127494086922|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "F8/F8s Spot",
 "productName": "Virtual Machines F Series",
-"retailPrice": 0.090658,
+"retailPrice": 0.094011,
 "skuName": "F8 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.090658
+"unitPrice": 0.094011
 },
 "DZH318Z0BQ51/01B4|60ed3b03-6a5d-5aec-afa4-4c3829b3b0e2|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "F2/F2s Spot",
 "productName": "Virtual Machines F Series",
-"retailPrice": 0.022674,
+"retailPrice": 0.023503,
 "skuName": "F2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.022674
+"unitPrice": 0.023503
 },
 "DZH318Z0BQ51/01B7|a8360e62-35a2-558d-9508-9e2166bf43aa|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "F1/F1s Spot",
 "productName": "Virtual Machines F Series",
-"retailPrice": 0.01122,
+"retailPrice": 0.011635,
 "skuName": "F1 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.01122
+"unitPrice": 0.011635
 },
 "DZH318Z0BQM2/00D3|415726df-279a-5d2c-af28-968880cc810b|Consumption|": {
 "armRegionName": "francecentral",
@@ -29765,46 +29765,46 @@
 "armRegionName": "francecentral",
 "meterName": "F4s Spot",
 "productName": "Virtual Machines FS Series Windows",
-"retailPrice": 0.086657,
+"retailPrice": 0.089822,
 "skuName": "F4s Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.086657
+"unitPrice": 0.089822
 },
 "DZH318Z0BQPS/00SV|101bd35b-c9f3-567c-956b-c9a2a926ddc1|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "F8s Spot",
 "productName": "Virtual Machines FS Series Windows",
-"retailPrice": 0.173314,
+"retailPrice": 0.179644,
 "skuName": "F8s Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.173314
+"unitPrice": 0.179644
 },
 "DZH318Z0BQPS/00SW|f36fd872-6963-5a6c-a478-d2f3a20289ba|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "F1s Spot",
 "productName": "Virtual Machines FS Series Windows",
-"retailPrice": 0.021655,
+"retailPrice": 0.022456,
 "skuName": "F1s Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.021655
+"unitPrice": 0.022456
 },
 "DZH318Z0BQPS/00T4|4649b252-55c2-5ca0-bc8e-aab6abb95026|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "F16s Spot",
 "productName": "Virtual Machines FS Series Windows",
-"retailPrice": 0.346474,
+"retailPrice": 0.359289,
 "skuName": "F16s Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.346474
+"unitPrice": 0.359289
 },
 "DZH318Z0BQPS/00T7|1ef45ac3-952a-5c44-aca2-1062e7740857|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "F2s Spot",
 "productName": "Virtual Machines FS Series Windows",
-"retailPrice": 0.043309,
+"retailPrice": 0.044911,
 "skuName": "F2s Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.043309
+"unitPrice": 0.044911
 },
 "DZH318Z0BQPW/001G|ae30a263-28d6-45f9-a84d-e9640b98e853|Consumption|": {
 "armRegionName": "francecentral",
@@ -30017,73 +30017,73 @@
 "armRegionName": "francecentral",
 "meterName": "DS14-8 v2 Spot",
 "productName": "Virtual Machines DSv2 Series Windows",
-"retailPrice": 0.552024,
+"retailPrice": 0.572442,
 "skuName": "DS14-8 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.552024
+"unitPrice": 0.572442
 },
 "DZH318Z0BQPW/01L9|85c6325b-a5ee-5549-98da-2a0dc269987d|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "DS11 v2 Spot",
 "productName": "Virtual Machines DSv2 Series Windows",
-"retailPrice": 0.069115,
+"retailPrice": 0.071672,
 "skuName": "DS11 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.069115
+"unitPrice": 0.071672
 },
 "DZH318Z0BQPW/01NN|010df35a-7b6d-5b0d-84b0-b968bdfd859f|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "DS3 v2 Spot",
 "productName": "Virtual Machines DSv2 Series Windows",
-"retailPrice": 0.131947,
+"retailPrice": 0.136828,
 "skuName": "DS3 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.131947
+"unitPrice": 0.136828
 },
 "DZH318Z0BQPW/01NP|cb4a15bd-e1cb-57a1-b209-0a92c46d1973|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "DS1 v2 Spot",
 "productName": "Virtual Machines DSv2 Series Windows",
-"retailPrice": 0.033002,
+"retailPrice": 0.034207,
 "skuName": "DS1 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.033002
+"unitPrice": 0.034207
 },
 "DZH318Z0BQPW/01NQ|09ac4b59-9786-5b1d-810c-8d0a7c77018c|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "DS5 v2 Spot",
 "productName": "Virtual Machines DSv2 Series Windows",
-"retailPrice": 0.527564,
+"retailPrice": 0.547078,
 "skuName": "DS5 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.527564
+"unitPrice": 0.547078
 },
 "DZH318Z0BQPW/01NR|780d6ef7-80f5-5444-9f81-7bb0b58b57d8|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "DS2 v2 Spot",
 "productName": "Virtual Machines DSv2 Series Windows",
-"retailPrice": 0.065974,
+"retailPrice": 0.068414,
 "skuName": "DS2 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.065974
+"unitPrice": 0.068414
 },
 "DZH318Z0BQPW/01NS|f4d91ee0-c430-536f-8607-7217e2ffd148|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "DS4 v2 Spot",
 "productName": "Virtual Machines DSv2 Series Windows",
-"retailPrice": 0.263894,
+"retailPrice": 0.273655,
 "skuName": "DS4 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.263894
+"unitPrice": 0.273655
 },
 "DZH318Z0BQPW/01QG|f85de2ce-e5fc-5c8c-90fd-cbf80342cf9c|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "DS15i v2 Spot",
 "productName": "Virtual Machines DSv2 Series Windows",
-"retailPrice": 0.69003,
+"retailPrice": 0.715552,
 "skuName": "DS15i v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.69003
+"unitPrice": 0.715552
 },
 "DZH318Z0BQPW/01X5|4a8f67c3-afc0-45ee-9f8a-22b1297468e2|Consumption|": {
 "armRegionName": "francecentral",
@@ -30107,10 +30107,10 @@
 "armRegionName": "francecentral",
 "meterName": "DS14-4 v2 Spot",
 "productName": "Virtual Machines DSv2 Series Windows",
-"retailPrice": 0.552024,
+"retailPrice": 0.572442,
 "skuName": "DS14-4 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.552024
+"unitPrice": 0.572442
 },
 "DZH318Z0BQPW/020Q|25b37232-78c8-40f1-974d-92a3b1f78880|Consumption|": {
 "armRegionName": "francecentral",
@@ -30125,10 +30125,10 @@
 "armRegionName": "francecentral",
 "meterName": "DS13-4 v2 Spot",
 "productName": "Virtual Machines DSv2 Series Windows",
-"retailPrice": 0.276012,
+"retailPrice": 0.286221,
 "skuName": "DS13-4 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.276012
+"unitPrice": 0.286221
 },
 "DZH318Z0BQPW/0218|893dc936-c905-43ee-b820-59b498f71f16|Consumption|": {
 "armRegionName": "francecentral",
@@ -30152,10 +30152,10 @@
 "armRegionName": "francecentral",
 "meterName": "DS13-2 v2 Spot",
 "productName": "Virtual Machines DSv2 Series Windows",
-"retailPrice": 0.276012,
+"retailPrice": 0.286221,
 "skuName": "DS13-2 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.276012
+"unitPrice": 0.286221
 },
 "DZH318Z0BQPW/02BP|893dc936-c905-43ee-b820-59b498f71f16|Consumption|": {
 "armRegionName": "francecentral",
@@ -30188,19 +30188,19 @@
 "armRegionName": "francecentral",
 "meterName": "DS12-1 v2 Spot",
 "productName": "Virtual Machines DSv2 Series Windows",
-"retailPrice": 0.138006,
+"retailPrice": 0.14311,
 "skuName": "DS12-1 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.138006
+"unitPrice": 0.14311
 },
 "DZH318Z0BQPW/02K1|402c0206-5a24-5634-9a53-07711e8650aa|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "DS11-1 v2 Spot",
 "productName": "Virtual Machines DSv2 Series Windows",
-"retailPrice": 0.069115,
+"retailPrice": 0.071672,
 "skuName": "DS11-1 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.069115
+"unitPrice": 0.071672
 },
 "DZH318Z0BQPW/02MN|5b8bbd36-0733-4db8-9734-b0fef3b80348|Consumption|": {
 "armRegionName": "francecentral",
@@ -30224,37 +30224,37 @@
 "armRegionName": "francecentral",
 "meterName": "DS15 v2 Spot",
 "productName": "Virtual Machines DSv2 Series Windows",
-"retailPrice": 0.69003,
+"retailPrice": 0.715552,
 "skuName": "DS15 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.69003
+"unitPrice": 0.715552
 },
 "DZH318Z0BQPW/02SG|1fc7777a-3763-522d-a093-fecc67b55849|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "DS14 v2 Spot",
 "productName": "Virtual Machines DSv2 Series Windows",
-"retailPrice": 0.552024,
+"retailPrice": 0.572442,
 "skuName": "DS14 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.552024
+"unitPrice": 0.572442
 },
 "DZH318Z0BQPW/02WB|a9bff84b-4b95-5668-858d-86b995eaafd8|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "DS13 v2 Spot",
 "productName": "Virtual Machines DSv2 Series Windows",
-"retailPrice": 0.276012,
+"retailPrice": 0.286221,
 "skuName": "DS13 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.276012
+"unitPrice": 0.286221
 },
 "DZH318Z0BQPW/02X5|2bfb2c39-3a6e-5557-8ef0-272612227c1b|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "DS12 v2 Spot",
 "productName": "Virtual Machines DSv2 Series Windows",
-"retailPrice": 0.138006,
+"retailPrice": 0.14311,
 "skuName": "DS12 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.138006
+"unitPrice": 0.14311
 },
 "DZH318Z0BQPW/03GM|456e3c63-ca96-55a2-a37d-bca2666d324b|Consumption|": {
 "armRegionName": "francecentral",
@@ -30278,10 +30278,10 @@
 "armRegionName": "francecentral",
 "meterName": "DS12-2 v2 Spot",
 "productName": "Virtual Machines DSv2 Series Windows",
-"retailPrice": 0.138006,
+"retailPrice": 0.14311,
 "skuName": "DS12-2 v2 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.138006
+"unitPrice": 0.14311
 },
 "DZH318Z0BX5L/032Z|caf5e123-270e-5006-b985-57b02cb01f79|Consumption|": {
 "armRegionName": "francecentral",
@@ -38205,10 +38205,10 @@
 "armRegionName": "francecentral",
 "meterName": "NC64asT4 v3 Spot",
 "productName": "Virtual Machines NCasT4 v3 Series",
-"retailPrice": 1.439837,
+"retailPrice": 1.511931,
 "skuName": "NC64asT4 v3 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 1.439837
+"unitPrice": 1.511931
 },
 "DZH318Z0DF49/00T8|e2ba3a52-d6a8-5612-a892-3ecc5cf23afe|Consumption|": {
 "armRegionName": "francecentral",
@@ -38233,10 +38233,10 @@
 "armRegionName": "francecentral",
 "meterName": "NC4as T4 v3 Spot",
 "productName": "Virtual Machines NCasT4 v3 Series",
-"retailPrice": 0.174414,
+"retailPrice": 0.183147,
 "skuName": "NC4as T4 v3 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.174414
+"unitPrice": 0.183147
 },
 "DZH318Z0DF49/00TC|fb13c5fa-a6ae-520b-a637-56cc77bbd2ff|Consumption|": {
 "armRegionName": "francecentral",
@@ -38280,19 +38280,19 @@
 "armRegionName": "francecentral",
 "meterName": "NC16asT4 v3 Spot",
 "productName": "Virtual Machines NCasT4 v3 Series",
-"retailPrice": 0.399025,
+"retailPrice": 0.419005,
 "skuName": "NC16asT4 v3 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.399025
+"unitPrice": 0.419005
 },
 "DZH318Z0DF49/00TJ|33a4896d-5383-5ab0-a257-3c9a01d0a335|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "NC8as T4 v3 Spot",
 "productName": "Virtual Machines NCasT4 v3 Series",
-"retailPrice": 0.249001,
+"retailPrice": 0.261468,
 "skuName": "NC8as T4 v3 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.249001
+"unitPrice": 0.261468
 },
 "DZH318Z0DF49/00TK|e594ccae-db58-5bfa-93c0-34bfdabccff7|Consumption|": {
 "armRegionName": "francecentral",
@@ -38335,10 +38335,10 @@
 "armRegionName": "francecentral",
 "meterName": "NC64asT4 v3 Spot",
 "productName": "Virtual Machines NCasT4 v3 Series Windows",
-"retailPrice": 2.274756,
+"retailPrice": 2.388654,
 "skuName": "NC64asT4 v3 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 2.274756
+"unitPrice": 2.388654
 },
 "DZH318Z0DF4B/00K6|0b9fbd36-6ef9-5025-821f-10eaa47d9865|Consumption|": {
 "armRegionName": "francecentral",
@@ -38353,10 +38353,10 @@
 "armRegionName": "francecentral",
 "meterName": "NC4as T4 v3 Spot",
 "productName": "Virtual Machines NCasT4 v3 Series Windows",
-"retailPrice": 0.226596,
+"retailPrice": 0.237942,
 "skuName": "NC4as T4 v3 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.226596
+"unitPrice": 0.237942
 },
 "DZH318Z0DF4B/00KB|d2ba3ee2-5390-541e-9f1f-5f698161b25f|Consumption|": {
 "armRegionName": "francecentral",
@@ -38380,19 +38380,19 @@
 "armRegionName": "francecentral",
 "meterName": "NC8as T4 v3 Spot",
 "productName": "Virtual Machines NCasT4 v3 Series Windows",
-"retailPrice": 0.353366,
+"retailPrice": 0.371059,
 "skuName": "NC8as T4 v3 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.353366
+"unitPrice": 0.371059
 },
 "DZH318Z0DF4B/00KF|546bcff0-0009-5e49-8407-1c1bca307b7a|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "NC16asT4 v3 Spot",
 "productName": "Virtual Machines NCasT4 v3 Series Windows",
-"retailPrice": 0.607755,
+"retailPrice": 0.638185,
 "skuName": "NC16asT4 v3 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.607755
+"unitPrice": 0.638185
 },
 "DZH318Z0DF4B/00KG|0c984b88-e16e-5490-b9ab-7fe5d5d5a976|Consumption|": {
 "armRegionName": "francecentral",
@@ -44580,19 +44580,19 @@
 "armRegionName": "francecentral",
 "meterName": "ND96isMI300Xv5 Spot",
 "productName": "Virtual Machines NDMI300Xv5 Srs",
-"retailPrice": 12.198,
+"retailPrice": 12.81,
 "skuName": "ND96isMI300Xv5 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 12.198
+"unitPrice": 12.81
 },
 "DZH318Z0FXZW/004B|48f8fe17-657e-553e-8daf-f4e8aca3ac10|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "ND96isrMI300Xv5 Spot",
 "productName": "Virtual Machines NDMI300Xv5 Srs",
-"retailPrice": 12.198,
+"retailPrice": 12.81,
 "skuName": "ND96isrMI300Xv5 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 12.198
+"unitPrice": 12.81
 },
 "DZH318Z0FXZW/004C|29e6f04e-caae-53fb-bb5b-eb20819956f5|Consumption|": {
 "armRegionName": "francecentral",
@@ -44967,19 +44967,19 @@
 "armRegionName": "francecentral",
 "meterName": "ND96isrMI300Xv5 Spot",
 "productName": "Virtual Machines NDMI300Xv5 Srs Windows",
-"retailPrice": 13.095773,
+"retailPrice": 13.752816,
 "skuName": "ND96isrMI300Xv5 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 13.095773
+"unitPrice": 13.752816
 },
 "DZH318Z0FZ0C/00CB|0db2c43e-5de5-5253-acfd-ed938ec03faf|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "ND96isMI300Xv5 Spot",
 "productName": "Virtual Machines NDMI300Xv5 Srs Windows",
-"retailPrice": 13.095773,
+"retailPrice": 13.752816,
 "skuName": "ND96isMI300Xv5 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 13.095773
+"unitPrice": 13.752816
 },
 "DZH318Z0FZ0C/00CD|a577e2ba-379a-5c50-8c77-8a41efc7bcc0|Consumption|": {
 "armRegionName": "francecentral",
@@ -45031,10 +45031,10 @@
 "armRegionName": "francecentral",
 "meterName": "D8ps v6 Spot",
 "productName": "Virtual Machines Dpsv6 Series",
-"retailPrice": 0.060614,
+"retailPrice": 0.063632,
 "skuName": "D8ps v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.060614
+"unitPrice": 0.063632
 },
 "DZH318Z0G1GB/00HB|d9ef3a25-f2f6-5642-b69a-31498207bbae|Consumption|": {
 "armRegionName": "francecentral",
@@ -45050,46 +45050,46 @@
 "armRegionName": "francecentral",
 "meterName": "D4ps v6 Spot",
 "productName": "Virtual Machines Dpsv6 Series",
-"retailPrice": 0.030307,
+"retailPrice": 0.031816,
 "skuName": "D4ps v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.030307
+"unitPrice": 0.031816
 },
 "DZH318Z0G1GB/00HD|7931d37d-0d92-594a-9d69-eb62ec3b4540|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "D48ps v6 Spot",
 "productName": "Virtual Machines Dpsv6 Series",
-"retailPrice": 0.363686,
+"retailPrice": 0.381792,
 "skuName": "D48ps v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.363686
+"unitPrice": 0.381792
 },
 "DZH318Z0G1GB/00HF|ffc931c2-d2af-539a-ade7-248fae1a1a7e|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "D64ps v6 Spot",
 "productName": "Virtual Machines Dpsv6 Series",
-"retailPrice": 0.484915,
+"retailPrice": 0.509056,
 "skuName": "D64ps v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.484915
+"unitPrice": 0.509056
 },
 "DZH318Z0G1GB/00HJ|b8ba6c89-c286-53ce-b055-3a0604fd0285|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "D16ps v6 Spot",
 "productName": "Virtual Machines Dpsv6 Series",
-"retailPrice": 0.121229,
+"retailPrice": 0.127264,
 "skuName": "D16ps v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.121229
+"unitPrice": 0.127264
 },
 "DZH318Z0G1GB/00HK|6949a5f6-6172-542a-bca1-6b6a00f553f0|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "D2ps v6 Spot",
 "productName": "Virtual Machines Dpsv6 Series",
-"retailPrice": 0.015154,
+"retailPrice": 0.015908,
 "skuName": "D2ps v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.015154
+"unitPrice": 0.015908
 },
 "DZH318Z0G1GB/00HL|1efc53d4-f467-53c5-bb80-c9ccf54d3edf|Consumption|": {
 "armRegionName": "francecentral",
@@ -45145,19 +45145,19 @@
 "armRegionName": "francecentral",
 "meterName": "D32ps v6 Spot",
 "productName": "Virtual Machines Dpsv6 Series",
-"retailPrice": 0.242458,
+"retailPrice": 0.254528,
 "skuName": "D32ps v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.242458
+"unitPrice": 0.254528
 },
 "DZH318Z0G1GB/00N0|44237507-19b3-5612-950a-7ca566d42586|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "D96ps v6 Spot",
 "productName": "Virtual Machines Dpsv6 Series",
-"retailPrice": 0.727373,
+"retailPrice": 0.763584,
 "skuName": "D96ps v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.727373
+"unitPrice": 0.763584
 },
 "DZH318Z0G1GB/00N5|d125ef0e-8d79-5174-b161-8bcede493f3e|Consumption|": {
 "armRegionName": "francecentral",
@@ -45193,28 +45193,28 @@
 "armRegionName": "francecentral",
 "meterName": "D16pds v6 Spot",
 "productName": "Virtual Machines Dpdsv6 Series",
-"retailPrice": 0.158743,
+"retailPrice": 0.166646,
 "skuName": "D16pds v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.158743
+"unitPrice": 0.166646
 },
 "DZH318Z0G1GH/0092|0f0c64c5-da9c-535f-b911-dd4367c52009|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "D4pds v6 Spot",
 "productName": "Virtual Machines Dpdsv6 Series",
-"retailPrice": 0.039732,
+"retailPrice": 0.04171,
 "skuName": "D4pds v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.039732
+"unitPrice": 0.04171
 },
 "DZH318Z0G1GH/0093|acefc6bc-4fc1-58b7-acfe-8be8dcde406f|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "D64pds v6 Spot",
 "productName": "Virtual Machines Dpdsv6 Series",
-"retailPrice": 0.635158,
+"retailPrice": 0.666778,
 "skuName": "D64pds v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.635158
+"unitPrice": 0.666778
 },
 "DZH318Z0G1GH/0094|7627991c-5677-528a-97f4-319507363c6f|Consumption|": {
 "armRegionName": "francecentral",
@@ -45230,19 +45230,19 @@
 "armRegionName": "francecentral",
 "meterName": "D2pds v6 Spot",
 "productName": "Virtual Machines Dpdsv6 Series",
-"retailPrice": 0.019774,
+"retailPrice": 0.020758,
 "skuName": "D2pds v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.019774
+"unitPrice": 0.020758
 },
 "DZH318Z0G1GH/0098|0483071c-2466-5ec6-a584-1eb59c3f1bc2|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "D8pds v6 Spot",
 "productName": "Virtual Machines Dpdsv6 Series",
-"retailPrice": 0.079464,
+"retailPrice": 0.08342,
 "skuName": "D8pds v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.079464
+"unitPrice": 0.08342
 },
 "DZH318Z0G1GH/009B|c663d20e-c5e1-5896-99da-297625323571|Consumption|": {
 "armRegionName": "francecentral",
@@ -45288,28 +45288,28 @@
 "armRegionName": "francecentral",
 "meterName": "D48pds v6 Spot",
 "productName": "Virtual Machines Dpdsv6 Series",
-"retailPrice": 0.476414,
+"retailPrice": 0.500132,
 "skuName": "D48pds v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.476414
+"unitPrice": 0.500132
 },
 "DZH318Z0G1GH/009K|65e26950-79be-5708-a32b-5d0dff81e49b|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "D32pds v6 Spot",
 "productName": "Virtual Machines Dpdsv6 Series",
-"retailPrice": 0.317486,
+"retailPrice": 0.333292,
 "skuName": "D32pds v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.317486
+"unitPrice": 0.333292
 },
 "DZH318Z0G1GH/00P3|002593dc-0c53-5675-ab9c-329a0aa6e99b|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "D96pds v6 Spot",
 "productName": "Virtual Machines Dpdsv6 Series",
-"retailPrice": 0.952644,
+"retailPrice": 1.00007,
 "skuName": "D96pds v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.952644
+"unitPrice": 1.00007
 },
 "DZH318Z0G1GH/00P5|232dc368-06e3-594d-9fe1-e8e3b0159cc1|Consumption|": {
 "armRegionName": "francecentral",
@@ -45365,55 +45365,55 @@
 "armRegionName": "francecentral",
 "meterName": "D64plds v6 Spot",
 "productName": "Virtual Machines Dpldsv6 Series",
-"retailPrice": 0.539246,
+"retailPrice": 0.566092,
 "skuName": "D64plds v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.539246
+"unitPrice": 0.566092
 },
 "DZH318Z0G1GK/00GS|e4f13f10-ec39-5d27-bcb2-f543ca977cc4|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "D32plds v6 Spot",
 "productName": "Virtual Machines Dpldsv6 Series",
-"retailPrice": 0.269623,
+"retailPrice": 0.283046,
 "skuName": "D32plds v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.269623
+"unitPrice": 0.283046
 },
 "DZH318Z0G1GK/00GT|bcc1f38a-b2c0-5d79-8c2d-ee467535826e|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "D16plds v6 Spot",
 "productName": "Virtual Machines Dpldsv6 Series",
-"retailPrice": 0.134904,
+"retailPrice": 0.14162,
 "skuName": "D16plds v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.134904
+"unitPrice": 0.14162
 },
 "DZH318Z0G1GK/00GV|39045b6f-2ed2-5017-9354-f4a8624aa4cc|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "D4plds v6 Spot",
 "productName": "Virtual Machines Dpldsv6 Series",
-"retailPrice": 0.033634,
+"retailPrice": 0.035308,
 "skuName": "D4plds v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.033634
+"unitPrice": 0.035308
 },
 "DZH318Z0G1GK/00GW|01a8bb8e-37e1-5c1a-9adb-89927c6172e5|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "D48plds v6 Spot",
 "productName": "Virtual Machines Dpldsv6 Series",
-"retailPrice": 0.404527,
+"retailPrice": 0.424666,
 "skuName": "D48plds v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.404527
+"unitPrice": 0.424666
 },
 "DZH318Z0G1GK/00GX|03c8103a-bafa-5890-8e4c-14e05d79acd1|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "D2plds v6 Spot",
 "productName": "Virtual Machines Dpldsv6 Series",
-"retailPrice": 0.016854,
+"retailPrice": 0.017693,
 "skuName": "D2plds v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.016854
+"unitPrice": 0.017693
 },
 "DZH318Z0G1GK/00GZ|ef3ea930-0706-5f96-b2fa-c95d7a7b061e|Consumption|": {
 "armRegionName": "francecentral",
@@ -45439,10 +45439,10 @@
 "armRegionName": "francecentral",
 "meterName": "D8plds v6 Spot",
 "productName": "Virtual Machines Dpldsv6 Series",
-"retailPrice": 0.067452,
+"retailPrice": 0.07081,
 "skuName": "D8plds v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.067452
+"unitPrice": 0.07081
 },
 "DZH318Z0G1GK/00JG|6c5c3f1d-26d6-525e-8b81-3496acab616d|Consumption|": {
 "armRegionName": "francecentral",
@@ -45458,10 +45458,10 @@
 "armRegionName": "francecentral",
 "meterName": "D96plds v6 Spot",
 "productName": "Virtual Machines Dpldsv6 Series",
-"retailPrice": 0.809054,
+"retailPrice": 0.849332,
 "skuName": "D96plds v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.809054
+"unitPrice": 0.849332
 },
 "DZH318Z0G1GK/00N0|0ff1d9eb-eb7d-56bd-acff-8785a35ebe39|Consumption|": {
 "armRegionName": "francecentral",
@@ -45507,28 +45507,28 @@
 "armRegionName": "francecentral",
 "meterName": "D32pls v6 Spot",
 "productName": "Virtual Machines Dplsv6 Series",
-"retailPrice": 0.214738,
+"retailPrice": 0.225428,
 "skuName": "D32pls v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.214738
+"unitPrice": 0.225428
 },
 "DZH318Z0G1GP/00GQ|d8067959-974e-5390-b52d-e18462fbd340|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "D4pls v6 Spot",
 "productName": "Virtual Machines Dplsv6 Series",
-"retailPrice": 0.026796,
+"retailPrice": 0.02813,
 "skuName": "D4pls v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.026796
+"unitPrice": 0.02813
 },
 "DZH318Z0G1GP/00GS|82907e1d-d7eb-5c93-b48e-4a6e8be8a305|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "D16pls v6 Spot",
 "productName": "Virtual Machines Dplsv6 Series",
-"retailPrice": 0.107369,
+"retailPrice": 0.112714,
 "skuName": "D16pls v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.107369
+"unitPrice": 0.112714
 },
 "DZH318Z0G1GP/00GV|66699bc6-3092-59b6-914d-840396418dce|Consumption|": {
 "armRegionName": "francecentral",
@@ -45554,28 +45554,28 @@
 "armRegionName": "francecentral",
 "meterName": "D8pls v6 Spot",
 "productName": "Virtual Machines Dplsv6 Series",
-"retailPrice": 0.053592,
+"retailPrice": 0.05626,
 "skuName": "D8pls v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.053592
+"unitPrice": 0.05626
 },
 "DZH318Z0G1GP/00H0|b56f0e44-dc17-5b6f-bb27-81f653d47a1e|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "D64pls v6 Spot",
 "productName": "Virtual Machines Dplsv6 Series",
-"retailPrice": 0.42929,
+"retailPrice": 0.450662,
 "skuName": "D64pls v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.42929
+"unitPrice": 0.450662
 },
 "DZH318Z0G1GP/00H1|da7d09b7-4949-564e-a0e7-0168dcdd8584|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "D2pls v6 Spot",
 "productName": "Virtual Machines Dplsv6 Series",
-"retailPrice": 0.013416,
+"retailPrice": 0.014084,
 "skuName": "D2pls v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.013416
+"unitPrice": 0.014084
 },
 "DZH318Z0G1GP/00H2|61865b8b-1ec1-59a6-83c3-33fd27a4690c|Consumption|": {
 "armRegionName": "francecentral",
@@ -45591,10 +45591,10 @@
 "armRegionName": "francecentral",
 "meterName": "D48pls v6 Spot",
 "productName": "Virtual Machines Dplsv6 Series",
-"retailPrice": 0.321922,
+"retailPrice": 0.337948,
 "skuName": "D48pls v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.321922
+"unitPrice": 0.337948
 },
 "DZH318Z0G1GP/00H5|ac36249f-521c-5931-9906-079077989420|Consumption|": {
 "armRegionName": "francecentral",
@@ -45610,10 +45610,10 @@
 "armRegionName": "francecentral",
 "meterName": "D96pls v6 Spot",
 "productName": "Virtual Machines Dplsv6 Series",
-"retailPrice": 0.644028,
+"retailPrice": 0.67609,
 "skuName": "D96pls v6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.644028
+"unitPrice": 0.67609
 },
 "DZH318Z0G1GP/00MQ|a91c81cc-c99d-5451-98c4-0b8ca763588f|Consumption|": {
 "armRegionName": "francecentral",
@@ -56061,10 +56061,10 @@
 "armRegionName": "francecentral",
 "meterName": "NC144dsxlRTX6kv6 Spot",
 "productName": "Virtual Machines NCdsxlRTX6kv6 Windows",
-"retailPrice": 2.921,
+"retailPrice": 2.699004,
 "skuName": "NC144dsxlRTX6kv6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 2.921
+"unitPrice": 2.699004
 },
 "DZH318Z0R67S/019P|a15e1776-fe7a-5f2b-97f2-36f333465211|Consumption|": {
 "armRegionName": "francecentral",
@@ -56079,10 +56079,10 @@
 "armRegionName": "francecentral",
 "meterName": "NC36dsxlRTX6kv6 Spot",
 "productName": "Virtual Machines NCdsxlRTX6kv6 Windows",
-"retailPrice": 0.692,
+"retailPrice": 0.639408,
 "skuName": "NC36dsxlRTX6kv6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.692
+"unitPrice": 0.639408
 },
 "DZH318Z0R67S/019V|9eabadf1-6554-5ad4-afaf-4507dd95bc2c|Consumption|": {
 "armRegionName": "francecentral",
@@ -56097,19 +56097,19 @@
 "armRegionName": "francecentral",
 "meterName": "NC288dsxlRTX6kv6 Spot",
 "productName": "Virtual Machines NCdsxlRTX6kv6 Windows",
-"retailPrice": 5.4016,
+"retailPrice": 4.991078,
 "skuName": "NC288dsxlRTX6kv6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 5.4016
+"unitPrice": 4.991078
 },
 "DZH318Z0R67S/01B8|35a57efe-3d22-5c3e-ba5c-ac8065770771|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "NC72dsxlRTX6kv6 Spot",
 "productName": "Virtual Machines NCdsxlRTX6kv6 Windows",
-"retailPrice": 1.3706,
+"retailPrice": 1.266434,
 "skuName": "NC72dsxlRTX6kv6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 1.3706
+"unitPrice": 1.266434
 },
 "DZH318Z0R67S/01BJ|6d5b205a-d560-5db7-a075-9ef4edb20244|Consumption|": {
 "armRegionName": "francecentral",
@@ -56142,10 +56142,10 @@
 "armRegionName": "francecentral",
 "meterName": "NC144dsxlRTX6kv6 Spot",
 "productName": "Virtual Machines NCdsxlRTX6kv6",
-"retailPrice": 1.5962,
+"retailPrice": 1.474889,
 "skuName": "NC144dsxlRTX6kv6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 1.5962
+"unitPrice": 1.474889
 },
 "DZH318Z0R67V/01FR|7aa2be81-9944-5ec8-985e-dee8e51f96d6|Consumption|": {
 "armRegionName": "francecentral",
@@ -56161,10 +56161,10 @@
 "armRegionName": "francecentral",
 "meterName": "NC288dsxlRTX6kv6 Spot",
 "productName": "Virtual Machines NCdsxlRTX6kv6",
-"retailPrice": 2.752,
+"retailPrice": 2.542848,
 "skuName": "NC288dsxlRTX6kv6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 2.752
+"unitPrice": 2.542848
 },
 "DZH318Z0R67V/01G6|19706eda-d0d0-579a-84fd-0c0afbe74717|Consumption|": {
 "armRegionName": "francecentral",
@@ -56180,10 +56180,10 @@
 "armRegionName": "francecentral",
 "meterName": "NC72dsxlRTX6kv6 Spot",
 "productName": "Virtual Machines NCdsxlRTX6kv6",
-"retailPrice": 0.7082,
+"retailPrice": 0.654377,
 "skuName": "NC72dsxlRTX6kv6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.7082
+"unitPrice": 0.654377
 },
 "DZH318Z0R67V/01GP|729b80d8-bc31-5d7e-8bb3-5b1d31de0083|Consumption|": {
 "armRegionName": "francecentral",
@@ -56199,10 +56199,10 @@
 "armRegionName": "francecentral",
 "meterName": "NC36dsxlRTX6kv6 Spot",
 "productName": "Virtual Machines NCdsxlRTX6kv6",
-"retailPrice": 0.3608,
+"retailPrice": 0.333379,
 "skuName": "NC36dsxlRTX6kv6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.3608
+"unitPrice": 0.333379
 },
 "DZH318Z0R67V/01GZ|9a9aaa47-1953-523f-be14-b54eed4ac63e|Consumption|": {
 "armRegionName": "francecentral",
@@ -56246,28 +56246,28 @@
 "armRegionName": "francecentral",
 "meterName": "NC72ldsxlRTX6kv6 Spot",
 "productName": "Virtual Machines NCldsxlRTX6kv6 Windows",
-"retailPrice": 1.2728,
+"retailPrice": 1.176067,
 "skuName": "NC72ldsxlRTX6kv6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 1.2728
+"unitPrice": 1.176067
 },
 "DZH318Z0R682/00V7|73e59657-70ad-561c-85be-edb8a469987c|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "NC24ldsxlRTX6kv6 Spot",
 "productName": "Virtual Machines NCldsxlRTX6kv6 Windows",
-"retailPrice": 0.5036,
+"retailPrice": 0.465326,
 "skuName": "NC24ldsxlRTX6kv6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.5036
+"unitPrice": 0.465326
 },
 "DZH318Z0R682/00W5|3983dc6b-298c-5734-93d2-990ff5f21e9d|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "NC144ldsxlRTX6kv6 Spot",
 "productName": "Virtual Machines NCldsxlRTX6kv6 Windows",
-"retailPrice": 2.7008,
+"retailPrice": 2.495539,
 "skuName": "NC144ldsxlRTX6kv6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 2.7008
+"unitPrice": 2.495539
 },
 "DZH318Z0R682/00W6|8a994c64-f194-5717-8392-ed7d7ed6c6c3|Consumption|": {
 "armRegionName": "francecentral",
@@ -56291,10 +56291,10 @@
 "armRegionName": "francecentral",
 "meterName": "NC288ldsxlRTX6kv6 Spot",
 "productName": "Virtual Machines NCldsxlRTX6kv6 Windows",
-"retailPrice": 5.4016,
+"retailPrice": 4.991078,
 "skuName": "NC288ldsxlRTX6kv6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 5.4016
+"unitPrice": 4.991078
 },
 "DZH318Z0R682/00WK|883f2356-9cf6-59ac-a3d1-ac72c6446709|Consumption|": {
 "armRegionName": "francecentral",
@@ -56318,10 +56318,10 @@
 "armRegionName": "francecentral",
 "meterName": "NC36ldsxlRTX6kv6 Spot",
 "productName": "Virtual Machines NCldsxlRTX6kv6 Windows",
-"retailPrice": 0.6422,
+"retailPrice": 0.593393,
 "skuName": "NC36ldsxlRTX6kv6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.6422
+"unitPrice": 0.593393
 },
 "DZH318Z0R682/0151|299c0fd8-8976-5243-b39f-9a3bdf220c36|Consumption|": {
 "armRegionName": "francecentral",
@@ -56345,19 +56345,19 @@
 "armRegionName": "francecentral",
 "meterName": "NC36ldsxlRTX6kv6 Spot",
 "productName": "Virtual Machines NCldsxlRTX6kv6",
-"retailPrice": 0.311,
+"retailPrice": 0.287364,
 "skuName": "NC36ldsxlRTX6kv6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.311
+"unitPrice": 0.287364
 },
 "DZH318Z0R685/018Z|0c1f087b-6a51-5c34-aabc-47d52519b716|Consumption|": {
 "armRegionName": "francecentral",
 "meterName": "NC72ldsxlRTX6kv6 Spot",
 "productName": "Virtual Machines NCldsxlRTX6kv6",
-"retailPrice": 0.6104,
+"retailPrice": 0.56401,
 "skuName": "NC72ldsxlRTX6kv6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.6104
+"unitPrice": 0.56401
 },
 "DZH318Z0R685/0190|55b0c62a-ccac-5551-bc0e-1c0b8b5ba878|Consumption|": {
 "armRegionName": "francecentral",
@@ -56373,10 +56373,10 @@
 "armRegionName": "francecentral",
 "meterName": "NC288ldsxlRTX6kv6 Spot",
 "productName": "Virtual Machines NCldsxlRTX6kv6",
-"retailPrice": 2.752,
+"retailPrice": 2.542848,
 "skuName": "NC288ldsxlRTX6kv6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 2.752
+"unitPrice": 2.542848
 },
 "DZH318Z0R685/0196|870a7102-0d0f-51df-a8f2-b62e60e5469d|Consumption|": {
 "armRegionName": "francecentral",
@@ -56412,10 +56412,10 @@
 "armRegionName": "francecentral",
 "meterName": "NC24ldsxlRTX6kv6 Spot",
 "productName": "Virtual Machines NCldsxlRTX6kv6",
-"retailPrice": 0.2828,
+"retailPrice": 0.261307,
 "skuName": "NC24ldsxlRTX6kv6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.2828
+"unitPrice": 0.261307
 },
 "DZH318Z0R685/01DK|5d52033f-a6bd-5f88-963b-2a3edfde5daa|Consumption|": {
 "armRegionName": "francecentral",
@@ -56431,10 +56431,10 @@
 "armRegionName": "francecentral",
 "meterName": "NC144ldsxlRTX6kv6 Spot",
 "productName": "Virtual Machines NCldsxlRTX6kv6",
-"retailPrice": 1.376,
+"retailPrice": 1.271424,
 "skuName": "NC144ldsxlRTX6kv6 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 1.376
+"unitPrice": 1.271424
 },
 "DZH318Z0R685/01HP|3f47af15-5410-5ce1-be01-cd1659b16ed0|Consumption|": {
 "armRegionName": "francecentral",
