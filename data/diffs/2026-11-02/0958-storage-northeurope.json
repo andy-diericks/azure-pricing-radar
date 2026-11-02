@@ -1,0 +1,68 @@
+{
+ "scope": "storage-northeurope",
+ "at": "2026-11-02T09:58:28.795975+00:00",
+ "added": [
+  {
+   "key": "DZH318Z0BP88/028G|ac49c320-9747-55a0-963d-263c6b6758ba|Consumption|",
+   "retailPrice": 3.1e-05,
+   "unitPrice": 3.1e-05,
+   "unitOfMeasure": "1 GiB/Hour",
+   "productName": "Standard SSD Managed Disks",
+   "skuName": "Confidential Compute Encryption ZRS",
+   "meterName": "Confidential Compute Encryption ZRS Provisioned Capacity",
+   "armRegionName": "northeurope"
+  },
+  {
+   "key": "DZH318Z0BJRM/00DT|ac8a11dc-3f25-5772-8d8d-1c319f036473|Consumption|",
+   "retailPrice": 0.12,
+   "unitPrice": 0.12,
+   "unitOfMeasure": "1 GB",
+   "productName": "Azure Data Lake Storage Gen2 Hierarchical Namespace",
+   "skuName": "Archive RA-GRS",
+   "meterName": "Priority Data Retrieval",
+   "armRegionName": "northeurope"
+  },
+  {
+   "key": "DZH318Z0BNZ5/00M3|aca2ef4b-230b-5ff4-8d4c-78845984c726|Consumption|",
+   "retailPrice": 0.108,
+   "unitPrice": 0.108,
+   "unitOfMeasure": "10K",
+   "productName": "Tables",
+   "skuName": "Account Encrypted ZRS",
+   "meterName": "Account Encrypted List Operations",
+   "armRegionName": "northeurope"
+  },
+  {
+   "key": "DZH318Z0CBTJ/016K|9c3b5e48-c10d-5c07-abff-731e7e1cc5c1|Consumption|",
+   "retailPrice": 1.2,
+   "unitPrice": 1.2,
+   "unitOfMeasure": "1/Month",
+   "productName": "Blob Features",
+   "skuName": "Cool ZRS",
+   "meterName": "Cool ZRS Named Encryption Scopes",
+   "armRegionName": "northeurope"
+  },
+  {
+   "key": "DZH318Z0BNZ5/00J6|ad578a2f-e53b-534c-8ce4-f4da57fdef1f|Consumption|",
+   "retailPrice": 0.108,
+   "unitPrice": 0.108,
+   "unitOfMeasure": "10K",
+   "productName": "Tables",
+   "skuName": "Account Encrypted GRS",
+   "meterName": "Account Encrypted List Operations",
+   "armRegionName": "northeurope"
+  },
+  {
+   "key": "DZH318Z0BJRN/00CW|a970d176-6044-4d9a-b478-33a809b45444|Consumption|",
+   "retailPrice": 0.002,
+   "unitPrice": 0.002,
+   "unitOfMeasure": "1 GB",
+   "productName": "Azure Data Lake Storage Gen2 Flat Namespace",
+   "skuName": "Hot GRS",
+   "meterName": "Hot Data Scanned for Query Acceleration",
+   "armRegionName": "northeurope"
+  }
+ ],
+ "removed": [],
+ "changed": []
+}
