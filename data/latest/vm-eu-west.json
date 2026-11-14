@@ -1103,10 +1103,10 @@
 "armRegionName": "westeurope",
 "meterName": "D48ps v7 Spot",
 "productName": "Virtual Machines Dpsv7 Series Windows",
-"retailPrice": 1.2236,
+"retailPrice": 1.1132,
 "skuName": "D48ps v7 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 1.2236
+"unitPrice": 1.1132
 },
 "DZH318XZR5CC/00C9|a5af0c76-b23c-51ee-87b5-aabe4bfa18d1|Consumption|": {
 "armRegionName": "westeurope",
@@ -1121,10 +1121,10 @@
 "armRegionName": "westeurope",
 "meterName": "D96ps v7 Spot",
 "productName": "Virtual Machines Dpsv7 Series Windows",
-"retailPrice": 2.447,
+"retailPrice": 2.2264,
 "skuName": "D96ps v7 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 2.447
+"unitPrice": 2.2264
 },
 "DZH318XZR5CC/00G8|2ee27570-c247-57d2-b5bf-f705460f366a|Consumption|": {
 "armRegionName": "westeurope",
@@ -1139,87 +1139,82 @@
 "armRegionName": "westeurope",
 "meterName": "D96ps v7 Spot",
 "productName": "Virtual Machines Dpsv7 Series",
-"retailPrice": 1.5638,
+"retailPrice": 1.3432,
 "skuName": "D96ps v7 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 1.5638
+"unitPrice": 1.3432
 },
 "DZH318XZR5CF/00M8|11847f4b-46fd-5bd3-a835-915220b98b60|Consumption|": {
 "armRegionName": "westeurope",
 "meterName": "D1ps v7 Spot",
 "productName": "Virtual Machines Dpsv7 Series",
-"retailPrice": 0.0163,
+"retailPrice": 0.014,
 "skuName": "D1ps v7 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.0163
+"unitPrice": 0.014
 },
 "DZH318XZR5CF/00MB|5968e2f3-3007-5e03-ae3d-fc37b8b6d462|Consumption|": {
 "armRegionName": "westeurope",
 "meterName": "D48ps v7",
 "productName": "Virtual Machines Dpsv7 Series",
-"retailPrice": 3.91,
-"savingsPlanPrice": 2.6588,
+"retailPrice": 3.358,
 "skuName": "D48ps v7",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 3.91
+"unitPrice": 3.358
 },
 "DZH318XZR5CF/00MD|8b0cde9e-0fa9-5113-87b8-26a9d12bf124|Consumption|": {
 "armRegionName": "westeurope",
 "meterName": "D2ps v7 Spot",
 "productName": "Virtual Machines Dpsv7 Series",
-"retailPrice": 0.0326,
+"retailPrice": 0.028,
 "skuName": "D2ps v7 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.0326
+"unitPrice": 0.028
 },
 "DZH318XZR5CF/00MJ|9c82b172-d842-5769-b07b-abc57fde3551|Consumption|": {
 "armRegionName": "westeurope",
 "meterName": "D16ps v7",
 "productName": "Virtual Machines Dpsv7 Series",
-"retailPrice": 1.303,
-"savingsPlanPrice": 0.88604,
+"retailPrice": 1.119,
 "skuName": "D16ps v7",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 1.303
+"unitPrice": 1.119
 },
 "DZH318XZR5CF/00MN|9b41037e-ba38-5a3a-af5c-6c4efef738b7|Consumption|": {
 "armRegionName": "westeurope",
 "meterName": "D1ps v7",
 "productName": "Virtual Machines Dpsv7 Series",
-"retailPrice": 0.0815,
-"savingsPlanPrice": 0.05542,
+"retailPrice": 0.07,
 "skuName": "D1ps v7",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.0815
+"unitPrice": 0.07
 },
 "DZH318XZR5CF/00MP|4d0d73de-dbd2-51e5-a0b1-92231ab260dc|Consumption|": {
 "armRegionName": "westeurope",
 "meterName": "D64ps v7",
 "productName": "Virtual Machines Dpsv7 Series",
-"retailPrice": 5.213,
-"savingsPlanPrice": 3.54484,
+"retailPrice": 4.477,
 "skuName": "D64ps v7",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 5.213
+"unitPrice": 4.477
 },
 "DZH318XZR5CF/00MS|0c682e13-f023-5ec4-8c38-453cd01df35e|Consumption|": {
 "armRegionName": "westeurope",
 "meterName": "D32ps v7 Spot",
 "productName": "Virtual Machines Dpsv7 Series",
-"retailPrice": 0.5212,
+"retailPrice": 0.4478,
 "skuName": "D32ps v7 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.5212
+"unitPrice": 0.4478
 },
 "DZH318XZR5CF/00MZ|51d55c22-089e-56c0-a60c-8667b6d06c92|Consumption|": {
 "armRegionName": "westeurope",
 "meterName": "D2ps v7",
 "productName": "Virtual Machines Dpsv7 Series",
-"retailPrice": 0.163,
-"savingsPlanPrice": 0.11084,
+"retailPrice": 0.14,
 "skuName": "D2ps v7",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.163
+"unitPrice": 0.14
 },
 "DZH318XZR5CF/00N0|c88cf5f8-6559-581b-867d-79de8aa15d48|Consumption|": {
 "armRegionName": "westeurope",
@@ -1235,39 +1230,37 @@
 "armRegionName": "westeurope",
 "meterName": "D4ps v7",
 "productName": "Virtual Machines Dpsv7 Series",
-"retailPrice": 0.326,
-"savingsPlanPrice": 0.22168,
+"retailPrice": 0.28,
 "skuName": "D4ps v7",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.326
+"unitPrice": 0.28
 },
 "DZH318XZR5CF/00N2|a2063b88-b260-5f61-b347-8a7df771fe46|Consumption|": {
 "armRegionName": "westeurope",
 "meterName": "D8ps v7 Spot",
 "productName": "Virtual Machines Dpsv7 Series",
-"retailPrice": 0.1304,
+"retailPrice": 0.112,
 "skuName": "D8ps v7 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.1304
+"unitPrice": 0.112
 },
 "DZH318XZR5CF/00N9|a8c0068d-cda4-569a-b92e-eca6bfc3fb8a|Consumption|": {
 "armRegionName": "westeurope",
 "meterName": "D48ps v7 Spot",
 "productName": "Virtual Machines Dpsv7 Series",
-"retailPrice": 0.782,
+"retailPrice": 0.6716,
 "skuName": "D48ps v7 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.782
+"unitPrice": 0.6716
 },
 "DZH318XZR5CF/00NB|358b12bb-efe4-5a2e-91e0-a95a29277818|Consumption|": {
 "armRegionName": "westeurope",
 "meterName": "D32ps v7",
 "productName": "Virtual Machines Dpsv7 Series",
-"retailPrice": 2.606,
-"savingsPlanPrice": 1.77208,
+"retailPrice": 2.239,
 "skuName": "D32ps v7",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 2.606
+"unitPrice": 2.239
 },
 "DZH318XZR5CF/00NF|df92e7ff-30a8-5c77-86a6-a2c50a32f482|Consumption|": {
 "armRegionName": "westeurope",
@@ -1283,47 +1276,46 @@
 "armRegionName": "westeurope",
 "meterName": "D16ps v7 Spot",
 "productName": "Virtual Machines Dpsv7 Series",
-"retailPrice": 0.2606,
+"retailPrice": 0.2238,
 "skuName": "D16ps v7 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.2606
+"unitPrice": 0.2238
 },
 "DZH318XZR5CF/00PF|2d02b3c4-be1f-524f-bcd9-3a6cb75a7ae3|Consumption|": {
 "armRegionName": "westeurope",
 "meterName": "D4ps v7 Spot",
 "productName": "Virtual Machines Dpsv7 Series",
-"retailPrice": 0.0652,
+"retailPrice": 0.056,
 "skuName": "D4ps v7 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.0652
+"unitPrice": 0.056
 },
 "DZH318XZR5CF/00PG|8d596a22-a1da-5359-989d-a258a2050b93|Consumption|": {
 "armRegionName": "westeurope",
 "meterName": "D64ps v7 Spot",
 "productName": "Virtual Machines Dpsv7 Series",
-"retailPrice": 1.0426,
+"retailPrice": 0.8954,
 "skuName": "D64ps v7 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 1.0426
+"unitPrice": 0.8954
 },
 "DZH318XZR5CF/00QN|7c139ae3-e85e-5c5e-8a9a-6038afa95982|Consumption|": {
 "armRegionName": "westeurope",
 "meterName": "D128ps v7",
 "productName": "Virtual Machines Dpsv7 Series",
-"retailPrice": 10.426,
-"savingsPlanPrice": 7.08968,
+"retailPrice": 8.954,
 "skuName": "D128ps v7",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 10.426
+"unitPrice": 8.954
 },
 "DZH318XZR5CF/00R5|b9d96da6-5352-5a59-9f5f-93c07a35d743|Consumption|": {
 "armRegionName": "westeurope",
 "meterName": "D128ps v7 Spot",
 "productName": "Virtual Machines Dpsv7 Series",
-"retailPrice": 2.0852,
+"retailPrice": 1.7908,
 "skuName": "D128ps v7 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 2.0852
+"unitPrice": 1.7908
 },
 "DZH318XZR5CH/010Q|db90b4cb-ff21-5100-9386-1633c235dcf6|Consumption|": {
 "armRegionName": "westeurope",
@@ -3142,30 +3134,28 @@
 "armRegionName": "westeurope",
 "meterName": "M8ps v4",
 "productName": "Virtual Machines Mpsv4 Series",
-"retailPrice": 1.301,
-"savingsPlanPrice": 0.88468,
+"retailPrice": 1.118,
 "skuName": "M8ps v4",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 1.301
+"unitPrice": 1.118
 },
 "DZH318XZR84C/008L|3c90a246-235b-5974-a164-85359dcffdbd|Consumption|": {
 "armRegionName": "westeurope",
 "meterName": "M2ps v4 Spot",
 "productName": "Virtual Machines Mpsv4 Series",
-"retailPrice": 0.065,
+"retailPrice": 0.0558,
 "skuName": "M2ps v4 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.065
+"unitPrice": 0.0558
 },
 "DZH318XZR84C/008T|a75c2024-527e-5e72-81e5-822eb6535c12|Consumption|": {
 "armRegionName": "westeurope",
 "meterName": "M32ps v4",
 "productName": "Virtual Machines Mpsv4 Series",
-"retailPrice": 5.206,
-"savingsPlanPrice": 3.54008,
+"retailPrice": 4.471,
 "skuName": "M32ps v4",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 5.206
+"unitPrice": 4.471
 },
 "DZH318XZR84C/008W|db281f01-ac58-5b59-bcd8-4cd453298a87|Consumption|": {
 "armRegionName": "westeurope",
@@ -3181,10 +3171,10 @@
 "armRegionName": "westeurope",
 "meterName": "M32ps v4 Spot",
 "productName": "Virtual Machines Mpsv4 Series",
-"retailPrice": 1.0412,
+"retailPrice": 0.8942,
 "skuName": "M32ps v4 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 1.0412
+"unitPrice": 0.8942
 },
 "DZH318XZR84C/009P|ce3393ed-f58d-5019-b60a-6fab5f1267ff|Consumption|": {
 "armRegionName": "westeurope",
@@ -3200,95 +3190,91 @@
 "armRegionName": "westeurope",
 "meterName": "M1ps v4",
 "productName": "Virtual Machines Mpsv4 Series",
-"retailPrice": 0.163,
-"savingsPlanPrice": 0.11084,
+"retailPrice": 0.14,
 "skuName": "M1ps v4",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.163
+"unitPrice": 0.14
 },
 "DZH318XZR84C/009X|ea725efe-7eae-5ff5-9866-0501815c12b5|Consumption|": {
 "armRegionName": "westeurope",
 "meterName": "M1ps v4 Spot",
 "productName": "Virtual Machines Mpsv4 Series",
-"retailPrice": 0.0326,
+"retailPrice": 0.028,
 "skuName": "M1ps v4 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.0326
+"unitPrice": 0.028
 },
 "DZH318XZR84C/009Z|ef471a05-3d4e-5d1d-b332-f4671083cc7e|Consumption|": {
 "armRegionName": "westeurope",
 "meterName": "M16ps v4",
 "productName": "Virtual Machines Mpsv4 Series",
-"retailPrice": 2.603,
-"savingsPlanPrice": 1.77004,
+"retailPrice": 2.235,
 "skuName": "M16ps v4",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 2.603
+"unitPrice": 2.235
 },
 "DZH318XZR84C/00B5|f9b5dd37-4148-53a9-a7e6-abb9ef51da24|Consumption|": {
 "armRegionName": "westeurope",
 "meterName": "M48ps v4 Spot",
 "productName": "Virtual Machines Mpsv4 Series",
-"retailPrice": 1.5616,
+"retailPrice": 1.3412,
 "skuName": "M48ps v4 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 1.5616
+"unitPrice": 1.3412
 },
 "DZH318XZR84C/00B7|35e1e1cf-95ef-5b4f-b622-c7b6e4e242ef|Consumption|": {
 "armRegionName": "westeurope",
 "meterName": "M4ps v4",
 "productName": "Virtual Machines Mpsv4 Series",
-"retailPrice": 0.651,
-"savingsPlanPrice": 0.44268,
+"retailPrice": 0.559,
 "skuName": "M4ps v4",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.651
+"unitPrice": 0.559
 },
 "DZH318XZR84C/00BF|fb803a47-7a7a-5056-9759-3d52cc48b106|Consumption|": {
 "armRegionName": "westeurope",
 "meterName": "M64ps v4 Spot",
 "productName": "Virtual Machines Mpsv4 Series",
-"retailPrice": 2.0822,
+"retailPrice": 1.7884,
 "skuName": "M64ps v4 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 2.0822
+"unitPrice": 1.7884
 },
 "DZH318XZR84C/00BQ|5eafcedd-1ea4-5f82-98ff-8aacf8a6a042|Consumption|": {
 "armRegionName": "westeurope",
 "meterName": "M16ps v4 Spot",
 "productName": "Virtual Machines Mpsv4 Series",
-"retailPrice": 0.5206,
+"retailPrice": 0.447,
 "skuName": "M16ps v4 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.5206
+"unitPrice": 0.447
 },
 "DZH318XZR84C/00C6|aabd4a90-18ab-523d-9ab8-536751604c28|Consumption|": {
 "armRegionName": "westeurope",
 "meterName": "M84ps v4 Spot",
 "productName": "Virtual Machines Mpsv4 Series",
-"retailPrice": 2.733,
+"retailPrice": 2.3472,
 "skuName": "M84ps v4 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 2.733
+"unitPrice": 2.3472
 },
 "DZH318XZR84C/00D1|28152e58-5a7b-5bd0-a880-a75093b61c4c|Consumption|": {
 "armRegionName": "westeurope",
 "meterName": "M4ps v4 Spot",
 "productName": "Virtual Machines Mpsv4 Series",
-"retailPrice": 0.1302,
+"retailPrice": 0.1118,
 "skuName": "M4ps v4 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.1302
+"unitPrice": 0.1118
 },
 "DZH318XZR84C/00LN|903b51ab-2b7b-5387-bbbd-c3289546718f|Consumption|": {
 "armRegionName": "westeurope",
 "meterName": "M48ps v4",
 "productName": "Virtual Machines Mpsv4 Series",
-"retailPrice": 7.808,
-"savingsPlanPrice": 5.30944,
+"retailPrice": 6.706,
 "skuName": "M48ps v4",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 7.808
+"unitPrice": 6.706
 },
 "DZH318XZR84C/00LP|cd7ea31a-472f-5396-afca-c5b9d5704fdd|Consumption|": {
 "armRegionName": "westeurope",
@@ -3304,19 +3290,19 @@
 "armRegionName": "westeurope",
 "meterName": "M8ps v4 Spot",
 "productName": "Virtual Machines Mpsv4 Series",
-"retailPrice": 0.2602,
+"retailPrice": 0.2236,
 "skuName": "M8ps v4 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.2602
+"unitPrice": 0.2236
 },
 "DZH318XZR84F/00R4|47da36c8-869d-577b-9ee0-0fef7751c9f5|Consumption|": {
 "armRegionName": "westeurope",
 "meterName": "M4ps v4 Spot",
 "productName": "Virtual Machines Mpsv4 Series Windows",
-"retailPrice": 0.167,
+"retailPrice": 0.1486,
 "skuName": "M4ps v4 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.167
+"unitPrice": 0.1486
 },
 "DZH318XZR84F/00R5|f3781b22-421b-5774-a4cf-0a7f12cd2555|Consumption|": {
 "armRegionName": "westeurope",
@@ -3331,19 +3317,19 @@
 "armRegionName": "westeurope",
 "meterName": "M2ps v4",
 "productName": "Virtual Machines Mpsv4 Series Windows",
-"retailPrice": 0.417,
+"retailPrice": 0.371,
 "skuName": "M2ps v4",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.417
+"unitPrice": 0.371
 },
 "DZH318XZR84F/00R8|4cffea8c-42cf-55a2-8df4-fc6030498289|Consumption|": {
 "armRegionName": "westeurope",
 "meterName": "M48ps v4",
 "productName": "Virtual Machines Mpsv4 Series Windows",
-"retailPrice": 10.016,
+"retailPrice": 8.914,
 "skuName": "M48ps v4",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 10.016
+"unitPrice": 8.914
 },
 "DZH318XZR84F/00RD|e831f83a-835d-5f12-b388-4d2b07f2f001|Consumption|": {
 "armRegionName": "westeurope",
@@ -3358,55 +3344,55 @@
 "armRegionName": "westeurope",
 "meterName": "M8ps v4",
 "productName": "Virtual Machines Mpsv4 Series Windows",
-"retailPrice": 1.669,
+"retailPrice": 1.486,
 "skuName": "M8ps v4",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 1.669
+"unitPrice": 1.486
 },
 "DZH318XZR84F/00RJ|3d223207-cb03-5415-878e-0f8856810172|Consumption|": {
 "armRegionName": "westeurope",
 "meterName": "M16ps v4",
 "productName": "Virtual Machines Mpsv4 Series Windows",
-"retailPrice": 3.339,
+"retailPrice": 2.971,
 "skuName": "M16ps v4",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 3.339
+"unitPrice": 2.971
 },
 "DZH318XZR84F/00S4|1049a376-5206-5a3b-a637-3abef5c191df|Consumption|": {
 "armRegionName": "westeurope",
 "meterName": "M64ps v4",
 "productName": "Virtual Machines Mpsv4 Series Windows",
-"retailPrice": 13.355,
+"retailPrice": 11.886,
 "skuName": "M64ps v4",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 13.355
+"unitPrice": 11.886
 },
 "DZH318XZR84F/00SN|9a03aa78-f53e-5011-b3e5-14693fc3c6a8|Consumption|": {
 "armRegionName": "westeurope",
 "meterName": "M8ps v4 Spot",
 "productName": "Virtual Machines Mpsv4 Series Windows",
-"retailPrice": 0.3338,
+"retailPrice": 0.2972,
 "skuName": "M8ps v4 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.3338
+"unitPrice": 0.2972
 },
 "DZH318XZR84F/00T2|124db532-d8cc-5881-841a-d0086bb375e2|Consumption|": {
 "armRegionName": "westeurope",
 "meterName": "M32ps v4 Spot",
 "productName": "Virtual Machines Mpsv4 Series Windows",
-"retailPrice": 1.3356,
+"retailPrice": 1.1886,
 "skuName": "M32ps v4 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 1.3356
+"unitPrice": 1.1886
 },
 "DZH318XZR84F/00TV|0245e8ac-ab9c-5a44-a932-406b04dcb3ad|Consumption|": {
 "armRegionName": "westeurope",
 "meterName": "M1ps v4",
 "productName": "Virtual Machines Mpsv4 Series Windows",
-"retailPrice": 0.209,
+"retailPrice": 0.186,
 "skuName": "M1ps v4",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.209
+"unitPrice": 0.186
 },
 "DZH318XZR84F/00V9|e269e47c-6760-5fe9-8e29-42653852385b|Consumption|": {
 "armRegionName": "westeurope",
@@ -3421,46 +3407,46 @@
 "armRegionName": "westeurope",
 "meterName": "M84ps v4",
 "productName": "Virtual Machines Mpsv4 Series Windows",
-"retailPrice": 17.529,
+"retailPrice": 15.6,
 "skuName": "M84ps v4",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 17.529
+"unitPrice": 15.6
 },
 "DZH318XZR84F/00W7|a44f09b6-31db-5e75-87a2-d2e2454b231d|Consumption|": {
 "armRegionName": "westeurope",
 "meterName": "M1ps v4 Spot",
 "productName": "Virtual Machines Mpsv4 Series Windows",
-"retailPrice": 0.0418,
+"retailPrice": 0.0372,
 "skuName": "M1ps v4 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.0418
+"unitPrice": 0.0372
 },
 "DZH318XZR84F/00XC|041b1aa1-7c47-5a5c-9fbd-2a25a08625ec|Consumption|": {
 "armRegionName": "westeurope",
 "meterName": "M16ps v4 Spot",
 "productName": "Virtual Machines Mpsv4 Series Windows",
-"retailPrice": 0.6678,
+"retailPrice": 0.5942,
 "skuName": "M16ps v4 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.6678
+"unitPrice": 0.5942
 },
 "DZH318XZR84F/012F|bd66df28-a702-5cef-b959-7b4272a8e77d|Consumption|": {
 "armRegionName": "westeurope",
 "meterName": "M48ps v4 Spot",
 "productName": "Virtual Machines Mpsv4 Series Windows",
-"retailPrice": 2.0032,
+"retailPrice": 1.7828,
 "skuName": "M48ps v4 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 2.0032
+"unitPrice": 1.7828
 },
 "DZH318XZR84F/012G|0725639e-3244-5c3c-8833-69bc0cfd41af|Consumption|": {
 "armRegionName": "westeurope",
 "meterName": "M4ps v4",
 "productName": "Virtual Machines Mpsv4 Series Windows",
-"retailPrice": 0.835,
+"retailPrice": 0.743,
 "skuName": "M4ps v4",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.835
+"unitPrice": 0.743
 },
 "DZH318XZR84F/012H|f367349c-a878-5ff8-a842-7a5aea49186b|Consumption|": {
 "armRegionName": "westeurope",
