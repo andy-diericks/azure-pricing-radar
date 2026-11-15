@@ -1,0 +1,624 @@
+{
+ "scope": "vm-swedencentral",
+ "at": "2026-11-15T19:57:21.656661+00:00",
+ "added": [],
+ "removed": [],
+ "changed": [
+  {
+   "key": "DZH318XZR51W/00WD|04d5020e-7546-55b5-9c05-27b8d68d2ba3|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "E1ps v7",
+    "productName": "Virtual Machines Epsv7 Series Windows",
+    "retailPrice": 0.143,
+    "skuName": "E1ps v7",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.143
+   },
+   "after": {
+    "retailPrice": 0.129,
+    "unitPrice": 0.129,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Epsv7 Series Windows",
+    "skuName": "E1ps v7",
+    "meterName": "E1ps v7",
+    "armRegionName": "swedencentral"
+   }
+  },
+  {
+   "key": "DZH318XZR51W/00T1|13af015e-561e-5555-ab3f-f49d6ade8066|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "E128ps v7",
+    "productName": "Virtual Machines Epsv7 Series Windows",
+    "retailPrice": 18.33,
+    "skuName": "E128ps v7",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 18.33
+   },
+   "after": {
+    "retailPrice": 16.573,
+    "unitPrice": 16.573,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Epsv7 Series Windows",
+    "skuName": "E128ps v7",
+    "meterName": "E128ps v7",
+    "armRegionName": "swedencentral"
+   }
+  },
+  {
+   "key": "DZH318XZR51X/006Q|15d0a7af-82bc-5099-be31-8e931303c0fc|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "E1ps v7 Spot",
+    "productName": "Virtual Machines Epsv7 Series",
+    "retailPrice": 0.01944,
+    "skuName": "E1ps v7 Spot",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.01944
+   },
+   "after": {
+    "retailPrice": 0.0167,
+    "unitPrice": 0.0167,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Epsv7 Series",
+    "skuName": "E1ps v7 Spot",
+    "meterName": "E1ps v7 Spot",
+    "armRegionName": "swedencentral"
+   }
+  },
+  {
+   "key": "DZH318XZR51X/0088|1b88a26f-0793-5ce2-80f0-757a1c19ff16|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "E1ps v7",
+    "productName": "Virtual Machines Epsv7 Series",
+    "retailPrice": 0.0972,
+    "savingsPlanPrice": 0.066096,
+    "skuName": "E1ps v7",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.0972
+   },
+   "after": {
+    "retailPrice": 0.0835,
+    "unitPrice": 0.0835,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Epsv7 Series",
+    "skuName": "E1ps v7",
+    "meterName": "E1ps v7",
+    "armRegionName": "swedencentral"
+   }
+  },
+  {
+   "key": "DZH318XZR51W/00SV|20718ad4-6380-5bc2-a96f-4ce5b80d1daf|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "E2ps v7 Spot",
+    "productName": "Virtual Machines Epsv7 Series Windows",
+    "retailPrice": 0.0572,
+    "skuName": "E2ps v7 Spot",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.0572
+   },
+   "after": {
+    "retailPrice": 0.0518,
+    "unitPrice": 0.0518,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Epsv7 Series Windows",
+    "skuName": "E2ps v7 Spot",
+    "meterName": "E2ps v7 Spot",
+    "armRegionName": "swedencentral"
+   }
+  },
+  {
+   "key": "DZH318XZR51X/0070|4827a27c-5c43-55fc-91e3-51db11f4a690|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "E8ps v7",
+    "productName": "Virtual Machines Epsv7 Series",
+    "retailPrice": 0.778,
+    "savingsPlanPrice": 0.52904,
+    "skuName": "E8ps v7",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.778
+   },
+   "after": {
+    "retailPrice": 0.668,
+    "unitPrice": 0.668,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Epsv7 Series",
+    "skuName": "E8ps v7",
+    "meterName": "E8ps v7",
+    "armRegionName": "swedencentral"
+   }
+  },
+  {
+   "key": "DZH318XZR51W/00WP|4f26ceaf-53c8-5253-af3a-7c02787ec3ba|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "E96ps v7 Spot",
+    "productName": "Virtual Machines Epsv7 Series Windows",
+    "retailPrice": 2.7494,
+    "skuName": "E96ps v7 Spot",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 2.7494
+   },
+   "after": {
+    "retailPrice": 2.4858,
+    "unitPrice": 2.4858,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Epsv7 Series Windows",
+    "skuName": "E96ps v7 Spot",
+    "meterName": "E96ps v7 Spot",
+    "armRegionName": "swedencentral"
+   }
+  },
+  {
+   "key": "DZH318XZR51X/0064|51470f9f-35eb-591d-bf69-bb6a713916e4|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "E128ps v7",
+    "productName": "Virtual Machines Epsv7 Series",
+    "retailPrice": 12.442,
+    "savingsPlanPrice": 8.46056,
+    "skuName": "E128ps v7",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 12.442
+   },
+   "after": {
+    "retailPrice": 10.685,
+    "unitPrice": 10.685,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Epsv7 Series",
+    "skuName": "E128ps v7",
+    "meterName": "E128ps v7",
+    "armRegionName": "swedencentral"
+   }
+  },
+  {
+   "key": "DZH318XZR51W/00VF|5552b2aa-f182-562c-95c9-5d09790dd549|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "E8ps v7",
+    "productName": "Virtual Machines Epsv7 Series Windows",
+    "retailPrice": 1.146,
+    "skuName": "E8ps v7",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 1.146
+   },
+   "after": {
+    "retailPrice": 1.036,
+    "unitPrice": 1.036,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Epsv7 Series Windows",
+    "skuName": "E8ps v7",
+    "meterName": "E8ps v7",
+    "armRegionName": "swedencentral"
+   }
+  },
+  {
+   "key": "DZH318XZR51X/007J|6521277a-1fba-5d24-880a-f813d28eca5d|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "E48ps v7 Spot",
+    "productName": "Virtual Machines Epsv7 Series",
+    "retailPrice": 0.9332,
+    "skuName": "E48ps v7 Spot",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.9332
+   },
+   "after": {
+    "retailPrice": 0.8014,
+    "unitPrice": 0.8014,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Epsv7 Series",
+    "skuName": "E48ps v7 Spot",
+    "meterName": "E48ps v7 Spot",
+    "armRegionName": "swedencentral"
+   }
+  },
+  {
+   "key": "DZH318XZR51W/00TH|8c901566-9525-56f1-b8f2-7bfc520d5a9b|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "E64ps v7 Spot",
+    "productName": "Virtual Machines Epsv7 Series Windows",
+    "retailPrice": 1.833,
+    "skuName": "E64ps v7 Spot",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 1.833
+   },
+   "after": {
+    "retailPrice": 1.6572,
+    "unitPrice": 1.6572,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Epsv7 Series Windows",
+    "skuName": "E64ps v7 Spot",
+    "meterName": "E64ps v7 Spot",
+    "armRegionName": "swedencentral"
+   }
+  },
+  {
+   "key": "DZH318XZR51W/00V7|8cd9a7cc-6895-59a8-ae42-de4ee0161d82|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "E1ps v7 Spot",
+    "productName": "Virtual Machines Epsv7 Series Windows",
+    "retailPrice": 0.0286,
+    "skuName": "E1ps v7 Spot",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.0286
+   },
+   "after": {
+    "retailPrice": 0.0258,
+    "unitPrice": 0.0258,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Epsv7 Series Windows",
+    "skuName": "E1ps v7 Spot",
+    "meterName": "E1ps v7 Spot",
+    "armRegionName": "swedencentral"
+   }
+  },
+  {
+   "key": "DZH318XZR51X/0075|a51a330c-05c1-5d97-9d8d-5e35dc22ea9e|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "E64ps v7",
+    "productName": "Virtual Machines Epsv7 Series",
+    "retailPrice": 6.221,
+    "savingsPlanPrice": 4.23028,
+    "skuName": "E64ps v7",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 6.221
+   },
+   "after": {
+    "retailPrice": 5.342,
+    "unitPrice": 5.342,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Epsv7 Series",
+    "skuName": "E64ps v7",
+    "meterName": "E64ps v7",
+    "armRegionName": "swedencentral"
+   }
+  },
+  {
+   "key": "DZH318XZR51X/005Z|ac761a28-57d6-538a-9508-9880fc66140c|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "E2ps v7",
+    "productName": "Virtual Machines Epsv7 Series",
+    "retailPrice": 0.194,
+    "savingsPlanPrice": 0.13192,
+    "skuName": "E2ps v7",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.194
+   },
+   "after": {
+    "retailPrice": 0.167,
+    "unitPrice": 0.167,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Epsv7 Series",
+    "skuName": "E2ps v7",
+    "meterName": "E2ps v7",
+    "armRegionName": "swedencentral"
+   }
+  },
+  {
+   "key": "DZH318XZR51W/00TF|b5667697-5fb6-589b-8398-0824e5d48d9e|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "E64ps v7",
+    "productName": "Virtual Machines Epsv7 Series Windows",
+    "retailPrice": 9.165,
+    "skuName": "E64ps v7",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 9.165
+   },
+   "after": {
+    "retailPrice": 8.286,
+    "unitPrice": 8.286,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Epsv7 Series Windows",
+    "skuName": "E64ps v7",
+    "meterName": "E64ps v7",
+    "armRegionName": "swedencentral"
+   }
+  },
+  {
+   "key": "DZH318XZR51X/00GD|b575fbd9-b45d-554a-99a5-ffd65cf4fe42|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "E16ps v7",
+    "productName": "Virtual Machines Epsv7 Series",
+    "retailPrice": 1.555,
+    "savingsPlanPrice": 1.0574,
+    "skuName": "E16ps v7",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 1.555
+   },
+   "after": {
+    "retailPrice": 1.336,
+    "unitPrice": 1.336,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Epsv7 Series",
+    "skuName": "E16ps v7",
+    "meterName": "E16ps v7",
+    "armRegionName": "swedencentral"
+   }
+  },
+  {
+   "key": "DZH318XZR51W/00VC|bb581a69-152c-50d3-a879-4c57ef2d9d5b|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "E48ps v7",
+    "productName": "Virtual Machines Epsv7 Series Windows",
+    "retailPrice": 6.874,
+    "skuName": "E48ps v7",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 6.874
+   },
+   "after": {
+    "retailPrice": 6.215,
+    "unitPrice": 6.215,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Epsv7 Series Windows",
+    "skuName": "E48ps v7",
+    "meterName": "E48ps v7",
+    "armRegionName": "swedencentral"
+   }
+  },
+  {
+   "key": "DZH318XZR51W/00SW|c528edeb-6c63-5142-aa6b-f4d22f5194e8|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "E96ps v7",
+    "productName": "Virtual Machines Epsv7 Series Windows",
+    "retailPrice": 13.747,
+    "skuName": "E96ps v7",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 13.747
+   },
+   "after": {
+    "retailPrice": 12.429,
+    "unitPrice": 12.429,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Epsv7 Series Windows",
+    "skuName": "E96ps v7",
+    "meterName": "E96ps v7",
+    "armRegionName": "swedencentral"
+   }
+  },
+  {
+   "key": "DZH318XZR51X/006V|c75d5fd7-6cc4-5bc9-8d25-4f04e8eb125e|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "E4ps v7",
+    "productName": "Virtual Machines Epsv7 Series",
+    "retailPrice": 0.389,
+    "savingsPlanPrice": 0.26452,
+    "skuName": "E4ps v7",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.389
+   },
+   "after": {
+    "retailPrice": 0.334,
+    "unitPrice": 0.334,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Epsv7 Series",
+    "skuName": "E4ps v7",
+    "meterName": "E4ps v7",
+    "armRegionName": "swedencentral"
+   }
+  },
+  {
+   "key": "DZH318XZR51X/0069|c8baf235-c055-5c00-945c-0a2a2ed64d33|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "E64ps v7 Spot",
+    "productName": "Virtual Machines Epsv7 Series",
+    "retailPrice": 1.2442,
+    "skuName": "E64ps v7 Spot",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 1.2442
+   },
+   "after": {
+    "retailPrice": 1.0684,
+    "unitPrice": 1.0684,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Epsv7 Series",
+    "skuName": "E64ps v7 Spot",
+    "meterName": "E64ps v7 Spot",
+    "armRegionName": "swedencentral"
+   }
+  },
+  {
+   "key": "DZH318XZR51X/006K|d3c9f7a3-658b-5cb4-9bc3-81355c6591ff|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "E16ps v7 Spot",
+    "productName": "Virtual Machines Epsv7 Series",
+    "retailPrice": 0.311,
+    "skuName": "E16ps v7 Spot",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.311
+   },
+   "after": {
+    "retailPrice": 0.2672,
+    "unitPrice": 0.2672,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Epsv7 Series",
+    "skuName": "E16ps v7 Spot",
+    "meterName": "E16ps v7 Spot",
+    "armRegionName": "swedencentral"
+   }
+  },
+  {
+   "key": "DZH318XZR51X/0077|dc264d36-2440-5912-a53c-a6f1e5270512|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "E4ps v7 Spot",
+    "productName": "Virtual Machines Epsv7 Series",
+    "retailPrice": 0.0778,
+    "skuName": "E4ps v7 Spot",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.0778
+   },
+   "after": {
+    "retailPrice": 0.0668,
+    "unitPrice": 0.0668,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Epsv7 Series",
+    "skuName": "E4ps v7 Spot",
+    "meterName": "E4ps v7 Spot",
+    "armRegionName": "swedencentral"
+   }
+  },
+  {
+   "key": "DZH318XZR51W/00TB|dde5c563-9f6c-50c2-8566-3570389f0c90|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "E16ps v7",
+    "productName": "Virtual Machines Epsv7 Series Windows",
+    "retailPrice": 2.291,
+    "skuName": "E16ps v7",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 2.291
+   },
+   "after": {
+    "retailPrice": 2.072,
+    "unitPrice": 2.072,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Epsv7 Series Windows",
+    "skuName": "E16ps v7",
+    "meterName": "E16ps v7",
+    "armRegionName": "swedencentral"
+   }
+  },
+  {
+   "key": "DZH318XZR51W/00W3|eeeeba16-1614-5632-bd12-0e5919557748|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "E16ps v7 Spot",
+    "productName": "Virtual Machines Epsv7 Series Windows",
+    "retailPrice": 0.4582,
+    "skuName": "E16ps v7 Spot",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.4582
+   },
+   "after": {
+    "retailPrice": 0.4144,
+    "unitPrice": 0.4144,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Epsv7 Series Windows",
+    "skuName": "E16ps v7 Spot",
+    "meterName": "E16ps v7 Spot",
+    "armRegionName": "swedencentral"
+   }
+  },
+  {
+   "key": "DZH318XZR51W/00TL|eff62343-5201-58e7-86a5-5198ad229312|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "E4ps v7",
+    "productName": "Virtual Machines Epsv7 Series Windows",
+    "retailPrice": 0.573,
+    "skuName": "E4ps v7",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.573
+   },
+   "after": {
+    "retailPrice": 0.518,
+    "unitPrice": 0.518,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Epsv7 Series Windows",
+    "skuName": "E4ps v7",
+    "meterName": "E4ps v7",
+    "armRegionName": "swedencentral"
+   }
+  },
+  {
+   "key": "DZH318XZR51X/007Q|f1829910-a119-51dd-bbf2-57b04a3f9eeb|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "E96ps v7 Spot",
+    "productName": "Virtual Machines Epsv7 Series",
+    "retailPrice": 1.8662,
+    "skuName": "E96ps v7 Spot",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 1.8662
+   },
+   "after": {
+    "retailPrice": 1.6026,
+    "unitPrice": 1.6026,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Epsv7 Series",
+    "skuName": "E96ps v7 Spot",
+    "meterName": "E96ps v7 Spot",
+    "armRegionName": "swedencentral"
+   }
+  },
+  {
+   "key": "DZH318XZR51W/00V5|f2ade957-f52a-55e7-96cd-dc6c8f11cc0a|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "E128ps v7 Spot",
+    "productName": "Virtual Machines Epsv7 Series Windows",
+    "retailPrice": 3.666,
+    "skuName": "E128ps v7 Spot",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 3.666
+   },
+   "after": {
+    "retailPrice": 3.3146,
+    "unitPrice": 3.3146,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Epsv7 Series Windows",
+    "skuName": "E128ps v7 Spot",
+    "meterName": "E128ps v7 Spot",
+    "armRegionName": "swedencentral"
+   }
+  },
+  {
+   "key": "DZH318XZR51X/006H|fc14fbdb-4aec-5d0b-8765-0a7433b6dad6|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "E32ps v7 Spot",
+    "productName": "Virtual Machines Epsv7 Series",
+    "retailPrice": 0.622,
+    "skuName": "E32ps v7 Spot",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.622
+   },
+   "after": {
+    "retailPrice": 0.5342,
+    "unitPrice": 0.5342,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Epsv7 Series",
+    "skuName": "E32ps v7 Spot",
+    "meterName": "E32ps v7 Spot",
+    "armRegionName": "swedencentral"
+   }
+  },
+  {
+   "key": "DZH318XZR51W/00VJ|fe32316e-6b76-5ca2-9760-74d019a07462|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "E48ps v7 Spot",
+    "productName": "Virtual Machines Epsv7 Series Windows",
+    "retailPrice": 1.3748,
+    "skuName": "E48ps v7 Spot",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 1.3748
+   },
+   "after": {
+    "retailPrice": 1.243,
+    "unitPrice": 1.243,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Epsv7 Series Windows",
+    "skuName": "E48ps v7 Spot",
+    "meterName": "E48ps v7 Spot",
+    "armRegionName": "swedencentral"
+   }
+  }
+ ]
+}

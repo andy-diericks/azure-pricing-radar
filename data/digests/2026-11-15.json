@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-15T00:19:18.103Z",
+  "generatedAt": "2026-11-15T19:58:02.380Z",
   "date": "2026-11-15",
-  "totalDrops": 27,
+  "totalDrops": 157,
   "totalIncreases": 0,
   "totalNewSkus": 0,
   "totalRemoved": 0,
@@ -43,6 +43,178 @@
           "regionDisplay": "West Europe",
           "priceBefore": 10.411,
           "priceAfter": 8.942,
+          "unitOfMeasure": "1 Hour",
+          "pctChange": -14.1,
+          "direction": "drop"
+        }
+      ]
+    },
+    {
+      "scope": "vm-eu-west",
+      "displayName": "Virtual Machines · West Europe",
+      "drops": 34,
+      "increases": 0,
+      "newSkus": 0,
+      "removed": 0,
+      "topMovers": [
+        {
+          "skuName": "E4ps v7 Spot",
+          "productName": "Virtual Machines Epsv7 Series",
+          "armRegionName": "westeurope",
+          "regionDisplay": "West Europe",
+          "priceBefore": 0.0856,
+          "priceAfter": 0.0734,
+          "unitOfMeasure": "1 Hour",
+          "pctChange": -14.3,
+          "direction": "drop"
+        },
+        {
+          "skuName": "E4ps v7",
+          "productName": "Virtual Machines Epsv7 Series",
+          "armRegionName": "westeurope",
+          "regionDisplay": "West Europe",
+          "priceBefore": 0.428,
+          "priceAfter": 0.367,
+          "unitOfMeasure": "1 Hour",
+          "pctChange": -14.3,
+          "direction": "drop"
+        },
+        {
+          "skuName": "E1ps v7 Spot",
+          "productName": "Virtual Machines Epsv7 Series",
+          "armRegionName": "westeurope",
+          "regionDisplay": "West Europe",
+          "priceBefore": 0.0214,
+          "priceAfter": 0.01836,
+          "unitOfMeasure": "1 Hour",
+          "pctChange": -14.2,
+          "direction": "drop"
+        }
+      ]
+    },
+    {
+      "scope": "vm-francecentral",
+      "displayName": "Virtual Machines · France Central",
+      "drops": 35,
+      "increases": 0,
+      "newSkus": 0,
+      "removed": 0,
+      "topMovers": [
+        {
+          "skuName": "E8ps v7 Spot",
+          "productName": "Virtual Machines Epsv7 Series",
+          "armRegionName": "francecentral",
+          "regionDisplay": "France Central",
+          "priceBefore": 0.1496,
+          "priceAfter": 0.1284,
+          "unitOfMeasure": "1 Hour",
+          "pctChange": -14.2,
+          "direction": "drop"
+        },
+        {
+          "skuName": "E8ps v7",
+          "productName": "Virtual Machines Epsv7 Series",
+          "armRegionName": "francecentral",
+          "regionDisplay": "France Central",
+          "priceBefore": 0.748,
+          "priceAfter": 0.642,
+          "unitOfMeasure": "1 Hour",
+          "pctChange": -14.2,
+          "direction": "drop"
+        },
+        {
+          "skuName": "E4ps v7 Spot",
+          "productName": "Virtual Machines Epsv7 Series",
+          "armRegionName": "francecentral",
+          "regionDisplay": "France Central",
+          "priceBefore": 0.0748,
+          "priceAfter": 0.0642,
+          "unitOfMeasure": "1 Hour",
+          "pctChange": -14.2,
+          "direction": "drop"
+        }
+      ]
+    },
+    {
+      "scope": "vm-northeurope",
+      "displayName": "Virtual Machines · North Europe",
+      "drops": 32,
+      "increases": 0,
+      "newSkus": 0,
+      "removed": 0,
+      "topMovers": [
+        {
+          "skuName": "E4ps v7",
+          "productName": "Virtual Machines Epsv7 Series",
+          "armRegionName": "northeurope",
+          "regionDisplay": "North Europe",
+          "priceBefore": 0.428,
+          "priceAfter": 0.367,
+          "unitOfMeasure": "1 Hour",
+          "pctChange": -14.3,
+          "direction": "drop"
+        },
+        {
+          "skuName": "E1ps v7 Spot",
+          "productName": "Virtual Machines Epsv7 Series",
+          "armRegionName": "northeurope",
+          "regionDisplay": "North Europe",
+          "priceBefore": 0.0214,
+          "priceAfter": 0.01836,
+          "unitOfMeasure": "1 Hour",
+          "pctChange": -14.2,
+          "direction": "drop"
+        },
+        {
+          "skuName": "E1ps v7",
+          "productName": "Virtual Machines Epsv7 Series",
+          "armRegionName": "northeurope",
+          "regionDisplay": "North Europe",
+          "priceBefore": 0.107,
+          "priceAfter": 0.0918,
+          "unitOfMeasure": "1 Hour",
+          "pctChange": -14.2,
+          "direction": "drop"
+        }
+      ]
+    },
+    {
+      "scope": "vm-swedencentral",
+      "displayName": "Virtual Machines · Sweden Central",
+      "drops": 29,
+      "increases": 0,
+      "newSkus": 0,
+      "removed": 0,
+      "topMovers": [
+        {
+          "skuName": "E1ps v7 Spot",
+          "productName": "Virtual Machines Epsv7 Series",
+          "armRegionName": "swedencentral",
+          "regionDisplay": "Sweden Central",
+          "priceBefore": 0.01944,
+          "priceAfter": 0.0167,
+          "unitOfMeasure": "1 Hour",
+          "pctChange": -14.1,
+          "direction": "drop"
+        },
+        {
+          "skuName": "E1ps v7",
+          "productName": "Virtual Machines Epsv7 Series",
+          "armRegionName": "swedencentral",
+          "regionDisplay": "Sweden Central",
+          "priceBefore": 0.0972,
+          "priceAfter": 0.0835,
+          "unitOfMeasure": "1 Hour",
+          "pctChange": -14.1,
+          "direction": "drop"
+        },
+        {
+          "skuName": "E8ps v7",
+          "productName": "Virtual Machines Epsv7 Series",
+          "armRegionName": "swedencentral",
+          "regionDisplay": "Sweden Central",
+          "priceBefore": 0.778,
+          "priceAfter": 0.668,
           "unitOfMeasure": "1 Hour",
           "pctChange": -14.1,
           "direction": "drop"

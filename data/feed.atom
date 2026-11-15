@@ -18,15 +18,35 @@
     <title>Azure pricing changes for 2026-11-15</title>
     <id>https://andy-diericks.github.io/azure-pricing-radar/#/digests/2026-11-15</id>
     <link href="https://andy-diericks.github.io/azure-pricing-radar/#/digests/2026-11-15"/>
-    <updated>2026-11-15T00:19:18.103Z</updated>
+    <updated>2026-11-15T19:58:02.380Z</updated>
     <content type="text">Azure pricing changes for 2026-11-15
 
-27 price drops
+157 price drops
 
 Virtual Machines · West Europe
   M2ps v4 (West Europe): -14.2% — $0.33 → $0.28/1 Hour
   D8ps v7 (West Europe): -14.1% — $0.65 → $0.56/1 Hour
-  M64ps v4 (West Europe): -14.1% — $10.41 → $8.94/1 Hour</content>
+  M64ps v4 (West Europe): -14.1% — $10.41 → $8.94/1 Hour
+
+Virtual Machines · West Europe
+  E4ps v7 Spot (West Europe): -14.3% — $0.09 → $0.07/1 Hour
+  E4ps v7 (West Europe): -14.3% — $0.43 → $0.37/1 Hour
+  E1ps v7 Spot (West Europe): -14.2% — $0.02 → $0.02/1 Hour
+
+Virtual Machines · France Central
+  E8ps v7 Spot (France Central): -14.2% — $0.15 → $0.13/1 Hour
+  E8ps v7 (France Central): -14.2% — $0.75 → $0.64/1 Hour
+  E4ps v7 Spot (France Central): -14.2% — $0.07 → $0.06/1 Hour
+
+Virtual Machines · North Europe
+  E4ps v7 (North Europe): -14.3% — $0.43 → $0.37/1 Hour
+  E1ps v7 Spot (North Europe): -14.2% — $0.02 → $0.02/1 Hour
+  E1ps v7 (North Europe): -14.2% — $0.11 → $0.09/1 Hour
+
+Virtual Machines · Sweden Central
+  E1ps v7 Spot (Sweden Central): -14.1% — $0.02 → $0.02/1 Hour
+  E1ps v7 (Sweden Central): -14.1% — $0.10 → $0.08/1 Hour
+  E8ps v7 (Sweden Central): -14.1% — $0.78 → $0.67/1 Hour</content>
   </entry>
   <entry>
     <title>Azure pricing changes for 2026-11-14</title>
