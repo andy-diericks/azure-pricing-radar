@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-11-15T00:19:18.103Z",
+  "date": "2026-11-15",
+  "totalDrops": 27,
+  "totalIncreases": 0,
+  "totalNewSkus": 0,
+  "totalRemoved": 0,
+  "sections": [
+    {
+      "scope": "vm-eu-west",
+      "displayName": "Virtual Machines · West Europe",
+      "drops": 27,
+      "increases": 0,
+      "newSkus": 0,
+      "removed": 0,
+      "topMovers": [
+        {
+          "skuName": "M2ps v4",
+          "productName": "Virtual Machines Mpsv4 Series",
+          "armRegionName": "westeurope",
+          "regionDisplay": "West Europe",
+          "priceBefore": 0.325,
+          "priceAfter": 0.279,
+          "unitOfMeasure": "1 Hour",
+          "pctChange": -14.2,
+          "direction": "drop"
+        },
+        {
+          "skuName": "D8ps v7",
+          "productName": "Virtual Machines Dpsv7 Series",
+          "armRegionName": "westeurope",
+          "regionDisplay": "West Europe",
+          "priceBefore": 0.652,
+          "priceAfter": 0.56,
+          "unitOfMeasure": "1 Hour",
+          "pctChange": -14.1,
+          "direction": "drop"
+        },
+        {
+          "skuName": "M64ps v4",
+          "productName": "Virtual Machines Mpsv4 Series",
+          "armRegionName": "westeurope",
+          "regionDisplay": "West Europe",
+          "priceBefore": 10.411,
+          "priceAfter": 8.942,
+          "unitOfMeasure": "1 Hour",
+          "pctChange": -14.1,
+          "direction": "drop"
+        }
+      ]
+    }
+  ]
+}

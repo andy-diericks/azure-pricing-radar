@@ -15,6 +15,20 @@
 9,904 new SKUs</content>
   </entry>
   <entry>
+    <title>Azure pricing changes for 2026-11-15</title>
+    <id>https://andy-diericks.github.io/azure-pricing-radar/#/digests/2026-11-15</id>
+    <link href="https://andy-diericks.github.io/azure-pricing-radar/#/digests/2026-11-15"/>
+    <updated>2026-11-15T00:19:18.103Z</updated>
+    <content type="text">Azure pricing changes for 2026-11-15
+
+27 price drops
+
+Virtual Machines · West Europe
+  M2ps v4 (West Europe): -14.2% — $0.33 → $0.28/1 Hour
+  D8ps v7 (West Europe): -14.1% — $0.65 → $0.56/1 Hour
+  M64ps v4 (West Europe): -14.1% — $10.41 → $8.94/1 Hour</content>
+  </entry>
+  <entry>
     <title>Azure pricing changes for 2026-11-14</title>
     <id>https://andy-diericks.github.io/azure-pricing-radar/#/digests/2026-11-14</id>
     <link href="https://andy-diericks.github.io/azure-pricing-radar/#/digests/2026-11-14"/>
