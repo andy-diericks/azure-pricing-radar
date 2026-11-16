@@ -2614,10 +2614,10 @@
 "armRegionName": "francecentral",
 "meterName": "E16ps v7 Spot",
 "productName": "Virtual Machines Epsv7 Series Windows",
-"retailPrice": 0.4462,
+"retailPrice": 0.404,
 "skuName": "E16ps v7 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.4462
+"unitPrice": 0.404
 },
 "DZH318XZR51W/00PB|c2ac590c-5504-513b-aa88-ff298d658389|Consumption|": {
 "armRegionName": "francecentral",
@@ -2704,10 +2704,10 @@
 "armRegionName": "francecentral",
 "meterName": "E2ps v7 Spot",
 "productName": "Virtual Machines Epsv7 Series Windows",
-"retailPrice": 0.0558,
+"retailPrice": 0.0506,
 "skuName": "E2ps v7 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.0558
+"unitPrice": 0.0506
 },
 "DZH318XZR51X/000R|247f928d-21c5-5b99-b418-210cba15b653|Consumption|": {
 "armRegionName": "francecentral",
@@ -2731,11 +2731,10 @@
 "armRegionName": "francecentral",
 "meterName": "E128ps v7",
 "productName": "Virtual Machines Epsv7 Series",
-"retailPrice": 11.963,
-"savingsPlanPrice": 8.13484,
+"retailPrice": 10.274,
 "skuName": "E128ps v7",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 11.963
+"unitPrice": 10.274
 },
 "DZH318XZR51X/0021|30029ecf-aedb-551e-ab81-92794ba8a24f|Consumption|": {
 "armRegionName": "francecentral",
@@ -2840,11 +2839,10 @@
 "armRegionName": "francecentral",
 "meterName": "E32ps v7",
 "productName": "Virtual Machines Epsv7 Series",
-"retailPrice": 2.991,
-"savingsPlanPrice": 2.03388,
+"retailPrice": 2.568,
 "skuName": "E32ps v7",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 2.991
+"unitPrice": 2.568
 },
 "DZH318XZR51X/00L0|62845ead-ea4e-5aa0-8b5a-7c79408e4f99|Consumption|": {
 "armRegionName": "francecentral",
@@ -2886,11 +2884,10 @@
 "armRegionName": "francecentral",
 "meterName": "E4ps v7",
 "productName": "Virtual Machines Epsv7 Series",
-"retailPrice": 0.374,
-"savingsPlanPrice": 0.25432,
+"retailPrice": 0.321,
 "skuName": "E4ps v7",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.374
+"unitPrice": 0.321
 },
 "DZH318XZR5CC/0121|7b91f51c-2e3a-59bf-a57e-db99e3f29823|Consumption|": {
 "armRegionName": "francecentral",

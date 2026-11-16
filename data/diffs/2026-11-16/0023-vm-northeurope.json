@@ -1,0 +1,176 @@
+{
+ "scope": "vm-northeurope",
+ "at": "2026-11-16T00:23:06.003164+00:00",
+ "added": [],
+ "removed": [],
+ "changed": [
+  {
+   "key": "DZH318XZR51W/00GT|20eeb601-0bf7-5f4e-92a5-8a0d869c0eb2|Consumption|",
+   "before": {
+    "armRegionName": "northeurope",
+    "meterName": "E96ps v7",
+    "productName": "Virtual Machines Epsv7 Series Windows",
+    "retailPrice": 14.68,
+    "skuName": "E96ps v7",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 14.68
+   },
+   "after": {
+    "retailPrice": 13.231,
+    "unitPrice": 13.231,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Epsv7 Series Windows",
+    "skuName": "E96ps v7",
+    "meterName": "E96ps v7",
+    "armRegionName": "northeurope"
+   }
+  },
+  {
+   "key": "DZH318XZR51X/00L4|22841dc3-f09f-5d30-ac18-b825cdb16730|Consumption|",
+   "before": {
+    "armRegionName": "northeurope",
+    "meterName": "E64ps v7 Spot",
+    "productName": "Virtual Machines Epsv7 Series",
+    "retailPrice": 1.3686,
+    "skuName": "E64ps v7 Spot",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 1.3686
+   },
+   "after": {
+    "retailPrice": 1.1752,
+    "unitPrice": 1.1752,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Epsv7 Series",
+    "skuName": "E64ps v7 Spot",
+    "meterName": "E64ps v7 Spot",
+    "armRegionName": "northeurope"
+   }
+  },
+  {
+   "key": "DZH318XZR51W/00DW|26b33eb4-b7bc-5c99-bf42-474908be8512|Consumption|",
+   "before": {
+    "armRegionName": "northeurope",
+    "meterName": "E2ps v7",
+    "productName": "Virtual Machines Epsv7 Series Windows",
+    "retailPrice": 0.306,
+    "skuName": "E2ps v7",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.306
+   },
+   "after": {
+    "retailPrice": 0.276,
+    "unitPrice": 0.276,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Epsv7 Series Windows",
+    "skuName": "E2ps v7",
+    "meterName": "E2ps v7",
+    "armRegionName": "northeurope"
+   }
+  },
+  {
+   "key": "DZH318XZR51X/00K8|331fc6c8-a484-589e-a93a-cb8143e640ca|Consumption|",
+   "before": {
+    "armRegionName": "northeurope",
+    "meterName": "E16ps v7 Spot",
+    "productName": "Virtual Machines Epsv7 Series",
+    "retailPrice": 0.3422,
+    "skuName": "E16ps v7 Spot",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.3422
+   },
+   "after": {
+    "retailPrice": 0.2938,
+    "unitPrice": 0.2938,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Epsv7 Series",
+    "skuName": "E16ps v7 Spot",
+    "meterName": "E16ps v7 Spot",
+    "armRegionName": "northeurope"
+   }
+  },
+  {
+   "key": "DZH318XZR51X/00P1|346030cb-1a67-5e98-98e5-403da4ac95f4|Consumption|",
+   "before": {
+    "armRegionName": "northeurope",
+    "meterName": "E4ps v7 Spot",
+    "productName": "Virtual Machines Epsv7 Series",
+    "retailPrice": 0.0856,
+    "skuName": "E4ps v7 Spot",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.0856
+   },
+   "after": {
+    "retailPrice": 0.0734,
+    "unitPrice": 0.0734,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Epsv7 Series",
+    "skuName": "E4ps v7 Spot",
+    "meterName": "E4ps v7 Spot",
+    "armRegionName": "northeurope"
+   }
+  },
+  {
+   "key": "DZH318XZR51W/00H2|365afe83-ad9d-5c5d-ab29-9e5acc9936f8|Consumption|",
+   "before": {
+    "armRegionName": "northeurope",
+    "meterName": "E64ps v7 Spot",
+    "productName": "Virtual Machines Epsv7 Series Windows",
+    "retailPrice": 1.9574,
+    "skuName": "E64ps v7 Spot",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 1.9574
+   },
+   "after": {
+    "retailPrice": 1.764,
+    "unitPrice": 1.764,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Epsv7 Series Windows",
+    "skuName": "E64ps v7 Spot",
+    "meterName": "E64ps v7 Spot",
+    "armRegionName": "northeurope"
+   }
+  },
+  {
+   "key": "DZH318XZR51W/00DQ|371989e3-ed5a-5796-8276-826791e38df9|Consumption|",
+   "before": {
+    "armRegionName": "northeurope",
+    "meterName": "E8ps v7 Spot",
+    "productName": "Virtual Machines Epsv7 Series Windows",
+    "retailPrice": 0.2446,
+    "skuName": "E8ps v7 Spot",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.2446
+   },
+   "after": {
+    "retailPrice": 0.2206,
+    "unitPrice": 0.2206,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Epsv7 Series Windows",
+    "skuName": "E8ps v7 Spot",
+    "meterName": "E8ps v7 Spot",
+    "armRegionName": "northeurope"
+   }
+  },
+  {
+   "key": "DZH318XZR51W/00FV|371c1db5-66ae-5355-98bc-5a67f2484245|Consumption|",
+   "before": {
+    "armRegionName": "northeurope",
+    "meterName": "E128ps v7 Spot",
+    "productName": "Virtual Machines Epsv7 Series Windows",
+    "retailPrice": 3.9148,
+    "skuName": "E128ps v7 Spot",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 3.9148
+   },
+   "after": {
+    "retailPrice": 3.5282,
+    "unitPrice": 3.5282,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Epsv7 Series Windows",
+    "skuName": "E128ps v7 Spot",
+    "meterName": "E128ps v7 Spot",
+    "armRegionName": "northeurope"
+   }
+  }
+ ]
+}

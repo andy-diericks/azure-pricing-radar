@@ -625,10 +625,10 @@
 "armRegionName": "westeurope",
 "meterName": "E128ps v7",
 "productName": "Virtual Machines Epsv7 Series Windows",
-"retailPrice": 19.574,
+"retailPrice": 17.641,
 "skuName": "E128ps v7",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 19.574
+"unitPrice": 17.641
 },
 "DZH318XZR51W/0093|d26bb345-a188-553b-91b8-d7b24d6a1cd5|Consumption|": {
 "armRegionName": "westeurope",
@@ -769,11 +769,10 @@
 "armRegionName": "westeurope",
 "meterName": "E8ps v7",
 "productName": "Virtual Machines Epsv7 Series",
-"retailPrice": 0.855,
-"savingsPlanPrice": 0.5814,
+"retailPrice": 0.735,
 "skuName": "E8ps v7",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.855
+"unitPrice": 0.735
 },
 "DZH318XZR51X/0123|d6ad1cbb-1046-544c-ac94-30ea3bd0cebf|Consumption|": {
 "armRegionName": "westeurope",
@@ -860,20 +859,19 @@
 "armRegionName": "westeurope",
 "meterName": "E16ps v7",
 "productName": "Virtual Machines Epsv7 Series",
-"retailPrice": 1.711,
-"savingsPlanPrice": 1.16348,
+"retailPrice": 1.469,
 "skuName": "E16ps v7",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 1.711
+"unitPrice": 1.469
 },
 "DZH318XZR51X/0138|3c5d59ff-53cc-5695-9bad-ef5386ffa21b|Consumption|": {
 "armRegionName": "westeurope",
 "meterName": "E96ps v7 Spot",
 "productName": "Virtual Machines Epsv7 Series",
-"retailPrice": 2.0528,
+"retailPrice": 1.763,
 "skuName": "E96ps v7 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 2.0528
+"unitPrice": 1.763
 },
 "DZH318XZR51X/013P|ef9b931e-641f-538d-924d-bb9988f50979|Consumption|": {
 "armRegionName": "westeurope",
@@ -897,11 +895,10 @@
 "armRegionName": "westeurope",
 "meterName": "E1ps v7",
 "productName": "Virtual Machines Epsv7 Series",
-"retailPrice": 0.107,
-"savingsPlanPrice": 0.07276,
+"retailPrice": 0.0918,
 "skuName": "E1ps v7",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 0.107
+"unitPrice": 0.0918
 },
 "DZH318XZR51X/0145|c1638e2c-cdc6-54cd-8323-80ac0ce3eb44|Consumption|": {
 "armRegionName": "westeurope",
@@ -916,10 +913,10 @@
 "armRegionName": "westeurope",
 "meterName": "E64ps v7 Spot",
 "productName": "Virtual Machines Epsv7 Series",
-"retailPrice": 1.3686,
+"retailPrice": 1.1752,
 "skuName": "E64ps v7 Spot",
 "unitOfMeasure": "1 Hour",
-"unitPrice": 1.3686
+"unitPrice": 1.1752
 },
 "DZH318XZR51X/014H|072fe8d8-1382-5198-b0a9-cae08e2dfcef|Consumption|": {
 "armRegionName": "westeurope",
