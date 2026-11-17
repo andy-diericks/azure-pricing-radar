@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-17T11:11:39.031Z",
+  "generatedAt": "2026-11-17T22:40:18.250Z",
   "date": "2026-11-17",
-  "totalDrops": 0,
+  "totalDrops": 160,
   "totalIncreases": 0,
-  "totalNewSkus": 0,
+  "totalNewSkus": 32,
   "totalRemoved": 0,
   "sections": [
     {
@@ -41,6 +41,178 @@
       "newSkus": 0,
       "removed": 0,
       "topMovers": []
+    },
+    {
+      "scope": "vm-eu-west",
+      "displayName": "Virtual Machines · West Europe",
+      "drops": 40,
+      "increases": 0,
+      "newSkus": 8,
+      "removed": 0,
+      "topMovers": [
+        {
+          "skuName": "D1pls v7 Spot",
+          "productName": "Virtual Machines Dplsv7 Series",
+          "armRegionName": "westeurope",
+          "regionDisplay": "West Europe",
+          "priceBefore": 0.01448,
+          "priceAfter": 0.01238,
+          "unitOfMeasure": "1 Hour",
+          "pctChange": -14.5,
+          "direction": "drop"
+        },
+        {
+          "skuName": "D4pls v7 Spot",
+          "productName": "Virtual Machines Dplsv7 Series",
+          "armRegionName": "westeurope",
+          "regionDisplay": "West Europe",
+          "priceBefore": 0.058,
+          "priceAfter": 0.0496,
+          "unitOfMeasure": "1 Hour",
+          "pctChange": -14.5,
+          "direction": "drop"
+        },
+        {
+          "skuName": "D2pls v7",
+          "productName": "Virtual Machines Dplsv7 Series",
+          "armRegionName": "westeurope",
+          "regionDisplay": "West Europe",
+          "priceBefore": 0.145,
+          "priceAfter": 0.124,
+          "unitOfMeasure": "1 Hour",
+          "pctChange": -14.5,
+          "direction": "drop"
+        }
+      ]
+    },
+    {
+      "scope": "vm-francecentral",
+      "displayName": "Virtual Machines · France Central",
+      "drops": 40,
+      "increases": 0,
+      "newSkus": 8,
+      "removed": 0,
+      "topMovers": [
+        {
+          "skuName": "D2pls v7 Spot",
+          "productName": "Virtual Machines Dplsv7 Series",
+          "armRegionName": "francecentral",
+          "regionDisplay": "France Central",
+          "priceBefore": 0.0254,
+          "priceAfter": 0.0216,
+          "unitOfMeasure": "1 Hour",
+          "pctChange": -15,
+          "direction": "drop"
+        },
+        {
+          "skuName": "D2pls v7",
+          "productName": "Virtual Machines Dplsv7 Series",
+          "armRegionName": "francecentral",
+          "regionDisplay": "France Central",
+          "priceBefore": 0.127,
+          "priceAfter": 0.108,
+          "unitOfMeasure": "1 Hour",
+          "pctChange": -15,
+          "direction": "drop"
+        },
+        {
+          "skuName": "D16pls v7 Spot",
+          "productName": "Virtual Machines Dplsv7 Series",
+          "armRegionName": "francecentral",
+          "regionDisplay": "France Central",
+          "priceBefore": 0.2024,
+          "priceAfter": 0.1732,
+          "unitOfMeasure": "1 Hour",
+          "pctChange": -14.4,
+          "direction": "drop"
+        }
+      ]
+    },
+    {
+      "scope": "vm-northeurope",
+      "displayName": "Virtual Machines · North Europe",
+      "drops": 40,
+      "increases": 0,
+      "newSkus": 8,
+      "removed": 0,
+      "topMovers": [
+        {
+          "skuName": "D1pls v7 Spot",
+          "productName": "Virtual Machines Dplsv7 Series",
+          "armRegionName": "northeurope",
+          "regionDisplay": "North Europe",
+          "priceBefore": 0.01448,
+          "priceAfter": 0.01238,
+          "unitOfMeasure": "1 Hour",
+          "pctChange": -14.5,
+          "direction": "drop"
+        },
+        {
+          "skuName": "D1pls v7",
+          "productName": "Virtual Machines Dplsv7 Series",
+          "armRegionName": "northeurope",
+          "regionDisplay": "North Europe",
+          "priceBefore": 0.0724,
+          "priceAfter": 0.0619,
+          "unitOfMeasure": "1 Hour",
+          "pctChange": -14.5,
+          "direction": "drop"
+        },
+        {
+          "skuName": "D4pls v7",
+          "productName": "Virtual Machines Dplsv7 Series",
+          "armRegionName": "northeurope",
+          "regionDisplay": "North Europe",
+          "priceBefore": 0.29,
+          "priceAfter": 0.248,
+          "unitOfMeasure": "1 Hour",
+          "pctChange": -14.5,
+          "direction": "drop"
+        }
+      ]
+    },
+    {
+      "scope": "vm-swedencentral",
+      "displayName": "Virtual Machines · Sweden Central",
+      "drops": 40,
+      "increases": 0,
+      "newSkus": 8,
+      "removed": 0,
+      "topMovers": [
+        {
+          "skuName": "D128pls v7",
+          "productName": "Virtual Machines Dplsv7 Series",
+          "armRegionName": "swedencentral",
+          "regionDisplay": "Sweden Central",
+          "priceBefore": 8.423,
+          "priceAfter": 7.208,
+          "unitOfMeasure": "1 Hour",
+          "pctChange": -14.4,
+          "direction": "drop"
+        },
+        {
+          "skuName": "D64pls v7 Spot",
+          "productName": "Virtual Machines Dplsv7 Series",
+          "armRegionName": "swedencentral",
+          "regionDisplay": "Sweden Central",
+          "priceBefore": 0.8424,
+          "priceAfter": 0.7208,
+          "unitOfMeasure": "1 Hour",
+          "pctChange": -14.4,
+          "direction": "drop"
+        },
+        {
+          "skuName": "D4pls v7 Spot",
+          "productName": "Virtual Machines Dplsv7 Series",
+          "armRegionName": "swedencentral",
+          "regionDisplay": "Sweden Central",
+          "priceBefore": 0.0526,
+          "priceAfter": 0.045,
+          "unitOfMeasure": "1 Hour",
+          "pctChange": -14.4,
+          "direction": "drop"
+        }
+      ]
     }
   ]
 }

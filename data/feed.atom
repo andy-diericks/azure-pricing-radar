@@ -18,10 +18,30 @@
     <title>Azure pricing changes for 2026-11-17</title>
     <id>https://andy-diericks.github.io/azure-pricing-radar/#/digests/2026-11-17</id>
     <link href="https://andy-diericks.github.io/azure-pricing-radar/#/digests/2026-11-17"/>
-    <updated>2026-11-17T11:11:39.031Z</updated>
+    <updated>2026-11-17T22:40:18.250Z</updated>
     <content type="text">Azure pricing changes for 2026-11-17
 
-No changes detected</content>
+160 price drops, 32 new SKUs
+
+Virtual Machines · West Europe
+  D1pls v7 Spot (West Europe): -14.5% — $0.01 → $0.01/1 Hour
+  D4pls v7 Spot (West Europe): -14.5% — $0.06 → $0.05/1 Hour
+  D2pls v7 (West Europe): -14.5% — $0.14 → $0.12/1 Hour
+
+Virtual Machines · France Central
+  D2pls v7 Spot (France Central): -15.0% — $0.03 → $0.02/1 Hour
+  D2pls v7 (France Central): -15.0% — $0.13 → $0.11/1 Hour
+  D16pls v7 Spot (France Central): -14.4% — $0.20 → $0.17/1 Hour
+
+Virtual Machines · North Europe
+  D1pls v7 Spot (North Europe): -14.5% — $0.01 → $0.01/1 Hour
+  D1pls v7 (North Europe): -14.5% — $0.07 → $0.06/1 Hour
+  D4pls v7 (North Europe): -14.5% — $0.29 → $0.25/1 Hour
+
+Virtual Machines · Sweden Central
+  D128pls v7 (Sweden Central): -14.4% — $8.42 → $7.21/1 Hour
+  D64pls v7 Spot (Sweden Central): -14.4% — $0.84 → $0.72/1 Hour
+  D4pls v7 Spot (Sweden Central): -14.4% — $0.05 → $0.04/1 Hour</content>
   </entry>
   <entry>
     <title>Azure pricing changes for 2026-11-16</title>
