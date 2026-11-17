@@ -2714,6 +2714,7 @@
 "meterName": "E48ps v7",
 "productName": "Virtual Machines Epsv7 Series",
 "retailPrice": 3.853,
+"savingsPlanPrice": 2.62004,
 "skuName": "E48ps v7",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 3.853
@@ -2732,6 +2733,7 @@
 "meterName": "E128ps v7",
 "productName": "Virtual Machines Epsv7 Series",
 "retailPrice": 10.274,
+"savingsPlanPrice": 6.98632,
 "skuName": "E128ps v7",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 10.274
@@ -2759,6 +2761,7 @@
 "meterName": "E1ps v7",
 "productName": "Virtual Machines Epsv7 Series",
 "retailPrice": 0.0803,
+"savingsPlanPrice": 0.054604,
 "skuName": "E1ps v7",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.0803
@@ -2768,6 +2771,7 @@
 "meterName": "E64ps v7",
 "productName": "Virtual Machines Epsv7 Series",
 "retailPrice": 5.137,
+"savingsPlanPrice": 3.49316,
 "skuName": "E64ps v7",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 5.137
@@ -2777,6 +2781,7 @@
 "meterName": "E8ps v7",
 "productName": "Virtual Machines Epsv7 Series",
 "retailPrice": 0.642,
+"savingsPlanPrice": 0.43656,
 "skuName": "E8ps v7",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.642
@@ -2795,6 +2800,7 @@
 "meterName": "E96ps v7",
 "productName": "Virtual Machines Epsv7 Series",
 "retailPrice": 7.705,
+"savingsPlanPrice": 5.2394,
 "skuName": "E96ps v7",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 7.705
@@ -2804,6 +2810,7 @@
 "meterName": "E16ps v7",
 "productName": "Virtual Machines Epsv7 Series",
 "retailPrice": 1.284,
+"savingsPlanPrice": 0.87312,
 "skuName": "E16ps v7",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 1.284
@@ -2840,6 +2847,7 @@
 "meterName": "E32ps v7",
 "productName": "Virtual Machines Epsv7 Series",
 "retailPrice": 2.568,
+"savingsPlanPrice": 1.74624,
 "skuName": "E32ps v7",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 2.568
@@ -2858,6 +2866,7 @@
 "meterName": "E2ps v7",
 "productName": "Virtual Machines Epsv7 Series",
 "retailPrice": 0.161,
+"savingsPlanPrice": 0.10948,
 "skuName": "E2ps v7",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.161
@@ -2885,6 +2894,7 @@
 "meterName": "E4ps v7",
 "productName": "Virtual Machines Epsv7 Series",
 "retailPrice": 0.321,
+"savingsPlanPrice": 0.21828,
 "skuName": "E4ps v7",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.321
@@ -3083,6 +3093,7 @@
 "meterName": "D8ps v7",
 "productName": "Virtual Machines Dpsv7 Series",
 "retailPrice": 0.489,
+"savingsPlanPrice": 0.33252,
 "skuName": "D8ps v7",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.489
@@ -3092,6 +3103,7 @@
 "meterName": "D96ps v7",
 "productName": "Virtual Machines Dpsv7 Series",
 "retailPrice": 5.87,
+"savingsPlanPrice": 3.9916,
 "skuName": "D96ps v7",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 5.87
@@ -3101,6 +3113,7 @@
 "meterName": "D48ps v7",
 "productName": "Virtual Machines Dpsv7 Series",
 "retailPrice": 2.935,
+"savingsPlanPrice": 1.9958,
 "skuName": "D48ps v7",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 2.935
@@ -3119,6 +3132,7 @@
 "meterName": "D64ps v7",
 "productName": "Virtual Machines Dpsv7 Series",
 "retailPrice": 3.914,
+"savingsPlanPrice": 2.66152,
 "skuName": "D64ps v7",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 3.914
@@ -3128,6 +3142,7 @@
 "meterName": "D2ps v7",
 "productName": "Virtual Machines Dpsv7 Series",
 "retailPrice": 0.122,
+"savingsPlanPrice": 0.08296,
 "skuName": "D2ps v7",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.122
@@ -3137,6 +3152,7 @@
 "meterName": "D128ps v7",
 "productName": "Virtual Machines Dpsv7 Series",
 "retailPrice": 7.827,
+"savingsPlanPrice": 5.32236,
 "skuName": "D128ps v7",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 7.827
@@ -3155,6 +3171,7 @@
 "meterName": "D4ps v7",
 "productName": "Virtual Machines Dpsv7 Series",
 "retailPrice": 0.245,
+"savingsPlanPrice": 0.1666,
 "skuName": "D4ps v7",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.245
@@ -3173,6 +3190,7 @@
 "meterName": "D32ps v7",
 "productName": "Virtual Machines Dpsv7 Series",
 "retailPrice": 1.957,
+"savingsPlanPrice": 1.33076,
 "skuName": "D32ps v7",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 1.957
@@ -3191,6 +3209,7 @@
 "meterName": "D1ps v7",
 "productName": "Virtual Machines Dpsv7 Series",
 "retailPrice": 0.0612,
+"savingsPlanPrice": 0.041616,
 "skuName": "D1ps v7",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.0612
@@ -3227,6 +3246,7 @@
 "meterName": "D16ps v7",
 "productName": "Virtual Machines Dpsv7 Series",
 "retailPrice": 0.978,
+"savingsPlanPrice": 0.66504,
 "skuName": "D16ps v7",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.978
@@ -5085,6 +5105,7 @@
 "meterName": "M2ps v4",
 "productName": "Virtual Machines Mpsv4 Series",
 "retailPrice": 0.244,
+"savingsPlanPrice": 0.16592,
 "skuName": "M2ps v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.244
@@ -5094,6 +5115,7 @@
 "meterName": "M32ps v4",
 "productName": "Virtual Machines Mpsv4 Series",
 "retailPrice": 3.908,
+"savingsPlanPrice": 2.65744,
 "skuName": "M32ps v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 3.908
@@ -5103,6 +5125,7 @@
 "meterName": "M84ps v4",
 "productName": "Virtual Machines Mpsv4 Series",
 "retailPrice": 10.259,
+"savingsPlanPrice": 6.97612,
 "skuName": "M84ps v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 10.259
@@ -5112,6 +5135,7 @@
 "meterName": "M64ps v4",
 "productName": "Virtual Machines Mpsv4 Series",
 "retailPrice": 7.816,
+"savingsPlanPrice": 5.31488,
 "skuName": "M64ps v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 7.816
@@ -5157,6 +5181,7 @@
 "meterName": "M16ps v4",
 "productName": "Virtual Machines Mpsv4 Series",
 "retailPrice": 1.954,
+"savingsPlanPrice": 1.32872,
 "skuName": "M16ps v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 1.954
@@ -5166,6 +5191,7 @@
 "meterName": "M48ps v4",
 "productName": "Virtual Machines Mpsv4 Series",
 "retailPrice": 5.862,
+"savingsPlanPrice": 3.98616,
 "skuName": "M48ps v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 5.862
@@ -5175,6 +5201,7 @@
 "meterName": "M4ps v4",
 "productName": "Virtual Machines Mpsv4 Series",
 "retailPrice": 0.489,
+"savingsPlanPrice": 0.33252,
 "skuName": "M4ps v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.489
@@ -5193,6 +5220,7 @@
 "meterName": "M8ps v4",
 "productName": "Virtual Machines Mpsv4 Series",
 "retailPrice": 0.977,
+"savingsPlanPrice": 0.66436,
 "skuName": "M8ps v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.977
@@ -5211,6 +5239,7 @@
 "meterName": "M1ps v4",
 "productName": "Virtual Machines Mpsv4 Series",
 "retailPrice": 0.122,
+"savingsPlanPrice": 0.08296,
 "skuName": "M1ps v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.122
