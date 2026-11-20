@@ -1,0 +1,206 @@
+{
+ "scope": "vm-swedencentral",
+ "at": "2026-11-20T21:58:22.717154+00:00",
+ "added": [],
+ "removed": [],
+ "changed": [
+  {
+   "key": "DZH318XZR5CJ/00K2|44ae79be-a3c4-5513-9895-c4f7274aa3ca|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "D8pls v7",
+    "productName": "Virtual Machines Dplsv7 Series",
+    "retailPrice": 0.451,
+    "skuName": "D8pls v7",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.451
+   },
+   "after": {
+    "retailPrice": 0.451,
+    "unitPrice": 0.451,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Dplsv7 Series",
+    "skuName": "D8pls v7",
+    "meterName": "D8pls v7",
+    "armRegionName": "swedencentral",
+    "savingsPlanPrice": 0.30668
+   }
+  },
+  {
+   "key": "DZH318XZR5CJ/00K4|96e729ef-95b2-5dad-ac1b-0601fdd8b4c6|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "D1pls v7",
+    "productName": "Virtual Machines Dplsv7 Series",
+    "retailPrice": 0.0563,
+    "skuName": "D1pls v7",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.0563
+   },
+   "after": {
+    "retailPrice": 0.0563,
+    "unitPrice": 0.0563,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Dplsv7 Series",
+    "skuName": "D1pls v7",
+    "meterName": "D1pls v7",
+    "armRegionName": "swedencentral",
+    "savingsPlanPrice": 0.038284
+   }
+  },
+  {
+   "key": "DZH318XZR5CJ/00LT|a776cc7a-a47e-5474-856f-98e4e872fbc3|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "D2pls v7",
+    "productName": "Virtual Machines Dplsv7 Series",
+    "retailPrice": 0.113,
+    "skuName": "D2pls v7",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.113
+   },
+   "after": {
+    "retailPrice": 0.113,
+    "unitPrice": 0.113,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Dplsv7 Series",
+    "skuName": "D2pls v7",
+    "meterName": "D2pls v7",
+    "armRegionName": "swedencentral",
+    "savingsPlanPrice": 0.07684
+   }
+  },
+  {
+   "key": "DZH318XZR5CJ/00M9|b56b2cc4-84c3-5d4c-876d-8e26b5423a90|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "D96pls v7",
+    "productName": "Virtual Machines Dplsv7 Series",
+    "retailPrice": 5.406,
+    "skuName": "D96pls v7",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 5.406
+   },
+   "after": {
+    "retailPrice": 5.406,
+    "unitPrice": 5.406,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Dplsv7 Series",
+    "skuName": "D96pls v7",
+    "meterName": "D96pls v7",
+    "armRegionName": "swedencentral",
+    "savingsPlanPrice": 3.67608
+   }
+  },
+  {
+   "key": "DZH318XZR5CJ/00M1|cd047ae2-f5cf-5134-a53d-5ab0bf39d70c|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "D4pls v7",
+    "productName": "Virtual Machines Dplsv7 Series",
+    "retailPrice": 0.225,
+    "skuName": "D4pls v7",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.225
+   },
+   "after": {
+    "retailPrice": 0.225,
+    "unitPrice": 0.225,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Dplsv7 Series",
+    "skuName": "D4pls v7",
+    "meterName": "D4pls v7",
+    "armRegionName": "swedencentral",
+    "savingsPlanPrice": 0.153
+   }
+  },
+  {
+   "key": "DZH318XZR5CJ/00MP|d3011ec4-b44f-562b-821d-34fa63f27468|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "D48pls v7",
+    "productName": "Virtual Machines Dplsv7 Series",
+    "retailPrice": 2.703,
+    "skuName": "D48pls v7",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 2.703
+   },
+   "after": {
+    "retailPrice": 2.703,
+    "unitPrice": 2.703,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Dplsv7 Series",
+    "skuName": "D48pls v7",
+    "meterName": "D48pls v7",
+    "armRegionName": "swedencentral",
+    "savingsPlanPrice": 1.83804
+   }
+  },
+  {
+   "key": "DZH318XZR5CJ/00LP|e41f5394-98dc-5568-9e3a-89ceee5525ce|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "D16pls v7",
+    "productName": "Virtual Machines Dplsv7 Series",
+    "retailPrice": 0.901,
+    "skuName": "D16pls v7",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.901
+   },
+   "after": {
+    "retailPrice": 0.901,
+    "unitPrice": 0.901,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Dplsv7 Series",
+    "skuName": "D16pls v7",
+    "meterName": "D16pls v7",
+    "armRegionName": "swedencentral",
+    "savingsPlanPrice": 0.61268
+   }
+  },
+  {
+   "key": "DZH318XZR5CJ/00K1|ebeb02bc-7465-5ec0-8300-0a2fffc2f510|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "D32pls v7",
+    "productName": "Virtual Machines Dplsv7 Series",
+    "retailPrice": 1.802,
+    "skuName": "D32pls v7",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 1.802
+   },
+   "after": {
+    "retailPrice": 1.802,
+    "unitPrice": 1.802,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Dplsv7 Series",
+    "skuName": "D32pls v7",
+    "meterName": "D32pls v7",
+    "armRegionName": "swedencentral",
+    "savingsPlanPrice": 1.22536
+   }
+  },
+  {
+   "key": "DZH318XZR5CJ/00MV|f4525629-65d8-5343-9be2-0b24b8926c7c|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "D64pls v7",
+    "productName": "Virtual Machines Dplsv7 Series",
+    "retailPrice": 3.604,
+    "skuName": "D64pls v7",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 3.604
+   },
+   "after": {
+    "retailPrice": 3.604,
+    "unitPrice": 3.604,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Dplsv7 Series",
+    "skuName": "D64pls v7",
+    "meterName": "D64pls v7",
+    "armRegionName": "swedencentral",
+    "savingsPlanPrice": 2.45072
+   }
+  }
+ ]
+}
