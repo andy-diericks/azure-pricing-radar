@@ -1,0 +1,910 @@
+{
+ "scope": "vm-eu-west",
+ "at": "2026-11-27T22:57:42.063056+00:00",
+ "added": [],
+ "removed": [],
+ "changed": [
+  {
+   "key": "DZH318Z0W0DX/00F8|04f995a9-cced-56c3-8d28-994fd990f19e|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "Standard_M16s_v4",
+    "productName": "Virtual Machines Msv4 Medium Memory series Linux",
+    "retailPrice": 4.817021,
+    "skuName": "Standard_M16s_v4",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 4.817021
+   },
+   "after": {
+    "retailPrice": 4.817021,
+    "unitPrice": 4.817021,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Msv4 Medium Memory series Linux",
+    "skuName": "Standard_M16s_v4",
+    "meterName": "Standard_M16s_v4",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 3.3232627879
+   }
+  },
+  {
+   "key": "DZH318Z0W0N7/09XZ|0fd69f83-b0f0-5efe-97de-9f5dba26f22f|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "Standard_M16lds_v4",
+    "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
+    "retailPrice": 3.3719,
+    "skuName": "Standard_M16lds_v4",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 3.3719
+   },
+   "after": {
+    "retailPrice": 3.3719,
+    "unitPrice": 3.3719,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
+    "skuName": "Standard_M16lds_v4",
+    "meterName": "Standard_M16lds_v4",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 2.32627381
+   }
+  },
+  {
+   "key": "DZH318Z0W0DX/077R|0ffb7321-68ee-5a3d-a824-b1647c2723a3|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "Standard_M32ls_v4",
+    "productName": "Virtual Machines Msv4 Medium Memory series Linux",
+    "retailPrice": 6.021277,
+    "skuName": "Standard_M32ls_v4",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 6.021277
+   },
+   "after": {
+    "retailPrice": 6.021277,
+    "unitPrice": 6.021277,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Msv4 Medium Memory series Linux",
+    "skuName": "Standard_M32ls_v4",
+    "meterName": "Standard_M32ls_v4",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 4.4310179704
+   }
+  },
+  {
+   "key": "DZH318Z0W0N7/09ZL|2ab0c4e3-fb4a-5643-ae39-c31ae234e6df|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "Standard_M16ds_v4",
+    "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
+    "retailPrice": 5.0579,
+    "skuName": "Standard_M16ds_v4",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 5.0579
+   },
+   "after": {
+    "retailPrice": 5.0579,
+    "unitPrice": 5.0579,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
+    "skuName": "Standard_M16ds_v4",
+    "meterName": "Standard_M16ds_v4",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 3.48944521
+   }
+  },
+  {
+   "key": "DZH318Z0W0N7/09KK|2ade1f66-8b8c-510c-9059-2d64abdad896|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "Standard_M32mds_v4",
+    "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
+    "retailPrice": 13.4877,
+    "skuName": "Standard_M32mds_v4",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 13.4877
+   },
+   "after": {
+    "retailPrice": 13.4877,
+    "unitPrice": 13.4877,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
+    "skuName": "Standard_M32mds_v4",
+    "meterName": "Standard_M32mds_v4",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 9.30516423
+   }
+  },
+  {
+   "key": "DZH318Z0W0N7/0C54|2f243086-8fb2-5eb6-bb7a-eaa537e4fe72|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "Standard_M32lds_v4",
+    "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
+    "retailPrice": 6.3223,
+    "skuName": "Standard_M32lds_v4",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 6.3223
+   },
+   "after": {
+    "retailPrice": 6.3223,
+    "unitPrice": 6.3223,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
+    "skuName": "Standard_M32lds_v4",
+    "meterName": "Standard_M32lds_v4",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 4.36175477
+   }
+  },
+  {
+   "key": "DZH318Z0W0DX/076L|33692b6f-4fcf-5971-92c0-a92e20fdac0e|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "Standard_M160s_v4",
+    "productName": "Virtual Machines Msv4 Medium Memory series Linux",
+    "retailPrice": 48.170217,
+    "skuName": "Standard_M160s_v4",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 48.170217
+   },
+   "after": {
+    "retailPrice": 48.170217,
+    "unitPrice": 48.170217,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Msv4 Medium Memory series Linux",
+    "skuName": "Standard_M160s_v4",
+    "meterName": "Standard_M160s_v4",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 33.2326327083
+   }
+  },
+  {
+   "key": "DZH318Z0W0N7/09M2|3a0a4ae7-7462-56ec-b8b7-fb10f591c61c|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "Standard_M192lds_v4",
+    "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
+    "retailPrice": 40.463,
+    "skuName": "Standard_M192lds_v4",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 40.463
+   },
+   "after": {
+    "retailPrice": 40.463,
+    "unitPrice": 40.463,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
+    "skuName": "Standard_M192lds_v4",
+    "meterName": "Standard_M192lds_v4",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 27.9154237
+   }
+  },
+  {
+   "key": "DZH318Z0W0DX/0723|3c76b4c4-d55e-5432-b979-42fd5de5e7ba|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "Standard_M128ls_v4",
+    "productName": "Virtual Machines Msv4 Medium Memory series Linux",
+    "retailPrice": 24.411261,
+    "skuName": "Standard_M128ls_v4",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 24.411261
+   },
+   "after": {
+    "retailPrice": 24.411261,
+    "unitPrice": 24.411261,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Msv4 Medium Memory series Linux",
+    "skuName": "Standard_M128ls_v4",
+    "meterName": "Standard_M128ls_v4",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 16.8240207527
+   }
+  },
+  {
+   "key": "DZH318Z0W0N7/09ZH|3f266b64-98f8-5fab-aa4a-44abf8c18571|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "Standard_M256lds_v4",
+    "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
+    "retailPrice": 51.2636,
+    "skuName": "Standard_M256lds_v4",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 51.2636
+   },
+   "after": {
+    "retailPrice": 51.2636,
+    "unitPrice": 51.2636,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
+    "skuName": "Standard_M256lds_v4",
+    "meterName": "Standard_M256lds_v4",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 35.36675764
+   }
+  },
+  {
+   "key": "DZH318Z0W0DX/076J|432ee9e5-b39a-5a42-b188-096f08d43c6a|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "Standard_M48ls_v4",
+    "productName": "Virtual Machines Msv4 Medium Memory series Linux",
+    "retailPrice": 9.634043,
+    "skuName": "Standard_M48ls_v4",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 9.634043
+   },
+   "after": {
+    "retailPrice": 9.634043,
+    "unitPrice": 9.634043,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Msv4 Medium Memory series Linux",
+    "skuName": "Standard_M48ls_v4",
+    "meterName": "Standard_M48ls_v4",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 6.6465269556
+   }
+  },
+  {
+   "key": "DZH318Z0W0DX/0749|4609dc3d-b0e5-5210-a485-22c40af41a7f|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "Standard_M96s_v4",
+    "productName": "Virtual Machines Msv4 Medium Memory series Linux",
+    "retailPrice": 28.90213,
+    "skuName": "Standard_M96s_v4",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 28.90213
+   },
+   "after": {
+    "retailPrice": 28.90213,
+    "unitPrice": 28.90213,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Msv4 Medium Memory series Linux",
+    "skuName": "Standard_M96s_v4",
+    "meterName": "Standard_M96s_v4",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 19.939579487
+   }
+  },
+  {
+   "key": "DZH318Z0W0N7/09MG|49283744-b734-5ae4-98e8-34df793e6e34|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "Standard_M96ds_v4",
+    "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
+    "retailPrice": 30.3472,
+    "skuName": "Standard_M96ds_v4",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 30.3472
+   },
+   "after": {
+    "retailPrice": 30.3472,
+    "unitPrice": 30.3472,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
+    "skuName": "Standard_M96ds_v4",
+    "meterName": "Standard_M96ds_v4",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 20.93653328
+   }
+  },
+  {
+   "key": "DZH318Z0W0DX/073Z|5109aa8b-6526-5054-912a-c15557e94574|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "Standard_M24ls_v4",
+    "productName": "Virtual Machines Msv4 Medium Memory series Linux",
+    "retailPrice": 4.817021,
+    "skuName": "Standard_M24ls_v4",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 4.817021
+   },
+   "after": {
+    "retailPrice": 4.817021,
+    "unitPrice": 4.817021,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Msv4 Medium Memory series Linux",
+    "skuName": "Standard_M24ls_v4",
+    "meterName": "Standard_M24ls_v4",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 3.3232627879
+   }
+  },
+  {
+   "key": "DZH318Z0W0N7/09KT|58b422fa-4a1f-56d9-a26f-6d80ab89f9b0|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "Standard_M48lds_v4",
+    "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
+    "retailPrice": 10.1157,
+    "skuName": "Standard_M48lds_v4",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 10.1157
+   },
+   "after": {
+    "retailPrice": 10.1157,
+    "unitPrice": 10.1157,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
+    "skuName": "Standard_M48lds_v4",
+    "meterName": "Standard_M48lds_v4",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 6.97882143
+   }
+  },
+  {
+   "key": "DZH318XZR5CJ/00Q6|5f9233c8-9e8c-5ea4-b343-2a47159f51de|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "D2pls v7",
+    "productName": "Virtual Machines Dplsv7 Series",
+    "retailPrice": 0.124,
+    "skuName": "D2pls v7",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.124
+   },
+   "after": {
+    "retailPrice": 0.124,
+    "unitPrice": 0.124,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Dplsv7 Series",
+    "skuName": "D2pls v7",
+    "meterName": "D2pls v7",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 0.08432
+   }
+  },
+  {
+   "key": "DZH318XZR5CJ/00T3|6dca5f90-f90a-5d19-8980-cf406540a62c|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "D128pls v7",
+    "productName": "Virtual Machines Dplsv7 Series",
+    "retailPrice": 7.929,
+    "skuName": "D128pls v7",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 7.929
+   },
+   "after": {
+    "retailPrice": 7.929,
+    "unitPrice": 7.929,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Dplsv7 Series",
+    "skuName": "D128pls v7",
+    "meterName": "D128pls v7",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 5.39172
+   }
+  },
+  {
+   "key": "DZH318Z0W0N7/0084|72ec900a-40d1-5d7c-84e8-661cf2845236|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "Standard_M32ds_v4",
+    "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
+    "retailPrice": 10.1157,
+    "skuName": "Standard_M32ds_v4",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 10.1157
+   },
+   "after": {
+    "retailPrice": 10.1157,
+    "unitPrice": 10.1157,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
+    "skuName": "Standard_M32ds_v4",
+    "meterName": "Standard_M32ds_v4",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 6.97882143
+   }
+  },
+  {
+   "key": "DZH318Z0W0N7/09PB|73a9e053-32f5-5a33-8395-9d6b99c7c889|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "Standard_M96lds_v4",
+    "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
+    "retailPrice": 20.2315,
+    "skuName": "Standard_M96lds_v4",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 20.2315
+   },
+   "after": {
+    "retailPrice": 20.2315,
+    "unitPrice": 20.2315,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
+    "skuName": "Standard_M96lds_v4",
+    "meterName": "Standard_M96lds_v4",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 13.95771185
+   }
+  },
+  {
+   "key": "DZH318Z0W0N7/0045|7687a50b-cc71-5f5b-a56d-dceb57280b35|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "Standard_M128ds_v4",
+    "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
+    "retailPrice": 40.463,
+    "skuName": "Standard_M128ds_v4",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 40.463
+   },
+   "after": {
+    "retailPrice": 40.463,
+    "unitPrice": 40.463,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
+    "skuName": "Standard_M128ds_v4",
+    "meterName": "Standard_M128ds_v4",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 27.9154237
+   }
+  },
+  {
+   "key": "DZH318Z0W0N7/0BRR|76d5e19a-634b-5055-8224-7d811cf60c07|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "Standard_M128lds_v4",
+    "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
+    "retailPrice": 25.6318,
+    "skuName": "Standard_M128lds_v4",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 25.6318
+   },
+   "after": {
+    "retailPrice": 25.6318,
+    "unitPrice": 25.6318,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
+    "skuName": "Standard_M128lds_v4",
+    "meterName": "Standard_M128lds_v4",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 17.68337882
+   }
+  },
+  {
+   "key": "DZH318Z0W0DX/074T|775b246b-cbf8-51fc-b981-a69609f5d87e|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "Standard_M96ls_v4",
+    "productName": "Virtual Machines Msv4 Medium Memory series Linux",
+    "retailPrice": 19.268087,
+    "skuName": "Standard_M96ls_v4",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 19.268087
+   },
+   "after": {
+    "retailPrice": 19.268087,
+    "unitPrice": 19.268087,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Msv4 Medium Memory series Linux",
+    "skuName": "Standard_M96ls_v4",
+    "meterName": "Standard_M96ls_v4",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 13.2930532213
+   }
+  },
+  {
+   "key": "DZH318Z0W0DX/00FS|8687a50c-6207-57cb-9725-498b6829fd1e|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "Standard_M48s_v4",
+    "productName": "Virtual Machines Msv4 Medium Memory series Linux",
+    "retailPrice": 14.451065,
+    "skuName": "Standard_M48s_v4",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 14.451065
+   },
+   "after": {
+    "retailPrice": 14.451065,
+    "unitPrice": 14.451065,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Msv4 Medium Memory series Linux",
+    "skuName": "Standard_M48s_v4",
+    "meterName": "Standard_M48s_v4",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 9.9697897435
+   }
+  },
+  {
+   "key": "DZH318Z0W0N7/001R|880b745e-1ff3-5893-864e-b0cefdd7dfc9|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "Standard_M48ds_v4",
+    "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
+    "retailPrice": 15.1736,
+    "skuName": "Standard_M48ds_v4",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 15.1736
+   },
+   "after": {
+    "retailPrice": 15.1736,
+    "unitPrice": 15.1736,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
+    "skuName": "Standard_M48ds_v4",
+    "meterName": "Standard_M48ds_v4",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 10.46826664
+   }
+  },
+  {
+   "key": "DZH318Z0W0DX/073S|89ea6ed5-7bb7-50df-817e-416241382877|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "Standard_M16ls_v4",
+    "productName": "Virtual Machines Msv4 Medium Memory series Linux",
+    "retailPrice": 3.211347,
+    "skuName": "Standard_M16ls_v4",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 3.211347
+   },
+   "after": {
+    "retailPrice": 3.211347,
+    "unitPrice": 3.211347,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Msv4 Medium Memory series Linux",
+    "skuName": "Standard_M16ls_v4",
+    "meterName": "Standard_M16ls_v4",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 2.2155089852
+   }
+  },
+  {
+   "key": "DZH318Z0W0N7/002P|8de9bd13-256f-5a0a-873a-96f5e6ee0d10|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "Standard_M64ds_v4",
+    "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
+    "retailPrice": 20.2315,
+    "skuName": "Standard_M64ds_v4",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 20.2315
+   },
+   "after": {
+    "retailPrice": 20.2315,
+    "unitPrice": 20.2315,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
+    "skuName": "Standard_M64ds_v4",
+    "meterName": "Standard_M64ds_v4",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 13.95771185
+   }
+  },
+  {
+   "key": "DZH318XZR5CJ/00PL|9fbcb3a2-1ba8-5f9b-8f30-0c4cde1cceab|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "D96pls v7",
+    "productName": "Virtual Machines Dplsv7 Series",
+    "retailPrice": 5.947,
+    "skuName": "D96pls v7",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 5.947
+   },
+   "after": {
+    "retailPrice": 5.947,
+    "unitPrice": 5.947,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Dplsv7 Series",
+    "skuName": "D96pls v7",
+    "meterName": "D96pls v7",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 4.04396
+   }
+  },
+  {
+   "key": "DZH318Z0W0DX/075C|a28ebe2f-036b-5de6-ac1a-95077554f51d|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "Standard_M256ls_v4",
+    "productName": "Virtual Machines Msv4 Medium Memory series Linux",
+    "retailPrice": 48.822522,
+    "skuName": "Standard_M256ls_v4",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 48.822522
+   },
+   "after": {
+    "retailPrice": 48.822522,
+    "unitPrice": 48.822522,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Msv4 Medium Memory series Linux",
+    "skuName": "Standard_M256ls_v4",
+    "meterName": "Standard_M256ls_v4",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 33.6826586177
+   }
+  },
+  {
+   "key": "DZH318Z0W0DX/0778|a99a834c-cb38-5ee4-aff6-c179051587b8|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "Standard_M64ls_v4",
+    "productName": "Virtual Machines Msv4 Medium Memory series Linux",
+    "retailPrice": 12.218175,
+    "skuName": "Standard_M64ls_v4",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 12.218175
+   },
+   "after": {
+    "retailPrice": 12.218175,
+    "unitPrice": 12.218175,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Msv4 Medium Memory series Linux",
+    "skuName": "Standard_M64ls_v4",
+    "meterName": "Standard_M64ls_v4",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 8.8620352509
+   }
+  },
+  {
+   "key": "DZH318Z0W0DX/00JJ|a9af9422-a799-536b-8a5a-557a6190dceb|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "Standard_M64s_v4",
+    "productName": "Virtual Machines Msv4 Medium Memory series Linux",
+    "retailPrice": 19.268087,
+    "skuName": "Standard_M64s_v4",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 19.268087
+   },
+   "after": {
+    "retailPrice": 19.268087,
+    "unitPrice": 19.268087,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Msv4 Medium Memory series Linux",
+    "skuName": "Standard_M64s_v4",
+    "meterName": "Standard_M64s_v4",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 13.2930532213
+   }
+  },
+  {
+   "key": "DZH318Z0W0N7/09KL|aafe6c5b-bb53-5305-a5bb-e55e8f9e27ec|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "Standard_M64mds_v4",
+    "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
+    "retailPrice": 26.9753,
+    "skuName": "Standard_M64mds_v4",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 26.9753
+   },
+   "after": {
+    "retailPrice": 26.9753,
+    "unitPrice": 26.9753,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
+    "skuName": "Standard_M64mds_v4",
+    "meterName": "Standard_M64mds_v4",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 18.61025947
+   }
+  },
+  {
+   "key": "DZH318Z0W0DX/077B|afef4d8c-e8ff-5ee7-b59a-3d683555c67d|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "Standard_M192ls_v4",
+    "productName": "Virtual Machines Msv4 Medium Memory series Linux",
+    "retailPrice": 38.536174,
+    "skuName": "Standard_M192ls_v4",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 38.536174
+   },
+   "after": {
+    "retailPrice": 38.536174,
+    "unitPrice": 38.536174,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Msv4 Medium Memory series Linux",
+    "skuName": "Standard_M192ls_v4",
+    "meterName": "Standard_M192ls_v4",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 26.5861064426
+   }
+  },
+  {
+   "key": "DZH318Z0W0N7/09KP|b0189cad-9211-5112-8db0-62412e8b6a65|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "Standard_M64lds_v4",
+    "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
+    "retailPrice": 12.8291,
+    "skuName": "Standard_M64lds_v4",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 12.8291
+   },
+   "after": {
+    "retailPrice": 12.8291,
+    "unitPrice": 12.8291,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
+    "skuName": "Standard_M64lds_v4",
+    "meterName": "Standard_M64lds_v4",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 8.85079609
+   }
+  },
+  {
+   "key": "DZH318Z0W0DX/079D|c255303d-b835-5f98-a024-51d2d5efbea6|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "Standard_M128s_v4",
+    "productName": "Virtual Machines Msv4 Medium Memory series Linux",
+    "retailPrice": 38.536174,
+    "skuName": "Standard_M128s_v4",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 38.536174
+   },
+   "after": {
+    "retailPrice": 38.536174,
+    "unitPrice": 38.536174,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Msv4 Medium Memory series Linux",
+    "skuName": "Standard_M128s_v4",
+    "meterName": "Standard_M128s_v4",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 26.5861064426
+   }
+  },
+  {
+   "key": "DZH318XZR84C/01Z2|ce6ba8b0-f582-5751-a04c-7b2aaff409d4|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "M128ps v4",
+    "productName": "Virtual Machines Mpsv4 Series",
+    "retailPrice": 17.883,
+    "skuName": "M128ps v4",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 17.883
+   },
+   "after": {
+    "retailPrice": 17.883,
+    "unitPrice": 17.883,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Mpsv4 Series",
+    "skuName": "M128ps v4",
+    "meterName": "M128ps v4",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 12.16044
+   }
+  },
+  {
+   "key": "DZH318Z0W0N7/09KQ|eb0c439a-de92-5e96-8cb1-8d6a06a8a132|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "Standard_M160ds_v4",
+    "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
+    "retailPrice": 50.5787,
+    "skuName": "Standard_M160ds_v4",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 50.5787
+   },
+   "after": {
+    "retailPrice": 50.5787,
+    "unitPrice": 50.5787,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
+    "skuName": "Standard_M160ds_v4",
+    "meterName": "Standard_M160ds_v4",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 34.89424513
+   }
+  },
+  {
+   "key": "DZH318XZR5CJ/00QD|eb63300f-1683-5ae6-844a-c3a0e06350d7|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "D8pls v7",
+    "productName": "Virtual Machines Dplsv7 Series",
+    "retailPrice": 0.496,
+    "skuName": "D8pls v7",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 0.496
+   },
+   "after": {
+    "retailPrice": 0.496,
+    "unitPrice": 0.496,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Dplsv7 Series",
+    "skuName": "D8pls v7",
+    "meterName": "D8pls v7",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 0.33728
+   }
+  },
+  {
+   "key": "DZH318Z0W0N7/09Z7|ef2582a4-fd17-5784-9425-b563c2ae6fb8|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "Standard_M24lds_v4",
+    "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
+    "retailPrice": 5.0579,
+    "skuName": "Standard_M24lds_v4",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 5.0579
+   },
+   "after": {
+    "retailPrice": 5.0579,
+    "unitPrice": 5.0579,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
+    "skuName": "Standard_M24lds_v4",
+    "meterName": "Standard_M24lds_v4",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 3.48944521
+   }
+  },
+  {
+   "key": "DZH318Z0W0DX/075X|f1b8bdef-21bf-5567-854d-f926ac3c8b8a|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "Standard_M64ms_v4",
+    "productName": "Virtual Machines Msv4 Medium Memory series Linux",
+    "retailPrice": 25.690782,
+    "skuName": "Standard_M64ms_v4",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 25.690782
+   },
+   "after": {
+    "retailPrice": 25.690782,
+    "unitPrice": 25.690782,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Msv4 Medium Memory series Linux",
+    "skuName": "Standard_M64ms_v4",
+    "meterName": "Standard_M64ms_v4",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 17.7240705018
+   }
+  },
+  {
+   "key": "DZH318Z0W0DX/0741|f3b11675-bd1e-5812-b416-67addddb361f|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "Standard_M32ms_v4",
+    "productName": "Virtual Machines Msv4 Medium Memory series Linux",
+    "retailPrice": 12.845391,
+    "skuName": "Standard_M32ms_v4",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 12.845391
+   },
+   "after": {
+    "retailPrice": 12.845391,
+    "unitPrice": 12.845391,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Msv4 Medium Memory series Linux",
+    "skuName": "Standard_M32ms_v4",
+    "meterName": "Standard_M32ms_v4",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 8.8620352509
+   }
+  },
+  {
+   "key": "DZH318Z0W0DX/00FT|fbd32831-1c77-53e7-817d-d9f992475e5b|Consumption|",
+   "before": {
+    "armRegionName": "westeurope",
+    "meterName": "Standard_M32s_v4",
+    "productName": "Virtual Machines Msv4 Medium Memory series Linux",
+    "retailPrice": 9.634043,
+    "skuName": "Standard_M32s_v4",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 9.634043
+   },
+   "after": {
+    "retailPrice": 9.634043,
+    "unitPrice": 9.634043,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Msv4 Medium Memory series Linux",
+    "skuName": "Standard_M32s_v4",
+    "meterName": "Standard_M32s_v4",
+    "armRegionName": "westeurope",
+    "savingsPlanPrice": 6.6465262657
+   }
+  }
+ ]
+}

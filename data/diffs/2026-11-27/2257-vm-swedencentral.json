@@ -1,0 +1,52 @@
+{
+ "scope": "vm-swedencentral",
+ "at": "2026-11-27T22:57:42.063056+00:00",
+ "added": [],
+ "removed": [],
+ "changed": [
+  {
+   "key": "DZH318XZR5CJ/00K8|11ab91e4-f574-59f0-abfd-868e26966902|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "D128pls v7",
+    "productName": "Virtual Machines Dplsv7 Series",
+    "retailPrice": 7.208,
+    "skuName": "D128pls v7",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 7.208
+   },
+   "after": {
+    "retailPrice": 7.208,
+    "unitPrice": 7.208,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Dplsv7 Series",
+    "skuName": "D128pls v7",
+    "meterName": "D128pls v7",
+    "armRegionName": "swedencentral",
+    "savingsPlanPrice": 4.90144
+   }
+  },
+  {
+   "key": "DZH318XZR84C/01XF|bb802942-617d-5166-b703-dd2f35ac43d1|Consumption|",
+   "before": {
+    "armRegionName": "swedencentral",
+    "meterName": "M128ps v4",
+    "productName": "Virtual Machines Mpsv4 Series",
+    "retailPrice": 16.257,
+    "skuName": "M128ps v4",
+    "unitOfMeasure": "1 Hour",
+    "unitPrice": 16.257
+   },
+   "after": {
+    "retailPrice": 16.257,
+    "unitPrice": 16.257,
+    "unitOfMeasure": "1 Hour",
+    "productName": "Virtual Machines Mpsv4 Series",
+    "skuName": "M128ps v4",
+    "meterName": "M128ps v4",
+    "armRegionName": "swedencentral",
+    "savingsPlanPrice": 11.05476
+   }
+  }
+ ]
+}

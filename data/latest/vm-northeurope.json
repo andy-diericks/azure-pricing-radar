@@ -4209,6 +4209,7 @@
 "meterName": "D96pls v7",
 "productName": "Virtual Machines Dplsv7 Series",
 "retailPrice": 5.947,
+"savingsPlanPrice": 4.04396,
 "skuName": "D96pls v7",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 5.947
@@ -4246,6 +4247,7 @@
 "meterName": "D16pls v7",
 "productName": "Virtual Machines Dplsv7 Series",
 "retailPrice": 0.991,
+"savingsPlanPrice": 0.67388,
 "skuName": "D16pls v7",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.991
@@ -4274,6 +4276,7 @@
 "meterName": "D64pls v7",
 "productName": "Virtual Machines Dplsv7 Series",
 "retailPrice": 3.965,
+"savingsPlanPrice": 2.6962,
 "skuName": "D64pls v7",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 3.965
@@ -4661,6 +4664,7 @@
 "meterName": "M128pds v4",
 "productName": "Virtual Machines Mpdsv4 Series",
 "retailPrice": 25.973,
+"savingsPlanPrice": 17.66164,
 "skuName": "M128pds v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 25.973

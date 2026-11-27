@@ -1342,6 +1342,7 @@
 "meterName": "D128pls v7",
 "productName": "Virtual Machines Dplsv7 Series",
 "retailPrice": 7.208,
+"savingsPlanPrice": 4.90144,
 "skuName": "D128pls v7",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 7.208
@@ -3133,6 +3134,7 @@
 "meterName": "M128ps v4",
 "productName": "Virtual Machines Mpsv4 Series",
 "retailPrice": 16.257,
+"savingsPlanPrice": 11.05476,
 "skuName": "M128ps v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 16.257

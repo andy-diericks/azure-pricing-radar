@@ -1510,6 +1510,7 @@
 "meterName": "D96pls v7",
 "productName": "Virtual Machines Dplsv7 Series",
 "retailPrice": 5.947,
+"savingsPlanPrice": 4.04396,
 "skuName": "D96pls v7",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 5.947
@@ -1538,6 +1539,7 @@
 "meterName": "D2pls v7",
 "productName": "Virtual Machines Dplsv7 Series",
 "retailPrice": 0.124,
+"savingsPlanPrice": 0.08432,
 "skuName": "D2pls v7",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.124
@@ -1547,6 +1549,7 @@
 "meterName": "D8pls v7",
 "productName": "Virtual Machines Dplsv7 Series",
 "retailPrice": 0.496,
+"savingsPlanPrice": 0.33728,
 "skuName": "D8pls v7",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 0.496
@@ -1660,6 +1663,7 @@
 "meterName": "D128pls v7",
 "productName": "Virtual Machines Dplsv7 Series",
 "retailPrice": 7.929,
+"savingsPlanPrice": 5.39172,
 "skuName": "D128pls v7",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 7.929
@@ -3347,6 +3351,7 @@
 "meterName": "M128ps v4",
 "productName": "Virtual Machines Mpsv4 Series",
 "retailPrice": 17.883,
+"savingsPlanPrice": 12.16044,
 "skuName": "M128ps v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 17.883
@@ -82448,6 +82453,7 @@
 "meterName": "Standard_M16s_v4",
 "productName": "Virtual Machines Msv4 Medium Memory series Linux",
 "retailPrice": 4.817021,
+"savingsPlanPrice": 3.3232627879,
 "skuName": "Standard_M16s_v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 4.817021
@@ -82466,6 +82472,7 @@
 "meterName": "Standard_M48s_v4",
 "productName": "Virtual Machines Msv4 Medium Memory series Linux",
 "retailPrice": 14.451065,
+"savingsPlanPrice": 9.9697897435,
 "skuName": "Standard_M48s_v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 14.451065
@@ -82475,6 +82482,7 @@
 "meterName": "Standard_M32s_v4",
 "productName": "Virtual Machines Msv4 Medium Memory series Linux",
 "retailPrice": 9.634043,
+"savingsPlanPrice": 6.6465262657,
 "skuName": "Standard_M32s_v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 9.634043
@@ -82511,6 +82519,7 @@
 "meterName": "Standard_M64s_v4",
 "productName": "Virtual Machines Msv4 Medium Memory series Linux",
 "retailPrice": 19.268087,
+"savingsPlanPrice": 13.2930532213,
 "skuName": "Standard_M64s_v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 19.268087
@@ -82529,6 +82538,7 @@
 "meterName": "Standard_M128ls_v4",
 "productName": "Virtual Machines Msv4 Medium Memory series Linux",
 "retailPrice": 24.411261,
+"savingsPlanPrice": 16.8240207527,
 "skuName": "Standard_M128ls_v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 24.411261
@@ -82547,6 +82557,7 @@
 "meterName": "Standard_M16ls_v4",
 "productName": "Virtual Machines Msv4 Medium Memory series Linux",
 "retailPrice": 3.211347,
+"savingsPlanPrice": 2.2155089852,
 "skuName": "Standard_M16ls_v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 3.211347
@@ -82565,6 +82576,7 @@
 "meterName": "Standard_M24ls_v4",
 "productName": "Virtual Machines Msv4 Medium Memory series Linux",
 "retailPrice": 4.817021,
+"savingsPlanPrice": 3.3232627879,
 "skuName": "Standard_M24ls_v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 4.817021
@@ -82574,6 +82586,7 @@
 "meterName": "Standard_M32ms_v4",
 "productName": "Virtual Machines Msv4 Medium Memory series Linux",
 "retailPrice": 12.845391,
+"savingsPlanPrice": 8.8620352509,
 "skuName": "Standard_M32ms_v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 12.845391
@@ -82583,6 +82596,7 @@
 "meterName": "Standard_M96s_v4",
 "productName": "Virtual Machines Msv4 Medium Memory series Linux",
 "retailPrice": 28.90213,
+"savingsPlanPrice": 19.939579487,
 "skuName": "Standard_M96s_v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 28.90213
@@ -82628,6 +82642,7 @@
 "meterName": "Standard_M96ls_v4",
 "productName": "Virtual Machines Msv4 Medium Memory series Linux",
 "retailPrice": 19.268087,
+"savingsPlanPrice": 13.2930532213,
 "skuName": "Standard_M96ls_v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 19.268087
@@ -82655,6 +82670,7 @@
 "meterName": "Standard_M256ls_v4",
 "productName": "Virtual Machines Msv4 Medium Memory series Linux",
 "retailPrice": 48.822522,
+"savingsPlanPrice": 33.6826586177,
 "skuName": "Standard_M256ls_v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 48.822522
@@ -82673,6 +82689,7 @@
 "meterName": "Standard_M64ms_v4",
 "productName": "Virtual Machines Msv4 Medium Memory series Linux",
 "retailPrice": 25.690782,
+"savingsPlanPrice": 17.7240705018,
 "skuName": "Standard_M64ms_v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 25.690782
@@ -82709,6 +82726,7 @@
 "meterName": "Standard_M48ls_v4",
 "productName": "Virtual Machines Msv4 Medium Memory series Linux",
 "retailPrice": 9.634043,
+"savingsPlanPrice": 6.6465269556,
 "skuName": "Standard_M48ls_v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 9.634043
@@ -82718,6 +82736,7 @@
 "meterName": "Standard_M160s_v4",
 "productName": "Virtual Machines Msv4 Medium Memory series Linux",
 "retailPrice": 48.170217,
+"savingsPlanPrice": 33.2326327083,
 "skuName": "Standard_M160s_v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 48.170217
@@ -82727,6 +82746,7 @@
 "meterName": "Standard_M64ls_v4",
 "productName": "Virtual Machines Msv4 Medium Memory series Linux",
 "retailPrice": 12.218175,
+"savingsPlanPrice": 8.8620352509,
 "skuName": "Standard_M64ls_v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 12.218175
@@ -82736,6 +82756,7 @@
 "meterName": "Standard_M192ls_v4",
 "productName": "Virtual Machines Msv4 Medium Memory series Linux",
 "retailPrice": 38.536174,
+"savingsPlanPrice": 26.5861064426,
 "skuName": "Standard_M192ls_v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 38.536174
@@ -82754,6 +82775,7 @@
 "meterName": "Standard_M32ls_v4",
 "productName": "Virtual Machines Msv4 Medium Memory series Linux",
 "retailPrice": 6.021277,
+"savingsPlanPrice": 4.4310179704,
 "skuName": "Standard_M32ls_v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 6.021277
@@ -82763,6 +82785,7 @@
 "meterName": "Standard_M128s_v4",
 "productName": "Virtual Machines Msv4 Medium Memory series Linux",
 "retailPrice": 38.536174,
+"savingsPlanPrice": 26.5861064426,
 "skuName": "Standard_M128s_v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 38.536174
@@ -83105,6 +83128,7 @@
 "meterName": "Standard_M48ds_v4",
 "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
 "retailPrice": 15.1736,
+"savingsPlanPrice": 10.46826664,
 "skuName": "Standard_M48ds_v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 15.1736
@@ -83123,6 +83147,7 @@
 "meterName": "Standard_M64ds_v4",
 "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
 "retailPrice": 20.2315,
+"savingsPlanPrice": 13.95771185,
 "skuName": "Standard_M64ds_v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 20.2315
@@ -83132,6 +83157,7 @@
 "meterName": "Standard_M128ds_v4",
 "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
 "retailPrice": 40.463,
+"savingsPlanPrice": 27.9154237,
 "skuName": "Standard_M128ds_v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 40.463
@@ -83159,6 +83185,7 @@
 "meterName": "Standard_M32ds_v4",
 "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
 "retailPrice": 10.1157,
+"savingsPlanPrice": 6.97882143,
 "skuName": "Standard_M32ds_v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 10.1157
@@ -83177,6 +83204,7 @@
 "meterName": "Standard_M32mds_v4",
 "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
 "retailPrice": 13.4877,
+"savingsPlanPrice": 9.30516423,
 "skuName": "Standard_M32mds_v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 13.4877
@@ -83186,6 +83214,7 @@
 "meterName": "Standard_M64mds_v4",
 "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
 "retailPrice": 26.9753,
+"savingsPlanPrice": 18.61025947,
 "skuName": "Standard_M64mds_v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 26.9753
@@ -83204,6 +83233,7 @@
 "meterName": "Standard_M64lds_v4",
 "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
 "retailPrice": 12.8291,
+"savingsPlanPrice": 8.85079609,
 "skuName": "Standard_M64lds_v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 12.8291
@@ -83213,6 +83243,7 @@
 "meterName": "Standard_M160ds_v4",
 "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
 "retailPrice": 50.5787,
+"savingsPlanPrice": 34.89424513,
 "skuName": "Standard_M160ds_v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 50.5787
@@ -83231,6 +83262,7 @@
 "meterName": "Standard_M48lds_v4",
 "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
 "retailPrice": 10.1157,
+"savingsPlanPrice": 6.97882143,
 "skuName": "Standard_M48lds_v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 10.1157
@@ -83258,6 +83290,7 @@
 "meterName": "Standard_M192lds_v4",
 "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
 "retailPrice": 40.463,
+"savingsPlanPrice": 27.9154237,
 "skuName": "Standard_M192lds_v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 40.463
@@ -83267,6 +83300,7 @@
 "meterName": "Standard_M96ds_v4",
 "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
 "retailPrice": 30.3472,
+"savingsPlanPrice": 20.93653328,
 "skuName": "Standard_M96ds_v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 30.3472
@@ -83303,6 +83337,7 @@
 "meterName": "Standard_M96lds_v4",
 "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
 "retailPrice": 20.2315,
+"savingsPlanPrice": 13.95771185,
 "skuName": "Standard_M96lds_v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 20.2315
@@ -83321,6 +83356,7 @@
 "meterName": "Standard_M16lds_v4",
 "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
 "retailPrice": 3.3719,
+"savingsPlanPrice": 2.32627381,
 "skuName": "Standard_M16lds_v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 3.3719
@@ -83348,6 +83384,7 @@
 "meterName": "Standard_M24lds_v4",
 "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
 "retailPrice": 5.0579,
+"savingsPlanPrice": 3.48944521,
 "skuName": "Standard_M24lds_v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 5.0579
@@ -83357,6 +83394,7 @@
 "meterName": "Standard_M256lds_v4",
 "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
 "retailPrice": 51.2636,
+"savingsPlanPrice": 35.36675764,
 "skuName": "Standard_M256lds_v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 51.2636
@@ -83366,6 +83404,7 @@
 "meterName": "Standard_M16ds_v4",
 "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
 "retailPrice": 5.0579,
+"savingsPlanPrice": 3.48944521,
 "skuName": "Standard_M16ds_v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 5.0579
@@ -83384,6 +83423,7 @@
 "meterName": "Standard_M128lds_v4",
 "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
 "retailPrice": 25.6318,
+"savingsPlanPrice": 17.68337882,
 "skuName": "Standard_M128lds_v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 25.6318
@@ -83411,6 +83451,7 @@
 "meterName": "Standard_M32lds_v4",
 "productName": "Virtual Machines Mdsv4 Medium Memory Series Linux",
 "retailPrice": 6.3223,
+"savingsPlanPrice": 4.36175477,
 "skuName": "Standard_M32lds_v4",
 "unitOfMeasure": "1 Hour",
 "unitPrice": 6.3223
